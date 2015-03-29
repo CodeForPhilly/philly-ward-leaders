@@ -25,6 +25,11 @@ var WardLeader = Backbone.Model.extend({
           
           this.set('wardOrdinal', getOrdinal(this.get('Ward')));
           
+          // Calculate turnout percentage
+          var turnout = this.get('Turnout 2014 General'),
+               registered = this.get('Total Registered');
+          this.set('turnoutPercentage', Math.round(turnout / registered * 100));
+          
           // Set default photo if no photo provided
           this.set('avatar', this.get('Photo') ? this.get('Photo') : this.get('Gender') === 'F' ? 'img/avatar-female.png' : 'img/avatar-male.png');
      }
@@ -54,6 +59,8 @@ var WardLeaders = Backbone.Collection.extend({
 });
 
 var TopLeadersItemView = Backbone.Marionette.ItemView.extend({
+     tagName: 'li',
+     className: 'leader-card panel',
      template: '#tmpl-top-leaders-item',
      initialize: function() {
           _.bindAll(this, 'onDetails');
@@ -187,3 +194,5 @@ wardLeaders.fetch({
           layout.getRegion('main').show(topLeadersView);
      }
 });
+
+$(document).foundation();
