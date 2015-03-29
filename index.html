@@ -31,7 +31,8 @@
   <div class="container">
      <div class="row">
           <div class="medium-12 columns">
-               <p>Lauren ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod porttitor nisl nec tincidunt. Duis lacinia mauris vel placerat ornare. Sed vitae consequat ante. Etiam sed enim in dolor eleifend molestie. Aliquam ultricies consectetur turpis vel pharetra. Nunc tellus turpis, imperdiet hendrerit felis eu, pellentesque convallis ex. Suspendisse nisi ipsum, vehicula nec velit nec, gravida gravida nisi. Proin rutrum convallis lacus, ut gravida elit pellentesque in. Ut accumsan justo suscipit tellus placerat interdum.</p>
+               <br>
+            <!--   <p>Lauren ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod porttitor nisl nec tincidunt. Duis lacinia mauris vel placerat ornare. Sed vitae consequat ante. Etiam sed enim in dolor eleifend molestie. Aliquam ultricies consectetur turpis vel pharetra. Nunc tellus turpis, imperdiet hendrerit felis eu, pellentesque convallis ex. Suspendisse nisi ipsum, vehicula nec velit nec, gravida gravida nisi. Proin rutrum convallis lacus, ut gravida elit pellentesque in. Ut accumsan justo suscipit tellus placerat interdum.</p> -->
           </div>
      </div>
      <div class="row">
@@ -46,7 +47,7 @@
        <h2>Contributing</h2>
        Did we get something wrong? Did you find something we missed? Have an idea for another data point?
        Take a look at the <a href="https://docs.google.com/spreadsheets/d/1nkkFQUaxcGa0oDPWl1Vr1cknToIq8FxfJ7CILQrFgBM/edit?usp=sharing" target="_blank">source data</a>
-       and right-click on a cell to add a comment.
+       and right-click on a cell to add a comment. Or add to the <a href="https://github.com/timwis/philly-ward-leaders" target="_blank">source code</a>!
        
        <h2>The Team</h2>
        <ul>
@@ -58,19 +59,29 @@
             <li>Tim Wisniewski</li>
             <li>Zach Rendin</li>
        </ul>
+       
+       <h2>Sources</h2>
+       <ul>
+            <li><a href="https://www.seventy.org/tools/ward-leaders-committeepeople/democratic-party">Ward Leader List</a>, Committee of Seventy</li>
+            <li><a href="https://www.opendataphilly.org/dataset/voter-turnout">Voter Turnout</a>, City of Philadelphia</li>
+            <li><a href="https://www.opendataphilly.org/dataset/elected-committeepeople">Elected Committee People</a>, City of Philadelphia</li>
+            <li><a href="https://www.opendataphilly.org/dataset/police-divisions">Division Boundaries</a>, City of Philadelphia</li>
+            <li><a href="https://www.opendataphilly.org/dataset/qualified-voter-registry">Qualified Voter Registry</a>, City of Philadelphia</li>
+            <li>And lots of googling!</li>
+       </ul>
   </div>
   
   <script type="text/template" id="tmpl-top-leaders">
      <ul class="button-group">
-          <li><a href="#" class="button info tiny<%= data.filter === 'voters' ? ' active' : '' %>" data-filter="voters">By Voters</a></li>
-          <li><a href="#" class="button info tiny<%= data.filter === 'turnout' ? ' active' : '' %>" data-filter="turnout">By Turnout</a></li>
-          <li><a href="#" class="button info tiny<%= data.filter === 'vacancies' ? ' active' : '' %>" data-filter="vacancies">By Vacancies</a></li>
+          <li><a href="#" class="button info<%= data.filter === 'voters' ? ' active' : '' %>" data-filter="voters">By Voters</a></li>
+          <li><a href="#" class="button info<%= data.filter === 'turnout' ? ' active' : '' %>" data-filter="turnout">By Turnout</a></li>
+          <li><a href="#" class="button info<%= data.filter === 'vacancies' ? ' active' : '' %>" data-filter="vacancies">By Vacancies</a></li>
      </ul>
-     <ul class="small-block-grid-3" id="leaders"></ul>
+     <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3" id="leaders"></ul>
   </script>
   
   <script type="text/template" id="tmpl-top-leaders-item">
-     <a class="th radius thumbnail center" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
+     <a class="th radius thumbnail center" role="button" aria-label="Thumbnail" href="<%= data.avatar %>"  data-ward="<%= data.Ward %>">
           <img aria-hidden=true src="<%= data.avatar %>"/>
      </a>
      <h3><a href="#" data-ward="<%= data.Ward %>"><%= data.Name %></a></h3>
@@ -88,32 +99,39 @@
   </script>
   
   <script type="text/template" id="tmpl-details">
-          <a href="#" class="button back tiny">Back</a>
+          <a href="#" class="button back">Back</a>
           <div class="row">
                <div class="small-12 columns">
+                    <h3><%= data.Name %>  -  <span class="dt"><%= data.wardOrdinal %> Ward</span></h3>
                </div>
           </div>
           <div class="row">
-               <div class="small-3 columns">
+               <div class="small-2 columns">
                     <a class="th radius thumbnail" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
                          <img aria-hidden=true src="<%= data.avatar %>"/>
                     </a>
                     <dl>
+                        
+                    </dl>     
+               </div>
+                <div class="small-3 columns">
+
+                <dl>
                          <dt>Registered Voters</dt>
                          <dd><%= data['Democrats Registered'].toLocaleString() %> democrats of <%= data['Total Registered'].toLocaleString() %> total</dd>
                          
                          <dt>Turnout (Last Election)</dt>
-                         <dd><%= data['Turnout 2014 General'].toLocaleString() %></dd>
+                         <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>
                          
                          <dt>Divisions</dt>
                          <dd><%= data['Divisions'] %></dd>
                          
                          <dt>Committee Persons</dt>
                          <dd><%= data['Committee People'] %> (<%= data['vacancies'] %> vacancies)</dd>
-               </div>
-               <div class="small-9 columns">
-                    <h3><%= data.Name %></h3>
-                    <h4><%= data.wardOrdinal %> Ward</h4>
+               </dl>          
+                </div>
+               <div class="small-3 columns">
+
                     <dl>
                          <dt>Address</dt>
                          <dd><%= data['Address'] %></dd>
@@ -135,6 +153,11 @@
                          <dd><%= data['Occupation'] %></dd>
                          <% } %>
                          
+                    </dl>
+               </div>
+               <div class="small-4 columns">
+                    
+                    <dl>
                          <% if(data['Email']) { %>
                          <dt>Email</dt>
                          <dd><a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact"></a></dd>
@@ -154,7 +177,7 @@
                          <dt>Twitter</dt>
                          <dd><a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a></dd>
                          <% } %>
-                    </dl>
+                    </dl>     
                </div>
           </div>
           <div class="ward-map-container"></div>
