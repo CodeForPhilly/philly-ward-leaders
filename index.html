@@ -10,7 +10,7 @@
   <title>Philly Ward Leaders</title>
 
   <link rel="stylesheet" href="bower_components/bower-foundation/css/foundation.min.css">
-  <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+  <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css">
   <link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -30,10 +30,10 @@
   
   <script type="text/template" id="tmpl-top-leaders">
      <h2>Top Ward Leaders</h2>
-     <ul class="button-group round">
-          <li><a href="#" class="button<%= data.filter === 'voters' ? ' active' : '' %>" data-filter="voters">By Voters</a></li>
-          <li><a href="#" class="button<%= data.filter === 'turnout' ? ' active' : '' %>" data-filter="turnout">By Turnout</a></li>
-          <li><a href="#" class="button<%= data.filter === 'vacancies' ? ' active' : '' %>" data-filter="vacancies">By Vacancies</a></li>
+     <ul class="button-group">
+          <li><a href="#" class="button tiny<%= data.filter === 'voters' ? ' active' : '' %>" data-filter="voters">By Voters</a></li>
+          <li><a href="#" class="button tiny<%= data.filter === 'turnout' ? ' active' : '' %>" data-filter="turnout">By Turnout</a></li>
+          <li><a href="#" class="button tiny<%= data.filter === 'vacancies' ? ' active' : '' %>" data-filter="vacancies">By Vacancies</a></li>
      </ul>
      <div id="leaders"></div>
   </script>
@@ -126,8 +126,7 @@
   <script src="bower_components/marionette/lib/backbone.marionette.min.js"></script>
   <script src="bower_components/tabletop/src/backbone.tabletopSync.js"></script>
   <script src="bower_components/tabletop/src/tabletop.js"></script>
-  <script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-  <script src="//cdn-geoweb.s3.amazonaws.com/esri-leaflet/1.0.0-rc.6/esri-leaflet.js"></script>
+  <script src="bower_components/leaflet/dist/leaflet.js"></script>
   <script src="bower_components/nprogress/nprogress.js"></script>
   <script src="js/main.js"></script>
 </body>
