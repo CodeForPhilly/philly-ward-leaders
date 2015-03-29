@@ -109,6 +109,9 @@ var DetailsView = Backbone.Marionette.LayoutView.extend({
 var WardMapView = Backbone.Marionette.ItemView.extend({
      template: false,
      className: 'ward-map',
+     initialize: function() {
+          wardBoundaries.on('sync', this.addBoundaries, this);
+     },
      onShow: function() {
           this.map = L.map(this.el).setView([39.9523893, -75.1636291], 10);
           L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.{ext}', {
@@ -119,12 +122,15 @@ var WardMapView = Backbone.Marionette.ItemView.extend({
                ext: 'png'
           }).addTo(this.map);
           
-          this.addBoundaries();
           this.addHome();
+          
+          if( ! _.isEmpty(wardBoundaries.attributes)) {
+               this.addBoundaries();
+          }
      },
      addBoundaries: function() {
           var ward = ('00' + this.model.get('Ward')).slice(-2),
-          boundaries = L.geoJson(wardBoundaries, {
+          boundaries = L.geoJson(wardBoundaries.toJSON(), {
                filter: function(feature, layer) {
                     return feature.properties.DIVISION_N.substring(0, 2) == ward;
                },
@@ -152,18 +158,15 @@ var getOrdinal = function(n) {
      return n+(s[(v-20)%10]||s[v]||s[0]);
 };
 
-var wardBoundaries = Backbone.Model.extend({
-     url: 'data/Political_Divisions.geojson'
-});
-wardBoundaries.fetch();
-
-//var wardBoundaries;
-//$.getJSON('data/Political_Divisions.geojson', function(result) { wardBoundaries = result; });
+var wardBoundaries = new Backbone.Model();
+wardBoundaries.fetch({url: 'data/Political_Divisions.geojson'});
 
 var wardLeaders = new WardLeaders();
 wardLeaders.fetch({
      success: function(collection) {
-          var topLeadersView = new TopLeadersView({collection: wardLeaders});
+          var topLeadersView = new TopLeadersView({
+               collection: wardLeaders
+          });
           layout.getRegion('top-leaders').show(topLeadersView);
      }
 });
