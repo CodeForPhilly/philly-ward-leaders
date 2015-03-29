@@ -62,9 +62,8 @@ var TopLeadersItemView = Backbone.Marionette.ItemView.extend({
           'click [data-ward]': 'onDetails'
      },
      onDetails: function(e) {
-          console.log(this.model);
-          var wardLeaderView = new WardLeaderView({ model: this.model });
-          layout.getRegion('details').show(wardLeaderView);
+          var detailsView = new DetailsView({ model: this.model });
+          layout.getRegion('details').show(detailsView);
           $(window).scrollTop(0);
           e.preventDefault();
      }
@@ -94,8 +93,57 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
      }
 });
 
-var WardLeaderView = Backbone.Marionette.ItemView.extend({
-     template: '#tmpl-details'
+var DetailsView = Backbone.Marionette.LayoutView.extend({
+     template: '#tmpl-details',
+     regions: {
+          'map': '.ward-map-container'
+     },
+     onShow: function() {
+          this.mapView = new WardMapView({
+               model: this.model
+          });
+          this.getRegion('map').show(this.mapView);
+     }
+});
+
+var WardMapView = Backbone.Marionette.ItemView.extend({
+     template: false,
+     className: 'ward-map',
+     onShow: function() {
+          this.map = L.map(this.el).setView([39.9523893, -75.1636291], 10);
+          L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.{ext}', {
+               attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+               subdomains: 'abcd',
+               minZoom: 0,
+               maxZoom: 20,
+               ext: 'png'
+          }).addTo(this.map);
+          
+          this.addBoundaries();
+          this.addHome();
+     },
+     addBoundaries: function() {
+          var ward = ('00' + this.model.get('Ward')).slice(-2),
+          boundaries = L.geoJson(wardBoundaries, {
+               filter: function(feature, layer) {
+                    return feature.properties.DIVISION_N.substring(0, 2) == ward;
+               },
+               onEachFeature: function(feature, layer) {
+                    if(feature.properties) {
+                         layer.bindPopup('Division: ' + feature.properties.DIVISION_N.substring(2));
+                    }
+               }
+          }).addTo(this.map);
+          this.map.fitBounds(boundaries.getBounds());
+     },
+     addHome: function() {
+          var homeGeometry = [this.model.get('Lat'), this.model.get('Lng')];
+          if(homeGeometry[0] && homeGeometry[1]) {
+               L.marker([this.model.get('Lat'), this.model.get('Lng')])
+                    .bindPopup('<b>Home Address</b><br>' + this.model.get('Address')).openPopup()
+                    .addTo(this.map);
+          }
+     }
 });
 
 var getOrdinal = function(n) {
@@ -103,6 +151,14 @@ var getOrdinal = function(n) {
           v=n%100;
      return n+(s[(v-20)%10]||s[v]||s[0]);
 };
+
+var wardBoundaries = Backbone.Model.extend({
+     url: 'data/Political_Divisions.geojson'
+});
+wardBoundaries.fetch();
+
+//var wardBoundaries;
+//$.getJSON('data/Political_Divisions.geojson', function(result) { wardBoundaries = result; });
 
 var wardLeaders = new WardLeaders();
 wardLeaders.fetch({

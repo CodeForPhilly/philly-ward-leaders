@@ -10,6 +10,7 @@
   <title>Philly Ward Leaders</title>
 
   <link rel="stylesheet" href="bower_components/bower-foundation/css/foundation.min.css">
+  <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -113,6 +114,7 @@
                <dd><a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a></dd>
                <% } %>
           </dl>
+          <div class="ward-map-container"></div>
   </script>
 
   <!-- Initialize JS Plugins -->
@@ -122,6 +124,8 @@
   <script src="bower_components/marionette/lib/backbone.marionette.min.js"></script>
   <script src="bower_components/tabletop/src/backbone.tabletopSync.js"></script>
   <script src="bower_components/tabletop/src/tabletop.js"></script>
+  <script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="//cdn-geoweb.s3.amazonaws.com/esri-leaflet/1.0.0-rc.6/esri-leaflet.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

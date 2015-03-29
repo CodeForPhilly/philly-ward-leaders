@@ -15,7 +15,8 @@
     "tabletop": "~1.4.0",
     "underscore": "~1.8.2",
     "backbone": "~1.1.2",
-    "marionette": "~2.4.1"
+    "marionette": "~2.4.1",
+    "leaflet-ajax": "~1.1.0"
   },
   "resolutions": {
     "underscore": "~1.8.2"
