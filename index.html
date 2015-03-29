@@ -24,17 +24,16 @@
           </div>
      </div>
      <div class="row">
-          <div class="small-4 columns" id="top-leaders"></div>
-          <div class="small-8 columns" id="details"></div>
+          <div class="small-12 columns" id="main"></div>
      </div>
   </div>
   
   <script type="text/template" id="tmpl-top-leaders">
      <h2>Top Ward Leaders</h2>
      <ul class="button-group round">
-          <li><a href="#" class="button active" data-filter="voters">By Voters</a></li>
-          <li><a href="#" class="button" data-filter="turnout">By Turnout</a></li>
-          <li><a href="#" class="button" data-filter="vacancies">By Vacancies</a></li>
+          <li><a href="#" class="button<%= data.filter === 'voters' ? ' active' : '' %>" data-filter="voters">By Voters</a></li>
+          <li><a href="#" class="button<%= data.filter === 'turnout' ? ' active' : '' %>" data-filter="turnout">By Turnout</a></li>
+          <li><a href="#" class="button<%= data.filter === 'vacancies' ? ' active' : '' %>" data-filter="vacancies">By Vacancies</a></li>
      </ul>
      <div id="leaders"></div>
   </script>
@@ -60,6 +59,8 @@
   </script>
   
   <script type="text/template" id="tmpl-details">
+          <a href="#" class="button back">Back</a>
+  
           <a class="th radius thumbnail" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
                <img aria-hidden=true src="<%= data.avatar %>"/>
           </a>

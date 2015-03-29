@@ -5,8 +5,7 @@ _.templateSettings.variable = 'data';
 var layout = new Marionette.LayoutView({
      el: 'body',
      regions: {
-          'top-leaders': '#top-leaders',
-          'details': '#details'
+          'main': '#main'
      }
 });
 
@@ -50,6 +49,7 @@ var WardLeaders = Backbone.Collection.extend({
           sheet: 'Democratic'
      },
      sync: Backbone.tabletopSync,
+     filter: 'voters',
      comparator: comparators.voters
 });
 
@@ -63,7 +63,7 @@ var TopLeadersItemView = Backbone.Marionette.ItemView.extend({
      },
      onDetails: function(e) {
           var detailsView = new DetailsView({ model: this.model });
-          layout.getRegion('details').show(detailsView);
+          layout.getRegion('main').show(detailsView);
           $(window).scrollTop(0);
           e.preventDefault();
      }
@@ -79,16 +79,21 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
      events: {
           'click [data-filter]': 'onFilter'
      },
+     serializeData: function() {
+          return $.extend({
+               filter: this.collection.filter
+          }, this.collection.toJSON());
+     },
      onFilter: function(e) {
           // Resort collection
-          var filter = $(e.currentTarget).data('filter');
-          this.collection.comparator = comparators[filter];
+          this.collection.filter = $(e.currentTarget).data('filter');
+          this.collection.comparator = comparators[this.collection.filter];
           this.collection.sort();
           
           // Change active button
-          var button = this.$('[data-filter="'+filter+'"]');
+          /*var button = this.$('[data-filter="'+filter+'"]');
           button.parent().siblings().children('a').removeClass('active');
-          button.addClass('active');
+          button.addClass('active');*/
           e.preventDefault();
      }
 });
@@ -98,11 +103,21 @@ var DetailsView = Backbone.Marionette.LayoutView.extend({
      regions: {
           'map': '.ward-map-container'
      },
+     events: {
+          'click .back': 'onBack'
+     },
      onShow: function() {
           this.mapView = new WardMapView({
                model: this.model
           });
           this.getRegion('map').show(this.mapView);
+     },
+     onBack: function(e) {
+          var topLeadersView = new TopLeadersView({
+               collection: wardLeaders
+          });
+          layout.getRegion('main').show(topLeadersView);
+          e.preventDefault();
      }
 });
 
@@ -169,6 +184,6 @@ wardLeaders.fetch({
           var topLeadersView = new TopLeadersView({
                collection: wardLeaders
           });
-          layout.getRegion('top-leaders').show(topLeadersView);
+          layout.getRegion('main').show(topLeadersView);
      }
 });
