@@ -1,0 +1,25 @@
+{
+  "name": "bower-foundation",
+  "description": "The most advanced responsive front-end framework in the world.",
+  "version": "4.0.0",
+  "dependencies": {
+    "modernizr": "*",
+    "jquery": "*",
+    "normalize-css": "*"
+  },
+  "main": [
+    "js/foundation.min.js",
+    "css/foundation.css"
+  ],
+  "homepage": "https://github.com/blacktail/bower-foundation",
+  "_release": "4.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "4.0.0",
+    "commit": "ebe5f2b1a98db47d12f18e19a4dca01d7857e14b"
+  },
+  "_source": "git://github.com/blacktail/bower-foundation.git",
+  "_target": "~4.0.0",
+  "_originalSource": "bower-foundation",
+  "_direct": true
+}

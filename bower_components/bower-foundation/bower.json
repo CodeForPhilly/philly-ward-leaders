@@ -1,0 +1,14 @@
+{
+  "name": "bower-foundation",
+  "description": "The most advanced responsive front-end framework in the world.",
+  "version": "4.0.0",
+  "dependencies": {
+    "modernizr": "*",
+    "jquery": "*",
+    "normalize-css": "*"
+  },
+  "main": [
+    "js/foundation.min.js",
+    "css/foundation.css"
+  ]
+}

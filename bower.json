@@ -1,0 +1,23 @@
+{
+  "name": "philly-ward-leaders",
+  "version": "0.0.1",
+  "main": "js/main.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bower-foundation": "~4.0.0",
+    "tabletop": "~1.4.0",
+    "underscore": "~1.8.2",
+    "backbone": "~1.1.2",
+    "marionette": "~2.4.1"
+  },
+  "resolutions": {
+    "underscore": "~1.8.2"
+  }
+}
