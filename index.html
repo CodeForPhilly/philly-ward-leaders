@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="bower_components/bower-foundation/css/foundation.min.css">
   <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+  <link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -46,7 +47,7 @@
           <h3><a href="#" data-ward="<%= data.Ward %>"><%= data.Name %></a></h3>
           <h4><%= data.wardOrdinal %> Ward</h4>
           <dl>
-               <dt>Total Registered</dt>
+               <dt>Registered Voters</dt>
                <dd><%= data['Total Registered'].toLocaleString() %></dd>
                
                <dt>Turnout (Last Election)</dt>
@@ -66,7 +67,7 @@
           <h4><%= data.wardOrdinal %> Ward</h4>
           <dl>
                <dt>Total Registered</dt>
-               <dd><%= data['Total Registered'].toLocaleString() %></dd>
+               <dd><%= data['Democrats Registered'].toLocaleString() %> Democrats of <%= data['Total Registered'].toLocaleString() %></dd>
                
                <dt>Turnout (Last Election)</dt>
                <dd><%= data['Turnout 2014 General'].toLocaleString() %></dd>
@@ -126,6 +127,7 @@
   <script src="bower_components/tabletop/src/tabletop.js"></script>
   <script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   <script src="//cdn-geoweb.s3.amazonaws.com/esri-leaflet/1.0.0-rc.6/esri-leaflet.js"></script>
+  <script src="bower_components/nprogress/nprogress.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

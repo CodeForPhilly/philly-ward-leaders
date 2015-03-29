@@ -162,8 +162,10 @@ var wardBoundaries = new Backbone.Model();
 wardBoundaries.fetch({url: 'data/Political_Divisions.geojson'});
 
 var wardLeaders = new WardLeaders();
+NProgress.start();
 wardLeaders.fetch({
      success: function(collection) {
+          NProgress.done();
           var topLeadersView = new TopLeadersView({
                collection: wardLeaders
           });
