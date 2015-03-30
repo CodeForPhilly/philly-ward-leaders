@@ -99,88 +99,85 @@
   </script>
   
   <script type="text/template" id="tmpl-details">
-          <a href="#" class="button back">Back</a>
-          <div class="row">
-               <div class="small-12 columns">
-                    <h3><%= data.Name %>  -  <span class="dt"><%= data.wardOrdinal %> Ward</span></h3>
-               </div>
+     <a href="#" class="button back">Back</a>
+     <h3><%= data.Name %>  -  <span class="dt"><%= data.wardOrdinal %> Ward</span></h3>
+     
+     <div class="row">
+          <div class="large-2 columns">
+               <a class="th radius" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
+                    <img aria-hidden=true src="<%= data.avatar %>"/>
+               </a>
+               <dl>
+                   
+               </dl>     
           </div>
-          <div class="row">
-               <div class="small-2 columns">
-                    <a class="th radius thumbnail" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
-                         <img aria-hidden=true src="<%= data.avatar %>"/>
-                    </a>
-                    <dl>
-                        
-                    </dl>     
-               </div>
-                <div class="small-3 columns">
+           <div class="large-3 columns">
 
-                <dl>
-                         <dt>Registered Voters</dt>
-                         <dd><%= data['Democrats Registered'].toLocaleString() %> democrats of <%= data['Total Registered'].toLocaleString() %> total</dd>
-                         
-                         <dt>Turnout (Last Election)</dt>
-                         <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>
-                         
-                         <dt>Divisions</dt>
-                         <dd><%= data['Divisions'] %></dd>
-                         
-                         <dt>Committee Persons</dt>
-                         <dd><%= data['Committee People'] %> (<%= data['vacancies'] %> vacancies)</dd>
-               </dl>          
-                </div>
-               <div class="small-3 columns">
-
-                    <dl>
-                         <dt>Address</dt>
-                         <dd><%= data['Address'] %></dd>
-                         
-                         <dt>Phones</dt>
-                         <dd><%= data['Phones'] %></dd>
-                         
-                         <dt>Age</dt>
-                         <dd><%= new Date().getFullYear() - data['Year of Birth'] %></dd>
-                         
-                         <dt>Gender</dt>
-                         <dd><%= data['Gender'] === 'F' ? 'Female' : data['Gender'] === 'M' ? 'Male' : 'Unknown' %></dd>
-                         
-                         <dt>Last Voted</dt>
-                         <dd><%= data['Last Voted'] %></dd>
-                         
-                         <% if(data['Occupation']) { %>
-                         <dt>Occupation</dt>
-                         <dd><%= data['Occupation'] %></dd>
-                         <% } %>
-                         
-                    </dl>
-               </div>
-               <div class="small-4 columns">
+           <dl>
+                    <dt>Registered Voters</dt>
+                    <dd><%= data['Democrats Registered'].toLocaleString() %> democrats of <%= data['Total Registered'].toLocaleString() %> total</dd>
                     
-                    <dl>
-                         <% if(data['Email']) { %>
-                         <dt>Email</dt>
-                         <dd><a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact"></a></dd>
-                         <% } %>
-                         
-                         <% if(data['LinkedIn']) { %>
-                         <dt>LinkedIn</dt>
-                         <dd><a href="<%= data['LinkedIn'] %>" target="_blank"><img src="img/linkedin.png" class="contact"></a></dd>
-                         <% } %>
-                         
-                         <% if(data['Facebook']) { %>
-                         <dt>Facebook</dt>
-                         <dd><a href="<%= data['Facebook'] %>" target="_blank"><img src="img/facebook.png" class="contact"></a></dd>
-                         <% } %>
-                         
-                         <% if(data['Twitter']) { %>
-                         <dt>Twitter</dt>
-                         <dd><a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a></dd>
-                         <% } %>
-                    </dl>     
-               </div>
+                    <dt>Turnout (Last Election)</dt>
+                    <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>
+                    
+                    <dt>Divisions</dt>
+                    <dd><%= data['Divisions'] %></dd>
+                    
+                    <dt>Committee Persons</dt>
+                    <dd><%= data['Committee People'] %> (<%= data['vacancies'] %> vacancies)</dd>
+          </dl>          
+           </div>
+          <div class="large-3 columns">
+
+               <dl>
+                    <dt>Address</dt>
+                    <dd><%= data['Address'] %></dd>
+                    
+                    <dt>Phones</dt>
+                    <dd><%= data['Phones'] %></dd>
+                    
+                    <dt>Age</dt>
+                    <dd><%= new Date().getFullYear() - data['Year of Birth'] %></dd>
+                    
+                    <dt>Gender</dt>
+                    <dd><%= data['Gender'] === 'F' ? 'Female' : data['Gender'] === 'M' ? 'Male' : 'Unknown' %></dd>
+                    
+                    <dt>Last Voted</dt>
+                    <dd><%= data['Last Voted'] %></dd>
+                    
+                    <% if(data['Occupation']) { %>
+                    <dt>Occupation</dt>
+                    <dd><%= data['Occupation'] %></dd>
+                    <% } %>
+                    
+               </dl>
           </div>
-          <div class="ward-map-container"></div>
+          <div class="large-4 columns">
+               
+               <dl>
+                    <% if(data['Email']) { %>
+                    <dt>Email</dt>
+                    <dd><a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact"></a></dd>
+                    <% } %>
+                    
+                    <% if(data['LinkedIn']) { %>
+                    <dt>LinkedIn</dt>
+                    <dd><a href="<%= data['LinkedIn'] %>" target="_blank"><img src="img/linkedin.png" class="contact"></a></dd>
+                    <% } %>
+                    
+                    <% if(data['Facebook']) { %>
+                    <dt>Facebook</dt>
+                    <dd><a href="<%= data['Facebook'] %>" target="_blank"><img src="img/facebook.png" class="contact"></a></dd>
+                    <% } %>
+                    
+                    <% if(data['Twitter']) { %>
+                    <dt>Twitter</dt>
+                    <dd><a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a></dd>
+                    <% } %>
+               </dl>     
+          </div>
+     </div>
+     <div class="ward-map-container"></div>
   </script>
 
   <!-- Initialize JS Plugins -->
