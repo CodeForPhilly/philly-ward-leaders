@@ -60,7 +60,7 @@ var WardLeaders = Backbone.Collection.extend({
 
 var TopLeadersItemView = Backbone.Marionette.ItemView.extend({
      tagName: 'li',
-     className: 'leader-card panel',
+     //className: 'leader-card panel',
      template: '#tmpl-top-leaders-item',
      initialize: function() {
           _.bindAll(this, 'onDetails');
