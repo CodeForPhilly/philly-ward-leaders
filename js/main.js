@@ -10,6 +10,7 @@ var layout = new Marionette.LayoutView({
 });
 
 var WardLeader = Backbone.Model.extend({
+     // Gets called on each ward leader model in the collection
      initialize: function() {
           // Convert to numbers
           var self = this,
@@ -32,6 +33,9 @@ var WardLeader = Backbone.Model.extend({
           
           // Set default photo if no photo provided
           this.set('avatar', this.get('Photo') ? this.get('Photo') : this.get('Gender') === 'F' ? 'img/avatar-female.png' : 'img/avatar-male.png');
+          
+          // Set URL slug
+          this.set('slug', this.get('Name').toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,''));
      }
 });
 
@@ -60,7 +64,6 @@ var WardLeaders = Backbone.Collection.extend({
 
 var TopLeadersItemView = Backbone.Marionette.ItemView.extend({
      tagName: 'li',
-     //className: 'leader-card panel',
      template: '#tmpl-top-leaders-item',
      initialize: function() {
           _.bindAll(this, 'onDetails');
@@ -69,9 +72,9 @@ var TopLeadersItemView = Backbone.Marionette.ItemView.extend({
           'click [data-ward]': 'onDetails'
      },
      onDetails: function(e) {
-          var detailsView = new DetailsView({ model: this.model });
-          layout.getRegion('main').show(detailsView);
-          $(window).scrollTop(0);
+          var ward = this.model.get('Ward'),
+               slug = this.model.get('slug');
+          router.navigate(ward + '/' + slug, {trigger: true});
           e.preventDefault();
      }
 });
@@ -96,11 +99,6 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
           this.collection.filter = $(e.currentTarget).data('filter');
           this.collection.comparator = comparators[this.collection.filter];
           this.collection.sort();
-          
-          // Change active button
-          /*var button = this.$('[data-filter="'+filter+'"]');
-          button.parent().siblings().children('a').removeClass('active');
-          button.addClass('active');*/
           e.preventDefault();
      }
 });
@@ -110,21 +108,11 @@ var DetailsView = Backbone.Marionette.LayoutView.extend({
      regions: {
           'map': '.ward-map-container'
      },
-     events: {
-          'click .back': 'onBack'
-     },
      onShow: function() {
           this.mapView = new WardMapView({
                model: this.model
           });
           this.getRegion('map').show(this.mapView);
-     },
-     onBack: function(e) {
-          var topLeadersView = new TopLeadersView({
-               collection: wardLeaders
-          });
-          layout.getRegion('main').show(topLeadersView);
-          e.preventDefault();
      }
 });
 
@@ -132,7 +120,7 @@ var WardMapView = Backbone.Marionette.ItemView.extend({
      template: false,
      className: 'ward-map',
      initialize: function() {
-          wardBoundaries.on('sync', this.addBoundaries, this);
+          router.wardBoundaries.on('sync', this.addBoundaries, this);
      },
      onShow: function() {
           this.map = L.map(this.el).setView([39.9523893, -75.1636291], 10);
@@ -146,13 +134,13 @@ var WardMapView = Backbone.Marionette.ItemView.extend({
           
           this.addHome();
           
-          if( ! _.isEmpty(wardBoundaries.attributes)) {
+          if( ! _.isEmpty(router.wardBoundaries.attributes)) {
                this.addBoundaries();
           }
      },
      addBoundaries: function() {
           var ward = ('00' + this.model.get('Ward')).slice(-2),
-          boundaries = L.geoJson(wardBoundaries.toJSON(), {
+          boundaries = L.geoJson(router.wardBoundaries.toJSON(), {
                filter: function(feature, layer) {
                     return feature.properties.DIVISION_N.substring(0, 2) == ward;
                },
@@ -180,19 +168,49 @@ var getOrdinal = function(n) {
      return n+(s[(v-20)%10]||s[v]||s[0]);
 };
 
-var wardBoundaries = new Backbone.Model();
-wardBoundaries.fetch({url: 'data/Political_Divisions.geojson'});
-
-var wardLeaders = new WardLeaders();
-NProgress.start();
-wardLeaders.fetch({
-     success: function(collection) {
-          NProgress.done();
+var Router = Backbone.Router.extend({
+     routes: {
+          "": "showTopLeaders",
+          ":ward/:slug": "detailsRoute"
+     },
+     initialize: function() {
+          this.wardBoundaries = new Backbone.Model();
+          this.wardBoundaries.fetch({url: 'data/Political_Divisions.geojson'});
+          
+          this.wardLeaders = new WardLeaders();
+          NProgress.start();
+          this.wardLeaders.fetch({
+               success: function(collection) {
+                    NProgress.done();
+               }
+          });
+     },
+     showTopLeaders: function() {
           var topLeadersView = new TopLeadersView({
-               collection: wardLeaders
+               collection: this.wardLeaders
           });
           layout.getRegion('main').show(topLeadersView);
+          $(window).scrollTop(0);
+     },
+     detailsRoute: function(ward, slug) {
+          if(this.wardLeaders.length) {
+               var model = this.wardLeaders.findWhere({Ward: ward, slug: slug});
+               this.showDetails(model);
+          } else {
+               var self = this;
+               this.wardLeaders.on('sync', function() {
+                    var model = self.wardLeaders.findWhere({Ward: ward});
+                    self.showDetails(model);
+               });
+          }
+     },
+     showDetails: function(model) {
+          var detailsView = new DetailsView({ model: model });
+          layout.getRegion('main').show(detailsView);
+          $(window).scrollTop(0);
      }
 });
+var router = new Router();
+Backbone.history.start();
 
 $(document).foundation();
