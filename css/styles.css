@@ -31,7 +31,20 @@ dl {
 /*thumbnail {
     padding: 10px 0px 10px;
 }*/
-.top-bar, .top-bar li a:not(.button) { background-color: #2284a1; }
+.top-bar, .top-bar-section ul, .top-bar-section li a:not(.button) { background-color: #2284a1; }
+
+/* Top bar active/hover */
+.top-bar-section ul li.active > a,
+.top-bar-section li:hover a,
+.top-bar-section ul li:hover > a,
+.top-bar-section ul.dropdown li a:hover:not(.button),
+.top-bar.expanded .title-area,
+.top-bar-section ul.dropdown {
+     background-color: #2ba6cb;
+}
+
+/* Override top bar widths to support mobile */
+.top-bar .name h1 a { width: auto; }
 
 /* Rounded avatars */
 .card {
