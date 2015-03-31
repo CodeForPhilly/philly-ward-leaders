@@ -2,7 +2,7 @@
 @import url("//fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Radley");
 
 /*.thumbnail img { height: 150px; }*/
-.button.active { background-color: #008CBA; }
+.button.active { background-color: #007095; }
 .contact { width: 60px; }
 .ward-map-container, .ward-map { width: 100%; height: 350px; }
 #nprogress .bar, #nprogress .spinner { margin-top: 45px; }
@@ -31,7 +31,7 @@ dl {
 /*thumbnail {
     padding: 10px 0px 10px;
 }*/
-.top-bar, .top-bar-section ul, .top-bar-section li a:not(.button) { background-color: #2284a1; }
+.top-bar, .top-bar-section ul, .top-bar-section li a:not(.button) { background-color: #2284a1 !important; }
 
 /* Top bar active/hover */
 .top-bar-section ul li.active > a,
@@ -41,6 +41,15 @@ dl {
 .top-bar.expanded .title-area,
 .top-bar-section ul.dropdown {
      background-color: #2ba6cb;
+}
+
+/* Decrease button group padding on mobile */
+@media only screen and (max-width: 40em) {
+     .button-group li a {
+          padding: 15px;
+          margin: 0;
+          font-size: 80%;
+     }
 }
 
 /* Override top bar widths to support mobile */

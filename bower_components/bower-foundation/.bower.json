@@ -20,6 +20,5 @@
   },
   "_source": "git://github.com/blacktail/bower-foundation.git",
   "_target": "~4.0.0",
-  "_originalSource": "bower-foundation",
-  "_direct": true
+  "_originalSource": "bower-foundation"
 }
