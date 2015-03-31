@@ -84,24 +84,39 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
      childView: TopLeadersItemView,
      childViewContainer: '#leaders',
      initialize: function() {
-          _.bindAll(this, 'onFilter');
+          _.bindAll(this, 'onSort', 'onSearch');
      },
      events: {
-          'click [data-filter]': 'onFilter'
+          'click [data-sort-key]': 'onSort',
+          'submit form': 'onSearch'
      },
      serializeData: function() {
           return $.extend({
-               filter: this.collection.filter
+               sortKey: this.collection.sortKey,
+               searchQuery: this.searchQuery
           }, this.collection.toJSON());
      },
-     onFilter: function(e) {
+     onSort: function(e) {
           // Resort collection
-          this.collection.filter = $(e.currentTarget).data('filter');
-          this.collection.comparator = comparators[this.collection.filter];
+          this.collection.sortKey = $(e.currentTarget).data('sort-key');
+          this.collection.comparator = comparators[this.collection.sortKey];
           this.collection.sort();
           e.preventDefault();
+     },
+     onSearch: function(e) {
+          this.searchQuery = this.$('#search').val();
+          console.log('Searching', this.searchQuery);
+          this.render();
+          e.preventDefault();
+     },
+     filter: function(child, index, collection) {
+          return this.searchQuery ? (stringContains(this.searchQuery, child.get('Name')) || stringContains(this.searchQuery, child.get('Ward'))) : true;
      }
 });
+
+var stringContains = function(needle, haystack) {
+     return haystack.toLowerCase().indexOf(needle.toLowerCase()) !== -1;
+};
 
 var DetailsView = Backbone.Marionette.LayoutView.extend({
      template: '#tmpl-details',
@@ -120,7 +135,7 @@ var WardMapView = Backbone.Marionette.ItemView.extend({
      template: false,
      className: 'ward-map',
      initialize: function() {
-          router.wardBoundaries.on('sync', this.addBoundaries, this);
+          router.divisionBoundaries.on('sync', this.addBoundaries, this);
      },
      onShow: function() {
           this.map = L.map(this.el).setView([39.9523893, -75.1636291], 10);
@@ -134,13 +149,13 @@ var WardMapView = Backbone.Marionette.ItemView.extend({
           
           this.addHome();
           
-          if( ! _.isEmpty(router.wardBoundaries.attributes)) {
+          if( ! _.isEmpty(router.divisionBoundaries.attributes)) {
                this.addBoundaries();
           }
      },
      addBoundaries: function() {
           var ward = ('00' + this.model.get('Ward')).slice(-2),
-          boundaries = L.geoJson(router.wardBoundaries.toJSON(), {
+          boundaries = L.geoJson(router.divisionBoundaries.toJSON(), {
                filter: function(feature, layer) {
                     return feature.properties.DIVISION_N.substring(0, 2) == ward;
                },
@@ -162,6 +177,43 @@ var WardMapView = Backbone.Marionette.ItemView.extend({
      }
 });
 
+var CityMapView = Backbone.Marionette.ItemView.extend({
+     template: false,
+     className: 'ward-map',
+     initialize: function() {
+          router.wardBoundaries.on('sync', this.addBoundaries, this);
+          this.popupTemplate = _.template($('#tmpl-citymap-popup').html());
+     },
+     onShow: function() {
+          this.map = L.map(this.el).setView([39.9523893, -75.1636291], 10);
+          L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.{ext}', {
+               attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+               subdomains: 'abcd',
+               minZoom: 0,
+               maxZoom: 20,
+               ext: 'png'
+          }).addTo(this.map);
+          
+          if( ! _.isEmpty(router.wardBoundaries.attributes)) {
+               this.addBoundaries();
+          }
+     },
+     addBoundaries: function() {
+          var self = this,
+               boundaries = L.geoJson(router.wardBoundaries.toJSON(), {
+               onEachFeature: function(feature, layer) {
+                    if(feature.properties) {
+                         var model = self.collection.findWhere({Ward: feature.properties.WARD_NUM});
+                         if(model) {
+                              layer.bindPopup(self.popupTemplate(model.toJSON()));
+                         }
+                    }
+               }
+          }).addTo(this.map);
+          this.map.fitBounds(boundaries.getBounds());
+     }
+});
+
 var getOrdinal = function(n) {
      var s=["th","st","nd","rd"],
           v=n%100;
@@ -171,11 +223,12 @@ var getOrdinal = function(n) {
 var Router = Backbone.Router.extend({
      routes: {
           "": "showTopLeaders",
-          ":ward/:slug": "detailsRoute"
+          ":ward/:slug": "detailsRoute",
+          "map": "map"
      },
      initialize: function() {
-          this.wardBoundaries = new Backbone.Model();
-          this.wardBoundaries.fetch({url: 'data/Political_Divisions.geojson'});
+          this.divisionBoundaries = new Backbone.Model();
+          this.divisionBoundaries.fetch({url: 'data/Political_Divisions.geojson'});
           
           this.wardLeaders = new WardLeaders();
           NProgress.start();
@@ -186,7 +239,7 @@ var Router = Backbone.Router.extend({
           });
      },
      showTopLeaders: function() {
-          var topLeadersView = new TopLeadersView({
+           topLeadersView = new TopLeadersView({
                collection: this.wardLeaders
           });
           layout.getRegion('main').show(topLeadersView);
@@ -207,6 +260,16 @@ var Router = Backbone.Router.extend({
      showDetails: function(model) {
           var detailsView = new DetailsView({ model: model });
           layout.getRegion('main').show(detailsView);
+          $(window).scrollTop(0);
+     },
+     map: function() {
+          if( ! this.wardBoundaries) {
+               this.wardBoundaries = new Backbone.Model();
+               this.wardBoundaries.fetch({url: 'data/Political_Wards.geojson'});
+          }
+          
+          var cityMapView = new CityMapView({collection: this.wardLeaders});
+          layout.getRegion('main').show(cityMapView);
           $(window).scrollTop(0);
      }
 });

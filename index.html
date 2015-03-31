@@ -10,6 +10,7 @@
   <title>Philly Ward Leaders</title>
 
   <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css">
   <link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -74,11 +75,26 @@
   </div>
   
   <script type="text/template" id="tmpl-top-leaders">
-     <ul class="button-group round">
-          <li><a href="#" class="button<%= data.filter === 'voters' ? ' active' : '' %>" data-filter="voters">By Voters</a></li>
-          <li><a href="#" class="button<%= data.filter === 'turnout' ? ' active' : '' %>" data-filter="turnout">By Turnout</a></li>
-          <li><a href="#" class="button<%= data.filter === 'vacancies' ? ' active' : '' %>" data-filter="vacancies">By Vacancies</a></li>
+     <div class="icon-bar three-up">
+          <a href="#" class="item dropdown" data-dropdown="sort-dropdown" aria-controls="sort-dropdown" aria-expanded="false">
+               <i class="fa fa-sort-amount-asc"></i>
+               <label>Sort</label>
+          </a>
+          <a href="#map" class="item">
+               <i class="fa fa-map-marker"></i>
+               <label>Map</label>
+          </a>
+          <a href="#" class="item">
+               <i class="fa fa-search"></i>
+               <label>Search</label>
+          </a>
+     </div>
+     <ul id="sort-dropdown" class="f-dropdown" data-dropdown-content aria-hidden="true">
+          <li><a href="#"<%= data.sortKey === ' class="voters"' ? ' active' : '' %> data-sort-key="voters">By Voters</a></li>
+          <li><a href="#"<%= data.sortKey === ' class="turnout"' ? ' active' : '' %> data-sort-key="turnout">By Turnout</a></li>
+          <li><a href="#"<%= data.sortKey === ' class="vacancies"' ? ' active' : '' %> data-sort-key="vacancies">By Vacancies</a></li>
      </ul>
+     <form><input type="text" id="search" value="<%= data.searchQuery %>" placeholder="Search Name or Ward"></form>
      <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3" id="leaders"></ul>
   </script>
   
@@ -186,6 +202,11 @@
           </div>
      </div>
      <div class="ward-map-container"></div>
+  </script>
+  
+  <script type="text/template" id="tmpl-citymap-popup">
+       <%= data.wardOrdinal %> Ward<br>
+       <a href="#<%= data.Ward %>/<%= data.slug %>"><%= data.Name %></a>
   </script>
 
   <!-- Initialize JS Plugins -->
