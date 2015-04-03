@@ -187,6 +187,7 @@
                          <a class="th radius" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
                               <img aria-hidden=true src="<%= data.avatar %>"/>
                          </a>
+                         <div class="error-link"><a href="<%= data.errorLink('Photo') %>" target="_blank">Have a <%= data.Photo ? 'better ' : '' %> photo?</a></div>
                     </div>
                     <div class="medium-3 columns">
                          <dl>
@@ -196,11 +197,12 @@
                               <dt>Turnout (Last Election)</dt>
                               <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>
                               
-                              <dt>Divisions</dt>
+                              <dt><span data-tooltip aria-haspopup="true" class="has-tip" title="How many divisions make up the ward">Divisions</span></dt>
                               <dd><%= data['Divisions'] %></dd>
                               
-                              <dt>Committee Persons</dt>
-                              <dd><%= data['Committee People'] %> (<%= data['vacancies'] %> vacancies)</dd>
+                              <dt><span data-tooltip aria-haspopup="true" class="has-tip" title="Each division elects 2 committee persons">Committee Persons</span></dt>
+                              <dd><%= data['Committee People'] %> (<%= data['vacancies'] %>
+                              <span data-tooltip aria-haspopup="true" class="has-tip" title="Each division elects 2 committee persons">vacancies</span>)</dd>
                          </dl>          
                     </div>
                     <div class="medium-3 columns">

@@ -147,6 +147,9 @@ var DetailsView = Backbone.Marionette.LayoutView.extend({
                }
           }, this.model.toJSON());
      },
+     onRender: function() {
+          this.$el.foundation('tooltip', 'reflow');
+     },
      onShow: function() {
           this.mapView = new WardMapView({
                model: this.model
