@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="bower_components/leaflet.locatecontrol/dist/L.Control.Locate.min.css">
   <link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 
 <body>
@@ -33,16 +34,25 @@
      </section>
   </nav>
   
-  <div class="container">
-     <div class="row">
-          <div class="medium-12 columns">
-               <br>
-            <!--   <p>Lauren ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod porttitor nisl nec tincidunt. Duis lacinia mauris vel placerat ornare. Sed vitae consequat ante. Etiam sed enim in dolor eleifend molestie. Aliquam ultricies consectetur turpis vel pharetra. Nunc tellus turpis, imperdiet hendrerit felis eu, pellentesque convallis ex. Suspendisse nisi ipsum, vehicula nec velit nec, gravida gravida nisi. Proin rutrum convallis lacus, ut gravida elit pellentesque in. Ut accumsan justo suscipit tellus placerat interdum.</p> -->
-          </div>
-     </div>
-     <div class="row">
-          <div class="small-12 columns" id="main"></div>
-     </div>
+  <div class="container" id="main">
+  </div>
+  
+  
+  <div id="intro" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+     <h1>Philly Ward Leaders</h1>
+     
+     <p>Had you heard of all the candidates for judge last time you voted? How about City Council at-Large?
+     When you voted, a neighbor of yours likely handed you a ballot of candidates endorsed by your  
+     <span data-tooltip aria-haspopup="true" class="has-tip" title="A roughly neighborhood-sized geographical division of the city">ward</span>.
+     If you haven’t heard of the candidates, why not take your neighbor’s advice?</p>
+
+     <p>These endorsements are determined by Ward Leaders, and have a huge influence over who gets elected in 
+     Philadelphia. As powerful and few as they are (67), ward leaders tend to remain behind the scenes and most 
+     voters don’t even know who theirs is. This transparency web site aims to bring a level of spotlight to ward 
+     leaders that is more proportional to the power they wield.</p>
+     
+     <a href="#" class="button large" data-reveal-close="#intro">Get Started</a>
+     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
   </div>
   
   <div id="about" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
@@ -74,37 +84,56 @@
             <li><a href="https://www.opendataphilly.org/dataset/qualified-voter-registry">Qualified Voter Registry</a>, City of Philadelphia</li>
             <li>And lots of googling!</li>
        </ul>
+       <a class="close-reveal-modal" aria-label="Close">&#215;</a>
   </div>
   
   <script type="text/template" id="tmpl-top-leaders">
-     <div class="icon-bar three-up">
-          <a href="#" class="item dropdown" data-dropdown="sort-dropdown" aria-controls="sort-dropdown" aria-expanded="false">
-               <i class="fa fa-sort-amount-asc"></i>
-               <label>Sort</label>
-          </a>
-          <a href="#map" class="item">
-               <i class="fa fa-map-marker"></i>
-               <label>Map</label>
-          </a>
-          <a href="#" class="item">
-               <i class="fa fa-search"></i>
-               <label>Search</label>
-          </a>
+     <div class="row collapse">
+          <div class="medium-12 columns">
+               <div class="icon-bar three-up">
+                    <a href="#" class="item dropdown" data-dropdown="sort-dropdown" aria-controls="sort-dropdown" aria-expanded="false">
+                         <i class="fa fa-sort-amount-asc"></i>
+                         <label>Sort</label>
+                    </a>
+                    <a href="#map" class="item">
+                         <i class="fa fa-map-marker"></i>
+                         <label>Map</label>
+                    </a>
+                    <a href="#" class="item" data-toggle="#search">
+                         <i class="fa fa-search"></i>
+                         <label>Search</label>
+                    </a>
+               </div>
+               <ul id="sort-dropdown" class="f-dropdown" data-dropdown-content aria-hidden="true">
+                    <li><a href="#"<%= data.sortKey === ' class="voters"' ? ' active' : '' %> data-sort-key="voters">Sort by # of Voters</a></li>
+                    <li><a href="#"<%= data.sortKey === ' class="turnout"' ? ' active' : '' %> data-sort-key="turnout">Sort by Turnout %</a></li>
+                    <li><a href="#"<%= data.sortKey === ' class="vacancies"' ? ' active' : '' %> data-sort-key="vacancies">Sort by Vacancies</a></li>
+               </ul>
+               <form id="search"<%= ! data.searchQuery ? ' class="hide"' : ''%>>
+                    <div class="row collapse">
+                         <% if(data.searchQuery) { %>
+                         <div class="small-1 columns">
+                              <a href="#" class="button secondary prefix" data-clear><i class="fa fa-times"></i></a>
+                         </div>
+                         <div class="small-11 columns">
+                         <% } else { %>
+                         <div class="small-12 columns">
+                         <% } %>
+                              <input type="text" class="query" value="<%= data.searchQuery %>" placeholder="Search Name or Ward">
+                         </div>
+                    </div>
+               </form>
+          </div>
      </div>
-     <ul id="sort-dropdown" class="f-dropdown" data-dropdown-content aria-hidden="true">
-          <li><a href="#"<%= data.sortKey === ' class="voters"' ? ' active' : '' %> data-sort-key="voters">Sort by # of Voters</a></li>
-          <li><a href="#"<%= data.sortKey === ' class="turnout"' ? ' active' : '' %> data-sort-key="turnout">Sort by Turnout %</a></li>
-          <li><a href="#"<%= data.sortKey === ' class="vacancies"' ? ' active' : '' %> data-sort-key="vacancies">Sort by Vacancies</a></li>
-     </ul>
-     <form><input type="text" id="search" value="<%= data.searchQuery %>" placeholder="Search Name or Ward"></form>
-     <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3" id="leaders"></ul>
+     <div class="row">
+          <div class="medium-12 columns">
+               <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3" id="leaders"></ul>
+          </div>
+     </div>
   </script>
   
   <script type="text/template" id="tmpl-top-leaders-item">
      <figure class="card" data-ward="<%= data.Ward %>" style="background-image: url('<%= data.avatar %>'); background-position-x: <%= data['Photo Offset X'] || '50%' %>; background-position-y: <%= data['Photo Offset Y'] || '50%' %>;">
-          <!--<a class="avatar" role="button" aria-label="Thumbnail" href="<%= data.avatar %>"  data-ward="<%= data.Ward %>">
-               <img aria-hidden=true src="<%= data.avatar %>"/>
-          </a>-->
           <div class="border"></div>
           <figcaption class="name"><a href="#" data-ward="<%= data.Ward %>"><%= data.Name %></a></figcaption>
           <figcaption class="logo">
@@ -125,84 +154,81 @@
   </script>
   
   <script type="text/template" id="tmpl-details">
-     <h3><%= data.Name %>  -  <span class="dt"><%= data.wardOrdinal %> Ward</span></h3>
-     
      <div class="row">
-          <div class="large-2 columns">
-               <a class="th radius" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
-                    <img aria-hidden=true src="<%= data.avatar %>"/>
-               </a>
-               <dl>
-                   
-               </dl>     
-          </div>
-           <div class="large-3 columns">
-
-           <dl>
-                    <dt>Registered Voters</dt>
-                    <dd><%= data['Democrats Registered'].toLocaleString() %> democrats of <%= data['Total Registered'].toLocaleString() %> total</dd>
-                    
-                    <dt>Turnout (Last Election)</dt>
-                    <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>
-                    
-                    <dt>Divisions</dt>
-                    <dd><%= data['Divisions'] %></dd>
-                    
-                    <dt>Committee Persons</dt>
-                    <dd><%= data['Committee People'] %> (<%= data['vacancies'] %> vacancies)</dd>
-          </dl>          
-           </div>
-          <div class="large-3 columns">
-
-               <dl>
-                    <dt>Address</dt>
-                    <dd><%= data['Address'] %></dd>
-                    
-                    <dt>Phones</dt>
-                    <dd><%= data['Phones'] %></dd>
-                    
-                    <dt>Age</dt>
-                    <dd><%= new Date().getFullYear() - data['Year of Birth'] %></dd>
-                    
-                    <dt>Gender</dt>
-                    <dd><%= data['Gender'] === 'F' ? 'Female' : data['Gender'] === 'M' ? 'Male' : 'Unknown' %></dd>
-                    
-                    <dt>Last Voted</dt>
-                    <dd><%= data['Last Voted'] %></dd>
-                    
-                    <% if(data['Occupation']) { %>
-                    <dt>Occupation</dt>
-                    <dd><%= data['Occupation'] %></dd>
-                    <% } %>
-                    
-               </dl>
-          </div>
-          <div class="large-4 columns">
+          <div class="medium-12 columns">
+               <h3><%= data.Name %>  -  <span class="dt"><%= data.wardOrdinal %> Ward</span></h3>
                
-               <dl>
-                    <% if(data['Email']) { %>
-                    <dt>Email</dt>
-                    <dd><a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact"></a></dd>
-                    <% } %>
-                    
-                    <% if(data['LinkedIn']) { %>
-                    <dt>LinkedIn</dt>
-                    <dd><a href="<%= data['LinkedIn'] %>" target="_blank"><img src="img/linkedin.png" class="contact"></a></dd>
-                    <% } %>
-                    
-                    <% if(data['Facebook']) { %>
-                    <dt>Facebook</dt>
-                    <dd><a href="<%= data['Facebook'] %>" target="_blank"><img src="img/facebook.png" class="contact"></a></dd>
-                    <% } %>
-                    
-                    <% if(data['Twitter']) { %>
-                    <dt>Twitter</dt>
-                    <dd><a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a></dd>
-                    <% } %>
-               </dl>     
+               <div class="row">
+                    <div class="medium-2 columns">
+                         <a class="th radius" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
+                              <img aria-hidden=true src="<%= data.avatar %>"/>
+                         </a>
+                    </div>
+                    <div class="medium-3 columns">
+                         <dl>
+                              <dt>Registered Voters</dt>
+                              <dd><%= data['Democrats Registered'].toLocaleString() %> democrats of <%= data['Total Registered'].toLocaleString() %> total</dd>
+                              
+                              <dt>Turnout (Last Election)</dt>
+                              <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>
+                              
+                              <dt>Divisions</dt>
+                              <dd><%= data['Divisions'] %></dd>
+                              
+                              <dt>Committee Persons</dt>
+                              <dd><%= data['Committee People'] %> (<%= data['vacancies'] %> vacancies)</dd>
+                         </dl>          
+                    </div>
+                    <div class="medium-3 columns">
+                         <dl>
+                              <dt>Address</dt>
+                              <dd><%= data['Address'] %></dd>
+                              
+                              <dt>Phones</dt>
+                              <dd><%= data['Phones'] %></dd>
+                              
+                              <dt>Age</dt>
+                              <dd><%= new Date().getFullYear() - data['Year of Birth'] %></dd>
+                              
+                              <dt>Gender</dt>
+                              <dd><%= data['Gender'] === 'F' ? 'Female' : data['Gender'] === 'M' ? 'Male' : 'Unknown' %></dd>
+                              
+                              <dt>Last Voted</dt>
+                              <dd><%= data['Last Voted'] %></dd>
+                              
+                              <% if(data['Occupation']) { %>
+                              <dt>Occupation</dt>
+                              <dd><%= data['Occupation'] %></dd>
+                              <% } %>
+                         </dl>
+                    </div>
+                    <div class="medium-4 columns">
+                         <dl>
+                              <% if(data['Email']) { %>
+                              <dt>Email</dt>
+                              <dd><a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact"></a></dd>
+                              <% } %>
+                              
+                              <% if(data['LinkedIn']) { %>
+                              <dt>LinkedIn</dt>
+                              <dd><a href="<%= data['LinkedIn'] %>" target="_blank"><img src="img/linkedin.png" class="contact"></a></dd>
+                              <% } %>
+                              
+                              <% if(data['Facebook']) { %>
+                              <dt>Facebook</dt>
+                              <dd><a href="<%= data['Facebook'] %>" target="_blank"><img src="img/facebook.png" class="contact"></a></dd>
+                              <% } %>
+                              
+                              <% if(data['Twitter']) { %>
+                              <dt>Twitter</dt>
+                              <dd><a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a></dd>
+                              <% } %>
+                         </dl>     
+                    </div>
+               </div>
+               <div class="ward-map-container"></div>
           </div>
      </div>
-     <div class="ward-map-container"></div>
   </script>
   
   <script type="text/template" id="tmpl-city-map-popup">

@@ -88,7 +88,9 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
      },
      events: {
           'click [data-sort-key]': 'onSort',
-          'submit form': 'onSearch'
+          'click [data-toggle]': 'onToggle',
+          'submit form': 'onSearch',
+          'click [data-clear]': 'onSearch'
      },
      serializeData: function() {
           return $.extend({
@@ -104,9 +106,14 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
           e.preventDefault();
      },
      onSearch: function(e) {
-          this.searchQuery = this.$('#search').val();
+          this.searchQuery = $(e.currentTarget).attr('data-clear') !== undefined ? '' : this.$('.query').val();
           this.render();
           e.preventDefault();
+     },
+     onToggle: function(e) {
+          var selector = $(e.currentTarget).data('toggle');
+          $(selector).toggleClass('hide');
+          $('input', $(selector))[0].focus();
      },
      filter: function(child, index, collection) {
           return this.searchQuery ? (stringContains(this.searchQuery, child.get('Name')) || stringContains(this.searchQuery, child.get('Ward'))) : true;
@@ -268,6 +275,7 @@ var Router = Backbone.Router.extend({
           "map": "map"
      },
      initialize: function() {
+          $('#intro').foundation('reveal', 'open');
           this.divisionBoundaries = new Backbone.Model();
           this.divisionBoundaries.fetch({url: 'data/Political_Divisions.geojson'});
           
@@ -318,3 +326,8 @@ var router = new Router();
 Backbone.history.start();
 
 $(document).foundation();
+$(document).foundation('tooltip', 'reflow');
+$('[data-reveal-close]').click(function(e) {
+     var selector = $(e.currentTarget).data('reveal-close');
+     $(selector).foundation('reveal', 'close');
+})
