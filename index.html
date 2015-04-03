@@ -9,133 +9,202 @@
 
   <title>Philly Ward Leaders</title>
 
-  <link rel="stylesheet" href="bower_components/bower-foundation/css/foundation.min.css">
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+  <nav class="top-bar" data-topbar role="navigation">
+     <ul class="title-area">
+          <li class="name">
+             <h1><a href="#">Philly Ward Leaders</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+     </ul>
+     <section class="top-bar-section">
+          <ul class="right">
+               <li><a href="#" data-reveal-id="about">About</a></li>
+          </ul>
+     </section>
+  </nav>
+  
   <div class="container">
      <div class="row">
           <div class="medium-12 columns">
-               <h1>It is   
-                  <script type="text/javascript">
-                  var currentTime = new Date()
-                  var hours = currentTime.getHours()
-                  var minutes = currentTime.getMinutes()
-
-                  if(hours > 11){
-                    var am_pm = "PM, "
-                    } else {
-                      var am_pm = "AM, "
-                  }
-
-                  if (hours > 12){
-                    hours = hours - 12
-                  }
-
-                  if (minutes < 10){
-                  minutes = "0" + minutes
-                  }
-                  document.write(hours + ":" + minutes + " " + am_pm)
-                  </script>
-                  do you know who your Ward Leader is?
-               </h1>
-               <h2>(and why it matters)</h2>
-               <p>Lauren ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod porttitor nisl nec tincidunt. Duis lacinia mauris vel placerat ornare. Sed vitae consequat ante. Etiam sed enim in dolor eleifend molestie. Aliquam ultricies consectetur turpis vel pharetra. Nunc tellus turpis, imperdiet hendrerit felis eu, pellentesque convallis ex. Suspendisse nisi ipsum, vehicula nec velit nec, gravida gravida nisi. Proin rutrum convallis lacus, ut gravida elit pellentesque in. Ut accumsan justo suscipit tellus placerat interdum.</p>
           </div>
      </div>
      <div class="row">
-          <div class="small-4 columns" id="top-leaders"></div>
-          <div class="small-8 columns" id="details"></div>
+          <div class="small-12 columns" id="main"></div>
      </div>
   </div>
   
+  <div id="about" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+       <h1>About the Project</h1>
+       This will soon be written! Promise.
+       
+       <h2>Contributing</h2>
+       Did we get something wrong? Did you find something we missed? Have an idea for another data point?
+       Take a look at the <a href="https://docs.google.com/spreadsheets/d/1nkkFQUaxcGa0oDPWl1Vr1cknToIq8FxfJ7CILQrFgBM/edit?usp=sharing" target="_blank">source data</a>
+       and right-click on a cell to add a comment. Or add to the <a href="https://github.com/timwis/philly-ward-leaders" target="_blank">source code</a>!
+       
+       <h2>The Team</h2>
+       <ul>
+            <li>Dave Walk</li>
+            <li>Lauren Ancona</li>
+            <li>Morgan Riffer</li>
+            <li>Nicholas Stanley</li>
+            <li>Sophia Shapira</li>
+            <li>Tim Wisniewski</li>
+            <li>Zach Rendin</li>
+       </ul>
+       
+       <h2>Sources</h2>
+       <ul>
+            <li><a href="https://www.seventy.org/tools/ward-leaders-committeepeople/democratic-party">Ward Leader List</a>, Committee of Seventy</li>
+            <li><a href="https://www.opendataphilly.org/dataset/voter-turnout">Voter Turnout</a>, City of Philadelphia</li>
+            <li><a href="https://www.opendataphilly.org/dataset/elected-committeepeople">Elected Committee People</a>, City of Philadelphia</li>
+            <li><a href="https://www.opendataphilly.org/dataset/police-divisions">Division Boundaries</a>, City of Philadelphia</li>
+            <li><a href="https://www.opendataphilly.org/dataset/qualified-voter-registry">Qualified Voter Registry</a>, City of Philadelphia</li>
+            <li>And lots of googling!</li>
+       </ul>
+  </div>
+  
   <script type="text/template" id="tmpl-top-leaders">
-     <h2>Top Ward Leaders</h2>
-     <ul class="button-group round">
-          <li><a href="#" class="button active" data-filter="voters">By Voters</a></li>
-          <li><a href="#" class="button" data-filter="turnout">By Turnout</a></li>
-          <li><a href="#" class="button" data-filter="vacancies">By Vacancies</a></li>
+     <div class="icon-bar three-up">
+          <a href="#" class="item dropdown" data-dropdown="sort-dropdown" aria-controls="sort-dropdown" aria-expanded="false">
+               <i class="fa fa-sort-amount-asc"></i>
+               <label>Sort</label>
+          </a>
+          <a href="#map" class="item">
+               <i class="fa fa-map-marker"></i>
+               <label>Map</label>
+          </a>
+          <a href="#" class="item">
+               <i class="fa fa-search"></i>
+               <label>Search</label>
+          </a>
+     </div>
+     <ul id="sort-dropdown" class="f-dropdown" data-dropdown-content aria-hidden="true">
+          <li><a href="#"<%= data.sortKey === ' class="voters"' ? ' active' : '' %> data-sort-key="voters">By Voters</a></li>
+          <li><a href="#"<%= data.sortKey === ' class="turnout"' ? ' active' : '' %> data-sort-key="turnout">By Turnout</a></li>
+          <li><a href="#"<%= data.sortKey === ' class="vacancies"' ? ' active' : '' %> data-sort-key="vacancies">By Vacancies</a></li>
      </ul>
-     <div id="leaders"></div>
+     <form><input type="text" id="search" value="<%= data.searchQuery %>" placeholder="Search Name or Ward"></form>
+     <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3" id="leaders"></ul>
   </script>
   
   <script type="text/template" id="tmpl-top-leaders-item">
-     <div class="leader-card">
-          <a class="th radius thumbnail" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
+     <figure class="card" data-ward="<%= data.Ward %>" style="background-image: url('<%= data.avatar %>'); background-position-x: <%= data['Photo Offset X'] || '50%' %>; background-position-y: <%= data['Photo Offset Y'] || '50%' %>;">
+          <!--<a class="avatar" role="button" aria-label="Thumbnail" href="<%= data.avatar %>"  data-ward="<%= data.Ward %>">
                <img aria-hidden=true src="<%= data.avatar %>"/>
-          </a>
-          <h3><a href="#" data-ward="<%= data.Ward %>"><%= data.Name %></a></h3>
-          <h4><%= data.wardOrdinal %> Ward</h4>
-          <dl>
-               <dt>Total Registered</dt>
+          </a>-->
+          <div class="border"></div>
+          <figcaption class="name"><a href="#" data-ward="<%= data.Ward %>"><%= data.Name %></a></figcaption>
+          <figcaption class="logo">
+               <span class="ward-number"><%= data.wardOrdinal %></span>
+               <span class="ward-text">Ward</span>
+          </figcaption>
+          <!--<dl>
+               <dt>Registered Voters</dt>
                <dd><%= data['Total Registered'].toLocaleString() %></dd>
                
                <dt>Turnout (Last Election)</dt>
-               <dd><%= data['Turnout 2014 General'].toLocaleString() %></dd>
-               
-               <dt>Committee Person Vacancies</dt>
-               <dd><%= data['vacancies'].toLocaleString() %></dd>
-          </dl>
-     </div>
+               <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>
+                              
+               <dt>Committee Persons</dt>
+               <dd><%= data['Committee People'] %> (<%= data['vacancies'] %> vacancies)</dd>
+          </dl>-->
+     </figure>
   </script>
   
   <script type="text/template" id="tmpl-details">
-          <a class="th radius thumbnail" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
-               <img aria-hidden=true src="<%= data.avatar %>"/>
-          </a>
-          <h3><a href="#" data-ward="<%= data.Ward %>"><%= data.Name %></a></h3>
-          <h4><%= data.wardOrdinal %> Ward</h4>
-          <dl>
-               <dt>Total Registered</dt>
-               <dd><%= data['Total Registered'].toLocaleString() %></dd>
+     <a href="#" class="button back">Back</a>
+     <h3><%= data.Name %>  -  <span class="dt"><%= data.wardOrdinal %> Ward</span></h3>
+     
+     <div class="row">
+          <div class="large-2 columns">
+               <a class="th radius" role="button" aria-label="Thumbnail" href="<%= data.avatar %>">
+                    <img aria-hidden=true src="<%= data.avatar %>"/>
+               </a>
+               <dl>
+                   
+               </dl>     
+          </div>
+           <div class="large-3 columns">
+
+           <dl>
+                    <dt>Registered Voters</dt>
+                    <dd><%= data['Democrats Registered'].toLocaleString() %> democrats of <%= data['Total Registered'].toLocaleString() %> total</dd>
+                    
+                    <dt>Turnout (Last Election)</dt>
+                    <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>
+                    
+                    <dt>Divisions</dt>
+                    <dd><%= data['Divisions'] %></dd>
+                    
+                    <dt>Committee Persons</dt>
+                    <dd><%= data['Committee People'] %> (<%= data['vacancies'] %> vacancies)</dd>
+          </dl>          
+           </div>
+          <div class="large-3 columns">
+
+               <dl>
+                    <dt>Address</dt>
+                    <dd><%= data['Address'] %></dd>
+                    
+                    <dt>Phones</dt>
+                    <dd><%= data['Phones'] %></dd>
+                    
+                    <dt>Age</dt>
+                    <dd><%= new Date().getFullYear() - data['Year of Birth'] %></dd>
+                    
+                    <dt>Gender</dt>
+                    <dd><%= data['Gender'] === 'F' ? 'Female' : data['Gender'] === 'M' ? 'Male' : 'Unknown' %></dd>
+                    
+                    <dt>Last Voted</dt>
+                    <dd><%= data['Last Voted'] %></dd>
+                    
+                    <% if(data['Occupation']) { %>
+                    <dt>Occupation</dt>
+                    <dd><%= data['Occupation'] %></dd>
+                    <% } %>
+                    
+               </dl>
+          </div>
+          <div class="large-4 columns">
                
-               <dt>Turnout (Last Election)</dt>
-               <dd><%= data['Turnout 2014 General'].toLocaleString() %></dd>
-               
-               <dt>Committee Person Vacancies</dt>
-               <dd><%= data['vacancies'].toLocaleString() %></dd>
-               
-               <dt>Address</dt>
-               <dd><%= data['Address'] %></dd>
-               
-               <dt>Phones</dt>
-               <dd><%= data['Phones'] %></dd>
-               
-               <dt>Age</dt>
-               <dd><%= new Date().getFullYear() - data['Year of Birth'] %></dd>
-               
-               <dt>Gender</dt>
-               <dd><%= data['Gender'] === 'F' ? 'Female' : data['Gender'] === 'M' ? 'Male' : 'Unknown' %></dd>
-               
-               <dt>Last Voted</dt>
-               <dd><%= data['Last Voted'] %></dd>
-               
-               <% if(data['Occupation']) { %>
-               <dt>Occupation</dt>
-               <dd><%= data['Occupation'] %></dd>
-               <% } %>
-               
-               <% if(data['Email']) { %>
-               <dt>Email</dt>
-               <dd><a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact"></a></dd>
-               <% } %>
-               
-               <% if(data['LinkedIn']) { %>
-               <dt>LinkedIn</dt>
-               <dd><a href="<%= data['LinkedIn'] %>" target="_blank"><img src="img/linkedin.png" class="contact"></a></dd>
-               <% } %>
-               
-               <% if(data['Facebook']) { %>
-               <dt>Facebook</dt>
-               <dd><a href="<%= data['Facebook'] %>" target="_blank"><img src="img/facebook.png" class="contact"></a></dd>
-               <% } %>
-               
-               <% if(data['Twitter']) { %>
-               <dt>Twitter</dt>
-               <dd><a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a></dd>
-               <% } %>
-          </dl>
+               <dl>
+                    <% if(data['Email']) { %>
+                    <dt>Email</dt>
+                    <dd><a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact"></a></dd>
+                    <% } %>
+                    
+                    <% if(data['LinkedIn']) { %>
+                    <dt>LinkedIn</dt>
+                    <dd><a href="<%= data['LinkedIn'] %>" target="_blank"><img src="img/linkedin.png" class="contact"></a></dd>
+                    <% } %>
+                    
+                    <% if(data['Facebook']) { %>
+                    <dt>Facebook</dt>
+                    <dd><a href="<%= data['Facebook'] %>" target="_blank"><img src="img/facebook.png" class="contact"></a></dd>
+                    <% } %>
+                    
+                    <% if(data['Twitter']) { %>
+                    <dt>Twitter</dt>
+                    <dd><a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a></dd>
+                    <% } %>
+               </dl>     
+          </div>
+     </div>
+     <div class="ward-map-container"></div>
+  </script>
+  
+  <script type="text/template" id="tmpl-citymap-popup">
+       <%= data.wardOrdinal %> Ward<br>
+       <a href="#<%= data.Ward %>/<%= data.slug %>"><%= data.Name %></a>
   </script>
 
   <!-- Initialize JS Plugins -->
@@ -145,6 +214,9 @@
   <script src="bower_components/marionette/lib/backbone.marionette.min.js"></script>
   <script src="bower_components/tabletop/src/backbone.tabletopSync.js"></script>
   <script src="bower_components/tabletop/src/tabletop.js"></script>
+  <script src="bower_components/leaflet/dist/leaflet.js"></script>
+  <script src="bower_components/nprogress/nprogress.js"></script>
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

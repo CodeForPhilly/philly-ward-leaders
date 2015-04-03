@@ -1,3 +1,174 @@
-.thumbnail img { height: 75px; }
-.button.active { background-color: #56CFF4; }
+@import url("//fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700");
+@import url("//fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Radley");
+
+/*.thumbnail img { height: 150px; }*/
+.button.active { background-color: #007095; }
 .contact { width: 60px; }
+.ward-map-container, .ward-map { width: 100%; height: 350px; }
+#nprogress .bar, #nprogress .spinner { margin-top: 45px; }
+/*.leader-card.panel {padding: 5px;}*/
+dt {
+    font-family: Montserrat;
+    font-size: 4!important;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.dt {
+    font-family: Montserrat;
+    font-size: 5!important;
+    color: #3661A2;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+dl {
+    font-family: 'Playfair Display';
+    font-size: 18;
+    font-weight: 400;
+}
+.ward-ordinal {
+    font-size-adjust: 80%;
+}
+/*thumbnail {
+    padding: 10px 0px 10px;
+}*/
+.top-bar, .top-bar-section ul, .top-bar-section li a:not(.button) { background-color: #2284a1 !important; }
+
+/* Top bar active/hover */
+.top-bar-section ul li.active > a,
+.top-bar-section li:hover a,
+.top-bar-section ul li:hover > a,
+.top-bar-section ul.dropdown li a:hover:not(.button),
+.top-bar.expanded .title-area,
+.top-bar-section ul.dropdown {
+     background-color: #2ba6cb;
+}
+
+/* Decrease button group padding on mobile */
+@media only screen and (max-width: 40em) {
+     .button-group li a {
+          padding: 15px;
+          margin: 0;
+          font-size: 80%;
+     }
+}
+
+/* Override top bar widths to support mobile */
+.top-bar .name h1 a { width: auto; }
+
+/* Rounded avatars */
+.card {
+     width: 80%;
+     height: 300px;
+     float: left;
+     margin-top: 1em;
+     margin-right: 1em;
+     position: relative;
+     overflow: hidden;
+     border: 5px #2284a1 solid;
+     background-size: cover;
+     background-position: 50%;
+     cursor: pointer;
+     
+     -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+     -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+/* Photo border */
+.card .border {
+     width: 100%;
+     height: 100%;
+     border: 1px black solid;
+}
+.card:before, .card:after {
+     content: '';
+}
+/* Top-left corner */
+.card:before {
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 8;
+     border-top: 45px solid #2284a1;
+     border-right: 45px solid transparent;
+}
+/* Top-left corner inside border */
+.card:after {
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 5;
+     border-top: 46px solid black;
+     border-right: 46px solid transparent;
+}
+/* Photo */
+/*.card img {
+     min-width: 100%;
+     max-width: none;
+     height: 100%;
+     border: 1px black solid;
+}*/
+/* Name */
+.card .name {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     background-color: #2284a1;
+     border-left: 1px black solid;
+     border-top: 1px black solid;
+     padding-left: 6px;
+}
+.card .name a {
+     color: #fff;
+}
+.card .name:before, .card .name:after {
+     content: '';
+}
+/* Bottom-right corner */
+.card .name:before {
+     position: absolute;
+     bottom: 25px;
+     right: -2px;
+     z-index: 18;
+     border-bottom: 15px solid #2284a1;
+     border-left: 15px solid transparent;
+}
+/* Bottom-right corner inside border */
+.card .name:after {
+     position: absolute;
+     bottom: 25px;
+     right: -2px;
+     z-index: 15;
+     border-bottom: 17px solid black;
+     border-left: 17px solid transparent;
+}
+/* Logo/Ward */
+.card .logo {
+     text-align: center;
+     position: absolute;
+     z-index: 15;
+     top: 3px;
+     left: 3px;
+     border: 1px black solid;
+     background-color: #fff;
+     padding: 5px;
+     padding-top: 7px;
+     
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     border-radius: 50%;
+     
+     /*-webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+     box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);*/
+}
+.card .logo .ward-number {
+     font-weight: bold;
+     color: #2284a1;
+     display: block;
+     line-height: 0.2;
+     padding-top: 7px;
+}
+.card .logo .ward-text {
+     color: #2284a1;
+     font-size: 80%;
+}
