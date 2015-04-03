@@ -179,10 +179,10 @@ var WardMapView = Backbone.Marionette.ItemView.extend({
 
 var CityMapView = Backbone.Marionette.ItemView.extend({
      template: false,
-     className: 'ward-map',
+     className: 'city-map',
      initialize: function() {
           router.wardBoundaries.on('sync', this.addBoundaries, this);
-          this.popupTemplate = _.template($('#tmpl-citymap-popup').html());
+          this.popupTemplate = _.template($('#tmpl-city-map-popup').html());
      },
      onShow: function() {
           this.map = L.map(this.el).setView([39.9523893, -75.1636291], 10);
@@ -203,10 +203,11 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
                boundaries = L.geoJson(router.wardBoundaries.toJSON(), {
                onEachFeature: function(feature, layer) {
                     if(feature.properties) {
-                         var model = self.collection.findWhere({Ward: feature.properties.WARD_NUM});
+                         layer.bindPopup(getOrdinal(feature.properties.WARD_NUM) + ' Ward');
+                         /*var model = self.collection.findWhere({Ward: feature.properties.WARD_NUM});
                          if(model) {
                               layer.bindPopup(self.popupTemplate(model.toJSON()));
-                         }
+                         }*/
                     }
                }
           }).addTo(this.map);

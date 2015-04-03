@@ -55,6 +55,16 @@ dl {
 /* Override top bar widths to support mobile */
 .top-bar .name h1 a { width: auto; }
 
+/* Map full height */
+#main, .city-map {
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+}
+#main { top: 45px; }
+
 /* Rounded avatars */
 .card {
      width: 80%;
