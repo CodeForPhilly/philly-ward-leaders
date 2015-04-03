@@ -90,9 +90,9 @@
           </a>
      </div>
      <ul id="sort-dropdown" class="f-dropdown" data-dropdown-content aria-hidden="true">
-          <li><a href="#"<%= data.sortKey === ' class="voters"' ? ' active' : '' %> data-sort-key="voters">By Voters</a></li>
-          <li><a href="#"<%= data.sortKey === ' class="turnout"' ? ' active' : '' %> data-sort-key="turnout">By Turnout</a></li>
-          <li><a href="#"<%= data.sortKey === ' class="vacancies"' ? ' active' : '' %> data-sort-key="vacancies">By Vacancies</a></li>
+          <li><a href="#"<%= data.sortKey === ' class="voters"' ? ' active' : '' %> data-sort-key="voters">Sort by # of Voters</a></li>
+          <li><a href="#"<%= data.sortKey === ' class="turnout"' ? ' active' : '' %> data-sort-key="turnout">Sort by Turnout %</a></li>
+          <li><a href="#"<%= data.sortKey === ' class="vacancies"' ? ' active' : '' %> data-sort-key="vacancies">Sort by Vacancies</a></li>
      </ul>
      <form><input type="text" id="search" value="<%= data.searchQuery %>" placeholder="Search Name or Ward"></form>
      <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3" id="leaders"></ul>

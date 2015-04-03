@@ -44,7 +44,7 @@ var comparators = {
           return -item.get('Total Registered');
      },
      turnout: function(item) {
-          return -item.get('Turnout 2014 General');
+          return -item.get('turnoutPercentage');
      },
      vacancies: function(item) {
           return -item.get('vacancies');
