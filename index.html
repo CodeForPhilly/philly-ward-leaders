@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="bower_components/L.GeoSearch/src/css/l.geosearch.css">
+  <link rel="stylesheet" href="bower_components/leaflet.locatecontrol/dist/L.Control.Locate.min.css">
   <link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -205,8 +207,9 @@
   </script>
   
   <script type="text/template" id="tmpl-city-map-popup">
-       <%= data.wardOrdinal %> Ward<br>
-       <a href="#<%= data.Ward %>/<%= data.slug %>"><%= data.Name %></a>
+     <header><%= data.wardOrdinal %> Ward</header>
+     <section><%= data.Name %></section>
+     <a href="#<%= data.Ward %>/<%= data.slug %>" class="button tiny">Details</a>
   </script>
 
   <!-- Initialize JS Plugins -->
@@ -217,6 +220,10 @@
   <script src="bower_components/tabletop/src/backbone.tabletopSync.js"></script>
   <script src="bower_components/tabletop/src/tabletop.js"></script>
   <script src="bower_components/leaflet/dist/leaflet.js"></script>
+  <script src="bower_components/L.GeoSearch/src/js/l.control.geosearch.js"></script>
+  <script src="bower_components/L.GeoSearch/src/js/l.geosearch.provider.google.js"></script>
+  <script src="bower_components/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+  <script src="bower_components/leaflet-pip/leaflet-pip.min.js"></script>
   <script src="bower_components/nprogress/nprogress.js"></script>
   <script src="bower_components/foundation/js/foundation.min.js"></script>
   <script src="js/main.js"></script>

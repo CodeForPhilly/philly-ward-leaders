@@ -105,7 +105,6 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
      },
      onSearch: function(e) {
           this.searchQuery = this.$('#search').val();
-          console.log('Searching', this.searchQuery);
           this.render();
           e.preventDefault();
      },
@@ -182,6 +181,7 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
      className: 'city-map',
      initialize: function() {
           router.wardBoundaries.on('sync', this.addBoundaries, this);
+          this.collection.on('sync', this.addBoundaries, this);
           this.popupTemplate = _.template($('#tmpl-city-map-popup').html());
      },
      onShow: function() {
@@ -194,24 +194,41 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
                ext: 'png'
           }).addTo(this.map);
           
-          if( ! _.isEmpty(router.wardBoundaries.attributes)) {
-               this.addBoundaries();
-          }
-     },
-     addBoundaries: function() {
-          var self = this,
-               boundaries = L.geoJson(router.wardBoundaries.toJSON(), {
-               onEachFeature: function(feature, layer) {
-                    if(feature.properties) {
-                         layer.bindPopup(getOrdinal(feature.properties.WARD_NUM) + ' Ward');
-                         /*var model = self.collection.findWhere({Ward: feature.properties.WARD_NUM});
-                         if(model) {
-                              layer.bindPopup(self.popupTemplate(model.toJSON()));
-                         }*/
-                    }
+          // Search geocoder
+          new L.Control.GeoSearch({
+               provider: new L.GeoSearch.Provider.Google(),
+               position: 'topcenter',
+               showMarker: true
+          }).addTo(this.map);
+          
+          // GPS Locator
+          L.control.locate({
+               icon: 'fa fa-location-arrow',
+               metric: false,
+               locateOptions: {
+                    maxZoom: 16
                }
           }).addTo(this.map);
-          this.map.fitBounds(boundaries.getBounds());
+          
+          this.addBoundaries();
+     },
+     addBoundaries: function() {
+          // If both ward boundaries and ward leaders have been fetched
+          if( ! _.isEmpty(router.wardBoundaries.attributes) && this.collection.length) {
+               var self = this;
+               window.boundaries = L.geoJson(router.wardBoundaries.toJSON(), {
+                    onEachFeature: function(feature, layer) {
+                         if(feature.properties) {
+                              //layer.bindPopup(getOrdinal(feature.properties.WARD_NUM) + ' Ward');
+                              var model = self.collection.findWhere({Ward: feature.properties.WARD_NUM});
+                              if(model) {
+                                   layer.bindPopup(self.popupTemplate(model.toJSON()));
+                              }
+                         }
+                    }
+               }).addTo(this.map);
+               this.map.fitBounds(window.boundaries.getBounds());
+          }
      }
 });
 
@@ -219,6 +236,29 @@ var getOrdinal = function(n) {
      var s=["th","st","nd","rd"],
           v=n%100;
      return n+(s[(v-20)%10]||s[v]||s[0]);
+};
+
+// Override geocode functionality to append city
+var geosearchCopy = L.Control.GeoSearch.prototype.geosearch;
+L.Control.GeoSearch.prototype.geosearch = function(qry) {
+     geosearchCopy.call(this, qry + ', Philadelphia, PA');
+};
+
+// Override show location to show which ward
+var showLocationCopy = L.Control.GeoSearch.prototype._showLocation;
+L.Control.GeoSearch.prototype._showLocation = function(location) {
+     showLocationCopy.call(this, location);
+     var polygon = leafletPip.pointInLayer([location.X, location.Y], window.boundaries),
+          popupTemplate = _.template($('#tmpl-city-map-popup').html()); // TODO: Add address to marker
+     this._positionMarker.bindPopup(polygon[0]._popup).openPopup();
+};
+
+var drawMarkerCopy = L.Control.Locate.prototype.drawMarker;
+L.Control.Locate.prototype.drawMarker = function(map) {
+     drawMarkerCopy.call(this, map);
+     var polygon = leafletPip.pointInLayer(this._event.latlng, window.boundaries),
+          popupTemplate = _.template($('#tmpl-city-map-popup').html()); // TODO: Add address to marker
+     this._marker.bindPopup(polygon[0]._popup).openPopup();
 };
 
 var Router = Backbone.Router.extend({

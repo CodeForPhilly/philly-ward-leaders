@@ -65,9 +65,28 @@ dl {
 }
 #main { top: 45px; }
 
+/* Leaflet popup */
+.leaflet-popup-content {
+     text-align: center;
+}
+.leaflet-popup-content header {
+     font-weight: bold;
+     font-size: 120%;
+}
+.leaflet-popup-content .button {
+     color: #fff;
+     margin-top: 5px;
+     margin-bottom: 0;
+}
+
+/* Leaflet address search */
+.leaflet-container .leaflet-control-geosearch input {
+     background-color: rgba(255, 255, 255, 0.90);
+}
+
 /* Rounded avatars */
 .card {
-     width: 80%;
+     width: 75%;
      height: 300px;
      float: left;
      margin-top: 1em;

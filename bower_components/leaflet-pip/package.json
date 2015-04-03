@@ -1,0 +1,35 @@
+{
+  "name": "leaflet-pip",
+  "version": "0.1.0",
+  "description": "point in polygon searches for leaflet",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify test/*.js | tape-run",
+    "build": "browserify -s leafletPip index.js > leaflet-pip.js && uglifyjs leaflet-pip.js -c -m > leaflet-pip.min.js"
+  },
+  "keywords": [
+    "leaflet",
+    "plugin",
+    "point",
+    "in",
+    "polygon",
+    "geo",
+    "geographical"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mapbox/leaflet-pip.git"
+  },
+  "devDependencies": {
+    "tape": "~2.13.3",
+    "tape-run": "~0.1.1",
+    "leaflet": "~0.7.3",
+    "phantomjs": "~1.9.7-9",
+    "browserify": "~4.1.11"
+  },
+  "author": "Tom MacWright <tom@macwright.org>",
+  "license": "ISC",
+  "dependencies": {
+    "geojson-utils": "~1.1.0"
+  }
+}

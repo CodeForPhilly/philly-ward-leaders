@@ -18,7 +18,10 @@
     "marionette": "~2.4.1",
     "leaflet-ajax": "~1.1.0",
     "nprogress": "~0.1.6",
-    "leaflet": "~0.7.3"
+    "leaflet": "~0.7.3",
+    "leaflet-pip": "~0.1.0",
+    "leaflet.locatecontrol": "~0.40.0",
+    "L.GeoSearch": "timwis/L.GeoSearch"
   },
   "resolutions": {
     "underscore": "~1.8.2"
