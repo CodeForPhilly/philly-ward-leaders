@@ -31,6 +31,7 @@
      <section class="top-bar-section">
           <ul class="right">
                <li><a href="#" data-reveal-id="about">About</a></li>
+               <li><a href="http://form.jotform.us/form/50926595605160" target="_blank" id="feedback-link">Feedback</a></li>
           </ul>
      </section>
   </nav>
@@ -103,6 +104,11 @@
             <li>And lots of googling!</li>
        </ul>
        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+  </div>
+  
+  <div id="feedback" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+     <script type="text/javascript" src="http://form.jotform.us/jsform/50926595605160"></script>
+     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
   </div>
   
   <script type="text/template" id="tmpl-top-leaders">
@@ -200,50 +206,86 @@
                     <div class="medium-3 columns">
                          <dl>
                               <dt>Address</dt>
-                              <dd><%= data['Address'] %></dd>
+                              <dd>
+                                   <% if(data['Address']) { %>
+                                   <%= data['Address'] %>
+                                   <% } else { %>
+                                   <span class="unknown">Unknown</span>
+                                   <span class="error-link"><a href="<%= data.errorLink('Address') %>" target="_blank">Know it?</a></span>
+                                   <% } %>
+                              </dd>
                               
-                              <dt>Phones</dt>
-                              <dd><%= data['Phones'] %></dd>
+                              <dt>Phone</dt>
+                              <dd>
+                                   <% if(data['Phones']) { %>
+                                   <%= data['Phones'] %>
+                                   <% } else { %>
+                                   <span class="unknown">Unknown</span>
+                                   <span class="error-link"><a href="<%= data.errorLink('Phone') %>" target="_blank">Know it?</a></span>
+                                   <% } %>
+                              </dd>
                               
                               <dt>Age</dt>
                               <dd><%= new Date().getFullYear() - data['Year of Birth'] %></dd>
                               
                               <dt>Gender</dt>
-                              <dd><%= data['Gender'] === 'F' ? 'Female' : data['Gender'] === 'M' ? 'Male' : 'Unknown' %></dd>
+                              <dd>
+                                   <% if(data['Gender']) { %>
+                                   <%= data['Gender'] === 'F' ? 'Female' : data['Gender'] === 'M' ? 'Male' : 'Unknown' %>
+                                   <% } else { %>
+                                   <span class="unknown">Unknown</span>
+                                   <span class="error-link"><a href="<%= data.errorLink('Gender') %>" target="_blank">Know it?</a></span>
+                                   <% } %>
+                              </dd>
                               
+                              <% if(data['Last Votes']) { %>
                               <dt>Last Voted</dt>
                               <dd><%= data['Last Voted'] %></dd>
-                              
-                              <% if(data['Occupation']) { %>
-                              <dt>Occupation</dt>
-                              <dd><%= data['Occupation'] %></dd>
                               <% } %>
+                              
+                              <dt>Occupation</dt>
+                              <dd>
+                                   <% if(data['Occupation']) { %>
+                                   <%= data['Occupation'] %>
+                                   <% } else { %>
+                                   <span class="unknown">Unknown</span>
+                                   <span class="error-link"><a href="<%= data.errorLink('Occupation') %>" target="_blank">Know it?</a></span>
+                                   <% } %>
+                              </dd>
                          </dl>
                     </div>
                     <div class="medium-4 columns">
                          <dl>
-                              <% if(data['Email']) { %>
                               <dt>Email</dt>
-                              <dd><a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact"></a></dd>
-                              <% } %>
+                              <dd>
+                                   <% if(data['Email']) { %>
+                                   <a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact"></a>
+                                   <% } else { %>
+                                   <span class="unknown">Unknown</span>
+                                   <span class="error-link"><a href="<%= data.errorLink('Email') %>" target="_blank">Know it?</a></span>
+                                   <% } %>
+                              </dd>
                               
-                              <% if(data['LinkedIn']) { %>
-                              <dt>LinkedIn</dt>
-                              <dd><a href="<%= data['LinkedIn'] %>" target="_blank"><img src="img/linkedin.png" class="contact"></a></dd>
-                              <% } %>
-                              
-                              <% if(data['Facebook']) { %>
-                              <dt>Facebook</dt>
-                              <dd><a href="<%= data['Facebook'] %>" target="_blank"><img src="img/facebook.png" class="contact"></a></dd>
-                              <% } %>
-                              
-                              <% if(data['Twitter']) { %>
-                              <dt>Twitter</dt>
-                              <dd><a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a></dd>
-                              <% } %>
+                              <dt>Social Media</dt>
+                              <dd>
+                                   <% if(data['LinkedIn']) { %>
+                                   <a href="<%= data['LinkedIn'] %>" target="_blank"><img src="img/linkedin.png" class="contact"></a>
+                                   <% } %>
+                                   
+                                   <% if(data['Facebook']) { %>
+                                   <a href="<%= data['Facebook'] %>" target="_blank"><img src="img/facebook.png" class="contact"></a>
+                                   <% } %>
+                                   
+                                   <% if(data['Twitter']) { %>
+                                   <a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a>
+                                   <% } %>
+                                   
+                                   <div class="error-link"><a href="<%= data.errorLink('Social Media') %>" target="_blank">Know a link?</a></div>
+                              </dd>
                          </dl>     
                     </div>
                </div>
+               <div class="error-link-bottom">Is this information incorrect? <a href="<%= data.errorLink() %>" target="_blank">Let us know.</a></div>
                <div class="ward-map-container"></div>
           </div>
      </div>

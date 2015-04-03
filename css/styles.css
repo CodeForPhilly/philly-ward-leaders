@@ -86,7 +86,18 @@ dl {
      background-color: rgba(255, 255, 255, 0.90);
 }
 
-/* Search form */
+/* Error links */
+.unknown { 
+     font-size: 80%;
+     color: #bababa;
+     text-transform: uppercase;
+}
+.error-link { font-size: 80%; }
+.error-link-bottom {
+     font-size: 80%;
+     text-align: center;
+     color: #a0a0a0;
+}
 
 /* Rounded avatars */
 .card {

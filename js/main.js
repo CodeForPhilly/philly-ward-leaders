@@ -1,5 +1,8 @@
-var spreadsheet = 'https://docs.google.com/spreadsheets/d/1nkkFQUaxcGa0oDPWl1Vr1cknToIq8FxfJ7CILQrFgBM/pubhtml',
-     storage = Tabletop.init( { key: spreadsheet, wait: true } );
+var config = {
+     spreadsheet: 'https://docs.google.com/spreadsheets/d/1nkkFQUaxcGa0oDPWl1Vr1cknToIq8FxfJ7CILQrFgBM/pubhtml',
+     feedbackUrl: $('#feedback-link').attr('href')
+},
+     storage = Tabletop.init( { key: config.spreadsheet, wait: true } );
 _.templateSettings.variable = 'data';
      
 var layout = new Marionette.LayoutView({
@@ -98,6 +101,9 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
                searchQuery: this.searchQuery
           }, this.collection.toJSON());
      },
+     onRender: function() {
+          this.$el.foundation('dropdown', 'reflow');
+     },
      onSort: function(e) {
           // Resort collection
           this.collection.sortKey = $(e.currentTarget).data('sort-key');
@@ -128,6 +134,18 @@ var DetailsView = Backbone.Marionette.LayoutView.extend({
      template: '#tmpl-details',
      regions: {
           'map': '.ward-map-container'
+     },
+     serializeData: function() {
+          return $.extend({
+               errorLink: function(field) {
+                    var params = {
+                         thePage: Backbone.history.getFragment(),
+                         whatHappened: 'I found a content or data error'
+                    };
+                    if(field) params.tellUs = field + ' should be: ';
+                    return config.feedbackUrl + '?' + $.param(params).replace(/\+/g, '%20');
+               }
+          }, this.model.toJSON());
      },
      onShow: function() {
           this.mapView = new WardMapView({
@@ -330,4 +348,5 @@ $(document).foundation('tooltip', 'reflow');
 $('[data-reveal-close]').click(function(e) {
      var selector = $(e.currentTarget).data('reveal-close');
      $(selector).foundation('reveal', 'close');
+     e.preventDefault();
 })
