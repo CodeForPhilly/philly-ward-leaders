@@ -68,11 +68,9 @@ var WardLeaders = Backbone.Collection.extend({
 var TopLeadersItemView = Backbone.Marionette.ItemView.extend({
      tagName: 'li',
      template: '#tmpl-top-leaders-item',
+     className: 'flip-container',
      initialize: function() {
           _.bindAll(this, 'onFlip');
-     },
-     events: {
-          'click figure': 'onFlip'
      },
      onFlip: function(e) {
           this.$('.stats').toggle();
@@ -97,6 +95,7 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
           'click [data-toggle]': 'onToggle',
           'submit form': 'onSearch',
           'click [data-clear]': 'onSearch'
+          //'touchstart .flip-container': 'onFlip'
      },
      serializeData: function() {
           return $.extend({
@@ -123,6 +122,9 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
           var selector = $(e.currentTarget).data('toggle');
           $(selector).toggleClass('hide');
           $('input', $(selector))[0].focus();
+     },
+     onFlip: function(e) {
+          $(e.currentTarget).toggleClass('hover');
      },
      filter: function(child, index, collection) {
           return this.searchQuery ? (stringContains(this.searchQuery, child.get('Name')) || stringContains(this.searchQuery, child.get('Ward'))) : true;
