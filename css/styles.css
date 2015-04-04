@@ -119,6 +119,7 @@ dt {
      width: 100%;
      height: 100%;
      border: 1px black solid;
+     z-index: 20;
 }
 .card:before, .card:after {
      content: '';
@@ -213,3 +214,27 @@ dt {
      color: #2284a1;
      font-size: 80%;
 }
+/* Stats */
+.card .stats {
+     display: none;
+     position: absolute;
+     top: 1px;
+     bottom: 1px;
+     left: 1px;
+     right: 1px;
+     background: #CDD8DB;
+     z-index: 19;
+     padding: 10px;
+}
+.card .stats h3 {
+     font-size: 120%;
+}
+.card .stats h3 .ward-ordinal {
+     display: block;
+}
+.card .stats dt, .card .stats dd {
+     margin-bottom: 0;
+     float: left;
+}
+.card .stats dt { width: 60%; }
+.card .stats .button { margin-top: 15px; }

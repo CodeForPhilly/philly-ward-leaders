@@ -69,17 +69,20 @@ var TopLeadersItemView = Backbone.Marionette.ItemView.extend({
      tagName: 'li',
      template: '#tmpl-top-leaders-item',
      initialize: function() {
-          _.bindAll(this, 'onDetails');
+          _.bindAll(this, 'onFlip');
      },
      events: {
-          'click [data-ward]': 'onDetails'
+          'click figure': 'onFlip'
      },
-     onDetails: function(e) {
+     onFlip: function(e) {
+          this.$('.stats').toggle();
+     }
+     /*onDetails: function(e) {
           var ward = this.model.get('Ward'),
                slug = this.model.get('slug');
           router.navigate(ward + '/' + slug, {trigger: true});
           e.preventDefault();
-     }
+     }*/
 });
 
 var TopLeadersView = Backbone.Marionette.CompositeView.extend({

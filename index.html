@@ -157,23 +157,27 @@
   </script>
   
   <script type="text/template" id="tmpl-top-leaders-item">
-     <figure class="card" data-ward="<%= data.Ward %>" style="background-image: url('<%= data.avatar %>'); background-position-x: <%= data['Photo Offset X'] || '50%' %>; background-position-y: <%= data['Photo Offset Y'] || '50%' %>;">
+     <figure class="card" style="background-image: url('<%= data.avatar %>'); background-position-x: <%= data['Photo Offset X'] || '50%' %>; background-position-y: <%= data['Photo Offset Y'] || '50%' %>;">
           <div class="border"></div>
           <figcaption class="name"><a href="#" data-ward="<%= data.Ward %>"><%= data.Name %></a></figcaption>
           <figcaption class="logo">
                <span class="ward-number"><%= data.wardOrdinal %></span>
                <span class="ward-text">Ward</span>
           </figcaption>
-          <!--<dl>
-               <dt>Registered Voters</dt>
-               <dd><%= data['Total Registered'].toLocaleString() %></dd>
-               
-               <dt>Turnout (Last Election)</dt>
-               <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>
-                              
-               <dt>Committee Persons</dt>
-               <dd><%= data['Committee People'] %> (<%= data['vacancies'] %> vacancies)</dd>
-          </dl>-->
+          <figcaption class="stats">
+               <h3><%= data.Name %> <span class="ward-ordinal"><%= data.wardOrdinal %> Ward</span></h3>
+               <dl>
+                    <dt>Voters</dt>
+                    <dd><%= data['Total Registered'].toLocaleString() %></dd>
+                    
+                    <dt>Turnout</dt>
+                    <dd><%= data['turnoutPercentage'] %>%</dd>
+                                   
+                    <dt>Vacancies</dt>
+                    <dd><%= data['vacancies'] %></dd>
+               </dl>
+               <a href="#<%= data['Ward'] %>/<%= data['slug'] %>" class="button expand">Details</a>
+          </figcaption>
      </figure>
   </script>
   
