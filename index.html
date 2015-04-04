@@ -180,7 +180,7 @@
   <script type="text/template" id="tmpl-details">
      <div class="row">
           <div class="medium-12 columns">
-               <h3><%= data.Name %>  -  <span class="dt"><%= data.wardOrdinal %> Ward</span></h3>
+               <h3><%= data.Name %> <span class="ward-ordinal"><%= data.wardOrdinal %> Ward</span></h3>
                
                <div class="row">
                     <div class="medium-2 columns">
@@ -203,7 +203,7 @@
                               <dt><span data-tooltip aria-haspopup="true" class="has-tip" title="Each division elects 2 committee persons">Committee Persons</span></dt>
                               <dd><%= data['Committee People'] %> (<%= data['vacancies'] %>
                               <span data-tooltip aria-haspopup="true" class="has-tip" title="Each division elects 2 committee persons">vacancies</span>)</dd>
-                         </dl>          
+                         </dl>
                     </div>
                     <div class="medium-3 columns">
                          <dl>
@@ -261,7 +261,7 @@
                               <dt>Email</dt>
                               <dd>
                                    <% if(data['Email']) { %>
-                                   <a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact"></a>
+                                   <a href="mailto:<%= data['Email'] %>" target="_blank"><img src="img/email.png" class="contact-icon"></a>
                                    <% } else { %>
                                    <span class="unknown">Unknown</span>
                                    <span class="error-link"><a href="<%= data.errorLink('Email') %>" target="_blank">Know it?</a></span>
@@ -271,15 +271,15 @@
                               <dt>Social Media</dt>
                               <dd>
                                    <% if(data['LinkedIn']) { %>
-                                   <a href="<%= data['LinkedIn'] %>" target="_blank"><img src="img/linkedin.png" class="contact"></a>
+                                   <a href="<%= data['LinkedIn'] %>" target="_blank"><img src="img/linkedin.png" class="contact-icon"></a>
                                    <% } %>
                                    
                                    <% if(data['Facebook']) { %>
-                                   <a href="<%= data['Facebook'] %>" target="_blank"><img src="img/facebook.png" class="contact"></a>
+                                   <a href="<%= data['Facebook'] %>" target="_blank"><img src="img/facebook.png" class="contact-icon"></a>
                                    <% } %>
                                    
                                    <% if(data['Twitter']) { %>
-                                   <a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact"></a>
+                                   <a href="<%= data['Twitter'] %>" target="_blank"><img src="img/twitter.png" class="contact-icon"></a>
                                    <% } %>
                                    
                                    <div class="error-link"><a href="<%= data.errorLink('Social Media') %>" target="_blank">Know a link?</a></div>
