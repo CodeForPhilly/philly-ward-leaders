@@ -21,7 +21,8 @@
     "leaflet": "~0.7.3",
     "leaflet-pip": "~0.1.0",
     "leaflet.locatecontrol": "~0.40.0",
-    "L.GeoSearch": "timwis/L.GeoSearch"
+    "L.GeoSearch": "timwis/L.GeoSearch",
+    "moment": "~2.9.0"
   },
   "resolutions": {
     "underscore": "~1.8.2"

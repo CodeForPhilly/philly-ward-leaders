@@ -39,6 +39,9 @@ var WardLeader = Backbone.Model.extend({
           
           // Set URL slug
           this.set('slug', this.get('Name').toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,''));
+          
+          // Last voted time ago
+          this.set('lastVotedAgo', moment(this.get('Last Voted')).fromNow());
      }
 });
 

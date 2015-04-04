@@ -41,7 +41,7 @@
   
   
   <div id="intro" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-     <h1>Philly Ward Leaders <small>The players behind elections</small></h1>
+     <h2>Philly Ward Leaders <small class="hide-for-small-only">The players behind elections</small></h2>
      
      <p>Had you heard of all the candidates for judge last time you voted? How about City Council at-Large?
      When you voted, a neighbor of yours likely handed you a ballot of candidates endorsed by your  
@@ -246,9 +246,9 @@
                                    <% } %>
                               </dd>
                               
-                              <% if(data['Last Votes']) { %>
+                              <% if(data['Last Voted']) { %>
                               <dt>Last Voted</dt>
-                              <dd><%= data['Last Voted'] %></dd>
+                              <dd><span data-tooltip aria-haspopup="true" class="has-tip" title="<%= data['Last Voted'] %>"><%= data['lastVotedAgo'] %></span></dd>
                               <% } %>
                               
                               <dt>Occupation</dt>
@@ -319,6 +319,7 @@
   <script src="bower_components/leaflet-pip/leaflet-pip.min.js"></script>
   <script src="bower_components/nprogress/nprogress.js"></script>
   <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="bower_components/moment/min/moment.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
