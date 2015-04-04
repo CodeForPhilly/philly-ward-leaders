@@ -236,6 +236,7 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
           L.control.locate({
                icon: 'fa fa-location-arrow',
                metric: false,
+               showPopup: false,
                locateOptions: {
                     maxZoom: 16
                }
