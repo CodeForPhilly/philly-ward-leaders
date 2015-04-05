@@ -235,7 +235,8 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
           new L.Control.GeoSearch({
                provider: new L.GeoSearch.Provider.Google(),
                position: 'topcenter',
-               showMarker: true
+               showMarker: true,
+               zoomLevel: 14
           }).addTo(this.map);
           
           // GPS Locator
@@ -244,7 +245,7 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
                metric: false,
                showPopup: false,
                locateOptions: {
-                    maxZoom: 16
+                    maxZoom: 14
                }
           }).addTo(this.map);
           
@@ -253,7 +254,14 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
      addBoundaries: function() {
           // If both ward boundaries and ward leaders have been fetched
           if( ! _.isEmpty(router.wardBoundaries.attributes) && this.collection.length) {
-               var self = this;
+               var self = this,
+                    colors = function(d) {
+                         return d >= 80 ? '#eff3ff' :
+                              d >= 60 ? '#bdd7e7' :
+                              d >= 40 ? '#6baed6' :
+                              d >= 20 ? '#bdd7e7' :
+                              '#eff3ff';
+                    };
                window.boundaries = L.geoJson(router.wardBoundaries.toJSON(), {
                     onEachFeature: function(feature, layer) {
                          if(feature.properties) {
@@ -263,6 +271,15 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
                                    layer.bindPopup(self.popupTemplate(model.toJSON()));
                               }
                          }
+                    },
+                    style: function(feature) {
+                         var model = self.collection.findWhere({Ward: feature.properties.WARD_NUM});
+                         return {
+                              fillColor: colors(model ? model.get('turnoutPercentage') : 0),
+                              fillOpacity: 0.7,
+                              weight: 3,
+                              color: '#2284a1'
+                         };
                     }
                }).addTo(this.map);
                this.map.fitBounds(window.boundaries.getBounds());
