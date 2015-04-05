@@ -3,7 +3,7 @@
 
 .contact-icon { width: 60px; }
 .ward-map-container, .ward-map { width: 100%; height: 350px; }
-iframe { width: 100%; height: 800px; border: none; }
+iframe { width: 100%; height: 800px; border: none; margin-top: -50px; }
 .close-reveal-modal { z-index: 9999; }
 /*#nprogress .bar, #nprogress .spinner { margin-top: 45px; }*/
 dl {
@@ -101,6 +101,8 @@ dt {
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -299,5 +301,5 @@ dt {
      margin-bottom: 0;
      float: left;
 }
-.stats dt { width: 60%; }
+.stats dt { width: 60%; overflow: hidden; }
 .stats .button { margin-top: 15px; }

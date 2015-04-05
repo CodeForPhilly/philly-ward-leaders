@@ -41,7 +41,7 @@ var WardLeader = Backbone.Model.extend({
           this.set('slug', this.get('Name').toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,''));
           
           // Last voted time ago
-          this.set('lastVotedAgo', moment(this.get('Last Voted')).fromNow());
+          this.set('lastVotedAgo', moment(new Date(this.get('Last Voted'))).fromNow());
      }
 });
 
@@ -300,9 +300,14 @@ L.Control.Locate.prototype.drawMarker = function(map) {
 
 var Router = Backbone.Router.extend({
      routes: {
-          "": "showTopLeaders",
-          ":ward/:slug": "detailsRoute",
-          "map": "map"
+          "": "topLeaders",
+          ":ward/:slug": "details",
+          "map": "map",
+          ":page": "static"
+     },
+     show: function(view) {
+          layout.getRegion('main').show(view);
+          $(window).scrollTop(0);
      },
      initialize: function() {
           $('#intro').foundation('reveal', 'open');
@@ -317,39 +322,36 @@ var Router = Backbone.Router.extend({
                }
           });
      },
-     showTopLeaders: function() {
-           topLeadersView = new TopLeadersView({
-               collection: this.wardLeaders
-          });
-          layout.getRegion('main').show(topLeadersView);
-          $(window).scrollTop(0);
+     topLeaders: function() {
+          this.show(new TopLeadersView({ collection: this.wardLeaders }));
      },
-     detailsRoute: function(ward, slug) {
+     details: function(ward, slug) {
           if(this.wardLeaders.length) {
                var model = this.wardLeaders.findWhere({Ward: ward, slug: slug});
-               this.showDetails(model);
+               this.show(new DetailsView({ model: model }));
           } else {
                var self = this;
                this.wardLeaders.on('sync', function() {
                     var model = self.wardLeaders.findWhere({Ward: ward});
-                    self.showDetails(model);
+                    this.show(new DetailsView({ model: model }));
                });
           }
-     },
-     showDetails: function(model) {
-          var detailsView = new DetailsView({ model: model });
-          layout.getRegion('main').show(detailsView);
-          $(window).scrollTop(0);
      },
      map: function() {
           if( ! this.wardBoundaries) {
                this.wardBoundaries = new Backbone.Model();
                this.wardBoundaries.fetch({url: 'data/Political_Wards.geojson'});
           }
-          
-          var cityMapView = new CityMapView({collection: this.wardLeaders});
-          layout.getRegion('main').show(cityMapView);
-          $(window).scrollTop(0);
+          this.show(new CityMapView({ collection: this.wardLeaders }));
+     },
+     static: function(key) {
+          if($('#tmpl-' + key).length) {
+               var view = new Backbone.Marionette.ItemView({template: '#tmpl-' + key});
+               layout.getRegion('main').show(view);
+               $(window).scrollTop(0);
+          } else {
+               this.navigate('', {trigger: true});
+          }
      }
 });
 var router = new Router();
