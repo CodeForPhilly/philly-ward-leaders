@@ -125,6 +125,7 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
           var selector = $(e.currentTarget).data('toggle');
           $(selector).toggleClass('hide');
           $('input', $(selector))[0].focus();
+          e.preventDefault();
      },
      onFlip: function(e) {
           $(e.currentTarget).toggleClass('hover');
@@ -213,7 +214,7 @@ var WardMapView = Backbone.Marionette.ItemView.extend({
 });
 
 var CityMapView = Backbone.Marionette.ItemView.extend({
-     template: false,
+     template: '#tmpl-city-map',
      className: 'city-map',
      initialize: function() {
           router.wardBoundaries.on('sync', this.addBoundaries, this);
@@ -221,7 +222,7 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
           this.popupTemplate = _.template($('#tmpl-city-map-popup').html());
      },
      onShow: function() {
-          this.map = L.map(this.el).setView([39.9523893, -75.1636291], 10);
+          this.map = L.map(this.$('.city-map-container')[0]).setView([39.9523893, -75.1636291], 10);
           L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.{ext}', {
                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
                subdomains: 'abcd',
