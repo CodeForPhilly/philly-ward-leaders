@@ -3,6 +3,8 @@
 
 .contact-icon { width: 60px; }
 .ward-map-container, .ward-map { width: 100%; height: 350px; }
+iframe { width: 100%; height: 800px; border: none; }
+.close-reveal-modal { z-index: 9999; }
 /*#nprogress .bar, #nprogress .spinner { margin-top: 45px; }*/
 dl {
     font-family: 'Playfair Display';
