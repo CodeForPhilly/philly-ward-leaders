@@ -138,22 +138,22 @@ var stringContains = function(needle, haystack) {
      return haystack.toLowerCase().indexOf(needle.toLowerCase()) !== -1;
 };
 
+var errorLink = function(field) {
+     var params = {
+          thePage: Backbone.history.getFragment(),
+          whatHappened: 'I found a content or data error'
+     };
+     if(field) params.tellUs = field + ' should be: ';
+     return config.feedbackUrl + '?' + $.param(params).replace(/\+/g, '%20');
+};
+
 var DetailsView = Backbone.Marionette.LayoutView.extend({
      template: '#tmpl-details',
      regions: {
           'map': '.ward-map-container'
      },
-     serializeData: function() {
-          return $.extend({
-               errorLink: function(field) {
-                    var params = {
-                         thePage: Backbone.history.getFragment(),
-                         whatHappened: 'I found a content or data error'
-                    };
-                    if(field) params.tellUs = field + ' should be: ';
-                    return config.feedbackUrl + '?' + $.param(params).replace(/\+/g, '%20');
-               }
-          }, this.model.toJSON());
+     templateHelpers: {
+          errorLink: errorLink
      },
      onRender: function() {
           this.$el.foundation('tooltip', 'reflow');
@@ -300,9 +300,11 @@ L.Control.Locate.prototype.drawMarker = function(map) {
 
 var Router = Backbone.Router.extend({
      routes: {
-          "": "topLeaders",
+          "": "static",
+          "list": "list",
           ":ward/:slug": "details",
           "map": "map",
+          "learn": "learn",
           ":page": "static"
      },
      show: function(view) {
@@ -322,7 +324,7 @@ var Router = Backbone.Router.extend({
                }
           });
      },
-     topLeaders: function() {
+     list: function() {
           this.show(new TopLeadersView({ collection: this.wardLeaders }));
      },
      details: function(ward, slug) {
@@ -333,7 +335,7 @@ var Router = Backbone.Router.extend({
                var self = this;
                this.wardLeaders.on('sync', function() {
                     var model = self.wardLeaders.findWhere({Ward: ward});
-                    this.show(new DetailsView({ model: model }));
+                    self.show(new DetailsView({ model: model }));
                });
           }
      },
@@ -344,14 +346,16 @@ var Router = Backbone.Router.extend({
           }
           this.show(new CityMapView({ collection: this.wardLeaders }));
      },
+     learn: function() {
+          var view = new Backbone.Marionette.ItemView({
+               template: '#tmpl-learn',
+               templateHelpers: { errorLink: errorLink }
+          });
+          this.show(view);
+     },
      static: function(key) {
-          if($('#tmpl-' + key).length) {
-               var view = new Backbone.Marionette.ItemView({template: '#tmpl-' + key});
-               layout.getRegion('main').show(view);
-               $(window).scrollTop(0);
-          } else {
-               this.navigate('', {trigger: true});
-          }
+          if( ! $('#tmpl-' + key).length) key = 'intro';
+          this.show(new Backbone.Marionette.ItemView({template: '#tmpl-' + key, className: key}));
      }
 });
 var router = new Router();
@@ -359,8 +363,3 @@ Backbone.history.start();
 
 $(document).foundation();
 $(document).foundation('tooltip', 'reflow');
-$('[data-reveal-close]').click(function(e) {
-     var selector = $(e.currentTarget).data('reveal-close');
-     $(selector).foundation('reveal', 'close');
-     e.preventDefault();
-})

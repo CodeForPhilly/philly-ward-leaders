@@ -3,9 +3,41 @@
 
 .contact-icon { width: 60px; }
 .ward-map-container, .ward-map { width: 100%; height: 350px; }
-iframe { width: 100%; height: 800px; border: none; margin-top: -50px; }
+iframe { width: 100%; height: 2000px; border: none; }
 .close-reveal-modal { z-index: 9999; }
-/*#nprogress .bar, #nprogress .spinner { margin-top: 45px; }*/
+/* NProgress color override */
+#nprogress .bar, #nprogress .spinner { margin-top: 45px; }
+#nprogress .bar { background: #D2AD1B; }
+#nprogress .peg { box-shadow: 0 0 10px #D2AD1B, 0 0 5px #D2AD1B; }
+#nprogress .spinner-icon { border-top-color: #D2AD1B; border-left-color: #D2AD1B; }
+
+/* Breadcrumbs margin */
+.breadcrumbs { margin-top: 10px; }
+
+/* Intro hero */
+.intro {
+     padding: 30px 5px;
+     background: #04576F;
+     color: #fff;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+}
+.intro h1 {
+     font-weight: 500;
+     color: #fff;
+}
+.intro h1.show-for-small {
+     font-size: 9vw;
+}
+.intro p {
+     font-weight: 300;
+}
+.intro .intro-detail {
+     opacity: 0.7;
+}
+.intro p .has-tip { color: inherit; }
+
 dl {
     font-family: 'Playfair Display';
     font-size: 18;
@@ -28,7 +60,7 @@ dt {
 /*thumbnail {
     padding: 10px 0px 10px;
 }*/
-.top-bar { z-index: 1; }
+.top-bar { z-index: 1100; }
 .top-bar, .top-bar-section ul, .top-bar-section li a:not(.button) { background-color: #2284a1 !important; }
 
 /* Top bar active/hover */
@@ -64,7 +96,6 @@ dt {
      right: 0;
 }
 #main { top: 45px; }
-.top-bar { z-index: 1; }
 
 /* Leaflet popup */
 .leaflet-popup-content {

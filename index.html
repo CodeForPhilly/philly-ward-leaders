@@ -41,24 +41,39 @@
   </div>
   
   
-  <div id="intro" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-     <h2>Philly Ward Leaders <small>The players behind elections</small></h2>
-     
-     <p>Had you heard of all the candidates for judge last time you voted? How about City Council at-Large?
-     When you voted, a neighbor of yours likely handed you a ballot of candidates endorsed by your  
-     <span data-tooltip aria-haspopup="true" class="has-tip" title="A roughly neighborhood-sized geographical division of the city">ward</span>.
-     If you haven’t heard of the candidates, why not take your neighbor’s advice?</p>
-
-     <p>These endorsements are determined by Ward Leaders, and have a huge influence over who gets elected in 
-     Philadelphia. As powerful and few as they are (66), ward leaders tend to remain behind the scenes and most 
-     voters don’t even know who theirs is. This transparency web site aims to bring a level of spotlight to ward 
-     leaders that is more proportional to the power they wield.</p>
-     
-     <a href="#" class="button large" data-reveal-close="#intro">Get Started</a>
-     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-  </div>
+  <script type="text/template" id="tmpl-intro">
+     <div class="row">
+          <div class="small-12 columns">
+               <h1 class="show-for-small">Philly Ward Leaders</h1>
+               <h1 class="hide-for-small">Philly Ward Leaders</h1>
+               <p>Shining a spotlight on the powerful players behind Philadelphia elections.</p>
+          </div>
+          <div class="medium-6 large-4 columns">
+               <a href="#list" class="button expand radius">Get Started</a>
+          </div>
+          <div class="small-12 columns intro-detail">
+               <p>Had you heard of all the candidates for judge last time you voted? How about City Council at-Large?
+               When you voted, a neighbor of yours likely handed you a ballot of candidates endorsed by your  
+               <span data-tooltip aria-haspopup="true" class="has-tip" title="A roughly neighborhood-sized geographical division of the city">ward</span>.
+               If you haven’t heard of the candidates, why not take your neighbor’s advice?</p>
+          
+               <p>These endorsements are determined by Ward Leaders, and have a huge influence over who gets elected in 
+               Philadelphia. As powerful and few as they are (66), ward leaders tend to remain behind the scenes and most 
+               voters don’t even know who theirs is. This transparency web site aims to bring a level of spotlight to ward 
+               leaders that is more proportional to the power they wield.</p>
+          </div>
+     </div>
+  </script>
   
   <script type="text/template" id="tmpl-about">
+     <div class="row">
+          <div class="small-12 columns">
+               <nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+                    <a href="#">Home</a>
+                    <a class="current" href="#about">About</a>
+               </nav>
+          </div>
+     </div>
      <div class="row">
           <div class="small-12 columns">
                <h1>About the Project</h1>
@@ -111,7 +126,20 @@
   </script>
   
   <script type="text/template" id="tmpl-learn">
-     <iframe src="https://docs.google.com/document/d/1l-Y06PPz1rItTdht8nVPFNRuSxG01kQUI4cffXscYZ8/pub"></iframe>
+     <div class="row">
+          <div class="small-12 columns">
+               <nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+                    <a href="#">Home</a>
+                    <a class="current" href="#learn">Learn</a>
+               </nav>
+          </div>
+     </div>
+     <div class="row">
+          <div class="small-12 columns">
+               <div class="error-link-bottom">Is this information incorrect? <a href="<%= data.errorLink() %>" target="_blank">Let us know.</a></div>
+               <iframe src="https://docs.google.com/document/d/1l-Y06PPz1rItTdht8nVPFNRuSxG01kQUI4cffXscYZ8/pub?embedded=true"></iframe>
+          </div>
+     </div>
   </script>
   
   <script type="text/template" id="tmpl-top-leaders">
@@ -187,6 +215,15 @@
   </script>
   
   <script type="text/template" id="tmpl-details">
+     <div class="row">
+          <div class="small-12 columns">
+               <nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
+                    <a href="#">Home</a>
+                    <a href="#list">Ward Leaders</a>
+                    <a class="current" href="#<%= data.Ward %>/<%= data.slug %>"><%= data.Name %></a>
+               </nav>
+          </div>
+     </div>
      <div class="row">
           <div class="medium-12 columns">
                <h3><%= data.Name %> <span class="ward-ordinal"><%= data.wardOrdinal %> Ward</span></h3>
