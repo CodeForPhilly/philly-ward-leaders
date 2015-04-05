@@ -17,6 +17,7 @@ iframe { width: 100%; height: 2000px; border: none; }
 /* Intro hero */
 .intro {
      width: 100%;
+     height: 1000px;
      padding: 30px 5px;
      background: #04576F;
      color: #fff;
