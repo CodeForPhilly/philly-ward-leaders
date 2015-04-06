@@ -60,6 +60,25 @@ dt {
     font-weight: 400;
     font-size: 75%;
 }
+
+/* Committee Persons */
+.committee-persons-container {
+     text-transform: capitalize;
+}
+.committee-persons-container .panel {
+     position: relative;
+}
+.committee-persons-container .panel header {
+     font-weight: bold;
+}
+.committee-persons-container .panel .logo {
+     position: absolute;
+     top: 0;
+     right: 5px;
+     font-size: 300%;
+     opacity: 0.3;
+}
+
 /*thumbnail {
     padding: 10px 0px 10px;
 }*/
@@ -122,7 +141,7 @@ dt {
 /* Error links */
 .unknown { 
      font-size: 80%;
-     color: #bababa;
+     color: #aaa;
      text-transform: uppercase;
 }
 .error-link { font-size: 80%; }

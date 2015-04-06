@@ -68,6 +68,34 @@ var WardLeaders = Backbone.Collection.extend({
      comparator: comparators.voters
 });
 
+var CommitteePerson = Backbone.Model.extend({
+     initialize: function() {
+          this.set('division', + this.get('PRECINCT').substr(3));
+          this.set('nameLowerCase', this.get('NAME').toLowerCase());
+          this.set('divisionOrdinal', getOrdinal(this.get('division')));
+     }
+});
+
+var CommitteePersons = Backbone.Collection.extend({
+     model: CommitteePerson,
+     initialize: function(models, options) {
+          if(options.ward) this.ward = options.ward;
+     },
+     url: function() {
+          var url = 'https://www.opendataphilly.org/api/action/datastore_search',
+               params = {
+                    resource_id: '71a9be91-f383-44a1-bba1-f837037f9135',
+                    filters: '{"PARTY":"D"}'
+               };
+          if(this.ward) params.q = ('00' + this.ward).slice(-2) + '-'; // pad left + '-';
+          return url + '?' + $.param(params);
+     },
+     parse: function(response, options) {
+          return response.success ? response.result.records : [];
+     },
+     comparator: 'division'
+});
+
 var TopLeadersItemView = Backbone.Marionette.ItemView.extend({
      tagName: 'li',
      template: '#tmpl-top-leaders-item',
@@ -151,20 +179,42 @@ var errorLink = function(field) {
 var DetailsView = Backbone.Marionette.LayoutView.extend({
      template: '#tmpl-details',
      regions: {
-          'map': '.ward-map-container'
+          'map': '.ward-map-container',
+          'committeePersons': '.committee-persons-container'
+     },
+     initialize: function(options) {
+          this.committeePersons = options.committeePersons || null;
+          this.committeePersons.on('sync', this.showCommmitteePersonsView, this);
      },
      templateHelpers: {
           errorLink: errorLink
      },
      onRender: function() {
           this.$el.foundation('tooltip', 'reflow');
+          this.showCommmitteePersonsView();
      },
      onShow: function() {
-          this.mapView = new WardMapView({
-               model: this.model
-          });
+          this.showMapView();
+     },
+     showMapView: function() {
+          this.mapView = new WardMapView({ model: this.model });
           this.getRegion('map').show(this.mapView);
+     },
+     showCommmitteePersonsView: function() {
+          this.committeePersonsView = new CommitteePersonsView({ collection: this.committeePersons });
+          this.getRegion('committeePersons').show(this.committeePersonsView);
      }
+});
+
+var CommitteePersonsItemView = Backbone.Marionette.ItemView.extend({
+     template: '#tmpl-committee-persons-item',
+     tagName: 'li'
+});
+
+var CommitteePersonsView = Backbone.Marionette.CollectionView.extend({
+     childView: CommitteePersonsItemView,
+     tagName: 'ul',
+     className: 'small-block-grid-1 medium-block-grid-2 large-block-grid-3'
 });
 
 var WardMapView = Backbone.Marionette.ItemView.extend({
@@ -346,14 +396,17 @@ var Router = Backbone.Router.extend({
           this.show(new TopLeadersView({ collection: this.wardLeaders }));
      },
      details: function(ward, slug) {
+          var committeePersons = new CommitteePersons(null, { ward: ward });
+          committeePersons.fetch();
+          
           if(this.wardLeaders.length) {
                var model = this.wardLeaders.findWhere({Ward: ward, slug: slug});
-               this.show(new DetailsView({ model: model }));
+               this.show(new DetailsView({ model: model, committeePersons: committeePersons }));
           } else {
                var self = this;
                this.wardLeaders.on('sync', function() {
                     var model = self.wardLeaders.findWhere({Ward: ward});
-                    self.show(new DetailsView({ model: model }));
+                    self.show(new DetailsView({ model: model, committeePersons: committeePersons }));
                });
           }
      },

@@ -330,12 +330,25 @@
                                    
                                    <div class="error-link"><a href="<%= data.errorLink('Social Media') %>" target="_blank">Know a link?</a></div>
                               </dd>
-                         </dl>     
+                         </dl>
+                         <a href="#learn" class="button small secondary">Learn More</a>
                     </div>
                </div>
                <div class="error-link-bottom">Is this information incorrect? <a href="<%= data.errorLink() %>" target="_blank">Let us know.</a></div>
                <div class="ward-map-container"></div>
+               
+               <h2>Committee Persons</h2>
+               <div class="committee-persons-container"></div>
           </div>
+     </div>
+  </script>
+  
+  <script type="text/template" id="tmpl-committee-persons-item">
+     <div class="panel">
+       <header><%= data.nameLowerCase %></header>
+       <section><%= data.divisionOrdinal %> Division</section>
+       <section><%= data.ADDRESS %></section>
+       <span class="logo"><%= data.division %></span>
      </div>
   </script>
   
