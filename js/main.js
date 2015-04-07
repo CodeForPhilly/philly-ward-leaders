@@ -378,7 +378,6 @@ var Router = Backbone.Router.extend({
           "list": "list",
           ":ward/:slug": "details",
           "map": "map",
-          "learn": "learn",
           ":page": "static"
      },
      show: function(view) {
@@ -424,17 +423,13 @@ var Router = Backbone.Router.extend({
           }
           this.show(new CityMapView({ collection: this.wardLeaders }));
      },
-     learn: function() {
-          var view = new Backbone.Marionette.ItemView({
-               template: '#tmpl-learn',
-               templateHelpers: { errorLink: errorLink }
-          });
-          view.title = 'Learn';
-          this.show(view);
-     },
      static: function(key) {
           if( ! $('#tmpl-' + key).length) key = 'intro';
-          var view = new Backbone.Marionette.ItemView({template: '#tmpl-' + key, className: key});
+          var view = new Backbone.Marionette.ItemView({
+               template: '#tmpl-' + key,
+               className: key,
+               templateHelpers: { errorLink: errorLink }
+          });
           view.title = key.capitalizeFirstLetter();
           this.show(view);
      }
