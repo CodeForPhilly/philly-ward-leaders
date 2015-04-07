@@ -51,6 +51,12 @@ dt {
     text-transform: uppercase;
     font-weight: 400;
 }
+.dd-note { 
+     font-size: 80%;
+     color: #aaa;
+     text-transform: uppercase;
+     display: block;
+}
 .ward-ordinal {
     font-family: Montserrat;
     font-size: 5!important;

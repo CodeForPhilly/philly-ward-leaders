@@ -287,8 +287,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               <dd><%= data['Divisions'] %></dd>
                               
                               <dt><span data-tooltip aria-haspopup="true" class="has-tip" title="Each division elects 2 committee persons">Committee Persons</span></dt>
-                              <dd><%= data['Committee People'] %> (<%= data['vacancies'] %>
-                              <span data-tooltip aria-haspopup="true" class="has-tip" title="Each division elects 2 committee persons">vacancies</span>)</dd>
+                              <dd>
+                                   <%= data['Committee People'] %> (<%= data['vacancies'] %>
+                                   <span data-tooltip aria-haspopup="true" class="has-tip" title="Each division elects 2 committee persons">vacancies</span>)
+                                   <span class="dd-note">Listed below the map</span>
+                              </dd>
                          </dl>
                     </div>
                     <div class="medium-3 columns">
