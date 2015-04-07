@@ -190,6 +190,7 @@ var DetailsView = Backbone.Marionette.LayoutView.extend({
           errorLink: errorLink
      },
      onRender: function() {
+          if(this.model.get('Name')) this.title = this.model.get('Name');
           this.$el.foundation('tooltip', 'reflow');
           this.showCommmitteePersonsView();
      },
@@ -266,6 +267,7 @@ var WardMapView = Backbone.Marionette.ItemView.extend({
 var CityMapView = Backbone.Marionette.ItemView.extend({
      template: '#tmpl-city-map',
      className: 'city-map',
+     title: 'Ward Map',
      initialize: function() {
           router.wardBoundaries.on('sync', this.addBoundaries, this);
           this.collection.on('sync', this.addBoundaries, this);
@@ -343,6 +345,10 @@ var getOrdinal = function(n) {
      return n+(s[(v-20)%10]||s[v]||s[0]);
 };
 
+String.prototype.capitalizeFirstLetter = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
 // Override geocode functionality to append city
 var geosearchCopy = L.Control.GeoSearch.prototype.geosearch;
 L.Control.GeoSearch.prototype.geosearch = function(qry) {
@@ -377,10 +383,11 @@ var Router = Backbone.Router.extend({
      },
      show: function(view) {
           layout.getRegion('main').show(view);
+          document.title = view.title !== undefined && view.title ? view.title + ' | ' + this.pageTitle : this.pageTitle;
           $(window).scrollTop(0);
      },
      initialize: function() {
-          $('#intro').foundation('reveal', 'open');
+          this.pageTitle = $("title").text();
           this.divisionBoundaries = new Backbone.Model();
           this.divisionBoundaries.fetch({url: 'data/Political_Divisions.geojson'});
           
@@ -422,11 +429,14 @@ var Router = Backbone.Router.extend({
                template: '#tmpl-learn',
                templateHelpers: { errorLink: errorLink }
           });
+          view.title = 'Learn';
           this.show(view);
      },
      static: function(key) {
           if( ! $('#tmpl-' + key).length) key = 'intro';
-          this.show(new Backbone.Marionette.ItemView({template: '#tmpl-' + key, className: key}));
+          var view = new Backbone.Marionette.ItemView({template: '#tmpl-' + key, className: key});
+          view.title = key.capitalizeFirstLetter();
+          this.show(view);
      }
 });
 var router = new Router();
