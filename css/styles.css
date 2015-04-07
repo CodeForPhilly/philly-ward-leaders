@@ -78,6 +78,20 @@ dt {
      opacity: 0.3;
 }
 
+/* Footer */
+footer {
+     font-size: 80%;
+     text-align: center;
+}
+.intro footer a {
+     color: #fff;
+     text-decoration: underline;
+}
+footer img {
+     height: 20px;
+     margin-bottom: 2px;
+}
+
 /*thumbnail {
     padding: 10px 0px 10px;
 }*/
