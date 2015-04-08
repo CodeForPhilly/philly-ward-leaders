@@ -17,7 +17,7 @@ var WardLeader = Backbone.Model.extend({
      initialize: function() {
           // Convert to numbers
           var self = this,
-               attributes = ['Democrats Registered', 'Total Registered', 'Turnout 2014 General'];
+               attributes = ['Ward', 'Democrats Registered', 'Total Registered', 'Turnout 2014 General'];
           attributes.forEach(function(attribute) {
                self.set(attribute, parseInt(self.get(attribute), 10));
           });
@@ -46,6 +46,7 @@ var WardLeader = Backbone.Model.extend({
 });
 
 var comparators = {
+     ward: 'Ward',
      voters: function(item) {
           return -item.get('Total Registered');
      },
@@ -65,7 +66,7 @@ var WardLeaders = Backbone.Collection.extend({
      },
      sync: Backbone.tabletopSync,
      filter: 'voters',
-     comparator: comparators.voters
+     comparator: comparators.wardNumber
 });
 
 var CommitteePerson = Backbone.Model.extend({
@@ -159,7 +160,7 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
           $(e.currentTarget).toggleClass('hover');
      },
      filter: function(child, index, collection) {
-          return this.searchQuery ? (stringContains(this.searchQuery, child.get('Name')) || stringContains(this.searchQuery, child.get('Ward'))) : true;
+          return this.searchQuery ? (stringContains(this.searchQuery, child.get('Name')) || stringContains(this.searchQuery, child.get('Ward').toString())) : true;
      }
 });
 
@@ -318,14 +319,14 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
                     onEachFeature: function(feature, layer) {
                          if(feature.properties) {
                               //layer.bindPopup(getOrdinal(feature.properties.WARD_NUM) + ' Ward');
-                              var model = self.collection.findWhere({Ward: feature.properties.WARD_NUM});
+                              var model = self.collection.findWhere({Ward: +feature.properties.WARD_NUM});
                               if(model) {
                                    layer.bindPopup(self.popupTemplate(model.toJSON()));
                               }
                          }
                     },
                     style: function(feature) {
-                         var model = self.collection.findWhere({Ward: feature.properties.WARD_NUM});
+                         var model = self.collection.findWhere({Ward: +feature.properties.WARD_NUM});
                          return {
                               fillColor: colors(model ? model.get('turnoutPercentage') : 0),
                               fillOpacity: 0.7,
@@ -406,12 +407,12 @@ var Router = Backbone.Router.extend({
           committeePersons.fetch();
           
           if(this.wardLeaders.length) {
-               var model = this.wardLeaders.findWhere({Ward: ward, slug: slug});
+               var model = this.wardLeaders.findWhere({Ward: +ward, slug: slug});
                this.show(new DetailsView({ model: model, committeePersons: committeePersons }));
           } else {
                var self = this;
                this.wardLeaders.on('sync', function() {
-                    var model = self.wardLeaders.findWhere({Ward: ward});
+                    var model = self.wardLeaders.findWhere({Ward: +ward});
                     self.show(new DetailsView({ model: model, committeePersons: committeePersons }));
                });
           }
