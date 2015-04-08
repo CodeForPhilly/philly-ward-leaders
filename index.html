@@ -318,8 +318,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                    <% } %>
                               </dd>
                               
+                              <% if(data['Year of Birth']) { %>
                               <dt>Age</dt>
                               <dd><%= new Date().getFullYear() - data['Year of Birth'] %></dd>
+                              <% } %>
                               
                               <dt>Gender</dt>
                               <dd>
