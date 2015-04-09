@@ -17,7 +17,7 @@ var WardLeader = Backbone.Model.extend({
      initialize: function() {
           // Convert to numbers
           var self = this,
-               attributes = ['Ward', 'Democrats Registered', 'Total Registered', 'Turnout 2014 General'];
+               attributes = ['Ward', 'Party Registered', 'Total Registered', 'Turnout 2014 General'];
           attributes.forEach(function(attribute) {
                self.set(attribute, parseInt(self.get(attribute), 10));
           });
