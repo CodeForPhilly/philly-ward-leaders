@@ -410,9 +410,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
   
   <script type="text/template" id="tmpl-city-map-popup">
-     <header><%= data.wardOrdinal %> Ward</header>
-     <section><%= data.Name %></section>
-     <section><%= data.turnoutPercentage %>% turnout</section>
+     <header><%= data[0].wardOrdinal %> Ward</header>
+     
+     <% for(var i = 0; i < data.length; i++) { %>
+     <section>
+          <%= data[i].Name %>
+          <span class="party"><%= data[i].Party %></span> 
+     </section>
+     <% } %>
+     <section><%= data[0].turnoutPercentage %>% turnout</section>
      <a href="#<%= data.Ward %>/<%= data.slug %>" class="button tiny">Details</a>
   </script>
 

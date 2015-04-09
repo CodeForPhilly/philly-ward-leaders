@@ -151,6 +151,15 @@ footer img {
      margin-top: 5px;
      margin-bottom: 0;
 }
+.leaflet-popup-content .party {
+     font-weight: bold;
+}
+.leaflet-popup-content .party:before {
+     content: '(';
+}
+.leaflet-popup-content .party:after {
+     content: ')';
+}
 
 /* Leaflet address search */
 .leaflet-container .leaflet-control-geosearch input {

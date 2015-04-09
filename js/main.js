@@ -65,7 +65,7 @@ var WardLeaders = Backbone.Collection.extend({
           sheet: 'Democratic'
      },
      sync: Backbone.tabletopSync,
-     filter: 'voters',
+     sortKey: 'voters',
      comparator: comparators.wardNumber
 });
 
@@ -322,9 +322,9 @@ var CityMapView = Backbone.Marionette.ItemView.extend({
                     onEachFeature: function(feature, layer) {
                          if(feature.properties) {
                               //layer.bindPopup(getOrdinal(feature.properties.WARD_NUM) + ' Ward');
-                              var model = self.collection.findWhere({Ward: +feature.properties.WARD_NUM});
-                              if(model) {
-                                   layer.bindPopup(self.popupTemplate(model.toJSON()));
+                              var models = self.collection.where({Ward: +feature.properties.WARD_NUM});
+                              if(models.length) {
+                                   layer.bindPopup(self.popupTemplate(models.map(function(obj) { return obj.toJSON(); })));
                               }
                          }
                     },
