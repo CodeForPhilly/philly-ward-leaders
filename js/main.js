@@ -81,14 +81,15 @@ var CommitteePersons = Backbone.Collection.extend({
      model: CommitteePerson,
      initialize: function(models, options) {
           if(options.ward) this.ward = options.ward;
+          if(options.party) this.party = options.party;
      },
      url: function() {
           var url = 'https://www.opendataphilly.org/api/action/datastore_search',
                params = {
-                    resource_id: '71a9be91-f383-44a1-bba1-f837037f9135',
-                    filters: '{"PARTY":"D"}'
+                    resource_id: '71a9be91-f383-44a1-bba1-f837037f9135'
                };
           if(this.ward) params.q = ('00' + this.ward).slice(-2) + '-'; // pad left + '-';
+          if(this.party) params.filters = '{"PARTY":"' + this.party + '"}';
           return url + '?' + $.param(params);
      },
      parse: function(response, options) {
@@ -184,7 +185,8 @@ var DetailsView = Backbone.Marionette.LayoutView.extend({
           'committeePersons': '.committee-persons-container'
      },
      initialize: function(options) {
-          this.committeePersons = options.committeePersons || null;
+          this.committeePersons = new CommitteePersons(null, { ward: this.model.get('Ward'), party: this.model.get('Party') });
+          this.committeePersons.fetch();
           this.committeePersons.on('sync', this.showCommmitteePersonsView, this);
      },
      templateHelpers: {
@@ -404,17 +406,14 @@ var Router = Backbone.Router.extend({
           this.show(new TopLeadersView({ collection: this.wardLeaders }));
      },
      details: function(ward, slug) {
-          var committeePersons = new CommitteePersons(null, { ward: ward });
-          committeePersons.fetch();
-          
           if(this.wardLeaders.length) {
                var model = this.wardLeaders.findWhere({Ward: +ward, slug: slug});
-               this.show(new DetailsView({ model: model, committeePersons: committeePersons }));
+               this.show(new DetailsView({ model: model }));
           } else {
                var self = this;
                this.wardLeaders.on('sync', function() {
                     var model = self.wardLeaders.findWhere({Ward: +ward});
-                    self.show(new DetailsView({ model: model, committeePersons: committeePersons }));
+                    self.show(new DetailsView({ model: model }));
                });
           }
      },
