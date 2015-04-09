@@ -280,7 +280,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="medium-3 columns">
                          <dl>
                               <dt>Registered Voters</dt>
-                              <dd><%= data['Party Registered'].toLocaleString() %> democrats of <%= data['Total Registered'].toLocaleString() %> total</dd>
+                              <dd><%= data['Party Registered'].toLocaleString() %> <%= data.partyPlural() %> of <%= data['Total Registered'].toLocaleString() %> total</dd>
                               
                               <dt>Turnout (Last Election)</dt>
                               <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>

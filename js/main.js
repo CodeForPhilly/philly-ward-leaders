@@ -188,7 +188,8 @@ var DetailsView = Backbone.Marionette.LayoutView.extend({
           this.committeePersons.on('sync', this.showCommmitteePersonsView, this);
      },
      templateHelpers: {
-          errorLink: errorLink
+          errorLink: errorLink,
+          partyPlural: function() { return this.Party === 'D' ? 'democrats' : this.Party === 'R' ? 'republicans' : 'party voters'; }
      },
      onRender: function() {
           if(this.model.get('Name')) this.title = this.model.get('Name');
