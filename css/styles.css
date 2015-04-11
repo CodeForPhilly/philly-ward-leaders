@@ -10,6 +10,9 @@ iframe { width: 100%; height: 2000px; border: none; }
 #nprogress .peg { box-shadow: 0 0 10px #D2AD1B, 0 0 5px #D2AD1B; }
 #nprogress .spinner-icon { border-top-color: #D2AD1B; border-left-color: #D2AD1B; }
 
+/* Fix a weird foundation bug with this bower version */
+.top-bar-section ul li > a { padding-left: 0.9375rem; }
+
 /* Breadcrumbs margin */
 .breadcrumbs { margin-top: 10px; }
 .city-map .breadcrumbs { margin-top: 0; }
@@ -51,7 +54,7 @@ dt {
     text-transform: uppercase;
     font-weight: 400;
 }
-.dd-note { 
+.dd-note {
      font-size: 80%;
      color: #aaa;
      text-transform: uppercase;
@@ -167,7 +170,7 @@ footer img {
 }
 
 /* Error links */
-.unknown { 
+.unknown {
      font-size: 80%;
      color: #aaa;
      text-transform: uppercase;
@@ -251,7 +254,7 @@ footer img {
      border: 5px #2284a1 solid;
      background-size: cover;
      background-position: 50%;
-     
+
      -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
      -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
      box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
@@ -336,11 +339,11 @@ footer img {
      background-color: #fff;
      padding: 5px;
      padding-top: 7px;
-     
+
      -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
      border-radius: 50%;
-     
+
      /*-webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
      -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
      box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);*/
@@ -367,7 +370,7 @@ footer img {
      padding: 10px;
      height: 300px;
      border: 5px #2284a1 solid;
-     
+
      -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
      -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
      box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);

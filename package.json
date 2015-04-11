@@ -5,8 +5,8 @@
   "main": "js/main.js",
   "scripts": {
     "install": "napa",
-    "build": "./node_modules/browserify/bin/cmd.js js/shims/marionette.js js/main.js -o js/bundle.js",
-    "watch": "./node_modules/watchify/bin/cmd.js -d js/shims/marionette.js js/main.js -o js/bundle.js"
+    "build": "./node_modules/browserify/bin/cmd.js -d -p [minifyify --map bundle.map.json --output bundle.map.json] src/shims/marionette.js src/shims/tabletop.js src/shims/foundation.js src/main.js -o bundle.js",
+    "watch": "./node_modules/watchify/bin/cmd.js -d src/shims/marionette.js src/shims/tabletop.js src/shims/foundation.js src/main.js -o bundle.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "backbone": "~1.1.2",
     "backbone.marionette": "~2.4.1",
     "browsernizr": "^1.0.2",
+    "font-awesome": "^4.3.0",
     "jquery": "^2.1.3",
     "leaflet": "~0.7.3",
     "leaflet-pip": "~0.1.1",
@@ -34,6 +35,7 @@
   },
   "devDependencies": {
     "browserify": "~9.0.8",
+    "minifyify": "^6.4.0",
     "node-underscorify": "0.0.14"
   },
   "napa": {
@@ -48,17 +50,11 @@
             "variable": "data"
           }
         }
-      ],
-      "browserify-shim"
+      ]
     ]
   },
   "browser": {
     "foundation": "foundation/js/foundation.js",
     "backbone.tabletopSync": "tabletop/src/backbone.tabletopSync.js"
-  },
-  "browserify-shim": {
-    "foundation": {
-      "depends": "global:Modernizr"
-    }
   }
 }

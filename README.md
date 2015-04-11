@@ -11,13 +11,17 @@ Clone the repo using:
 ```bash
 $ git clone https://github.com/timwis/philly-ward-leaders.git
 ```
-
-The repository already includes all dependencies (since it's also serving the web page via the `gh-pages` branch),
-but if you'd like to *add* dependencies, use bower. To install bower, use:
+Install dependencies using:
 ```bash
-$ sudo npm install -g bower
+$ npm install
 ```
-Then to install a dependency, use:
+
+## Build
+After you make changes, build the application using:
 ```bash
-$ bower install --save <dependency-name>
+$ npm run build
+```
+To watch files for changes and automatically build, use:
+```bash
+$ npm run watch
 ```
