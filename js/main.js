@@ -1,8 +1,7 @@
-var config = {
-     spreadsheet: 'https://docs.google.com/spreadsheets/d/1nkkFQUaxcGa0oDPWl1Vr1cknToIq8FxfJ7CILQrFgBM/pubhtml',
-     feedbackUrl: $('#feedback-link').attr('href')
-},
-     storage = Tabletop.init( { key: config.spreadsheet, wait: true } );
+var WardLeaders = require('./collections/ward-leaders'),
+     CommitteePersons = require('./collections/committee-persons'),
+     LeadersListView = require('./views/leaders-list');
+
 _.templateSettings.variable = 'data';
      
 var layout = new Marionette.LayoutView({
@@ -10,92 +9,6 @@ var layout = new Marionette.LayoutView({
      regions: {
           'main': '#main'
      }
-});
-
-var WardLeader = Backbone.Model.extend({
-     // Gets called on each ward leader model in the collection
-     initialize: function() {
-          // Convert to numbers
-          var self = this,
-               attributes = ['Ward', 'Party Registered', 'Total Registered', 'Turnout 2014 General'];
-          attributes.forEach(function(attribute) {
-               self.set(attribute, parseInt(self.get(attribute), 10));
-          });
-          
-          // Calculate vacancies
-          var divisions = parseInt(this.get('Divisions'), 10),
-               committeePeople = parseInt(this.get('Committee People'), 10);
-          this.set('vacancies', divisions * 2 - committeePeople);
-          
-          this.set('wardOrdinal', getOrdinal(this.get('Ward')));
-          
-          // Calculate turnout percentage
-          var turnout = this.get('Turnout 2014 General'),
-               registered = this.get('Total Registered');
-          this.set('turnoutPercentage', Math.round(turnout / registered * 100));
-          
-          // Set default photo if no photo provided
-          this.set('avatar', this.get('Photo') ? this.get('Photo') : this.get('Gender') === 'F' ? 'img/avatar-female.png' : 'img/avatar-male.png');
-          
-          // Set URL slug
-          this.set('slug', this.get('Name').toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,''));
-          
-          // Last voted time ago
-          this.set('lastVotedAgo', moment(new Date(this.get('Last Voted'))).fromNow());
-     }
-});
-
-var comparators = {
-     ward: 'Ward',
-     voters: function(item) {
-          return -item.get('Total Registered');
-     },
-     turnout: function(item) {
-          return -item.get('turnoutPercentage');
-     },
-     vacancies: function(item) {
-          return -item.get('vacancies');
-     }
-};
-
-var WardLeaders = Backbone.Collection.extend({
-     model: WardLeader,
-     tabletop: {
-          instance: storage,
-          sheet: 'Democratic'
-     },
-     sync: Backbone.tabletopSync,
-     sortKey: 'voters',
-     comparator: comparators.wardNumber
-});
-
-var CommitteePerson = Backbone.Model.extend({
-     initialize: function() {
-          this.set('division', + this.get('PRECINCT').substr(3));
-          this.set('nameLowerCase', this.get('NAME').toLowerCase());
-          this.set('divisionOrdinal', getOrdinal(this.get('division')));
-     }
-});
-
-var CommitteePersons = Backbone.Collection.extend({
-     model: CommitteePerson,
-     initialize: function(models, options) {
-          if(options.ward) this.ward = options.ward;
-          if(options.party) this.party = options.party;
-     },
-     url: function() {
-          var url = 'https://www.opendataphilly.org/api/action/datastore_search',
-               params = {
-                    resource_id: '71a9be91-f383-44a1-bba1-f837037f9135'
-               };
-          if(this.ward) params.q = ('00' + this.ward).slice(-2) + '-'; // pad left + '-';
-          if(this.party) params.filters = '{"PARTY":"' + this.party + '"}';
-          return url + '?' + $.param(params);
-     },
-     parse: function(response, options) {
-          return response.success ? response.result.records : [];
-     },
-     comparator: 'division'
 });
 
 var TopLeadersItemView = Backbone.Marionette.ItemView.extend({
