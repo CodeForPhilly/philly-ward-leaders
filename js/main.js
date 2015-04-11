@@ -3,6 +3,8 @@ var $ = require('jquery'),
   Backbone = require('backbone'),
   Marionette = require('backbone.marionette'),
   Router = require('./router');
+var Modernizr = require('browsernizr');
+require('foundation');
 
 var layout = new Marionette.LayoutView({
      el: 'body',

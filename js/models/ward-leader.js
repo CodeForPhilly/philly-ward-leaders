@@ -18,7 +18,7 @@ module.exports = Backbone.Model.extend({
                committeePeople = parseInt(this.get('Committee People'), 10);
           this.set('vacancies', divisions * 2 - committeePeople);
           
-          this.set('wardOrdinal', getOrdinal(this.get('Ward')));
+          this.set('wardOrdinal', util.getOrdinal(this.get('Ward')));
           
           // Calculate turnout percentage
           var turnout = this.get('Turnout 2014 General'),

@@ -2,11 +2,14 @@ var Backbone = require('backbone'),
   Marionette = require('backbone.marionette'),
   _ = require('underscore'),
   L = require('leaflet'),
+  leafletPip = require('leaflet-pip'),
   Template = require('../templates/city-map.html'),
   PopupTemplate = require('../templates/city-map-popup.html');
 require('leaflet.locatecontrol');
 require('Leaflet.GeoSearch');
 require('Leaflet.GeoSearch/src/js/l.geosearch.provider.google');
+
+L.Icon.Default.imagePath = 'node_modules/leaflet/dist/images/';
 
 module.exports = Backbone.Marionette.ItemView.extend({
   template: Template,
@@ -95,7 +98,7 @@ var showLocationCopy = L.Control.GeoSearch.prototype._showLocation;
 L.Control.GeoSearch.prototype._showLocation = function(location) {
      showLocationCopy.call(this, location);
      var polygon = leafletPip.pointInLayer([location.X, location.Y], window.boundaries),
-          popupTemplate = _.template($('#tmpl-city-map-popup').html()); // TODO: Add address to marker
+          popupTemplate = PopupTemplate; // TODO: Add address to marker
      this._positionMarker.bindPopup(polygon[0]._popup).openPopup();
 };
 
@@ -103,6 +106,6 @@ var drawMarkerCopy = L.Control.Locate.prototype.drawMarker;
 L.Control.Locate.prototype.drawMarker = function(map) {
      drawMarkerCopy.call(this, map);
      var polygon = leafletPip.pointInLayer(this._event.latlng, window.boundaries),
-          popupTemplate = _.template($('#tmpl-city-map-popup').html()); // TODO: Add address to marker
+          popupTemplate = PopupTemplate; // TODO: Add address to marker
      this._marker.bindPopup(polygon[0]._popup).openPopup();
 };

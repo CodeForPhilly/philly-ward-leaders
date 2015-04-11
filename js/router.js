@@ -15,7 +15,6 @@ var Backbone = require('backbone'),
     learn: require('./templates/learn.html'),
     intro: require('./templates/intro.html')
   };
-require('foundation');
 
 module.exports = Backbone.Router.extend({
   routes: {

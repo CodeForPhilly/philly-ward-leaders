@@ -1,10 +1,13 @@
 var Backbone = require('backbone'),
   Marionette = require('backbone.marionette'),
+  Template = require('../templates/ward-leader-details.html'),
+  CommitteePersons = require('../collections/committee-persons'),
+  CommitteePersonsView = require('../views/committee-person-list'),
   WardMapView = require('./ward-map'),
   util = require('../util');
 
-Backbone.Marionette.LayoutView.extend({
-  template: '#tmpl-details',
+module.exports = Backbone.Marionette.LayoutView.extend({
+  template: Template,
   regions: {
     'map': '.ward-map-container',
     'committeePersons': '.committee-persons-container'

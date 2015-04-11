@@ -4,6 +4,7 @@
   "description": "## Data source The data for this application is pulled on-demand from a [google spreadsheet](https://docs.google.com/spreadsheets/d/1nkkFQUaxcGa0oDPWl1Vr1cknToIq8FxfJ7CILQrFgBM/edit?usp=sharing). If you spot something we got wrong, or want to add information, right-click on a cell to add a comment to submit information, or create an issue on this repository if you'd like to dive in with edit access.",
   "main": "js/main.js",
   "scripts": {
+    "install": "napa",
     "build": "./node_modules/browserify/bin/cmd.js js/shims/marionette.js js/main.js -o js/bundle.js",
     "watch": "./node_modules/watchify/bin/cmd.js -d js/shims/marionette.js js/main.js -o js/bundle.js"
   },
@@ -20,35 +21,44 @@
     "Leaflet.GeoSearch": "git://github.com/timwis/L.GeoSearch",
     "backbone": "~1.1.2",
     "backbone.marionette": "~2.4.1",
+    "browsernizr": "^1.0.2",
     "jquery": "^2.1.3",
     "leaflet": "~0.7.3",
     "leaflet-pip": "~0.1.1",
     "leaflet.locatecontrol": "~0.40.0",
     "moment": "~2.10.2",
+    "napa": "^1.2.0",
     "nprogress": "~0.1.6",
     "tabletop": "git://github.com/timwis/tabletop",
-    "underscore": "~1.8.3",
-    "zurb-foundation-5": "~5.4.7"
+    "underscore": "~1.8.3"
   },
   "devDependencies": {
     "browserify": "~9.0.8",
-    "browserify-shim": "^3.8.3",
     "node-underscorify": "0.0.14"
+  },
+  "napa": {
+    "foundation": "zurb/bower-foundation"
   },
   "browserify": {
     "transform": [
-      ["node-underscorify", {
-        "templateSettings": { "variable": "data" }
-      }]
+      [
+        "node-underscorify",
+        {
+          "templateSettings": {
+            "variable": "data"
+          }
+        }
+      ],
+      "browserify-shim"
     ]
   },
   "browser": {
-    "foundation": "zurb-foundation-5/js/foundation/foundation.js",
+    "foundation": "foundation/js/foundation.js",
     "backbone.tabletopSync": "tabletop/src/backbone.tabletopSync.js"
   },
   "browserify-shim": {
-    "backbone.tabletopSync": {
-      "depends": ["backbone:Backbone"]
+    "foundation": {
+      "depends": "global:Modernizr"
     }
   }
 }

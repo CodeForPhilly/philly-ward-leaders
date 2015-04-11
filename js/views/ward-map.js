@@ -1,12 +1,16 @@
 var Backbone = require('backbone'),
   Marionette = require('backbone.marionette'),
+  _ = require('underscore'),
   L = require('leaflet');
+
+L.Icon.Default.imagePath = 'node_modules/leaflet/dist/images/';
 
 module.exports = Backbone.Marionette.ItemView.extend({
   template: false,
   className: 'ward-map',
-  initialize: function() {
-    router.divisionBoundaries.on('sync', this.addBoundaries, this);
+  initialize: function(options) {
+    this.divisionBoundaries = options.divisionBoundaries;
+    this.divisionBoundaries.on('sync', this.addBoundaries, this);
   },
   onShow: function() {
     this.map = L.map(this.el).setView([39.9523893, -75.1636291], 10);
@@ -20,13 +24,13 @@ module.exports = Backbone.Marionette.ItemView.extend({
 
     this.addHome();
 
-    if( ! _.isEmpty(router.divisionBoundaries.attributes)) {
+    if( ! _.isEmpty(this.divisionBoundaries.attributes)) {
       this.addBoundaries();
     }
   },
   addBoundaries: function() {
     var ward = ('00' + this.model.get('Ward')).slice(-2),
-    boundaries = L.geoJson(router.divisionBoundaries.toJSON(), {
+    boundaries = L.geoJson(this.divisionBoundaries.toJSON(), {
       filter: function(feature, layer) {
         return feature.properties.DIVISION_N.substring(0, 2) == ward;
       },
