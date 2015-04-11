@@ -1,0 +1,10 @@
+<header><%= data[0].wardOrdinal %> Ward</header>
+
+<% for(var i = 0; i < data.length; i++) { %>
+<section>
+     <%= data[i].Name %>
+     <span class="party"><%= data[i].Party %></span>
+</section>
+<% } %>
+<section><%= data[0].turnoutPercentage %>% turnout</section>
+<a href="#<%= data.Ward %>/<%= data.slug %>" class="button tiny">Details</a>

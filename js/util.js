@@ -1,3 +1,5 @@
+var Backbone = require('backbone');
+
 module.exports = {
      stringContains: function(needle, haystack) {
           return haystack.toLowerCase().indexOf(needle.toLowerCase()) !== -1;
@@ -9,10 +11,10 @@ module.exports = {
           return n+(s[(v-20)%10]||s[v]||s[0]);
      },
 
-     capitalizeFirstLetter: function() {
-         return this.charAt(0).toUpperCase() + this.slice(1);
+     capitalizeFirstLetter: function(str) {
+         return str.charAt(0).toUpperCase() + str.slice(1);
      },
-     
+
      errorLink: function(field) {
           var params = {
                thePage: Backbone.history.getFragment(),

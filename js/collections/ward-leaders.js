@@ -1,4 +1,7 @@
-var Backbone = require('backbone');
+var Backbone = require('backbone'),
+  Tabletop = require('tabletop').Tabletop,
+  WardLeader = require('../models/ward-leader');
+require('backbone.tabletopSync');
 
 var comparators = {
      ward: 'Ward',
