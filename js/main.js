@@ -120,11 +120,13 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
      template: '#tmpl-top-leaders',
      childView: TopLeadersItemView,
      childViewContainer: '#leaders',
+     party: 'D',
      initialize: function() {
           _.bindAll(this, 'onSort', 'onSearch');
      },
      events: {
           'click [data-sort-key]': 'onSort',
+          'click [data-party]': 'onSwitchParty',
           'click [data-toggle]': 'onToggle',
           'submit form': 'onSearch',
           'click [data-clear]': 'onSearch'
@@ -133,7 +135,8 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
      serializeData: function() {
           return $.extend({
                sortKey: this.collection.sortKey,
-               searchQuery: this.searchQuery
+               searchQuery: this.searchQuery,
+               party: this.party
           }, this.collection.toJSON());
      },
      onRender: function() {
@@ -157,11 +160,16 @@ var TopLeadersView = Backbone.Marionette.CompositeView.extend({
           $('input', $(selector))[0].focus();
           e.preventDefault();
      },
+     onSwitchParty: function(e) {
+          this.party = $(e.currentTarget).data('party');
+          this.render();
+          e.preventDefault();
+     },
      onFlip: function(e) {
           $(e.currentTarget).toggleClass('hover');
      },
      filter: function(child, index, collection) {
-          return this.searchQuery ? (stringContains(this.searchQuery, child.get('Name')) || stringContains(this.searchQuery, child.get('Ward').toString())) : true;
+          return child.get('Party') === this.party && (this.searchQuery ? (stringContains(this.searchQuery, child.get('Name')) || stringContains(this.searchQuery, child.get('Ward').toString())) : true);
      }
 });
 
