@@ -1,0 +1,80 @@
+{{#markdown}}
+```scss
+//
+// Top Bar Variables
+//
+$include-html-top-bar-classes: $include-html-classes !default;
+
+// Background color for the top bar
+$topbar-bg-color: $oil !default;
+$topbar-bg: $topbar-bg-color !default;
+
+// Height and margin
+$topbar-height: 45px !default;
+$topbar-margin-bottom: 0 !default;
+
+// Controlling the styles for the title in the top bar
+$topbar-title-weight: $font-weight-normal !default;
+$topbar-title-font-size: rem-calc(17) !default;
+
+// Style the top bar dropdown elements
+$topbar-dropdown-bg: $oil !default;
+$topbar-dropdown-link-color: $white !default;
+$topbar-dropdown-link-bg: $oil !default;
+$topbar-dropdown-link-bg-hover: $oil !default;
+$topbar-dropdown-link-weight: $font-weight-normal !default;
+$topbar-dropdown-toggle-size: 5px !default;
+$topbar-dropdown-toggle-color: $white !default;
+$topbar-dropdown-toggle-alpha: 0.4 !default;
+
+// Set the link colors and styles for top-level nav
+$topbar-link-color: $white !default;
+$topbar-link-color-hover: $white !default;
+$topbar-link-color-active: $white !default;
+$topbar-link-color-active-hover: $white !default;
+$topbar-link-weight: $font-weight-normal !default;
+$topbar-link-font-size: rem-calc(13) !default;
+$topbar-link-hover-lightness: -10% !default; // Darken by 10%
+$topbar-link-bg: $topbar-bg !default;
+$topbar-link-bg-hover: $oil !default;
+$topbar-link-bg-color-hover: $charcoal !default;
+$topbar-link-bg-active: $primary-color !default;
+$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%) !default;
+$topbar-link-font-family: $body-font-family !default;
+$topbar-link-text-transform: none !default;
+$topbar-link-padding: $topbar-height / 3 !default;
+$topbar-back-link-size: $h5-font-size !default;
+$topbar-link-dropdown-padding: 20px;
+$topbar-button-font-size: 0.75rem !default;
+$topbar-button-top: 7px !default;
+
+$topbar-dropdown-label-color: $monsoon !default;
+$topbar-dropdown-label-text-transform: uppercase !default;
+$topbar-dropdown-label-font-weight: $font-weight-bold !default;
+$topbar-dropdown-label-font-size: rem-calc(10) !default;
+$topbar-dropdown-label-bg: $oil !default;
+
+// Top menu icon styles
+$topbar-menu-link-transform: uppercase !default;
+$topbar-menu-link-font-size: rem-calc(13) !default;
+$topbar-menu-link-weight: $font-weight-bold !default;
+$topbar-menu-link-color: $white !default;
+$topbar-menu-icon-color: $white !default;
+$topbar-menu-link-color-toggled: $jumbo !default;
+$topbar-menu-icon-color-toggled: $jumbo !default;
+
+// Transitions and breakpoint styles
+$topbar-transition-speed: 300ms !default;
+// Using rem-calc for the below breakpoint causes issues with top bar
+$topbar-breakpoint: #{lower-bound($medium-range)} !default; // Change to 9999px for always mobile layout
+$topbar-media-query: $medium-up !default;
+
+// Divider Styles
+$topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%) !default;
+$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%) !default;
+
+// Sticky Class
+$topbar-sticky-class: ".sticky" !default;
+$topbar-arrows: true !default; //Set false to remove the triangle icon from the menu item
+```
+{{/markdown}}
