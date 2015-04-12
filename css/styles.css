@@ -17,6 +17,8 @@ iframe { width: 100%; height: 2000px; border: none; }
 .breadcrumbs { margin-top: 10px; }
 .city-map .breadcrumbs { margin-top: 0; }
 
+svg { width: 100%; }
+
 /* Intro hero */
 .intro {
      width: 100%;

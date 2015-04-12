@@ -36,7 +36,8 @@
   "devDependencies": {
     "browserify": "~9.0.8",
     "minifyify": "^6.4.0",
-    "node-underscorify": "0.0.14"
+    "node-underscorify": "0.0.14",
+    "watchify": "^3.1.0"
   },
   "napa": {
     "foundation": "zurb/bower-foundation"
