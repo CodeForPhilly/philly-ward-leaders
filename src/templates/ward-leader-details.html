@@ -21,10 +21,18 @@
                <div class="medium-3 columns">
                     <dl>
                          <dt>Registered Voters</dt>
-                         <dd><%= data['Party Registered'].toLocaleString() %> <%= data.partyPlural() %> of <%= data['Total Registered'].toLocaleString() %> total</dd>
+                         <dd>
+                           <%= data['Party Registered'].toLocaleString() %> <%= data.partyPlural(data.Party) %>
+                           of <%= data['Total Registered'].toLocaleString() %> total
+                           (<%= data.partyRegisteredPercentage %>%)
+                        </dd>
 
                          <dt>Turnout (Last Election)</dt>
-                         <dd><%= data['Turnout 2014 General'].toLocaleString() %> (<%= data['turnoutPercentage'] %>%)</dd>
+                         <dd>
+                           <%= data['Party Turnout'].toLocaleString() %> <%= data.partyPlural(data.Party) %> (<%= data['partyTurnoutPercentage'] %>%)
+                           <br>
+                           <%= data['Total Turnout'].toLocaleString() %> total (<%= data['totalTurnoutPercentage'] %>%)
+                         </dd>
 
                          <dt><span data-tooltip aria-haspopup="true" class="has-tip" title="How many divisions make up the ward">Divisions</span></dt>
                          <dd><%= data['Divisions'] %></dd>

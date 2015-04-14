@@ -22,5 +22,9 @@ module.exports = {
           };
           if(field) params.tellUs = field + ' should be: ';
           return $('#feedback-link').attr('href') + '?' + $.param(params).replace(/\+/g, '%20');
-     }
+     },
+
+     partyPlural: function(party) {
+       return party === 'D' ? 'democrats' : party === 'R' ? 'republicans' : 'party voters';
+    }
 };

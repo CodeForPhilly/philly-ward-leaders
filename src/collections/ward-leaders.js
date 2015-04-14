@@ -6,10 +6,10 @@ require('backbone.tabletopSync');
 var comparators = {
      ward: 'Ward',
      voters: function(item) {
-          return -item.get('Total Registered');
+          return -item.get('Party Registered');
      },
      turnout: function(item) {
-          return -item.get('turnoutPercentage');
+          return -item.get('partyTurnoutPercentage');
      },
      vacancies: function(item) {
           return -item.get('vacancies');

@@ -20,7 +20,7 @@ module.exports = Backbone.Marionette.LayoutView.extend({
   },
   templateHelpers: {
     errorLink: util.errorLink,
-    partyPlural: function() { return this.Party === 'D' ? 'democrats' : this.Party === 'R' ? 'republicans' : 'party voters'; }
+    partyPlural: util.partyPlural
   },
   onRender: function() {
     if(this.model.get('Name')) this.title = this.model.get('Name');

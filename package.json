@@ -31,7 +31,8 @@
     "napa": "^1.2.0",
     "nprogress": "~0.1.6",
     "tabletop": "git://github.com/timwis/tabletop",
-    "underscore": "~1.8.3"
+    "underscore": "~1.8.3",
+    "watchify": "^3.1.0"
   },
   "devDependencies": {
     "browserify": "~9.0.8",

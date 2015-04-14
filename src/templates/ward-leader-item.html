@@ -10,11 +10,11 @@
      <figure class="stats back">
           <h3><%= data.Name %> <span class="ward-ordinal"><%= data.wardOrdinal %> Ward</span></h3>
           <dl>
-               <dt>Voters</dt>
-               <dd><%= data['Total Registered'].toLocaleString() %></dd>
+               <dt>Voters (<span data-tooltip aria-haspopup="true" class="has-tip" title="<%= data.partyPlural(data.Party) %>"><%= data.Party %></span>)</dt>
+               <dd><%= data['Party Registered'].toLocaleString() %></dd>
 
-               <dt>Turnout</dt>
-               <dd><%= data['turnoutPercentage'] %>%</dd>
+               <dt>Turnout (<span data-tooltip aria-haspopup="true" class="has-tip" title="<%= data.partyPlural(data.Party) %>"><%= data.Party %></span>)</dt>
+               <dd><%= data['partyTurnoutPercentage'] %>%</dd>
 
                <dt>Vacancies</dt>
                <dd><%= data['vacancies'] %></dd>
