@@ -1,23 +1,26 @@
 var Backbone = require('backbone'),
   Marionette = require('backbone.marionette'),
   _ = require('underscore'),
-  Template = require('../templates/ward-leader-item.html'),
-  util = require('../util');
+  baseballCard = require('../baseball-card'),
+  Template = require('../templates/ward-leader-item.html');
 
 module.exports = Backbone.Marionette.ItemView.extend({
   tagName: 'li',
-  template: Template,
   className: 'flip-container',
-  initialize: function() {
-    _.bindAll(this, 'onFlip');
-  },
-  templateHelpers: {
-    partyPlural: util.partyPlural
-  },
-  onFlip: function(e) {
-    this.$('.stats').toggle();
-  },
-  onRender: function() {
+  template: Template,
+  onShow: function() {
+    baseballCard.front(this.$('.front')[0], {
+      ward: this.model.get('wardOrdinal'),
+      name: this.model.get('Name'),
+      photoUrl: this.model.get('Photo')
+    });
+
+    baseballCard.back(this.$('.back')[0], $.extend({
+      ward: this.model.get('wardOrdinal'),
+      name: this.model.get('Name'),
+      photoUrl: this.model.get('Photo')
+    }, this.model.toJSON()));
+
     this.$el.foundation('tooltip', 'reflow');
   }
 });

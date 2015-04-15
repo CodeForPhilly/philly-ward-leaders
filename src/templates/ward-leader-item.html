@@ -1,24 +1,4 @@
-<div class="flipper party-<%= data.Party %>">
-     <figure class="card front" style="background-image: url('<%= data.avatar %>'); background-position-x: <%= data['Photo Offset X'] || '50%' %>; background-position-y: <%= data['Photo Offset Y'] || '50%' %>;">
-          <div class="border"></div>
-          <figcaption class="name"><a href="#" data-ward="<%= data.Ward %>"><%= data.Name %></a></figcaption>
-          <figcaption class="logo">
-               <span class="ward-number"><%= data.wardOrdinal %></span>
-               <span class="ward-text">Ward</span>
-          </figcaption>
-     </figure>
-     <figure class="stats back">
-          <h3><%= data.Name %> <span class="ward-ordinal"><%= data.wardOrdinal %> Ward</span></h3>
-          <dl>
-               <dt>Voters (<span data-tooltip aria-haspopup="true" class="has-tip" title="<%= data.partyPlural(data.Party) %>"><%= data.Party %></span>)</dt>
-               <dd><%= data['Party Registered'].toLocaleString() %></dd>
-
-               <dt>Turnout (<span data-tooltip aria-haspopup="true" class="has-tip" title="<%= data.partyPlural(data.Party) %>"><%= data.Party %></span>)</dt>
-               <dd><%= data['partyTurnoutPercentage'] %>%</dd>
-
-               <dt>Vacancies</dt>
-               <dd><%= data['vacancies'] %></dd>
-          </dl>
-          <a href="#<%= data['Ward'] %>/<%= data['slug'] %>" class="button expand">Details</a>
-     </figure>
+<div class="flipper">
+  <svg class="front"></svg>
+  <svg class="back"></svg>
 </div>
