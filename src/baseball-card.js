@@ -13,7 +13,7 @@ module.exports = {
       topLeftCut: 65,
       bottomRightCut: 95,
       photoUrl: '',
-      photoOffsetX: 0,
+      photoOffset: null,
       name: '',
       ward: ''
     };
@@ -35,18 +35,18 @@ module.exports = {
     var photo = s.image(config.photoUrl,
     	0, // x
     	config.cardBorderWidth, // y
-    	config.cardWidth - config.cardBorderWidth + config.photoOffsetX, // width
+    	config.cardWidth - config.cardBorderWidth + config.photoOffset, // width
     	config.cardHeight - config.cardBorderWidth // height
     )
     .attr({
-      preserveAspectRatio: 'xMaxYMid slice'
+      preserveAspectRatio: (config.photoOffset !== null ? 'xMaxYMid' : 'xMidYMid') + ' slice'
     });
     var photoPattern = photo.toPattern()
     .attr({
       viewBox: [
         0,
         config.cardBorderWidth,
-        config.cardWidth - config.cardBorderWidth + config.photoOffsetX,
+        config.cardWidth - config.cardBorderWidth + config.photoOffset,
         config.cardHeight - config.cardBorderWidth
       ]
     });
@@ -116,7 +116,7 @@ module.exports = {
       cardBorderColor: '#2284a1',
       cardInsideColor: '#CDD8DB',
       photoUrl: '',
-      photoOffsetX: 0,
+      photoOffset: null,
       name: '',
       ward: ''
     };

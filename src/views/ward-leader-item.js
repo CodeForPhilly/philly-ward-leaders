@@ -9,16 +9,20 @@ module.exports = Backbone.Marionette.ItemView.extend({
   className: 'flip-container',
   template: Template,
   onShow: function() {
+    var photoOffset = parseInt(this.model.get('Photo Offset'), 10);
+    if( ! photoOffset) photoOffset = null;
+
     baseballCard.front(this.$('.front')[0], {
       ward: this.model.get('wardOrdinal'),
       name: this.model.get('Name'),
-      photoUrl: this.model.get('Photo')
+      photoUrl: this.model.get('avatar'),
+      photoOffset: photoOffset
     });
 
     baseballCard.back(this.$('.back')[0], $.extend({
       ward: this.model.get('wardOrdinal'),
       name: this.model.get('Name'),
-      photoUrl: this.model.get('Photo')
+      photoUrl: this.model.get('avatar')
     }, this.model.toJSON()));
 
     this.$el.foundation('tooltip', 'reflow');
