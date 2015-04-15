@@ -1,12 +1,13 @@
 var Snap = require('snapsvg'),
-  _ = require('underscore');
+  _ = require('underscore'),
+  BackTemplate = require('./templates/ward-leader-item-back.html');
 
 module.exports = {
   front: function(selector, options) {
 
     var defaultConfig = {
-      cardWidth: 350,
-      cardHeight: 500,
+      cardWidth: 300,
+      cardHeight: 450,
       cardBorderWidth: 15,
       cardBorderColor: '#2284a1',
       topLeftCut: 65,
@@ -109,13 +110,11 @@ module.exports = {
   back: function(selector, options) {
 
     var defaultConfig = {
-      cardWidth: 350,
-      cardHeight: 500,
+      cardWidth: 250,
+      cardHeight: 375,
       cardBorderWidth: 15,
       cardBorderColor: '#2284a1',
       cardInsideColor: '#CDD8DB',
-      topLeftCut: 65,
-      bottomRightCut: 95,
       photoUrl: '',
       photoOffsetX: 0,
       name: '',
@@ -128,5 +127,25 @@ module.exports = {
     s.attr({
       viewBox: [0, 0, config.cardWidth, config.cardHeight]
     });
+
+    var card = s.rect(5, 5, config.cardWidth - 10, config.cardHeight - 10, 2)
+    .attr({
+      fill: config.cardBorderColor,
+      stroke: config.cardBorderColor,
+      strokeWidth: 10
+    });
+
+    var inside = s.rect(config.cardBorderWidth, config.cardBorderWidth, config.cardWidth - config.cardBorderWidth * 2, config.cardHeight - config.cardBorderWidth * 2)
+    .attr({
+      fill: config.cardInsideColor,
+      stroke: '#000',
+      strokeWidth: 1
+    });
+
+    var contents = Snap.parse(BackTemplate(config));
+
+    var g = s.group().append(contents);
+
+    return s;
   }
 };
