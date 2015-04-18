@@ -9,7 +9,6 @@ module.exports = Backbone.Marionette.CompositeView.extend({
   template: Template,
   childView: WardLeaderItemView,
   childViewContainer: '#leaders',
-  party: 'D',
   initialize: function() {
     _.bindAll(this, 'onSort', 'onSearch');
   },
@@ -25,7 +24,7 @@ module.exports = Backbone.Marionette.CompositeView.extend({
     return $.extend({
       sortKey: this.collection.sortKey,
       searchQuery: this.searchQuery,
-      party: this.party
+      party: this.collection.party
     }, this.collection.toJSON());
   },
   onRender: function() {
@@ -50,7 +49,7 @@ module.exports = Backbone.Marionette.CompositeView.extend({
     e.preventDefault();
   },
   onSwitchParty: function(e) {
-    this.party = $(e.currentTarget).data('party');
+    this.collection.party = $(e.currentTarget).data('party');
     this.render();
     e.preventDefault();
   },
@@ -58,6 +57,6 @@ module.exports = Backbone.Marionette.CompositeView.extend({
     $(e.currentTarget).toggleClass('hover');
   },
   filter: function(child, index, collection) {
-    return child.get('Party') === this.party && (this.searchQuery ? (util.stringContains(this.searchQuery, child.get('Name')) || util.stringContains(this.searchQuery, child.get('Ward').toString())) : true);
+    return child.get('Party') === this.collection.party && (this.searchQuery ? (util.stringContains(this.searchQuery, child.get('Name')) || util.stringContains(this.searchQuery, child.get('Ward').toString())) : true);
   }
 });

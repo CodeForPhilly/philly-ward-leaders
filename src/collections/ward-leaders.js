@@ -30,5 +30,6 @@ module.exports = Backbone.Collection.extend({
      sync: Backbone.tabletopSync,
      sortKey: 'voters',
      comparator: comparators.wardNumber,
-     comparators: comparators
+     comparators: comparators,
+     party: 'D'
 });
