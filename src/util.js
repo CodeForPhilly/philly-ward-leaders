@@ -24,7 +24,9 @@ module.exports = {
           return $('#feedback-link').attr('href') + '?' + $.param(params).replace(/\+/g, '%20');
      },
 
-     partyPlural: function(party) {
-       return party === 'D' ? 'democrats' : party === 'R' ? 'republicans' : 'party voters';
+     partyName: function(party, plural) {
+       if(party === 'R') return plural ? 'republicans' : 'republican';
+       else if(party === 'D') return plural ? 'democrats' : 'democratic';
+       else return plural ? 'party voter' : '';
     }
 };

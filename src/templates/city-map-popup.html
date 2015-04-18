@@ -1,10 +1,11 @@
 <header><%= data[0].wardOrdinal %> Ward</header>
+<section><%= data[0].totalTurnoutPercentage %>% turnout (total)</section>
 
 <% for(var i = 0; i < data.length; i++) { %>
 <section>
-     <%= data[i].Name %>
-     <span class="party"><%= data[i].Party %></span>
+  <a href="#<%= data[i].Ward %>/<%= data[i].slug %>" class="button tiny">
+    <%= data[i].Name %>
+    <span class="party"><%= data[i].Party %></span>
+  </a>
 </section>
 <% } %>
-<section><%= data[0].turnoutPercentage %>% turnout</section>
-<a href="#<%= data[0].Ward %>/<%= data[0].slug %>" class="button tiny">Details</a>

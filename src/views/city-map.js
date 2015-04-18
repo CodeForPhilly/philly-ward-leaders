@@ -75,7 +75,7 @@ module.exports = Backbone.Marionette.ItemView.extend({
         style: function(feature) {
           var model = self.collection.findWhere({Ward: +feature.properties.WARD_NUM});
           return {
-            fillColor: colors(model ? model.get('turnoutPercentage') : 0),
+            fillColor: colors(model ? model.get('totalTurnoutPercentage') : 0),
             fillOpacity: 0.7,
             weight: 3,
             color: '#2284a1'

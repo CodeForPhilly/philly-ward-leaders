@@ -12,18 +12,17 @@ module.exports = Backbone.Marionette.ItemView.extend({
     var photoOffset = parseInt(this.model.get('Photo Offset'), 10);
     if( ! photoOffset) photoOffset = null;
 
-    baseballCard.front(this.$('.front')[0], {
+    var settings = $.extend({
       ward: this.model.get('wardOrdinal'),
       name: this.model.get('Name'),
       photoUrl: this.model.get('avatar'),
       photoOffset: photoOffset
-    });
+    }, this.model.toJSON());
 
-    baseballCard.back(this.$('.back')[0], $.extend({
-      ward: this.model.get('wardOrdinal'),
-      name: this.model.get('Name'),
-      photoUrl: this.model.get('avatar')
-    }, this.model.toJSON()));
+    if(this.model.get('Party') === 'R') settings.cardBorderColor = '#A12222';
+
+    baseballCard.front(this.$('.front')[0], settings);
+    baseballCard.back(this.$('.back')[0], settings);
 
     this.$el.foundation('tooltip', 'reflow');
   }
