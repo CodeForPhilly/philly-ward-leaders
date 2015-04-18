@@ -5,7 +5,7 @@
         <h3><%= data.Name %> <span class="ward-ordinal"><%= data.wardOrdinal %> Ward</span></h3>
         <dl>
           <dt>Voters (<%= data.Party %>)</dt>
-          <dd><%= data['Total Registered'].toLocaleString() %></dd>
+          <dd><%= data['Party Registered'].toLocaleString() %></dd>
 
           <dt>Turnout (<%= data.Party %>)</dt>
           <dd><%= data['partyTurnoutPercentage'] %>%</dd>
