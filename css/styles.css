@@ -202,10 +202,6 @@ footer img {
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 
-	backface-visibility: hidden;
-	-webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-
 	position: relative;
 	margin: 0 30px;
 }
@@ -213,7 +209,6 @@ footer img {
 .front, .back {
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
 }
 
 .back {
