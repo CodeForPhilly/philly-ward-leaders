@@ -53,7 +53,7 @@ module.exports = Backbone.Router.extend({
     } else {
       var self = this;
       this.wardLeaders.on('sync', function() {
-        var model = self.wardLeaders.findWhere({Ward: +ward});
+        var model = self.wardLeaders.findWhere({Ward: +ward, slug: slug});
         self.show(new WardLeaderDetailsView({ model: model, divisionBoundaries: self.divisionBoundaries }));
       });
     }
