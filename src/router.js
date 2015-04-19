@@ -13,7 +13,8 @@ var Backbone = require('backbone'),
     about: require('./templates/about.html'),
     faq: require('./templates/faq.html'),
     learn: require('./templates/learn.html'),
-    intro: require('./templates/intro.html')
+    intro: require('./templates/intro.html'),
+    rules: require('./templates/rules.html')
   };
 
 module.exports = Backbone.Router.extend({
