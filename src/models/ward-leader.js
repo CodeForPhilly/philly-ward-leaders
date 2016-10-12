@@ -1,4 +1,4 @@
-var Backbone = require('Backbone'),
+var Backbone = require('backbone'),
      WardLeader = require('../models/ward-leader'),
      moment = require('moment'),
      util = require('../util');
