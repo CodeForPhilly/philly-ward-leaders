@@ -1,4 +1,5 @@
 var Backbone = require('backbone'),
+  $ = require('jquery'),
   Marionette = require('backbone.marionette'),
   NProgress = require('nprogress'),
   util = require('./util'),
@@ -16,6 +17,8 @@ var Backbone = require('backbone'),
     intro: require('./templates/intro.html'),
     rules: require('./templates/rules.html')
   };
+require('foundation-sites');
+require('foundation-sites/js/foundation/foundation.tooltip');
 
 module.exports = Backbone.Router.extend({
   routes: {
@@ -75,7 +78,10 @@ module.exports = Backbone.Router.extend({
     var view = new Backbone.Marionette.ItemView({
       template: template,
       className: key,
-      templateHelpers: { errorLink: util.errorLink }
+      templateHelpers: { errorLink: util.errorLink },
+      onRender: function() {
+        this.$el.foundation('tooltip', 'reflow');
+      }
     });
     view.title = util.capitalizeFirstLetter(key);
     this.show(view);

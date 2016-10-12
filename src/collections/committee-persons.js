@@ -1,4 +1,5 @@
 var Backbone = require('backbone'),
+     $ = require('jquery')
      CommitteePerson = require('../models/committee-person');
 
 module.exports = Backbone.Collection.extend({

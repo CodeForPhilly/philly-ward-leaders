@@ -5,6 +5,8 @@ var Backbone = require('backbone'),
   CommitteePersonsView = require('../views/committee-person-list'),
   WardMapView = require('./ward-map'),
   util = require('../util');
+require('foundation-sites');
+require('foundation-sites/js/foundation/foundation.tooltip');
 
 module.exports = Backbone.Marionette.LayoutView.extend({
   template: Template,

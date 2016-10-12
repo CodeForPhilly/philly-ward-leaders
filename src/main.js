@@ -1,10 +1,11 @@
-var $ = require('jquery'),
-  _ = require('underscore'),
-  Backbone = require('backbone'),
-  Marionette = require('backbone.marionette'),
-  Router = require('./router');
-var Modernizr = require('browsernizr');
-require('foundation');
+var $ = jQuery = require('jquery');
+var _ = require('underscore');
+Backbone = require('backbone'); // must be on window for tabletopSync
+Backbone.$ = $ || jQuery; // shim for marionette
+var Marionette = require('backbone.marionette');
+var Router = require('./router');
+require('browsernizr/test/touchevents');
+Modernizr = require('browsernizr'); // must be on window for foundation?
 
 var layout = new Marionette.LayoutView({
      el: 'body',

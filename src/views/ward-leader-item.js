@@ -1,5 +1,6 @@
 var Backbone = require('backbone'),
   Marionette = require('backbone.marionette'),
+  $ = require('jquery'),
   _ = require('underscore'),
   baseballCard = require('../baseball-card'),
   Template = require('../templates/ward-leader-item.html');
@@ -23,7 +24,5 @@ module.exports = Backbone.Marionette.ItemView.extend({
 
     baseballCard.front(this.$('.front')[0], settings);
     baseballCard.back(this.$('.back')[0], settings);
-
-    this.$el.foundation('tooltip', 'reflow');
   }
 });

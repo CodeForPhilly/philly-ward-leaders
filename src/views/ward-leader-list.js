@@ -1,9 +1,12 @@
 var Backbone = require('backbone'),
   Marionette = require('backbone.marionette'),
+  $ = require('jquery'),
   _ = require('underscore'),
   Template = require('../templates/ward-leader-list.html'),
   WardLeaderItemView = require('../views/ward-leader-item'),
   util = require('../util');
+require('foundation-sites');
+require('foundation-sites/js/foundation/foundation.dropdown');
 
 module.exports = Backbone.Marionette.CompositeView.extend({
   template: Template,
