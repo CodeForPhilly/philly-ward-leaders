@@ -4,9 +4,10 @@
   "description": "Shining a spotlight on the powerful players behind Philadelphia elections.",
   "main": "src/main.js",
   "scripts": {
-    "dev": "budo src/main.js:bundle.js --live",
-    "build:css": "cleancss css/styles.css -o bundle.css",
-    "build:js": "browserify src/main.js | uglifyjs -- > bundle.js",
+    "dev": "budo src/main.js:build/bundle.js --live",
+    "mkdir": "mkdir -p build",
+    "build:css": "npm run mkdir && cleancss css/styles.css -o build/bundle.css",
+    "build:js": "npm run mkdir && browserify src/main.js | uglifyjs -- > build/bundle.js",
     "build": "npm run build:css && npm run build:js",
     "start": "npm run build:css && npm run dev"
   },
@@ -41,6 +42,7 @@
     "browserify": "^13.1.0",
     "budo": "^9.2.1",
     "clean-css": "^3.4.20",
+    "gh-pages": "^0.11.0",
     "node-underscorify": "0.0.14",
     "uglify-js": "^2.7.3"
   },
