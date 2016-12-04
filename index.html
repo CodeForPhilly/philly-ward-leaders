@@ -12,8 +12,7 @@ layout: default
         {% assign party = site.pwl.parties[leader.party] %}
         {% assign stat = stats | where: 'ward', leader.ward | where: 'party', party.name | first %}
 
-        {% assign registered_party_float = stat.registered_party | times: 1.0 %}
-        {% assign turnout_percent_party = stat.turnout_party | divided_by: registered_party_float | times: 100 | round %}
+        {% assign turnout_percent_party = stat.turnout_party | times: 100 | divided_by: stat.registered_party | round %}
 
         <div class="flipper">
           <svg class="front"></svg>

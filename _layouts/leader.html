@@ -8,11 +8,9 @@ layout: default
 {% assign party = site.pwl.parties[page.party] %}
 {% assign stat = site.data.stats | where: 'ward', page.ward | where: 'party', party.name | first %}
 
-{% assign registered_total_float = stat.registered_total | times: 1.0 %}
-{% assign registered_percent_party = stat.registered_party | divided_by: registered_total_float | times: 100 | round %}
+{% assign registered_percent_party = stat.registered_party | times: 100 | divided_by: stat.registered_total | round %}
 
-{% assign registered_party_float = stat.registered_party | times: 1.0 %}
-{% assign turnout_percent_party = stat.turnout_party | divided_by: registered_party_float | times: 100 | round %}
+{% assign turnout_percent_party = stat.turnout_party | times: 100 | divided_by: stat.registered_party | round %}
 
 <h2>Registered Voters</h2>
 {{ stat.registered_party }} {{ party.plural }}
