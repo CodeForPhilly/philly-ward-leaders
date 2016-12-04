@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% assign leaders = site.leaders | where: 'party', 'D' %}
+{% assign stats = site.data.stats %}
+
+<div class="row">
+  <div class="medium-12 columns">
+    <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3" id="leaders">
+      {% for leader in leaders %}
+
+        {% assign party = site.pwl.parties[leader.party] %}
+        {% assign stat = stats | where: 'ward', leader.ward | where: 'party', party.name | first %}
+
+        {% assign registered_party_float = stat.registered_party | times: 1.0 %}
+        {% assign turnout_percent_party = stat.turnout_party | divided_by: registered_party_float | times: 100 | round %}
+
+        <div class="flipper">
+          <svg class="front"></svg>
+          <svg class="back">
+            <div class="stats">
+              <h3>{{ leader.name }} <span class="ward-ordinal">{{ leader.ward }} Ward</span></h3>
+              <dl>
+                <dt>Voters ({{ leader.party }})</dt>
+                <dd>{{ stat.registered_party }}</dd>
+
+                <dt>Turnout ({{ leader.party }})</dt>
+                <dd>{{ turnout_percent_party }}%</dd>
+
+                <dt>Vacancies</dt>
+                <dd></dd>
+              </dl>
+              <a href="{{ leader.url }}" class="button expand">Details</a>
+            </div>
+          </svg>
+        </div>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

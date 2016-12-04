@@ -1,0 +1,29 @@
+title: Philly Ward Leaders
+baseurl: ""
+
+# Custom Philly Ward Leaders variables
+pwl:
+  # Convert D & R to party names
+  parties:
+    D:
+      name: democratic
+      plural: democrats
+    R:
+      name: republican
+      plural: republicans
+
+exclude:
+  - data-scripts
+
+collections:
+  leaders:
+    output: true
+    permalink: /leaders/:path/
+
+# Convoluted way to set the default layout for the collection
+defaults:
+  - scope:
+      path: ""
+      type: leaders
+    values:
+      layout: leader
