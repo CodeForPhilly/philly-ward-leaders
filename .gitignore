@@ -1,4 +1,5 @@
 _site
 *.swp
+*.swo
 data-scripts/venv
 data-scripts/__pycache__

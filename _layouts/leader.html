@@ -1,17 +1,58 @@
 ---
 layout: default
 ---
-{% assign committee_people = site.data.committee_people %}
-
-{{ page.name }}
 
 {% assign party = site.pwl.parties[page.party] %}
 {% assign stat = site.data.stats | where: 'ward', page.ward | where: 'party', party.name | first %}
 
 {% assign registered_percent_party = stat.registered_party | times: 100 | divided_by: stat.registered_total | round %}
-
 {% assign turnout_percent_party = stat.turnout_party | times: 100 | divided_by: stat.registered_party | round %}
+{% assign turnout_percent_total = stat.turnout_total | times: 100 | divided_by: stat.registered_total | round %}
 
-<h2>Registered Voters</h2>
-{{ stat.registered_party }} {{ party.plural }}
-of {{ stat.registered_total }} total ({{ registered_percent_party }}%)
+{% assign committee_people = site.data.committee_people %}
+{% assign committee_ward = committee_people | where: 'ward', page.ward | where: 'party', party.name %}
+{% assign committee_count = committee_ward | size %}
+{% assign vacancies = page.divisions | minus: committee_count %}
+
+<h3>
+  {{ page.name }}
+  <span class="ward-ordinal">
+    {{ page.ward }} Ward {{ page.subward }}
+    ({{ party.name }})
+  </span>
+</h3>
+
+<dl>
+  <dt>Registered Voters</dt>
+  <dd>
+    {{ stat.registered_party }} {{ party.plural }}
+    of {{ stat.registered_total }} total ({{ registered_percent_party }}%)
+  </dd>
+
+  <dt>Turnout (2015 Primary)</dt>
+  <dd>
+    <div>{{ stat.turnout_party }} {{ party.plural }} ({{ turnout_percent_party }}%)</div>
+    <div>{{ stat.turnout_total }} total ({{ turnout_percent_total }}%)</div>
+  </dd>
+
+  <dt>Divisions</dt>
+  <dd>{{ page.divisions }}</dd>
+
+  <dt>Committee Persons</dt>
+  <dd>
+    {{ committee_count }}
+    ({{ vacancies }} vacancies)
+  </dd>
+</dl>
+
+<h2>Committee Persons</h2>
+<div class="committee-persons-container">
+  {% for person in committee_ward %}
+    <div class="panel">
+      <header>{{ person.name }}</header>
+      <section>{{ person.division }} division</section>
+      <section>{{ person.address }}</section>
+      <span class="logo">{{ person.division }}</span>
+    </div>
+  {% endfor %}
+</div>
