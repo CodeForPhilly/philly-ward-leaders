@@ -1,9 +1,12 @@
+import json
+
 import click
 import petl as etl
 
 from registry import process_registry
 from turnout import process_turnout
 from committee import process_committee
+from divisions import process_divisions
 
 @click.group()
 def cli():
@@ -27,6 +30,14 @@ def voters(registry_file, turnout_file):
 def committee(committee_file):
     """Cleans committee person file"""
     process_committee(committee_file).tocsv()
+
+@cli.command()
+@click.option('--out', '-o', 'output_dir', type=click.Path(),
+              required=True, help='Output directory for individual .geojson files')
+@click.argument('divisions_file', type=click.Path())
+def divisions(divisions_file, output_dir):
+    """Cleans and separates divisions file"""
+    process_divisions(divisions_file, output_dir)
 
 if __name__ == '__main__':
     cli()
