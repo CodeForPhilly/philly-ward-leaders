@@ -1,5 +1,10 @@
 ---
 layout: default
+styles:
+  - https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.2/leaflet.css
+scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.2/leaflet.js
+  - scripts/map.js
 ---
 
 {% assign party = site.pwl.parties[page.party] %}
@@ -44,6 +49,8 @@ layout: default
     ({{ vacancies }} vacancies)
   </dd>
 </dl>
+
+<div class="ward-map-container" data-ward="{{ page.ward }}"></div>
 
 <h2>Committee Persons</h2>
 <div class="committee-persons-container">

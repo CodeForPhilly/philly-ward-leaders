@@ -22,6 +22,15 @@
   <link rel="stylesheet" href="node_modules/leaflet.locatecontrol/dist/L.Control.Locate.css">
   <link rel="stylesheet" href="node_modules/nprogress/nprogress.css">-->
   <link rel="stylesheet" href="{{ "styles/main.css" | relative_url }}">
+  {% for style in layout.styles %}
+    {% assign prefix = style | slice: 0, 4 | downcase %}
+    {% if prefix == 'http' %}
+      {% assign path = style %}
+    {% else %}
+      {% assign path = style | relative_url %}
+    {% endif %}
+    <link rel="stylesheet" href="{{ path }}">
+  {% endfor %}
 </head>
 
 <body>
@@ -33,6 +42,16 @@
   <div class="container" id="main">
     {{ content }}
   </div>
+
+  {% for script in layout.scripts %}
+    {% assign prefix = script | slice: 0, 4 | downcase %}
+    {% if prefix == 'http' %}
+      {% assign path = script %}
+    {% else %}
+      {% assign path = script | relative_url %}
+    {% endif %}
+    <script src="{{ path }}"></script>
+  {% endfor %}
 
 </body>
 </html>
