@@ -15,6 +15,7 @@ def process_divisions(filepath, output_dir):
         division = int(ward_div[2:].lstrip('0'))
 
         wards[ward].append({
+            'type': 'Feature',
             'properties': {
                 'ward_div': ward_div,
                 'ward': ward,
