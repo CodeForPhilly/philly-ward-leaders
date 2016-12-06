@@ -4,6 +4,7 @@ styles:
   - https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.2/leaflet.css
 scripts:
   - https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.2/leaflet.js
+  - https://cdnjs.cloudflare.com/ajax/libs/reqwest/2.0.5/reqwest.min.js
   - scripts/map.js
 ---
 
@@ -50,7 +51,8 @@ scripts:
   </dd>
 </dl>
 
-<div class="ward-map-container" data-ward="{{ page.ward }}"></div>
+{% capture boundaries_path %}divisions/{{ page.ward }}.geojson{% endcapture %}
+<div class="ward-map-container" data-boundaries="{{ boundaries_path | relative_url }}"></div>
 
 <h2>Committee Persons</h2>
 <div class="committee-persons-container">

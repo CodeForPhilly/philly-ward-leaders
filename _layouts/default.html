@@ -17,19 +17,15 @@
 
   <link rel="stylesheet" href="{{ "vendor/foundation.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "vendor/font-awesome.css" | relative_url }}">
-  <!--<link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
-  <link rel="stylesheet" href="node_modules/Leaflet.GeoSearch/src/css/l.geosearch.css">
-  <link rel="stylesheet" href="node_modules/leaflet.locatecontrol/dist/L.Control.Locate.css">
-  <link rel="stylesheet" href="node_modules/nprogress/nprogress.css">-->
   <link rel="stylesheet" href="{{ "styles/main.css" | relative_url }}">
-  {% for style in layout.styles %}
-    {% assign prefix = style | slice: 0, 4 | downcase %}
-    {% if prefix == 'http' %}
-      {% assign path = style %}
-    {% else %}
-      {% assign path = style | relative_url %}
+
+  {% for item in layout.styles %}
+    {% assign link = item %}
+    {% assign item_prefix = link | slice: 0, 4 | downcase %}
+    {% if item_prefix != 'http' %}
+      {% assign link = item | relative_url %}
     {% endif %}
-    <link rel="stylesheet" href="{{ path }}">
+    <link rel="stylesheet" href="{{ link }}">
   {% endfor %}
 </head>
 
@@ -43,14 +39,13 @@
     {{ content }}
   </div>
 
-  {% for script in layout.scripts %}
-    {% assign prefix = script | slice: 0, 4 | downcase %}
-    {% if prefix == 'http' %}
-      {% assign path = script %}
-    {% else %}
-      {% assign path = script | relative_url %}
+  {% for item in layout.scripts %}
+    {% assign link = item %}
+    {% assign item_prefix = link | slice: 0, 4 | downcase %}
+    {% if item_prefix != 'http' %}
+      {% assign link = item | relative_url %}
     {% endif %}
-    <script src="{{ path }}"></script>
+    <script src="{{ link }}"></script>
   {% endfor %}
 
 </body>
