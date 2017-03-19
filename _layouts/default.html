@@ -19,7 +19,12 @@
   <link rel="stylesheet" href="{{ "vendor/font-awesome.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "styles/main.css" | relative_url }}">
 
-  {% for item in layout.styles %}
+  {% if layout.styles.size %}
+    {% assign styles = layout.styles | concat: page.styles %}
+  {% else %}
+    {% assign styles = page.styles %}
+  {% endif %}
+  {% for item in styles %}
     {% assign link = item %}
     {% assign item_prefix = link | slice: 0, 4 | downcase %}
     {% if item_prefix != 'http' %}
@@ -39,7 +44,12 @@
     {{ content }}
   </div>
 
-  {% for item in layout.scripts %}
+  {% if layout.scripts.size %}
+    {% assign scripts = layout.scripts | concat: page.scripts %}
+  {% else %}
+    {% assign scripts = page.scripts %}
+  {% endif %}
+  {% for item in scripts %}
     {% assign link = item %}
     {% assign item_prefix = link | slice: 0, 4 | downcase %}
     {% if item_prefix != 'http' %}

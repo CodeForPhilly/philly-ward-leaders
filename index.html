@@ -1,8 +1,12 @@
 ---
 layout: default
+scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.0/snap.svg-min.js
+  - scripts/baseball-card.js
 ---
 {% assign leaders = site.leaders | where: 'party', 'D' %}
 {% assign stats = site.data.stats %}
+{% assign committee_people = site.data.committee_people %}
 
 <div class="row">
   <div class="medium-12 columns">
@@ -14,25 +18,39 @@ layout: default
 
         {% assign turnout_percent_party = stat.turnout_party | times: 100 | divided_by: stat.registered_party | round %}
 
-        <div class="flipper">
-          <svg class="front"></svg>
-          <svg class="back">
-            <div class="stats">
-              <h3>{{ leader.name }} <span class="ward-ordinal">{{ leader.ward }} Ward</span></h3>
-              <dl>
-                <dt>Voters ({{ leader.party }})</dt>
-                <dd>{{ stat.registered_party }}</dd>
+        {% assign committee_count = committee_people | where: 'ward', leader.ward | where: 'party', party.name | size %}
+        {% assign vacancies = leader.divisions | times: 2 | minus: committee_count %}
 
-                <dt>Turnout ({{ leader.party }})</dt>
-                <dd>{{ turnout_percent_party }}%</dd>
+        <li class="flip-container"
+          data-ward="{{ leader.ward }}"
+          data-name="{{ leader.name }}"
+          data-photo="{{ leader.photo }}"
+          data-photo-offset="{{ leader.photo_offset }}">
+          <div class="flipper">
+            <svg class="front"></svg>
+            <svg class="back"></svg>
+            <svg class="contents">
+              <foreignObject width="100%" height="100%">
+                <body>
+                  <div class="stats">
+                    <h3>{{ leader.name }} <span class="ward-ordinal">{{ leader.ward }} Ward</span></h3>
+                    <dl>
+                      <dt>Voters ({{ leader.party }})</dt>
+                      <dd>{{ stat.registered_party }}</dd>
 
-                <dt>Vacancies</dt>
-                <dd></dd>
-              </dl>
-              <a href="{{ leader.url }}" class="button expand">Details</a>
-            </div>
-          </svg>
-        </div>
+                      <dt>Turnout ({{ leader.party }})</dt>
+                      <dd>{{ turnout_percent_party }}%</dd>
+
+                      <dt>Vacancies</dt>
+                      <dd>{{ vacancies }}</dd>
+                    </dl>
+                    <a href="{{ leader.url }}" class="button expand">Details</a>
+                  </div>
+                </body>
+              </foreignObject>
+            </svg>
+          </div>
+        </li>
       {% endfor %}
     </ul>
   </div>
