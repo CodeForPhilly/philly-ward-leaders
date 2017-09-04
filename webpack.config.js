@@ -35,12 +35,17 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: require.resolve('snapsvg/dist/snap.svg.js'),
+        use: 'imports-loader?this=>window,fix=>module.exports=0'
       }
     ]
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      snapsvg: 'snapsvg/dist/snap.svg.js'
     }
   },
   devServer: {
