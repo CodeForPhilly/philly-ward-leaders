@@ -21,17 +21,16 @@
 </template>
 
 <script>
-import leaders from '../../data/ward-leaders.json'
+import { mapState } from 'vuex'
+
 import Hero from '../components/hero.vue'
 import BaseballCard from '../components/baseball-card/index.vue'
 
 export default {
   name: 'app',
-  data () {
-    return {
-      leaders: leaders.filter((leader) => leader.Party === 'D')
-    }
-  },
+  computed: mapState({
+    leaders: (state) => state.leaders.filter((leader) => leader.Party === 'D')
+  }),
   components: {
     'hero': Hero,
     'baseball-card': BaseballCard

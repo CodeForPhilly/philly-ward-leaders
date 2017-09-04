@@ -18,7 +18,7 @@
                 <dt>Vacancies</dt>
                 <dd>Lorem</dd>
               </dl>
-              <a class="button is-info details">Details</a>
+              <router-link :to="url" class="button is-info details">Details</router-link>
             </div>
           </body>
         </foreignObject>
@@ -40,6 +40,11 @@ export default {
     'partyRegistered',
     'partyTurnout'
   ],
+  computed: {
+    url () {
+      return `/${this.ward}/${this.party}`
+    }
+  },
   mounted () {
     const frontEl = this.$el.querySelector('.front')
     createFront(frontEl, this.$props)
