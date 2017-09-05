@@ -1,6 +1,6 @@
 {
   "presets": [
-    ["env", { "modules": false }]
+    ["env", { "modules": false, "exclude": ["transform-regenerator"] }]
   ],
   "plugins": [
     ["transform-object-rest-spread", { "useBuiltIns": true }]

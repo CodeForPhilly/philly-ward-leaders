@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+// Use static json file until back-end is wired up
 import leaders from '../../data/ward-leaders.json'
 
 Vue.use(Vuex)
@@ -8,21 +9,17 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   strict: (process.env.NODE_ENV !== 'production'),
   state: {
-    leaders, // Use static data until back-end integration is built
-    currentLeader: {}
+    leaders: []
   },
   mutations: {
-    setCurrentLeader (state, leader) {
-      state.currentLeader = leader
+    FETCH_LEADERS_SUCCESS (state, leaders) {
+      state.leaders = leaders
     }
   },
   actions: {
-    // Stub using static data until back-end integration is built
-    fetchCurrentLeader ({ state, commit }, { ward, party }) {
-      const leader = state.leaders.find((leader) => {
-        return (leader.Ward + '' === ward) && (leader.Party === party)
-      })
-      commit('setCurrentLeader', leader)
+    FETCH_LEADERS ({ commit }) {
+      // Add fetching here
+      commit('FETCH_LEADERS_SUCCESS', leaders)
     }
   }
 })

@@ -3,7 +3,7 @@
     <hero></hero>
     <section class="section">
       <div class="container">
-        <div class="columns is-multiline">
+        <div v-if="leaders.length" class="columns is-multiline">
           <baseball-card
             v-for="leader in leaders"
             :name="leader.Name"
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 import Hero from '../components/hero.vue'
 import BaseballCard from '../components/baseball-card/index.vue'
@@ -34,10 +34,12 @@ export default {
   components: {
     'hero': Hero,
     'baseball-card': BaseballCard
+  },
+  methods: mapActions({
+    fetchLeaders: 'FETCH_LEADERS'
+  }),
+  created () {
+    this.fetchLeaders()
   }
 }
 </script>
-
-<style lang="scss">
-@import "~bulma";
-</style>

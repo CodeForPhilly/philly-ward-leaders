@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-info">
+    <section class="hero is-info" v-if="leader">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -12,7 +12,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" v-if="leader">
       <nav class="level">
         <div class="level-item has-text-centered">
           <div>
@@ -49,18 +49,16 @@ import { mapState, mapActions } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      leader: (state) => state.currentLeader
+      leader: function (state) {
+        const { ward, party } = this.$route.params
+        return state.leaders.find((leader) => {
+          return (leader.Ward + '' === ward) && (leader.Party === party)
+        })
+      }
     }),
     vacancies () {
       return this.leader.Divisions * 2 - this.leader['Committee People']
     }
-  },
-  methods: mapActions([
-    'fetchCurrentLeader'
-  ]),
-  created () {
-    const { ward, party } = this.$route.params
-    this.fetchCurrentLeader({ ward, party })
   }
 }
 </script>
