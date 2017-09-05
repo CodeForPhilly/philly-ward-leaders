@@ -9,6 +9,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "bulma": "^0.5.1",
     "snapsvg": "^0.5.1",
     "vue": "^2.3.3",

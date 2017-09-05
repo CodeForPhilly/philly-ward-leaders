@@ -100,6 +100,17 @@
         </div>
       </div>
     </section>
+    <section class="section" v-if="committeePersons">
+      <h2 class="title is-2">Committee Persons</h2>
+      <div class="columns is-multiline">
+        <committee-person
+          v-for="person in committeePersons"
+          :fullName="person.name"
+          :division="person.division"
+          :address="person.address"
+        ></committee-person>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -107,6 +118,7 @@
 import { mapState, mapActions } from 'vuex'
 
 import StatsBar from '../components/stats-bar.vue'
+import CommitteePerson from '../components/committee-person.vue'
 
 export default {
   computed: {
@@ -116,7 +128,8 @@ export default {
         return state.leaders.find((leader) => {
           return (leader.ward + '' === ward) && (leader.party === party)
         })
-      }
+      },
+      committeePersons: (state) => state.committeePersons
     }),
     partyPlural () {
       return this.leader.party === 'D' ? 'democrats' : 'republicans'
@@ -137,8 +150,19 @@ export default {
       return this.leader.divisions * 2 - this.leader.committeePersons
     }
   },
+  methods: mapActions({
+    fetchLeaders: 'FETCH_LEADERS',
+    fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS'
+  }),
+  created () {
+    if (!this.leader) this.fetchLeaders()
+
+    const ward = this.$route.params.ward
+    this.fetchCommitteePersons(ward)
+  },
   components: {
-    'stats-bar': StatsBar
+    'stats-bar': StatsBar,
+    'committee-person': CommitteePerson
   }
 }
 </script>
