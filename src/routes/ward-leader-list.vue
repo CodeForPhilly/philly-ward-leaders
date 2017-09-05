@@ -6,13 +6,13 @@
         <div v-if="leaders.length" class="columns is-multiline">
           <baseball-card
             v-for="leader in leaders"
-            :name="leader.Name"
-            :ward="leader.Ward"
-            :party="leader.Party"
-            :photo="leader.Photo"
-            :photoOffset="leader['Photo Offset']"
-            :partyTurnout="leader['Party Turnout']"
-            :partyRegistered="leader['Party Registered']"
+            :name="leader.fullName"
+            :ward="leader.ward"
+            :party="leader.party"
+            :photo="leader.photo"
+            :photoOffset="leader.photoOffset"
+            :partyTurnout="leader.partyTurnout"
+            :partyRegistered="leader.partyRegistered"
           ></baseball-card>
         </div>
       </div>
@@ -29,7 +29,7 @@ import BaseballCard from '../components/baseball-card/index.vue'
 export default {
   name: 'app',
   computed: mapState({
-    leaders: (state) => state.leaders.filter((leader) => leader.Party === 'D')
+    leaders: (state) => state.leaders.filter((leader) => leader.party === 'D')
   }),
   components: {
     'hero': Hero,

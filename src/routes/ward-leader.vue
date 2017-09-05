@@ -4,7 +4,7 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            {{ leader.Name }}
+            {{ leader.fullName }}
           </h1>
           <h2 class="subtitle">
             Ward Leader
@@ -14,47 +14,47 @@
     </section>
     <section class="section" v-if="leader">
       <stats-bar
-        :party="leader.Party"
-        :party-registered="leader['Party Registered']"
-        :party-turnout="leader['Party Turnout']"
-        :divisions="leader.Divisions"
+        :party="leader.party"
+        :party-registered="leader.partyRegistered"
+        :party-turnout="leader.partyTurnout"
+        :divisions="leader.divisions"
         :vacancies="vacancies"
       ></stats-bar>
     </section>
     <section class="section" v-if="leader">
       <div class="columns">
         <div class="column">
-          <figure class="image is-square" v-if="leader.Photo">
-            <img :src="leader.Photo">
+          <figure class="image" v-if="leader.photo">
+            <img :src="leader.photo">
           </figure>
         </div>
         <div class="column">
           <dl>
             <dt>Registered voters</dt>
             <dd>
-              {{ leader['Party Registered'] }}
+              {{ leader.partyRegistered }}
               {{ partyPlural }} of
-              {{ leader['Total Registered'] }}
+              {{ leader.totalRegistered }}
               ({{ registeredPercent }}%)
             </dd>
 
             <dt>Turnout (2015 Primary)</dt>
             <dd>
-              {{ leader['Party Turnout'] }}
+              {{ leader.partyTurnout }}
               {{ partyPlural }}
               ({{ partyTurnoutPercent }}%)
               <br>
-              {{ leader['Total Turnout'] }}
+              {{ leader.totalTurnout }}
               total
               ({{ totalTurnoutPercent }}%)
             </dd>
 
             <dt>Divisions</dt>
-            <dd>{{ leader.Divisions }}</dd>
+            <dd>{{ leader.divisions }}</dd>
 
             <dt>Committee Persons</dt>
             <dd>
-              {{ leader['Committee People'] }}
+              {{ leader.committeePersons }}
               ({{ vacancies }} vacancies)
             </dd>
           </dl>
@@ -62,37 +62,37 @@
         <div class="column">
           <dl>
             <dt>Address</dt>
-            <dd>{{ leader.Address }}</dd>
+            <dd>{{ leader.address }}</dd>
 
             <dt>Phone</dt>
-            <dd>{{ leader.Phone }}</dd>
+            <dd>{{ leader.phone }}</dd>
 
             <dt>Age</dt>
-            <dd>{{ leader.Age }}</dd>
+            <dd>{{ leader.age }}</dd>
 
             <dt>Gender</dt>
-            <dd>{{ leader.Gender }}</dd>
+            <dd>{{ leader.gender }}</dd>
 
             <dt>Occupation</dt>
-            <dd>{{ leader.Occupation }}</dd>
+            <dd>{{ leader.occupation }}</dd>
           </dl>
         </div>
         <div class="column">
           <dl>
             <dt>Email</dt>
-            <dd>{{ leader.Email }}</dd>
+            <dd>{{ leader.email }}</dd>
 
             <dt>Social Media</dt>
             <dd>
               <ul>
-                <li v-if="leader.LinkedIn">
-                  <a :href="leader.LinkedIn">LinkedIn</a>
+                <li v-if="leader.linkedin">
+                  <a :href="leader.linkedin">LinkedIn</a>
                 </li>
-                <li v-if="leader.Facebook">
-                  <a :href="leader.Facebook">Facebook</a>
+                <li v-if="leader.facebook">
+                  <a :href="leader.facebook">Facebook</a>
                 </li>
-                <li v-if="leader.Twitter">
-                  <a :href="leader.Twitter">Twitter</a>
+                <li v-if="leader.twitter">
+                  <a :href="leader.twitter">Twitter</a>
                 </li>
               </ul>
             </dd>
@@ -114,30 +114,27 @@ export default {
       leader: function (state) {
         const { ward, party } = this.$route.params
         return state.leaders.find((leader) => {
-          return (leader.Ward + '' === ward) && (leader.Party === party)
+          return (leader.ward + '' === ward) && (leader.party === party)
         })
       }
     }),
     partyPlural () {
-      return this.leader.Party === 'D' ? 'democrats' : 'republicans'
+      return this.leader.party === 'D' ? 'democrats' : 'republicans'
     },
     registeredPercent () {
-      const partyRegistered = this.leader['Party Registered']
-      const totalRegistered = this.leader['Total Registered']
+      const { partyRegistered, totalRegistered } = this.leader
       return Math.round(partyRegistered / totalRegistered * 100)
     },
     partyTurnoutPercent () {
-      const partyTurnout = this.leader['Party Turnout']
-      const partyRegistered = this.leader['Party Registered']
+      const { partyTurnout, partyRegistered } = this.leader
       return Math.round(partyTurnout / partyRegistered * 100)
     },
     totalTurnoutPercent () {
-      const totalTurnout = this.leader['Total Turnout']
-      const totalRegistered = this.leader['Total Registered']
+      const { totalTurnout, totalRegistered } = this.leader
       return Math.round(totalTurnout / totalRegistered * 100)
     },
     vacancies () {
-      return this.leader.Divisions * 2 - this.leader['Committee People']
+      return this.leader.divisions * 2 - this.leader.committeePersons
     }
   },
   components: {
