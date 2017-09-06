@@ -5,7 +5,7 @@ export function createFront (el, data) {
     cardWidth: 300,
     cardHeight: 450,
     cardBorderWidth: 15,
-    cardBorderColor: '#3273dc',
+    cardBorderColor: '#2284a1',
     topLeftCut: 65,
     bottomRightCut: 95
   }
@@ -106,7 +106,7 @@ export function createBack (el, contentsEl) {
     cardWidth: 250,
     cardHeight: 375,
     cardBorderWidth: 15,
-    cardBorderColor: '#3273dc',
+    cardBorderColor: '#2284a1',
     cardInsideColor: '#CDD8DB'
   }
 
