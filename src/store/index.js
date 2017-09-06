@@ -11,7 +11,8 @@ const store = new Vuex.Store({
   strict: (process.env.NODE_ENV !== 'production'),
   state: {
     leaders: [],
-    committeePersons: [] // Of ward currently in view
+    committeePersons: [], // Of ward currently in view
+    wardBoundaries: {} // Of ward currently in view
   },
   mutations: {
     FETCH_LEADERS_SUCCESS (state, leaders) {
@@ -19,6 +20,9 @@ const store = new Vuex.Store({
     },
     FETCH_COMMITTEE_PERSONS_SUCCESS (state, committeePersons) {
       state.committeePersons = committeePersons
+    },
+    FETCH_WARD_BOUNDARIES_SUCCESS (state, wardBoundaries) {
+      state.wardBoundaries = wardBoundaries
     }
   },
   actions: {
@@ -31,6 +35,11 @@ const store = new Vuex.Store({
       const response = await axios.get(url)
       const committeePersons = response.data.rows
       commit('FETCH_COMMITTEE_PERSONS_SUCCESS', committeePersons)
+    },
+    async FETCH_WARD_BOUNDARIES ({ commit }, ward) {
+      const url = `/data/ward-boundaries/${ward}.geojson`
+      const response = await axios.get(url)
+      commit('FETCH_WARD_BOUNDARIES_SUCCESS', response.data)
     }
   }
 })

@@ -103,7 +103,7 @@
       </div>
     </section>
     <section class="section">
-      <ward-map :ward="leader.ward"></ward-map>
+      <ward-map :ward="leader.ward" :boundaries="wardBoundaries"></ward-map>
     </section>
     <section class="section">
       <div class="container">
@@ -137,7 +137,8 @@ export default {
           return (leader.ward + '' === ward) && (leader.party === party)
         })
       },
-      committeePersons: (state) => state.committeePersons
+      committeePersons: (state) => state.committeePersons,
+      wardBoundaries: (state) => state.wardBoundaries
     }),
     partyPlural () {
       return this.leader.party === 'D' ? 'democrats' : 'republicans'
@@ -160,13 +161,15 @@ export default {
   },
   methods: mapActions({
     fetchLeaders: 'FETCH_LEADERS',
-    fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS'
+    fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS',
+    fetchWardBoundaries: 'FETCH_WARD_BOUNDARIES'
   }),
   created () {
     if (!this.leader) this.fetchLeaders()
 
     const ward = this.$route.params.ward
     this.fetchCommitteePersons(ward)
+    this.fetchWardBoundaries(ward)
   },
   components: {
     'stats-bar': StatsBar,
