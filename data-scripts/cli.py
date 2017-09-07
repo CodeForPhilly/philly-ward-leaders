@@ -8,6 +8,7 @@ from turnout import process_turnout
 from committee import process_committee
 from divisions import process_divisions
 from leaders import process_leaders
+from contentful import process_import
 
 @click.group()
 def cli():
@@ -41,12 +42,20 @@ def divisions(divisions_file, output_dir):
     process_divisions(divisions_file, output_dir)
 
 @cli.command()
-@click.option('--out', '-o', 'output_dir', type=click.Path(),
-              required=True, help='Output directory for individual .md files')
 @click.argument('leaders_file', type=click.Path())
-def leaders(leaders_file, output_dir):
-    """Splits ward leaders CSV into individual YAML front-matter files"""
-    process_leaders(leaders_file, output_dir)
+def leaders(leaders_file):
+    """Cleans ward leaders CSV and converts to JSON file"""
+    process_leaders(leaders_file).tojson()
+
+@cli.command('import')
+@click.argument('import_file')
+@click.option('--space', 'space_id', required=True,
+              help='Contentful.com Space ID')
+@click.option('--apikey', 'api_key', required=True,
+              help='Contentful.com API key')
+def import_contentful(import_file, space_id, api_key):
+    """Imports a JSON file to a contentful.com space"""
+    process_import(import_file, space_id, api_key)
 
 if __name__ == '__main__':
     cli()

@@ -1,41 +1,35 @@
 import csv
-from collections import OrderedDict
-from os import path
 
-from slugify import slugify
+import petl as etl
 
-def process_leaders(filepath, output_dir):
-    with open(filepath) as input_file:
-        reader = csv.DictReader(input_file)
+def remove_dash_lines(value):
+    """Some social media values are '---------'"""
+    return None if value[:2] == '--' else value
 
-        for row in reader:
-            lines = [
-                'ward: ' + row['Ward'],
-                'sub_ward: ' + row['Sub-Ward'],
-                'party: ' + row['Party'],
-                'name: ' + row['Name'],
-                'nickname: ' + row['Nickname'],
-                'phones: ' + row['Phones'],
-                'address: ' + row['Address'],
-                'lat: ' + row['Lat'],
-                'lng: ' + row['Lng'],
-                'ward_of_residence: ' + row['Ward of Residence'],
-                'year_of_birth: ' + row['Year of Birth'],
-                'gender: ' + row['Gender'],
-                'photo: ' + row['Photo'],
-                'photo_offset: ' + row['Photo Offset'],
-                'occupation: ' + row['Occupation'],
-                'linkedin: ' + row['LinkedIn'],
-                'facebook: ' + row['Facebook'],
-                'twitter: ' + row['Twitter'],
-                'email: ' + row['Email'],
-                'divisions: ' + row['Divisions'],
-            ]
-            contents = '---\n' + '\n'.join(lines) + '\n---'
+def process_leaders(filepath):
+    table = etl.fromcsv(filepath) \
+        .rename({'Name':        'fullName',
+                 'Ward':        'ward',
+                 'Sub-Ward':    'subWard',
+                 'Party':       'party',
+                 'Nickname':    'nickname',
+                 'Phones':      'phone',
+                 'Address':     'address',
+                 'Gender':      'gender',
+                 'Ward of Residence':   'wardOfResidence',
+                 'Year of Birth':       'yearOfBirth',
+                 'Occupation':          'occupation',
+                 'Photo':       'photo',
+                 'LinkedIn':    'linkedin',
+                 'Facebook':    'facebook',
+                 'Twitter':     'twitter',
+                 'Email':       'email'}) \
+        .cutout('Lat', 'Lng', 'Last Voted', 'Photo Offset',
+                'Divisions', 'Committee People', 'Party Registered',
+                'Total Registered', 'Party Turnout', 'Total Turnout',
+                '2014 General Party Turnout', '2014 General Total Turnout',
+                'Total Turnout') \
+        .convert({'ward': int, 'wardOfResidence': int}) \
+        .convert(('linkedin', 'facebook', 'twitter'), remove_dash_lines)
 
-            slug = slugify('{}{}-{}'.format(row['Ward'], row['Sub-Ward'], row['Name']))
-            output_filename = slug + '.md'
-            output_filepath = path.join(output_dir, output_filename)
-
-            with open(output_filepath, 'w') as output_file:
-                output_file.write(contents)
+    return table
