@@ -51,11 +51,13 @@ def leaders(leaders_file):
 @click.argument('import_file')
 @click.option('--space', 'space_id', required=True,
               help='Contentful.com Space ID')
+@click.option('--content-type', 'content_type', required=True,
+              help='Contentful.com Content type ID')
 @click.option('--apikey', 'api_key', required=True,
               help='Contentful.com API key')
-def import_contentful(import_file, space_id, api_key):
+def import_contentful(import_file, space_id, content_type, api_key):
     """Imports a JSON file to a contentful.com space"""
-    process_import(import_file, space_id, api_key)
+    process_import(import_file, space_id, content_type, api_key)
 
 if __name__ == '__main__':
     cli()

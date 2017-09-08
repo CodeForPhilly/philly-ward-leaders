@@ -6,6 +6,12 @@ def remove_dash_lines(value):
     """Some social media values are '---------'"""
     return None if value[:2] == '--' else value
 
+def expand_party(party):
+    return 'Democratic' if party == 'D' else 'Republican' if party == 'R' else None
+
+def expand_gender(gender):
+    return 'Male' if gender == 'M' else 'Female' if gender == 'F' else None
+
 def process_leaders(filepath):
     table = etl.fromcsv(filepath) \
         .rename({'Name':        'fullName',
@@ -28,8 +34,10 @@ def process_leaders(filepath):
                 'Divisions', 'Committee People', 'Party Registered',
                 'Total Registered', 'Party Turnout', 'Total Turnout',
                 '2014 General Party Turnout', '2014 General Total Turnout',
-                'Total Turnout') \
-        .convert({'ward': int, 'wardOfResidence': int}) \
-        .convert(('linkedin', 'facebook', 'twitter'), remove_dash_lines)
+                'Total Turnout', 'photo') \
+        .convert({'ward': int, 'wardOfResidence': int, 'yearOfBirth': int}) \
+        .convert(('linkedin', 'facebook', 'twitter'), remove_dash_lines) \
+        .convert('party', expand_party) \
+        .convert('gender', expand_gender)
 
     return table
