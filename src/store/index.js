@@ -61,9 +61,12 @@ const store = new Vuex.Store({
       commit('FETCH_LEADER_SUCCESS', leader)
     },
     async FETCH_COMMITTEE_PERSONS ({ commit }, { ward, party }) {
-      const url = `https://data.phila.gov/carto/api/v2/sql?q=SELECT * FROM elected_committee_people WHERE ward = ${ward}`
-      const response = await axios.get(url)
-      const committeePersons = response.data.rows
+      const response = await client.getEntries({
+        content_type: 'committeePerson',
+        'fields.ward': ward,
+        'fields.party': party
+      })
+      const committeePersons = response.items.map((item) => item.fields)
       commit('FETCH_COMMITTEE_PERSONS_SUCCESS', committeePersons)
     }
   }

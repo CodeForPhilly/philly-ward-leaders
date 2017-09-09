@@ -106,7 +106,7 @@
       <div class="columns is-multiline">
         <committee-person
           v-for="person in committeePersons"
-          :fullName="person.name"
+          :fullName="person.fullName"
           :division="person.division"
           :address="person.address"
         ></committee-person>
