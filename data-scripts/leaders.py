@@ -12,6 +12,9 @@ def expand_party(party):
 def expand_gender(gender):
     return 'Male' if gender == 'M' else 'Female' if gender == 'F' else None
 
+def empty_to_none(value):
+    return None if value == '' else value
+
 def process_leaders(filepath):
     table = etl.fromcsv(filepath) \
         .rename({'Name':        'fullName',
@@ -38,6 +41,7 @@ def process_leaders(filepath):
         .convert({'ward': int, 'wardOfResidence': int, 'yearOfBirth': int}) \
         .convert(('linkedin', 'facebook', 'twitter'), remove_dash_lines) \
         .convert('party', expand_party) \
-        .convert('gender', expand_gender)
+        .convert('gender', expand_gender) \
+        .convertall(empty_to_none)
 
     return table
