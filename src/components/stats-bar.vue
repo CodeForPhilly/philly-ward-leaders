@@ -2,20 +2,20 @@
   <nav class="level">
     <div class="level-item has-text-centered">
       <div>
-        <p class="heading">Voters ({{ party }})</p>
-        <p class="title">{{ partyRegistered }}</p>
+        <p class="heading">Voters ({{ partyAbbr }})</p>
+        <p class="title">{{ registeredVotersParty }}</p>
       </div>
     </div>
     <div class="level-item has-text-centered">
       <div>
-        <p class="heading">Turnout ({{ party }})</p>
-        <p class="title">{{ partyTurnout }}</p>
+        <p class="heading">Turnout ({{ partyAbbr }})</p>
+        <p class="title">{{ turnoutPartyPercent }}%</p>
       </div>
     </div>
     <div class="level-item has-text-centered">
       <div>
         <p class="heading">Divisions</p>
-        <p class="title">{{ divisions }}</p>
+        <p class="title">{{ divisionCount }}</p>
       </div>
     </div>
     <div class="level-item has-text-centered">
@@ -31,10 +31,15 @@
 export default {
   props: [
     'party',
-    'party-registered',
-    'party-turnout',
-    'divisions',
+    'registered-voters-party',
+    'turnout-party-percent',
+    'division-count',
     'vacancies'
-  ]
+  ],
+  computed: {
+    partyAbbr () {
+      return this.party && this.party[0]
+    }
+  }
 }
 </script>

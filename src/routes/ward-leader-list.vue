@@ -9,10 +9,11 @@
             :name="leader.fullName"
             :ward="leader.ward"
             :party="leader.party"
-            :photo="leader.photo"
-            :photoOffset="leader.photoOffset"
-            :partyTurnout="leader.partyTurnout"
-            :partyRegistered="leader.partyRegistered"
+            :photoUrl="leader.photoUrl"
+            :turnoutParty="leader.turnoutParty"
+            :registeredVotersParty="leader.registeredVotersParty"
+            :divisionCount="leader.divisionCount"
+            :committeePersonCount="leader.committeePersonCount"
           ></baseball-card>
         </div>
       </div>
@@ -29,7 +30,7 @@ import BaseballCard from '../components/baseball-card/index.vue'
 export default {
   name: 'app',
   computed: mapState({
-    leaders: (state) => state.leaders.filter((leader) => leader.party === 'D')
+    leaders: (state) => state.leaders.filter((leader) => leader.party === 'Democratic')
   }),
   components: {
     'hero': Hero,
