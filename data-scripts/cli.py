@@ -31,7 +31,7 @@ def voters(registry_file, turnout_file):
 @click.argument('committee_file', type=click.Path())
 def committee(committee_file):
     """Cleans committee person file"""
-    process_committee(committee_file).tocsv()
+    process_committee(committee_file).tojson()
 
 @cli.command()
 @click.option('--out', '-o', 'output_dir', type=click.Path(),
