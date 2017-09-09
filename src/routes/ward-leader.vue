@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-info" v-if="leader">
+    <section class="hero is-info">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -12,7 +12,7 @@
         </div>
       </div>
     </section>
-    <section class="section" v-if="leader">
+    <section class="section stats-bar">
       <stats-bar
         :party="leader.party"
         :registered-voters-party="leader.registeredVotersParty"
@@ -101,6 +101,9 @@
         </div>
       </div>
     </section>
+    <section class="section">
+      <ward-map :ward="leader.ward" :boundaries="wardBoundaries"></ward-map>
+    </section>
     <section class="section" v-if="committeePersons">
       <h2 class="title is-2">Committee Persons</h2>
       <div class="columns is-multiline">
@@ -120,12 +123,14 @@ import { mapState, mapActions } from 'vuex'
 
 import StatsBar from '../components/stats-bar.vue'
 import CommitteePerson from '../components/committee-person.vue'
+import WardMap from '../components/ward-map.vue'
 
 export default {
   computed: {
     ...mapState({
       leader: (state) => state.leader,
-      committeePersons: (state) => state.committeePersons
+      committeePersons: (state) => state.committeePersons,
+      wardBoundaries: (state) => state.wardBoundaries
     }),
     partyPlural () {
       return this.leader.party === 'Democratic' ? 'democrats' : 'republicans'
@@ -148,21 +153,27 @@ export default {
   },
   methods: mapActions({
     fetchLeader: 'FETCH_LEADER',
-    fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS'
+    fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS',
+    fetchWardBoundaries: 'FETCH_WARD_BOUNDARIES'
   }),
   created () {
     const { ward, party } = this.$route.params
     this.fetchLeader({ ward, party })
     this.fetchCommitteePersons({ ward, party })
+    this.fetchWardBoundaries(ward)
   },
   components: {
     'stats-bar': StatsBar,
-    'committee-person': CommitteePerson
+    'committee-person': CommitteePerson,
+    'ward-map': WardMap
   }
 }
 </script>
 
 <style>
+.stats-bar {
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
 dt {
   font-weight: bold;
 }
