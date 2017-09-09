@@ -9,10 +9,11 @@
             :name="leader.fullName"
             :ward="leader.ward"
             :party="leader.party"
-            :photo="leader.photo"
-            :photoOffset="leader.photoOffset"
-            :partyTurnout="leader.partyTurnout"
-            :partyRegistered="leader.partyRegistered"
+            :photoUrl="leader.photoUrl"
+            :turnoutParty="leader.turnoutParty"
+            :registeredVotersParty="leader.registeredVotersParty"
+            :divisionCount="leader.divisionCount"
+            :committeePersonCount="leader.committeePersonCount"
           ></baseball-card>
         </div>
       </div>

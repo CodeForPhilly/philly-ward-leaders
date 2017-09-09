@@ -7,7 +7,7 @@
             {{ leader.fullName }}
           </h1>
           <h2 class="subtitle">
-            Ward Leader
+            {{ leader.ward }} Ward Leader
           </h2>
         </div>
       </div>
@@ -15,46 +15,47 @@
     <section class="section" v-if="leader">
       <stats-bar
         :party="leader.party"
-        :party-registered="leader.partyRegistered"
-        :party-turnout="leader.partyTurnout"
-        :divisions="leader.divisions"
+        :registered-voters-party="leader.registeredVotersParty"
+        :turnout-party-percent="turnoutPartyPercent"
+        :division-count="leader.divisionCount"
         :vacancies="vacancies"
       ></stats-bar>
     </section>
     <section class="section" v-if="leader">
       <div class="columns">
         <div class="column">
-          <figure class="image" v-if="leader.photo">
-            <img :src="leader.photo">
+          <figure class="image" v-if="leader.photoUrl">
+            <img :src="leader.photoUrl">
           </figure>
         </div>
         <div class="column">
           <dl>
             <dt>Registered voters</dt>
             <dd>
-              {{ leader.partyRegistered }}
+              {{ leader.registeredVotersParty }}
               {{ partyPlural }} of
-              {{ leader.totalRegistered }}
-              ({{ registeredPercent }}%)
+              {{ leader.registeredVotersTotal }}
+              total
+              ({{ registeredVotersPercent }}%)
             </dd>
 
             <dt>Turnout (2015 Primary)</dt>
             <dd>
-              {{ leader.partyTurnout }}
+              {{ leader.turnoutParty }}
               {{ partyPlural }}
-              ({{ partyTurnoutPercent }}%)
+              ({{ turnoutPartyPercent }}%)
               <br>
-              {{ leader.totalTurnout }}
+              {{ leader.turnoutTotal }}
               total
-              ({{ totalTurnoutPercent }}%)
+              ({{ turnoutTotalPercent }}%)
             </dd>
 
             <dt>Divisions</dt>
-            <dd>{{ leader.divisions }}</dd>
+            <dd>{{ leader.divisionCount }}</dd>
 
             <dt>Committee Persons</dt>
             <dd>
-              {{ leader.committeePersons }}
+              {{ leader.committeePersonCount }}
               ({{ vacancies }} vacancies)
             </dd>
           </dl>
@@ -123,42 +124,36 @@ import CommitteePerson from '../components/committee-person.vue'
 export default {
   computed: {
     ...mapState({
-      leader: function (state) {
-        const { ward, party } = this.$route.params
-        return state.leaders.find((leader) => {
-          return (leader.ward + '' === ward) && (leader.party === party)
-        })
-      },
+      leader: (state) => state.leader,
       committeePersons: (state) => state.committeePersons
     }),
     partyPlural () {
-      return this.leader.party === 'D' ? 'democrats' : 'republicans'
+      return this.leader.party === 'Democratic' ? 'democrats' : 'republicans'
     },
-    registeredPercent () {
-      const { partyRegistered, totalRegistered } = this.leader
-      return Math.round(partyRegistered / totalRegistered * 100)
+    registeredVotersPercent () {
+      const { registeredVotersParty, registeredVotersTotal } = this.leader
+      return Math.round(registeredVotersParty / registeredVotersTotal * 100)
     },
-    partyTurnoutPercent () {
-      const { partyTurnout, partyRegistered } = this.leader
-      return Math.round(partyTurnout / partyRegistered * 100)
+    turnoutPartyPercent () {
+      const { turnoutParty, registeredVotersParty } = this.leader
+      return Math.round(turnoutParty / registeredVotersParty * 100)
     },
-    totalTurnoutPercent () {
-      const { totalTurnout, totalRegistered } = this.leader
-      return Math.round(totalTurnout / totalRegistered * 100)
+    turnoutTotalPercent () {
+      const { turnoutTotal, registeredVotersTotal } = this.leader
+      return Math.round(turnoutTotal / registeredVotersTotal * 100)
     },
     vacancies () {
-      return this.leader.divisions * 2 - this.leader.committeePersons
+      return this.leader.divisionCount * 2 - this.leader.committeePersonCount
     }
   },
   methods: mapActions({
-    fetchLeaders: 'FETCH_LEADERS',
+    fetchLeader: 'FETCH_LEADER',
     fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS'
   }),
   created () {
-    if (!this.leader) this.fetchLeaders()
-
-    const ward = this.$route.params.ward
-    this.fetchCommitteePersons(ward)
+    const { ward, party } = this.$route.params
+    this.fetchLeader({ ward, party })
+    this.fetchCommitteePersons({ ward, party })
   },
   components: {
     'stats-bar': StatsBar,
