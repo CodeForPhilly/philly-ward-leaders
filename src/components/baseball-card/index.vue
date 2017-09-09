@@ -9,14 +9,14 @@
             <div class="stats">
               <h3>{{ name }}<span class="ward-ordinal">{{ ward }} Ward</span></h3>
               <dl>
-                <dt>Voters ({{ party }})</dt>
-                <dd>{{ partyRegistered }}</dd>
+                <dt>Voters ({{ partyAbbr }})</dt>
+                <dd>{{ registeredVotersParty }}</dd>
 
-                <dt>Turnout ({{ party }})</dt>
-                <dd>{{ partyTurnout }}%</dd>
+                <dt>Turnout ({{ partyAbbr }})</dt>
+                <dd>{{ turnoutPartyPercent }}%</dd>
 
                 <dt>Vacancies</dt>
-                <dd>Lorem</dd>
+                <dd>{{ vacancies }}</dd>
               </dl>
               <router-link :to="url" class="button is-info details">Details</router-link>
             </div>
@@ -35,14 +35,25 @@ export default {
     'name',
     'ward',
     'party',
-    'photo',
-    'photoOffset',
-    'partyRegistered',
-    'partyTurnout'
+    'photoUrl',
+    'registeredVotersParty',
+    'turnoutParty',
+    'turnoutTotal',
+    'divisionCount',
+    'committeePersonCount'
   ],
   computed: {
     url () {
       return `/${this.ward}/${this.party}`
+    },
+    partyAbbr () {
+      return this.party && this.party[0]
+    },
+    turnoutPartyPercent () {
+      return Math.round(this.turnoutParty / this.registeredVotersParty * 100)
+    },
+    vacancies () {
+      return this.divisionCount * 2 - this.committeePersonCount
     }
   },
   mounted () {

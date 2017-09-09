@@ -25,10 +25,10 @@ export function createFront (el, data) {
 
   const photoX = 0
   const photoY = config.cardBorderWidth
-  const photoWidth = config.cardWidth - config.cardBorderWidth + data.photoOffset
+  const photoWidth = config.cardWidth - config.cardBorderWidth // + data.photoOffset
   const photoHeight = config.cardHeight - config.cardBorderWidth
   const photoRatio = (data.photoOffset !== '' ? 'xMaxYMid' : 'xMidYMid') + ' slice'
-  const photo = svg.image(data.photo, photoX, photoY, photoWidth, photoHeight)
+  const photo = svg.image(data.photoUrl, photoX, photoY, photoWidth, photoHeight)
     .attr({ preserveAspectRatio: photoRatio })
 
   const photoPattern = photo.toPattern()
