@@ -1,11 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+import { createClient } from 'contentful'
 
-// Use static json file until back-end is wired up
-import leaders from '../../data/ward-leaders.json'
+import { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } from '../config'
 
 Vue.use(Vuex)
+
+const client = createClient({
+  space: CONTENTFUL_SPACE_ID,
+  accessToken: CONTENTFUL_ACCESS_TOKEN
+})
 
 const store = new Vuex.Store({
   strict: (process.env.NODE_ENV !== 'production'),
@@ -22,8 +27,9 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-    FETCH_LEADERS ({ commit }) {
-      // Add fetching here
+    async FETCH_LEADERS ({ commit }) {
+      const response = await client.getEntries({ content_type: 'wardLeader' })
+      const leaders = response.items.map((item) => item.fields)
       commit('FETCH_LEADERS_SUCCESS', leaders)
     },
     async FETCH_COMMITTEE_PERSONS ({ commit }, ward) {

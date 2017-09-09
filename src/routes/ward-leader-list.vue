@@ -29,7 +29,7 @@ import BaseballCard from '../components/baseball-card/index.vue'
 export default {
   name: 'app',
   computed: mapState({
-    leaders: (state) => state.leaders.filter((leader) => leader.party === 'D')
+    leaders: (state) => state.leaders.filter((leader) => leader.party === 'Democratic')
   }),
   components: {
     'hero': Hero,
