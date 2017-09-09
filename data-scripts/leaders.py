@@ -28,17 +28,23 @@ def process_leaders(filepath):
                  'Ward of Residence':   'wardOfResidence',
                  'Year of Birth':       'yearOfBirth',
                  'Occupation':          'occupation',
-                 'Photo':       'photo',
                  'LinkedIn':    'linkedin',
                  'Facebook':    'facebook',
                  'Twitter':     'twitter',
-                 'Email':       'email'}) \
+                 'Email':       'email',
+                 'Photo':       'photoUrl',
+                 'Divisions':   'divisionCount',
+                 'Committee People':    'committeePersonCount',
+                 'Party Registered':    'registeredVotersParty',
+                 'Total Registered':    'registeredVotersTotal',
+                 'Party Turnout':       'turnoutParty',
+                 'Total Turnout':       'turnoutTotal'}) \
         .cutout('Lat', 'Lng', 'Last Voted', 'Photo Offset',
-                'Divisions', 'Committee People', 'Party Registered',
-                'Total Registered', 'Party Turnout', 'Total Turnout',
-                '2014 General Party Turnout', '2014 General Total Turnout',
-                'Total Turnout', 'photo') \
-        .convert({'ward': int, 'wardOfResidence': int, 'yearOfBirth': int}) \
+                '2014 General Party Turnout', '2014 General Total Turnout') \
+        .convert(('ward', 'wardOfResidence', 'yearOfBirth',
+                  'divisionCount', 'committeePersonCount',
+                  'registeredVotersParty', 'registeredVotersTotal',
+                  'turnoutParty', 'turnoutTotal'), int) \
         .convert(('linkedin', 'facebook', 'twitter'), remove_dash_lines) \
         .convert('party', expand_party) \
         .convert('gender', expand_gender) \
