@@ -37,10 +37,10 @@ export default {
       geojsonOpts: {
         style: () => ({
           weight: 2,
-          color: '#eceff1',
-          opacity: 1,
-          fillColor: '#e4ce7f',
-          fillOpacity: 1
+          color: '#04576F',
+          opacity: 0.8,
+          fillColor: '#2284a1',
+          fillOpacity: 0.4
         })
       }
     }
