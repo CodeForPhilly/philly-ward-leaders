@@ -14,7 +14,7 @@
       </div>
     </section>
 
-    <section class="section stats-bar">
+    <section class="section stats-bar is-hidden-mobile">
       <stats-bar
         :party="leader.party"
         :registered-voters-party="leader.registeredVotersParty"
