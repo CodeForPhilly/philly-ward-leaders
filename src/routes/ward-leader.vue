@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <section class="hero is-info">
       <div class="hero-body">
         <div class="container">
@@ -12,6 +13,7 @@
         </div>
       </div>
     </section>
+
     <section class="section stats-bar">
       <stats-bar
         :party="leader.party"
@@ -21,100 +23,108 @@
         :vacancy-count="vacancyCount"
       ></stats-bar>
     </section>
+
     <section class="section" v-if="leader">
-      <div class="columns">
-        <div class="column">
-          <figure class="image" v-if="leader.photoUrl">
-            <img :src="leader.photoUrl">
-          </figure>
-        </div>
-        <div class="column">
-          <dl>
-            <dt>Registered voters</dt>
-            <dd>
-              {{ leader.registeredVotersParty }}
-              {{ partyPlural }} of
-              {{ leader.registeredVotersTotal }}
-              total
-              ({{ registeredVotersPercent }}%)
-            </dd>
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <figure class="image" v-if="leader.photoUrl">
+              <img :src="leader.photoUrl">
+            </figure>
+          </div>
+          <div class="column">
+            <dl>
+              <dt>Registered voters</dt>
+              <dd>
+                {{ leader.registeredVotersParty }}
+                {{ partyPlural }} of
+                {{ leader.registeredVotersTotal }}
+                total
+                ({{ registeredVotersPercent }}%)
+              </dd>
 
-            <dt>Turnout (2015 Primary)</dt>
-            <dd>
-              {{ leader.turnoutParty }}
-              {{ partyPlural }}
-              ({{ turnoutPartyPercent }}%)
-              <br>
-              {{ leader.turnoutTotal }}
-              total
-              ({{ turnoutTotalPercent }}%)
-            </dd>
+              <dt>Turnout (2015 Primary)</dt>
+              <dd>
+                {{ leader.turnoutParty }}
+                {{ partyPlural }}
+                ({{ turnoutPartyPercent }}%)
+                <br>
+                {{ leader.turnoutTotal }}
+                total
+                ({{ turnoutTotalPercent }}%)
+              </dd>
 
-            <dt>Divisions</dt>
-            <dd>{{ leader.divisionCount }}</dd>
+              <dt>Divisions</dt>
+              <dd>{{ leader.divisionCount }}</dd>
 
-            <dt>Committee Persons</dt>
-            <dd>
-              {{ leader.committeePersonCount }}
-              ({{ vacancyCount }} vacancies)
-            </dd>
-          </dl>
-        </div>
-        <div class="column">
-          <dl>
-            <dt>Address</dt>
-            <dd>{{ leader.address }}</dd>
+              <dt>Committee Persons</dt>
+              <dd>
+                {{ leader.committeePersonCount }}
+                ({{ vacancyCount }} vacancies)
+              </dd>
+            </dl>
+          </div>
+          <div class="column">
+            <dl>
+              <dt>Address</dt>
+              <dd>{{ leader.address }}</dd>
 
-            <dt>Phone</dt>
-            <dd>{{ leader.phone }}</dd>
+              <dt>Phone</dt>
+              <dd>{{ leader.phone }}</dd>
 
-            <dt>Age</dt>
-            <dd>{{ leader.age }}</dd>
+              <dt>Age</dt>
+              <dd>{{ leader.age }}</dd>
 
-            <dt>Gender</dt>
-            <dd>{{ leader.gender }}</dd>
+              <dt>Gender</dt>
+              <dd>{{ leader.gender }}</dd>
 
-            <dt>Occupation</dt>
-            <dd>{{ leader.occupation }}</dd>
-          </dl>
-        </div>
-        <div class="column">
-          <dl>
-            <dt>Email</dt>
-            <dd>{{ leader.email }}</dd>
+              <dt>Occupation</dt>
+              <dd>{{ leader.occupation }}</dd>
+            </dl>
+          </div>
+          <div class="column">
+            <dl>
+              <dt>Email</dt>
+              <dd>{{ leader.email }}</dd>
 
-            <dt>Social Media</dt>
-            <dd>
-              <ul>
-                <li v-if="leader.linkedin">
-                  <a :href="leader.linkedin">LinkedIn</a>
-                </li>
-                <li v-if="leader.facebook">
-                  <a :href="leader.facebook">Facebook</a>
-                </li>
-                <li v-if="leader.twitter">
-                  <a :href="leader.twitter">Twitter</a>
-                </li>
-              </ul>
-            </dd>
-          </dl>
+              <dt>Social Media</dt>
+              <dd>
+                <ul>
+                  <li v-if="leader.linkedin">
+                    <a :href="leader.linkedin">LinkedIn</a>
+                  </li>
+                  <li v-if="leader.facebook">
+                    <a :href="leader.facebook">Facebook</a>
+                  </li>
+                  <li v-if="leader.twitter">
+                    <a :href="leader.twitter">Twitter</a>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
         </div>
       </div>
     </section>
+
     <section class="section">
       <ward-map :ward="leader.ward" :boundaries="wardBoundaries"></ward-map>
     </section>
+
     <section class="section" v-if="committeePersons">
-      <h2 class="title is-2">Committee Persons</h2>
-      <div class="columns is-multiline">
-        <committee-person
-          v-for="person in committeePersons"
-          :fullName="person.fullName"
-          :division="person.division"
-          :address="person.address"
-        ></committee-person>
+      <div class="container">
+        <h2 class="title is-2">Committee Persons</h2>
+        <div class="columns is-multiline">
+          <committee-person
+            v-for="person in committeePersons"
+            :fullName="person.fullName"
+            :division="person.division"
+            :address="person.address"
+          ></committee-person>
+        </div>
       </div>
     </section>
+
   </div>
 </template>
 
