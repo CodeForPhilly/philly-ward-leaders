@@ -67,25 +67,61 @@
           <div class="column">
             <dl>
               <dt>Address</dt>
-              <dd>{{ leader.address }}</dd>
+              <dd v-if="leader.address">{{ leader.address }}</dd>
+              <dd v-else>
+                <span class="unknown">Unknown</span>
+                <ask-detail
+                  :fullName="leader.fullName"
+                  detail="Address"></ask-detail>
+              </dd>
 
               <dt>Phone</dt>
-              <dd>{{ leader.phone }}</dd>
+              <dd v-if="leader.phone">{{ leader.phone }}</dd>
+              <dd v-else>
+                <span class="unknown">Unknown</span>
+                <ask-detail
+                  :fullName="leader.fullName"
+                  detail="Phone"></ask-detail>
+              </dd>
 
               <dt>Age</dt>
-              <dd>{{ leader.age }}</dd>
+              <dd v-if="leader.age">{{ leader.age }}</dd>
+              <dd v-else>
+                <span class="unknown">Unknown</span>
+                <ask-detail
+                  :fullName="leader.fullName"
+                  detail="Age"></ask-detail>
+              </dd>
 
               <dt>Gender</dt>
-              <dd>{{ leader.gender }}</dd>
+              <dd v-if="leader.gender">{{ leader.gender }}</dd>
+              <dd v-else>
+                <span class="unknown">Unknown</span>
+                <ask-detail
+                  :fullName="leader.fullName"
+                  detail="Gender"></ask-detail>
+              </dd>
 
               <dt>Occupation</dt>
-              <dd>{{ leader.occupation }}</dd>
+              <dd v-if="leader.occupation">{{ leader.occupation }}</dd>
+              <dd v-else>
+                <span class="unknown">Unknown</span>
+                <ask-detail
+                  :fullName="leader.fullName"
+                  detail="Occupation"></ask-detail>
+              </dd>
             </dl>
           </div>
           <div class="column">
             <dl>
               <dt>Email</dt>
-              <dd>{{ leader.email }}</dd>
+              <dd v-if="leader.email">{{ leader.email }}</dd>
+              <dd v-else>
+                <span class="unknown">Unknown</span>
+                <ask-detail
+                  :fullName="leader.fullName"
+                  detail="Email"></ask-detail>
+              </dd>
 
               <dt>Social Media</dt>
               <dd>
@@ -100,6 +136,10 @@
                     <a :href="leader.twitter">Twitter</a>
                   </li>
                 </ul>
+                <ask-detail
+                  :fullName="leader.fullName"
+                  detail="Social media"
+                  label="Know a link?"></ask-detail>
               </dd>
             </dl>
           </div>
@@ -134,6 +174,7 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 import StatsBar from '../components/stats-bar.vue'
 import CommitteePerson from '../components/committee-person.vue'
 import WardMap from '../components/ward-map.vue'
+import AskDetail from '../components/ask-detail.vue'
 
 export default {
   computed: {
@@ -164,7 +205,8 @@ export default {
   components: {
     'stats-bar': StatsBar,
     'committee-person': CommitteePerson,
-    'ward-map': WardMap
+    'ward-map': WardMap,
+    'ask-detail': AskDetail
   }
 }
 </script>
