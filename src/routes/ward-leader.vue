@@ -169,7 +169,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .stats-bar {
   padding: 3rem 1.5rem 1.5rem 1.5rem;
 }

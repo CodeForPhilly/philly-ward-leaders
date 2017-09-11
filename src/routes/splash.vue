@@ -16,7 +16,7 @@
   </section>
 </template>
 
-<style>
+<style scoped>
 .button {
   min-width: 250px;
   margin-bottom: 15px;
