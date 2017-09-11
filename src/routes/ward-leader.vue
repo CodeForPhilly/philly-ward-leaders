@@ -18,7 +18,7 @@
         :registered-voters-party="leader.registeredVotersParty"
         :turnout-party-percent="turnoutPartyPercent"
         :division-count="leader.divisionCount"
-        :vacancies="vacancies"
+        :vacancy-count="vacancyCount"
       ></stats-bar>
     </section>
     <section class="section" v-if="leader">
@@ -56,7 +56,7 @@
             <dt>Committee Persons</dt>
             <dd>
               {{ leader.committeePersonCount }}
-              ({{ vacancies }} vacancies)
+              ({{ vacancyCount }} vacancies)
             </dd>
           </dl>
         </div>
@@ -119,7 +119,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
 
 import StatsBar from '../components/stats-bar.vue'
 import CommitteePerson from '../components/committee-person.vue'
@@ -132,24 +132,13 @@ export default {
       committeePersons: (state) => state.committeePersons,
       wardBoundaries: (state) => state.wardBoundaries
     }),
-    partyPlural () {
-      return this.leader.party === 'Democratic' ? 'democrats' : 'republicans'
-    },
-    registeredVotersPercent () {
-      const { registeredVotersParty, registeredVotersTotal } = this.leader
-      return Math.round(registeredVotersParty / registeredVotersTotal * 100)
-    },
-    turnoutPartyPercent () {
-      const { turnoutParty, registeredVotersParty } = this.leader
-      return Math.round(turnoutParty / registeredVotersParty * 100)
-    },
-    turnoutTotalPercent () {
-      const { turnoutTotal, registeredVotersTotal } = this.leader
-      return Math.round(turnoutTotal / registeredVotersTotal * 100)
-    },
-    vacancies () {
-      return this.leader.divisionCount * 2 - this.leader.committeePersonCount
-    }
+    ...mapGetters([
+      'partyPlural',
+      'registeredVotersPercent',
+      'turnoutPartyPercent',
+      'turnoutTotalPercent',
+      'vacancyCount'
+    ])
   },
   methods: mapActions({
     fetchLeader: 'FETCH_LEADER',

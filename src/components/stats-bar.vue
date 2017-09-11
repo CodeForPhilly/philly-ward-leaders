@@ -21,25 +21,25 @@
     <div class="level-item has-text-centered">
       <div>
         <p class="heading">Vacancies</p>
-        <p class="title">{{ vacancies }}</p>
+        <p class="title">{{ vacancyCount }}</p>
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   props: [
     'party',
     'registered-voters-party',
     'turnout-party-percent',
     'division-count',
-    'vacancies'
+    'vacancy-count'
   ],
-  computed: {
-    partyAbbr () {
-      return this.party && this.party[0]
-    }
-  }
+  computed: mapGetters([
+    'partyAbbr'
+  ])
 }
 </script>

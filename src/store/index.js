@@ -20,6 +20,35 @@ const store = new Vuex.Store({
     committeePersons: [], // Of ward currently in view
     wardBoundaries: {} // Of ward currently in view
   },
+  getters: {
+    partyPlural (state) {
+      const party = state.leader.party
+      if (party === 'Democratic') {
+        return 'democrats'
+      } else if (party === 'Republican') {
+        return 'republicans'
+      }
+    },
+    partyAbbr (state) {
+      if (state.leader.party) return state.leader.party[0]
+    },
+    registeredVotersPercent (state) {
+      const { registeredVotersParty, registeredVotersTotal } = state.leader
+      return Math.round(registeredVotersParty / registeredVotersTotal * 100)
+    },
+    turnoutPartyPercent (state) {
+      const { turnoutParty, registeredVotersParty } = state.leader
+      return Math.round(turnoutParty / registeredVotersParty * 100)
+    },
+    turnoutTotalPercent (state) {
+      const { turnoutTotal, registeredVotersTotal } = state.leader
+      return Math.round(turnoutTotal / registeredVotersTotal * 100)
+    },
+    vacancyCount (state) {
+      const { divisionCount, committeePersonCount } = state.leader
+      return divisionCount * 2 - committeePersonCount
+    }
+  },
   mutations: {
     FETCH_LEADERS_SUCCESS (state, leaders) {
       state.leaders = leaders
