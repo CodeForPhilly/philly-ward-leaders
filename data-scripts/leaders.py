@@ -1,16 +1,21 @@
 import csv
 
 import petl as etl
+from slugify import slugify
 
 def remove_dash_lines(value):
     """Some social media values are '---------'"""
     return None if value[:2] == '--' else value
 
 def expand_party(party):
-    return 'Democratic' if party == 'D' else 'Republican' if party == 'R' else None
+    return 'democratic' if party == 'D' else 'republican' if party == 'R' else None
 
 def expand_gender(gender):
     return 'Male' if gender == 'M' else 'Female' if gender == 'F' else None
+
+def create_slug(row):
+    url_string = '{} {}'.format(row['ward'], row['fullName'])
+    return slugify(url_string)
 
 def empty_to_none(value):
     return None if value == '' else value
@@ -48,6 +53,7 @@ def process_leaders(filepath):
         .convert(('linkedin', 'facebook', 'twitter'), remove_dash_lines) \
         .convert('party', expand_party) \
         .convert('gender', expand_gender) \
+        .addfield('slug', create_slug) \
         .convertall(empty_to_none)
 
     return table
