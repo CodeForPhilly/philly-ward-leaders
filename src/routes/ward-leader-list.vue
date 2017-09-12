@@ -1,7 +1,19 @@
 <template>
   <div>
     <hero></hero>
-    <section class="section">
+    <section class="section leader-list">
+
+      <div class="tabs is-large is-centered">
+        <ul>
+          <router-link to="/leaders/democrats" tag="li" active-class="is-active">
+            <a>Democrats</a>
+          </router-link>
+          <router-link to="/leaders/republicans" tag="li" active-class="is-active">
+            <a>Republicans</a>
+          </router-link>
+        </ul>
+      </div>
+
       <div class="container">
         <div v-if="leaders.length" class="columns is-multiline">
           <baseball-card
@@ -17,6 +29,7 @@
           ></baseball-card>
         </div>
       </div>
+
     </section>
   </div>
 </template>
@@ -30,17 +43,32 @@ import BaseballCard from '../components/baseball-card/index.vue'
 export default {
   name: 'app',
   computed: mapState({
-    leaders: (state) => state.leaders.filter((leader) => leader.party === 'Democratic')
+    leaders: (state) => state.leaders
   }),
   components: {
     'hero': Hero,
     'baseball-card': BaseballCard
   },
-  methods: mapActions({
-    fetchLeaders: 'FETCH_LEADERS'
-  }),
+  methods: {
+    ...mapActions({
+      fetchLeaders: 'FETCH_LEADERS'
+    }),
+    fetchPartyLeaders () {
+      const party = this.$route.params.party
+      this.fetchLeaders(party)
+    }
+  },
   created () {
-    this.fetchLeaders()
+    this.fetchPartyLeaders()
+  },
+  watch: {
+    '$route': 'fetchPartyLeaders'
   }
 }
 </script>
+
+<style scoped>
+.leader-list {
+  padding-top: 24px;
+}
+</style>

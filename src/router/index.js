@@ -9,7 +9,8 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/', component: Splash },
-  { path: '/leaders', component: WardLeaderList },
+  { path: '/leaders', redirect: '/leaders/democrats' },
+  { path: '/leaders/:party', component: WardLeaderList },
   { path: '/:ward/:party', component: WardLeader }
 ]
 

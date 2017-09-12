@@ -1,9 +1,9 @@
 <template>
   <div class="column is-one-third flip-container">
     <div class="flipper">
-      <svg class="front"></svg>
-      <svg class="back"></svg>
-      <svg class="contents">
+      <svg class="front" ref="front"></svg>
+      <svg class="back" ref="back"></svg>
+      <svg class="contents" ref="content">
         <foreignObject width="100%" height="100%">
           <body>
             <div class="stats">
@@ -57,12 +57,20 @@ export default {
     }
   },
   mounted () {
-    const frontEl = this.$el.querySelector('.front')
-    createFront(frontEl, this.$props)
+    this.createCard()
+  },
+  updated () {
+    this.createCard()
+  },
+  methods: {
+    createCard () {
+      const frontEl = this.$refs.front
+      createFront(frontEl, this.$props)
 
-    const backEl = this.$el.querySelector('.back')
-    const contentsEl = this.$el.querySelector('.contents')
-    createBack(backEl, contentsEl)
+      const backEl = this.$refs.back
+      const contentsEl = this.$refs.content
+      createBack(backEl, contentsEl)
+    }
   }
 }
 </script>
