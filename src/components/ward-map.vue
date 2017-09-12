@@ -1,7 +1,19 @@
 <template>
-  <v-map v-if="isBoundariesLoaded" style="height: 350px" :zoom="zoom" :center="center" :options="mapOpts">
-    <v-tilelayer :url="url" :attribution="attribution" :params="tileOpts"></v-tilelayer>
-    <v-geojson-layer :geojson="boundaries" :options="geojsonOpts"></v-geojson-layer>
+  <v-map
+    v-if="isBoundariesLoaded"
+    class="map"
+    :zoom="zoom"
+    :center="center"
+    :options="mapOpts"
+    ref="map">
+    <v-tilelayer
+      :url="url"
+      :attribution="attribution"
+      :params="tileOpts"></v-tilelayer>
+    <v-geojson-layer
+      :geojson="boundaries"
+      :options="geojsonOpts"
+      ref="geojson"></v-geojson-layer>
   </v-map>
 </template>
 
@@ -49,10 +61,27 @@ export default {
     isBoundariesLoaded () {
       return ('type' in this.boundaries)
     }
+  },
+  updated () {
+    this.zoomToWard()
+  },
+  methods: {
+    zoomToWard () {
+      const map = this.$refs.map
+      const geojsonLayer = this.$refs.geojson
+      if (map && geojsonLayer) {
+        const bounds = geojsonLayer.getBounds()
+        map.fitBounds(bounds)
+      }
+    }
   }
 }
 </script>
 
 <style lang="scss">
 @import "~leaflet/dist/leaflet.css";
+
+.map {
+  height: 350px;
+}
 </style>
