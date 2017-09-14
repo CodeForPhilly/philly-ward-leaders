@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="leader.fullName">
 
     <section class="hero is-info">
       <div class="hero-body">
@@ -24,7 +24,7 @@
       ></stats-bar>
     </section>
 
-    <section class="section" v-if="leader">
+    <section class="section">
       <div class="container">
         <div class="columns">
           <div class="column">
