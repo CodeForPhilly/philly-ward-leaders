@@ -5,10 +5,10 @@
 
       <div class="tabs is-large is-centered">
         <ul>
-          <router-link to="/leaders/democrats" tag="li" active-class="is-active">
+          <router-link to="/leaders/democratic" tag="li" active-class="is-active">
             <a>Democrats</a>
           </router-link>
-          <router-link to="/leaders/republicans" tag="li" active-class="is-active">
+          <router-link to="/leaders/republican" tag="li" active-class="is-active">
             <a>Republicans</a>
           </router-link>
         </ul>
