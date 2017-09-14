@@ -8,7 +8,7 @@ from turnout import process_turnout
 from committee import process_committee
 from divisions import process_divisions
 from leaders import process_leaders
-from contentful import process_import
+from contentful import process_import, process_drop
 
 @click.group()
 def cli():
@@ -58,6 +58,18 @@ def leaders(leaders_file):
 def import_contentful(import_file, space_id, content_type, api_key):
     """Imports a JSON file to a contentful.com space"""
     process_import(import_file, space_id, content_type, api_key)
+
+@cli.command('drop')
+@click.option('--space', 'space_id', required=True,
+              help='Contentful.com Space ID')
+@click.option('--content-type', 'content_type', required=True,
+              help='Contentful.com Content type ID')
+@click.option('--apikey', 'api_key', required=True,
+              help='Contentful.com API key')
+def drop_contentful(space_id, content_type, api_key):
+    """Drops all entries from a contentful.com content type.
+       Processes 1,000 records at a time."""
+    process_drop(space_id, content_type, api_key)
 
 if __name__ == '__main__':
     cli()
