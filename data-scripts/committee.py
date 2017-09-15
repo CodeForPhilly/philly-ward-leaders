@@ -1,16 +1,10 @@
 import petl as etl
-from slugify import slugify
 
 def has_ward_and_division(row):
     return row['ward'] != '' and row['division'] != ''
 
 def clean_party(party):
     return 'democratic' if party == 'Democrat' else 'republican' if party == 'Republican' else None
-
-def create_slug(row):
-    url_string = '{} {} {}'.format(row['ward'],
-        row['division'], row['fullName'])
-    return slugify(url_string)
 
 def process_committee(filepath):
     table = etl.fromcsv(filepath) \
@@ -22,7 +16,6 @@ def process_committee(filepath):
                   'division': int,
                   'fullName': 'title',
                   'address': 'title'}) \
-        .convert('party', clean_party) \
-        .addfield('slug', create_slug)
+        .convert('party', clean_party)
 
     return table
