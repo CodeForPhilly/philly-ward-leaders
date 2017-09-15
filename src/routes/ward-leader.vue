@@ -8,7 +8,7 @@
             {{ leader.fullName }}
           </h1>
           <h2 class="subtitle">
-            {{ leader.ward }} Ward Leader
+            {{ leader.ward | ordinalize }} Ward Leader
           </h2>
         </div>
       </div>
@@ -36,20 +36,20 @@
             <dl>
               <dt>Registered voters</dt>
               <dd>
-                {{ leader.registeredVotersParty }}
+                {{ leader.registeredVotersParty | formatNumber }}
                 {{ partyPlural }} of
-                {{ leader.registeredVotersTotal }}
+                {{ leader.registeredVotersTotal | formatNumber }}
                 total
                 ({{ registeredVotersPercent }}%)
               </dd>
 
               <dt>Turnout (2015 Primary)</dt>
               <dd>
-                {{ leader.turnoutParty }}
+                {{ leader.turnoutParty | formatNumber }}
                 {{ partyPlural }}
                 ({{ turnoutPartyPercent }}%)
                 <br>
-                {{ leader.turnoutTotal }}
+                {{ leader.turnoutTotal | formatNumber }}
                 total
                 ({{ turnoutTotalPercent }}%)
               </dd>
@@ -175,6 +175,7 @@ import StatsBar from '../components/stats-bar.vue'
 import CommitteePerson from '../components/committee-person.vue'
 import WardMap from '../components/ward-map.vue'
 import AskDetail from '../components/ask-detail.vue'
+import { formatNumber, ordinalize } from '../util'
 
 export default {
   props: [
@@ -215,6 +216,10 @@ export default {
     'committee-person': CommitteePerson,
     'ward-map': WardMap,
     'ask-detail': AskDetail
+  },
+  filters: {
+    formatNumber,
+    ordinalize
   }
 }
 </script>

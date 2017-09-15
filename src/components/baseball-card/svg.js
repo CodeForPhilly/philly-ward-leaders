@@ -1,5 +1,7 @@
 import Snap from 'snapsvg'
 
+import { ordinalize } from '../../util'
+
 export function createFront (el, data) {
   const config = {
     cardWidth: 300,
@@ -58,7 +60,8 @@ export function createFront (el, data) {
     })
 
   // Ward text line 1
-  svg.text(45, 45, data.ward)
+  const ordinal = ordinalize(data.ward)
+  svg.text(45, 45, ordinal)
     .attr({
       'text-anchor': 'middle',
       'font-family': 'arial',

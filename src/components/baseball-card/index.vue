@@ -7,7 +7,12 @@
         <foreignObject width="100%" height="100%">
           <body>
             <div class="stats">
-              <h3>{{ name }}<span class="ward-ordinal">{{ ward }} Ward</span></h3>
+              <h3>
+                {{ name }}
+                <span class="ward-ordinal">
+                  {{ ward | ordinalize }} Ward
+                </span>
+              </h3>
               <dl>
                 <dt>Voters ({{ partyAbbr }})</dt>
                 <dd>{{ registeredVotersParty }}</dd>
@@ -29,6 +34,7 @@
 
 <script>
 import { createFront, createBack } from './svg'
+import { slugify, ordinalize } from '../../util'
 
 export default {
   props: [
@@ -47,10 +53,7 @@ export default {
       return `/leaders/${this.party}/${this.ward}/${this.slug}`
     },
     slug () {
-      return this.name.toString().toLowerCase().trim()
-        .replace(/[^a-zA-Z0-9]/g, '-')  // Replace non-alphanumeric chars with -
-        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-        .replace(/^\-|\-$/i, '')        // Remove leading/trailing hyphen
+      return slugify(this.name)
     },
     partyAbbr () {
       return this.party && this.party[0]
@@ -77,6 +80,9 @@ export default {
       const contentsEl = this.$refs.content
       createBack(backEl, contentsEl)
     }
+  },
+  filters: {
+    ordinalize
   }
 }
 </script>

@@ -3,7 +3,7 @@
     <div class="level-item has-text-centered">
       <div>
         <p class="heading">Voters ({{ partyAbbr }})</p>
-        <p class="title">{{ registeredVotersParty }}</p>
+        <p class="title">{{ registeredVotersParty | formatNumber }}</p>
       </div>
     </div>
     <div class="level-item has-text-centered">
@@ -30,6 +30,8 @@
 <script>
 import { mapGetters } from 'vuex'
 
+import { formatNumber } from '../util'
+
 export default {
   props: [
     'party',
@@ -40,6 +42,9 @@ export default {
   ],
   computed: mapGetters([
     'partyAbbr'
-  ])
+  ]),
+  filters: {
+    formatNumber
+  }
 }
 </script>
