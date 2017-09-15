@@ -21,11 +21,11 @@
             :name="leader.fullName"
             :ward="leader.ward"
             :party="leader.party"
-            :photoUrl="leader.photoUrl"
-            :turnoutParty="leader.turnoutParty"
-            :registeredVotersParty="leader.registeredVotersParty"
-            :divisionCount="leader.divisionCount"
-            :committeePersonCount="leader.committeePersonCount"
+            :photo-url="leader.photoUrl"
+            :turnout-party="leader.turnoutParty"
+            :registered-voters-party="leader.registeredVotersParty"
+            :division-count="leader.divisionCount"
+            :committee-person-count="leader.committeePersonCount"
           ></baseball-card>
         </div>
       </div>
@@ -42,6 +42,7 @@ import BaseballCard from '../components/baseball-card/index.vue'
 
 export default {
   name: 'app',
+  props: [ 'party' ],
   computed: mapState({
     leaders: (state) => state.leaders
   }),
@@ -49,20 +50,16 @@ export default {
     'hero': Hero,
     'baseball-card': BaseballCard
   },
-  methods: {
-    ...mapActions({
-      fetchLeaders: 'FETCH_LEADERS'
-    }),
-    fetchPartyLeaders () {
-      const party = this.$route.params.party
-      this.fetchLeaders(party)
-    }
-  },
+  methods: mapActions({
+    fetchLeaders: 'FETCH_LEADERS'
+  }),
   created () {
-    this.fetchPartyLeaders()
+    this.fetchLeaders(this.party)
   },
   watch: {
-    '$route': 'fetchPartyLeaders'
+    party (newValue) {
+      this.fetchLeaders(newValue)
+    }
   }
 }
 </script>

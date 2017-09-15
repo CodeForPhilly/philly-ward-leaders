@@ -44,7 +44,13 @@ export default {
   ],
   computed: {
     url () {
-      return `/${this.ward}/${this.party}`
+      return `/leaders/${this.party}/${this.ward}/${this.slug}`
+    },
+    slug () {
+      return this.name.toString().toLowerCase().trim()
+        .replace(/[^a-zA-Z0-9]/g, '-')  // Replace non-alphanumeric chars with -
+        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+        .replace(/^\-|\-$/i, '')        // Remove leading/trailing hyphen
     },
     partyAbbr () {
       return this.party && this.party[0]

@@ -177,6 +177,11 @@ import WardMap from '../components/ward-map.vue'
 import AskDetail from '../components/ask-detail.vue'
 
 export default {
+  props: [
+    'party',
+    'ward',
+    'slug'
+  ],
   computed: {
     ...mapState({
       leader: (state) => state.leader,
@@ -197,10 +202,13 @@ export default {
     fetchWardBoundaries: 'FETCH_WARD_BOUNDARIES'
   }),
   created () {
-    const { ward, party } = this.$route.params
-    this.fetchLeader({ ward, party })
-    this.fetchCommitteePersons({ ward, party })
-    this.fetchWardBoundaries(ward)
+    const opts = {
+      ward: this.ward,
+      party: this.party
+    }
+    this.fetchLeader(opts)
+    this.fetchCommitteePersons(opts)
+    this.fetchWardBoundaries(this.ward)
   },
   components: {
     'stats-bar': StatsBar,
