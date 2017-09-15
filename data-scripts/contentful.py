@@ -2,6 +2,7 @@ import json
 
 from contentful_management import Client
 from tqdm import tqdm
+from ratelimit import rate_limited
 
 def process_import(filepath, space_id, content_type_id, api_key):
     client = Client(api_key)
@@ -27,13 +28,17 @@ def process_import(filepath, space_id, content_type_id, api_key):
                 except Exception:
                     pass
 
+@rate_limited(78)
+def delete_entry(entry):
+    if entry.is_published:
+        entry.unpublish()
+
+    entry.delete()
+
 def process_drop(space_id, content_type_id, api_key):
     client = Client(api_key)
     content_type = client.content_types(space_id).find(content_type_id)
     entries = content_type.entries().all({ 'limit': 1000 })
 
     for entry in tqdm(entries):
-        if entry.is_published:
-            entry.unpublish()
-
-        entry.delete()
+        delete_entry(entry)

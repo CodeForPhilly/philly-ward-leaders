@@ -23,9 +23,9 @@ const store = new Vuex.Store({
   getters: {
     partyPlural (state) {
       const party = state.leader.party
-      if (party === 'Democratic') {
+      if (party === 'democratic') {
         return 'democrats'
-      } else if (party === 'Republican') {
+      } else if (party === 'republican') {
         return 'republicans'
       }
     },
@@ -64,7 +64,7 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-    async FETCH_LEADERS ({ commit }, partyPlural) {
+    async FETCH_LEADERS ({ commit }, party) {
       const fields = [
         'sys.id',
         'fields.ward',
@@ -76,7 +76,6 @@ const store = new Vuex.Store({
         'fields.divisionCount',
         'fields.committeePersonCount'
       ]
-      const party = pluralToParty(partyPlural)
       const response = await client.getEntries({
         content_type: 'wardLeader',
         order: 'fields.ward',
@@ -111,13 +110,5 @@ const store = new Vuex.Store({
     }
   }
 })
-
-function pluralToParty (partyPlural) {
-  if (partyPlural === 'democrats') {
-    return 'Democratic'
-  } else if (partyPlural === 'republicans') {
-    return 'Republican'
-  }
-}
 
 export default store
