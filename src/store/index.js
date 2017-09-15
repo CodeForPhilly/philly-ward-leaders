@@ -15,6 +15,7 @@ const client = createClient({
 const store = new Vuex.Store({
   strict: (process.env.NODE_ENV !== 'production'),
   state: {
+    contentPage: {},
     leaders: [],
     leader: {},
     committeePersons: [], // Of ward currently in view
@@ -61,6 +62,9 @@ const store = new Vuex.Store({
     },
     FETCH_WARD_BOUNDARIES_SUCCESS (state, wardBoundaries) {
       state.wardBoundaries = wardBoundaries
+    },
+    FETCH_CONTENT_PAGE_SUCCESS (state, contentPage) {
+      state.contentPage = contentPage
     }
   },
   actions: {
@@ -107,6 +111,14 @@ const store = new Vuex.Store({
       const url = `/data/ward-boundaries/${ward}.geojson`
       const response = await axios.get(url)
       commit('FETCH_WARD_BOUNDARIES_SUCCESS', response.data)
+    },
+    async FETCH_CONTENT_PAGE ({ commit }, slug) {
+      const response = await client.getEntries({
+        content_type: 'page',
+        'fields.slug': slug
+      })
+      const contentPage = response.items[0].fields
+      commit('FETCH_CONTENT_PAGE_SUCCESS', contentPage)
     }
   }
 })

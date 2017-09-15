@@ -15,9 +15,21 @@
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-start"></div>
       <div class="navbar-end">
-        <router-link to="/" class="navbar-item">
-          Home
+        <router-link to="/leaders" class="navbar-item">
+          Leaders
         </router-link>
+        <router-link to="/learn" class="navbar-item">
+          Learn
+        </router-link>
+        <router-link to="/party-rules" class="navbar-item">
+          Party Rules
+        </router-link>
+        <router-link to="/about" class="navbar-item">
+          About
+        </router-link>
+        <a class="navbar-item" href="http://form.jotform.us/form/50926595605160">
+          Feedback
+        </a>
       </div>
     </div>
   </nav>
