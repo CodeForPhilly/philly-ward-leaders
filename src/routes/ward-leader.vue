@@ -115,7 +115,9 @@
           <div class="column">
             <dl>
               <dt>Email</dt>
-              <dd v-if="leader.email">{{ leader.email }}</dd>
+              <dd v-if="leader.email">
+                <a :href="'mailto:' + leader.email">{{ leader.email }}</a>
+              </dd>
               <dd v-else>
                 <span class="unknown">Unknown</span>
                 <ask-detail
@@ -230,5 +232,13 @@ export default {
 }
 dt {
   font-weight: bold;
+  letter-spacing: 1px;
+}
+dd {
+  margin-bottom: 15px;
+}
+.unknown {
+  letter-spacing: 1px;
+  font-size: 80%;
 }
 </style>
