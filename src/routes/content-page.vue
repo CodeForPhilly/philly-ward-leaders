@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <h1>{{ title }}</h1>
-    <div v-html="content"></div>
-  </div>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <h1>{{ title }}</h1>
+        <div v-html="content"></div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
