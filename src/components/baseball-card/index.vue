@@ -15,7 +15,7 @@
               </h3>
               <dl>
                 <dt>Voters ({{ partyAbbr }})</dt>
-                <dd>{{ registeredVotersParty }}</dd>
+                <dd>{{ registeredVotersParty | formatNumber }}</dd>
 
                 <dt>Turnout ({{ partyAbbr }})</dt>
                 <dd>{{ turnoutPartyPercent }}%</dd>
@@ -34,7 +34,7 @@
 
 <script>
 import { createFront, createBack } from './svg'
-import { slugify, ordinalize } from '../../util'
+import { slugify, ordinalize, formatNumber } from '../../util'
 
 export default {
   props: [
@@ -56,7 +56,7 @@ export default {
       return slugify(this.name)
     },
     partyAbbr () {
-      return this.party && this.party[0]
+      return this.party && this.party[0].toUpperCase()
     },
     turnoutPartyPercent () {
       return Math.round(this.turnoutParty / this.registeredVotersParty * 100)
@@ -82,7 +82,8 @@ export default {
     }
   },
   filters: {
-    ordinalize
+    ordinalize,
+    formatNumber
   }
 }
 </script>
