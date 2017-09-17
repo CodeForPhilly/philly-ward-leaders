@@ -24,12 +24,23 @@
       ></stats-bar>
     </section>
 
-    <section class="section">
+    <section class="section leader-info">
       <div class="container">
         <div class="columns">
           <div class="column">
             <figure class="image" v-if="leader.photoUrl">
               <img :src="leader.photoUrl">
+              <ask-detail
+                :fullName="leader.fullName"
+                detail="Photo"
+                label="Have a better photo?"></ask-detail>
+            </figure>
+            <figure class="image" v-else>
+              <img src="../assets/photo-placeholder.png">
+              <ask-detail
+                :fullName="leader.fullName"
+                detail="Photo"
+                label="Have a photo?"></ask-detail>
             </figure>
           </div>
           <div class="column">
@@ -144,8 +155,15 @@
                   label="Know a link?"></ask-detail>
               </dd>
             </dl>
+
           </div>
         </div>
+        <p class="has-text-centered">
+          Is this information incorrect?
+          <ask-detail
+            :fullName="leader.fullName"
+            label="Let us know"></ask-detail>
+        </p>
       </div>
     </section>
 
@@ -229,6 +247,9 @@ export default {
 <style scoped>
 .stats-bar {
   padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
+.leader-info {
+  padding-bottom: 0;
 }
 dt {
   font-weight: bold;

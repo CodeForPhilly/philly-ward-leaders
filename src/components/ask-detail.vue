@@ -17,8 +17,10 @@ export default {
     href () {
       const opts = {
         thePage: this.fullName,
-        whatHappened: 'I found a content or data error',
-        tellUs: `${this.detail} should be: `
+        whatHappened: 'I found a content or data error'
+      }
+      if (this.detail) {
+        opts.tellUs = `${this.detail} should be: `
       }
       const query = qs.stringify(opts)
       return `${FEEDBACK_URL}?${query}`
