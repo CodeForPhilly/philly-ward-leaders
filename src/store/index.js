@@ -33,6 +33,14 @@ const store = new Vuex.Store({
     partyAbbr (state) {
       if (state.leader.party) return state.leader.party[0]
     },
+    partyTitle (state) {
+      const party = state.leader.party
+      if (party === 'democratic') {
+        return 'Democratic'
+      } else if (party === 'republican') {
+        return 'Republican'
+      }
+    },
     registeredVotersPercent (state) {
       const { registeredVotersParty, registeredVotersTotal } = state.leader
       return Math.round(registeredVotersParty / registeredVotersTotal * 100)

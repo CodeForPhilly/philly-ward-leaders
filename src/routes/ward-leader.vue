@@ -8,7 +8,10 @@
             {{ leader.fullName }}
           </h1>
           <h2 class="subtitle">
-            {{ leader.ward | ordinalize }} Ward Leader
+            {{ leader.ward | ordinalize }}
+            <span v-if="leader.subWard">({{ leader.subWard }})</span>
+            Ward Leader,
+            {{ partyTitle }} Party
           </h2>
         </div>
       </div>
@@ -211,6 +214,7 @@ export default {
     }),
     ...mapGetters([
       'partyPlural',
+      'partyTitle',
       'registeredVotersPercent',
       'turnoutPartyPercent',
       'turnoutTotalPercent',
