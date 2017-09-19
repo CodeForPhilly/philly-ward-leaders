@@ -19,7 +19,7 @@
           Leaders
         </router-link>
         <router-link to="/learn" class="navbar-item">
-          Learn
+          Learn More
         </router-link>
         <router-link to="/party-rules" class="navbar-item">
           Party Rules
