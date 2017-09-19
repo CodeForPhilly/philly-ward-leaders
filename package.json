@@ -13,6 +13,7 @@
     "bulma": "^0.5.1",
     "contentful": "^4.6.1",
     "marked": "^0.3.6",
+    "nanoid": "^0.2.1",
     "ordinal": "^1.0.2",
     "query-string": "^5.0.0",
     "snapsvg": "^0.5.1",

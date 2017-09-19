@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 import { createClient } from 'contentful'
+import nanoid from 'nanoid'
 
 import { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } from '../config'
 
@@ -15,6 +16,7 @@ const client = createClient({
 const store = new Vuex.Store({
   strict: (process.env.NODE_ENV !== 'production'),
   state: {
+    notifications: {},
     contentPage: {},
     leaders: [],
     leader: {},
@@ -73,10 +75,23 @@ const store = new Vuex.Store({
     },
     FETCH_CONTENT_PAGE_SUCCESS (state, contentPage) {
       state.contentPage = contentPage
+    },
+    ADD_NOTIFICATION (state, notification) {
+      Vue.set(state.notifications, notification.id, notification)
+    },
+    REMOVE_NOTIFICATION (state, id) {
+      Vue.delete(state.notifications, id)
     }
   },
   actions: {
-    async FETCH_LEADERS ({ commit }, party) {
+    NOTIFY ({ commit }, msg) {
+      const id = nanoid()
+      const duration = 5000
+      const notification = { id, msg }
+      commit('ADD_NOTIFICATION', notification)
+      window.setTimeout(() => commit('REMOVE_NOTIFICATION', id), duration)
+    },
+    async FETCH_LEADERS (ctx, party) {
       const fields = [
         'sys.id',
         'fields.ward',
@@ -88,45 +103,85 @@ const store = new Vuex.Store({
         'fields.divisionCount',
         'fields.committeePersonCount'
       ]
-      const response = await client.getEntries({
-        content_type: 'wardLeader',
-        order: 'fields.ward',
-        'fields.party': party,
-        select: fields.join(',')
-      })
+      let response
+      try {
+        response = await client.getEntries({
+          content_type: 'wardLeader',
+          order: 'fields.ward',
+          'fields.party': party,
+          select: fields.join(',')
+        })
+      } catch (err) {
+        ctx.dispatch('NOTIFY', `Failed to retrieve ward leaders`)
+        return
+      }
       const leaders = response.items.map((item) => item.fields)
-      commit('FETCH_LEADERS_SUCCESS', leaders)
+      ctx.commit('FETCH_LEADERS_SUCCESS', leaders)
     },
-    async FETCH_LEADER ({ commit }, { ward, party }) {
-      const response = await client.getEntries({
-        content_type: 'wardLeader',
-        'fields.ward': ward,
-        'fields.party': party
-      })
-      const leader = response.items[0].fields
-      commit('FETCH_LEADER_SUCCESS', leader)
+    async FETCH_LEADER (ctx, { ward, party }) {
+      let response
+      try {
+        response = await client.getEntries({
+          content_type: 'wardLeader',
+          'fields.ward': ward,
+          'fields.party': party
+        })
+      } catch (err) {
+        console.error('caught', err)
+        ctx.dispatch('NOTIFY', `Failed to get information about the ward leader`)
+        return
+      }
+
+      if (response.items.length) {
+        const leader = response.items[0].fields
+        ctx.commit('FETCH_LEADER_SUCCESS', leader)
+      } else {
+        ctx.dispatch('NOTIFY', `Ward leader was not found`)
+      }
     },
-    async FETCH_COMMITTEE_PERSONS ({ commit }, { ward, party }) {
-      const response = await client.getEntries({
-        content_type: 'committeePerson',
-        'fields.ward': ward,
-        'fields.party': party
-      })
+    async FETCH_COMMITTEE_PERSONS (ctx, { ward, party }) {
+      let response
+      try {
+        response = await client.getEntries({
+          content_type: 'committeePerson',
+          'fields.ward': ward,
+          'fields.party': party
+        })
+      } catch (err) {
+        ctx.dispatch('NOTIFY', `Failed to get list of committee persons`)
+        return
+      }
       const committeePersons = response.items.map((item) => item.fields)
-      commit('FETCH_COMMITTEE_PERSONS_SUCCESS', committeePersons)
+      ctx.commit('FETCH_COMMITTEE_PERSONS_SUCCESS', committeePersons)
     },
-    async FETCH_WARD_BOUNDARIES ({ commit }, ward) {
-      const url = `/data/ward-boundaries/${ward}.geojson`
-      const response = await axios.get(url)
-      commit('FETCH_WARD_BOUNDARIES_SUCCESS', response.data)
+    async FETCH_WARD_BOUNDARIES (ctx, ward) {
+      let response
+      try {
+        const url = `/data/ward-boundaries/${ward}.geojson`
+        response = await axios.get(url)
+      } catch (err) {
+        return
+      }
+      ctx.commit('FETCH_WARD_BOUNDARIES_SUCCESS', response.data)
     },
-    async FETCH_CONTENT_PAGE ({ commit }, slug) {
-      const response = await client.getEntries({
-        content_type: 'page',
-        'fields.slug': slug
-      })
-      const contentPage = response.items[0].fields
-      commit('FETCH_CONTENT_PAGE_SUCCESS', contentPage)
+    async FETCH_CONTENT_PAGE (ctx, slug) {
+      let response
+      try {
+        response = await client.getEntries({
+          content_type: 'page',
+          'fields.slug': slug
+        })
+      } catch (err) {
+        ctx.dispatch('NOTIFY', `Failed to retrieve content`)
+        return
+      }
+
+      if (response.items.length) {
+        const contentPage = response.items[0].fields
+        ctx.commit('FETCH_CONTENT_PAGE_SUCCESS', contentPage)
+      } else {
+        ctx.dispatch('NOTIFY', `Page not found`)
+      }
     }
   }
 })

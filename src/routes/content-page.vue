@@ -17,7 +17,11 @@ export default {
   props: [ 'slug' ],
   computed: mapState({
     title: (state) => state.contentPage.title,
-    content: (state) => marked(state.contentPage.content)
+    content: (state) => {
+      if (state.contentPage.content) {
+        return marked(state.contentPage.content)
+      }
+    }
   }),
   methods: mapActions({
     fetchContentPage: 'FETCH_CONTENT_PAGE'
