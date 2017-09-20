@@ -44,6 +44,10 @@ $primary: $light-blue;
 
 @import "~bulma";
 
+.navbar-burger span {
+  background-color: $white;
+}
+
 .notifications {
   position: absolute;
   top: 60px;
