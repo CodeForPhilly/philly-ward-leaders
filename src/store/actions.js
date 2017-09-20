@@ -93,6 +93,18 @@ export async function FETCH_WARD_BOUNDARIES (ctx, ward) {
   ctx.commit('FETCH_WARD_BOUNDARIES_SUCCESS', response.data)
 }
 
+export async function FETCH_CITYWIDE_BOUNDARIES (ctx) {
+  let response
+  try {
+    const url = `/data/citywide-boundaries.geojson`
+    response = await axios.get(url)
+  } catch (err) {
+    ctx.dispatch('NOTIFY', `Failed to retrieve ward boundaries`)
+    return
+  }
+  ctx.commit('FETCH_CITYWIDE_BOUNDARIES_SUCCESS', response.data)
+}
+
 export async function FETCH_CONTENT_PAGE (ctx, slug) {
   let response
   try {

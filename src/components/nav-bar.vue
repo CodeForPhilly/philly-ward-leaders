@@ -18,6 +18,9 @@
         <router-link to="/leaders" class="navbar-item">
           Leaders
         </router-link>
+        <router-link to="/map" class="navbar-item">
+          Ward Map
+        </router-link>
         <router-link to="/learn" class="navbar-item">
           Learn More
         </router-link>

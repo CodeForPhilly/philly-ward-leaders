@@ -15,7 +15,8 @@ const store = new Vuex.Store({
     leaders: [],
     leader: {},
     committeePersons: [], // Of ward currently in view
-    wardBoundaries: {} // Of ward currently in view
+    wardBoundaries: {}, // Of ward currently in view
+    citywideBoundaries: {}
   },
   getters,
   mutations,
