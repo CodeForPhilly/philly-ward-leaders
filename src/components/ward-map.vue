@@ -70,6 +70,9 @@ export default {
       return ('type' in this.boundaries)
     }
   },
+  mounted () {
+    this.zoomToWard()
+  },
   updated () {
     this.zoomToWard()
   },
