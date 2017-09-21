@@ -171,7 +171,10 @@
     </section>
 
     <section class="section">
-      <ward-map :ward="leader.ward" :boundaries="wardBoundaries"></ward-map>
+      <ward-map
+        :ward="leader.ward"
+        :boundaries="wardBoundaries"
+        :committeePersons="committeePersons"></ward-map>
     </section>
 
     <section class="section" v-if="committeePersons">

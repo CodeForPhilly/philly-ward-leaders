@@ -20,11 +20,14 @@
 <script>
 import { Map, TileLayer, GeoJSON } from 'vue2-leaflet'
 
+import { ordinalize } from '../util'
+
 export default {
   name: 'ward-map',
   props: [
     'ward',
-    'boundaries'
+    'boundaries',
+    'committeePersons'
   ],
   components: {
     'v-map': Map,
@@ -53,7 +56,12 @@ export default {
           opacity: 0.8,
           fillColor: '#2284a1',
           fillOpacity: 0.4
-        })
+        }),
+        onEachFeature: (feature, layer) => {
+          const division = +feature.properties.division
+          const template = this.popupTemplate(division)
+          layer.bindPopup(template)
+        }
       }
     }
   },
@@ -73,6 +81,23 @@ export default {
         const bounds = geojsonLayer.getBounds()
         map.fitBounds(bounds)
       }
+    },
+    popupTemplate (division) {
+      const ordinal = ordinalize(division)
+      const persons = this.findCommitteePersons(division)
+      return `
+        <div>
+          <h4 class="title is-4">${ordinal} Division</h4>
+          <ul>
+            ${persons.map((person) => `<li>${person.fullName}</li>`).join('')}
+          </ul>
+        </div>
+      `
+    },
+    findCommitteePersons (division) {
+      return this.committeePersons.filter((person) => {
+        return person.division === division
+      })
     }
   }
 }
