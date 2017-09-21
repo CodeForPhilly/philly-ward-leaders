@@ -39,3 +39,9 @@ export function vacancyCount (state) {
   const { divisionCount, committeePersonCount } = state.leader
   return divisionCount * 2 - committeePersonCount
 }
+
+export function findLeader (state) {
+  return function (ward, party) {
+    return state.leaders.find((leader) => leader.ward === ward && leader.party === party)
+  }
+}

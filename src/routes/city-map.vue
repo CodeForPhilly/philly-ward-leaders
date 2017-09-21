@@ -1,6 +1,6 @@
 <template>
   <v-map
-    class="map"
+    class="map citywide-map"
     :zoom="zoom"
     :center="center">
     <v-tilelayer
@@ -16,10 +16,9 @@
 
 <script>
 import { Map, TileLayer, GeoJSON } from 'vue2-leaflet'
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 
-import WardPopup from '../components/ward-popup.vue'
-const WardPopupConstructor = WardPopup._Ctor[0] // See #127
+import { ordinalize, slugify } from '../util'
 
 export default {
   components: {
@@ -47,37 +46,76 @@ export default {
           fillColor: '#2284a1',
           fillOpacity: 0.4
         }),
-        onEachFeature (feature, layer) {
-          const propsData = {
-            ward: feature.properties.WARD_NUM
-          }
-          const vm = new WardPopupConstructor({ propsData }).$mount()
-          layer.bindPopup(vm.$el)
+        onEachFeature: (feature, layer) => {
+          const ward = +feature.properties.WARD_NUM
+          const democrat = this.findLeader(ward, 'democratic')
+          const republican = this.findLeader(ward, 'republican')
+          const template = popupTemplate(ward, democrat, republican)
+          layer.bindPopup(template)
         }
       }
     }
   },
   computed: {
     ...mapState({
-      boundaries: (state) => state.citywideBoundaries
+      boundaries: (state) => state.citywideBoundaries,
+      leaders: (state) => state.leaders
     }),
+    ...mapGetters([
+      'findLeader'
+    ]),
     isBoundariesLoaded () {
-      return ('type' in this.boundaries)
+      return ('type' in this.boundaries) && (this.leaders.length > 0)
     }
   },
   methods: mapActions({
-    fetchCitywideBoundaries: 'FETCH_CITYWIDE_BOUNDARIES'
+    fetchCitywideBoundaries: 'FETCH_CITYWIDE_BOUNDARIES',
+    fetchLeaders: 'FETCH_LEADERS'
   }),
   created () {
     this.fetchCitywideBoundaries()
+    this.fetchLeaders()
   }
+}
+
+function popupTemplate (ward, democrat, republican) {
+  const demName = democrat && democrat.fullName
+  const demSlug = democrat && slugify(demName)
+  const demUrl = `/leaders/democratic/${ward}/${demSlug}`
+
+  const repName = republican && republican.fullName
+  const repSlug = republican && slugify(repName)
+  const repUrl = `/leaders/republican/${ward}/${repSlug}`
+
+  return `
+    <div>
+      <h4 class="title is-4">
+        ${ordinalize(ward)} Ward
+      </h4>
+      <ul class="leader-buttons">
+        <li>
+          <a href="${demUrl}" class="button">
+            ${demName} (D)
+          </a>
+        </li>
+        <li>
+          <a href="${repUrl}" class="button">
+            ${repName} (R)
+          </a>
+        </li>
+      </ul>
+    </div>
+  `
 }
 </script>
 
-<style lang="scss">
+<style>
 @import "~leaflet/dist/leaflet.css";
 
-.map {
+.citywide-map {
   height: 100vh;
+}
+.leader-buttons .button {
+  width: 100%;
 }
 </style>

@@ -31,12 +31,13 @@ export async function FETCH_LEADERS (ctx, party) {
   ]
   let response
   try {
-    response = await client.getEntries({
+    const opts = {
       content_type: 'wardLeader',
       order: 'fields.ward',
-      'fields.party': party,
       select: fields.join(',')
-    })
+    }
+    if (party) opts['fields.party'] = party
+    response = await client.getEntries(opts)
   } catch (err) {
     ctx.dispatch('NOTIFY', `Failed to retrieve ward leaders`)
     return
