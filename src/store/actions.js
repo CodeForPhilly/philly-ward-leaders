@@ -72,6 +72,7 @@ export async function FETCH_COMMITTEE_PERSONS (ctx, { ward, party }) {
   try {
     response = await client.getEntries({
       content_type: 'committeePerson',
+      order: 'fields.division',
       'fields.ward': ward,
       'fields.party': party
     })
