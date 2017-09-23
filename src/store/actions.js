@@ -101,6 +101,7 @@ export async function FETCH_WARD_BOUNDARIES (ctx, ward) {
     const url = `/data/ward-boundaries/${ward}.geojson`
     response = await axios.get(url)
   } catch (err) {
+    ctx.commit('END_REQUEST', 'FETCH_WARD_BOUNDARIES')
     return
   }
   ctx.commit('FETCH_WARD_BOUNDARIES_SUCCESS', response.data)
