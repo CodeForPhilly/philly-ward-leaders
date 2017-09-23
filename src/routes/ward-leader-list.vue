@@ -44,7 +44,9 @@ export default {
   name: 'app',
   props: [ 'party' ],
   computed: mapState({
-    leaders: (state) => state.leaders
+    leaders: function (state) {
+      return state.leaders.filter((leader) => leader.party === this.party)
+    }
   }),
   components: {
     'hero': Hero,
@@ -54,12 +56,7 @@ export default {
     fetchLeaders: 'FETCH_LEADERS'
   }),
   created () {
-    this.fetchLeaders(this.party)
-  },
-  watch: {
-    party (newValue) {
-      this.fetchLeaders(newValue)
-    }
+    this.fetchLeaders()
   }
 }
 </script>

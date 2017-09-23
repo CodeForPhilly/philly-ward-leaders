@@ -17,7 +17,7 @@ export function NOTIFY ({ commit }, msg) {
   window.setTimeout(() => commit('REMOVE_NOTIFICATION', id), duration)
 }
 
-export async function FETCH_LEADERS (ctx, party) {
+export async function FETCH_LEADERS (ctx) {
   const fields = [
     'sys.id',
     'fields.ward',
@@ -37,7 +37,6 @@ export async function FETCH_LEADERS (ctx, party) {
       select: fields.join(','),
       limit: 1000
     }
-    if (party) opts['fields.party'] = party
     response = await client.getEntries(opts)
   } catch (err) {
     ctx.dispatch('NOTIFY', `Failed to retrieve ward leaders`)
