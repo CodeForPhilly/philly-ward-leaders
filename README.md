@@ -1,5 +1,8 @@
 # philly-ward-leaders
 
+Rebuilding using [Vue.js](https://vuejs.org) and [Contentful](https://contentful.com).
+[Work in progress demo](https://phillywardleaders.surge.sh)
+
 > Shining a spotlight on the powerful players behind Philadelphia elections.
 
 ## Build Setup
@@ -14,5 +17,3 @@ npm start
 # build for production with minification
 npm run build
 ```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
