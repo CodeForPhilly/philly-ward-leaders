@@ -115,7 +115,7 @@ function popupTemplate (ward, democratFullName, republicanFullName) {
 @import "~leaflet/dist/leaflet.css";
 
 .citywide-map {
-  height: 100vh;
+  height: calc(100vh - 52px);
 }
 .leader-buttons .button {
   width: 100%;
