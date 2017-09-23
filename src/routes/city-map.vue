@@ -48,9 +48,9 @@ export default {
         }),
         onEachFeature: (feature, layer) => {
           const ward = +feature.properties.WARD_NUM
-          const democrat = this.findLeader(ward, 'democratic')
-          const republican = this.findLeader(ward, 'republican')
-          const template = popupTemplate(ward, democrat, republican)
+          const democrat = this.findLeader(ward, 'democratic') || {}
+          const republican = this.findLeader(ward, 'republican') || {}
+          const template = popupTemplate(ward, democrat.fullName, republican.fullName)
           layer.bindPopup(template)
         }
       }
@@ -78,14 +78,9 @@ export default {
   }
 }
 
-function popupTemplate (ward, democrat, republican) {
-  const demName = democrat && democrat.fullName
-  const demSlug = democrat && slugify(demName)
-  const demUrl = `/leaders/democratic/${ward}/${demSlug}`
-
-  const repName = republican && republican.fullName
-  const repSlug = republican && slugify(repName)
-  const repUrl = `/leaders/republican/${ward}/${repSlug}`
+function popupTemplate (ward, democratFullName, republicanFullName) {
+  const demButton = leaderButton(ward, 'democratic', democratFullName)
+  const repButton = leaderButton(ward, 'republican', republicanFullName)
 
   return `
     <div>
@@ -93,19 +88,26 @@ function popupTemplate (ward, democrat, republican) {
         ${ordinalize(ward)} Ward
       </h4>
       <ul class="leader-buttons">
-        <li>
-          <a href="${demUrl}" class="button">
-            ${demName} (D)
-          </a>
-        </li>
-        <li>
-          <a href="${repUrl}" class="button">
-            ${repName} (R)
-          </a>
-        </li>
+        ${demButton}
+        ${repButton}
       </ul>
     </div>
   `
+
+  function leaderButton (ward, party, fullName) {
+    if (!fullName) {
+      return ''
+    }
+    const slug = slugify(fullName)
+    const url = `/leaders/${party}/${ward}/${slug}`
+    const partyAbbr = (party === 'democratic') ? 'D' : 'R'
+
+    return `
+      <li>
+        <a href="${url}" class="button">${fullName} (${partyAbbr})</a>
+      </li>
+    `
+  }
 }
 </script>
 

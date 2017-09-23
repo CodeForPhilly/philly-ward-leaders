@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 export function FETCH_LEADERS_SUCCESS (state, leaders) {
   state.leaders = leaders
 }

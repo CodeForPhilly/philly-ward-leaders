@@ -34,7 +34,8 @@ export async function FETCH_LEADERS (ctx, party) {
     const opts = {
       content_type: 'wardLeader',
       order: 'fields.ward',
-      select: fields.join(',')
+      select: fields.join(','),
+      limit: 1000
     }
     if (party) opts['fields.party'] = party
     response = await client.getEntries(opts)
