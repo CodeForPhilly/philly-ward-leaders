@@ -183,6 +183,7 @@
         <div class="columns is-multiline">
           <committee-person
             v-for="person in committeePersons"
+            :key="person.id"
             :fullName="person.fullName"
             :division="person.division"
             :address="person.address"

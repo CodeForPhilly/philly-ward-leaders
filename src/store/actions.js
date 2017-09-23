@@ -44,7 +44,7 @@ export async function FETCH_LEADERS (ctx) {
     ctx.commit('END_REQUEST', 'FETCH_LEADERS')
     return
   }
-  const leaders = response.items.map((item) => item.fields)
+  const leaders = response.items.map(getFieldsAndId)
   ctx.commit('FETCH_LEADERS_SUCCESS', leaders)
   ctx.commit('END_REQUEST', 'FETCH_LEADERS')
 }
@@ -66,7 +66,7 @@ export async function FETCH_LEADER (ctx, { ward, party }) {
   }
 
   if (response.items.length) {
-    const leader = response.items[0].fields
+    const leader = getFieldsAndId(response.items[0])
     ctx.commit('FETCH_LEADER_SUCCESS', leader)
   } else {
     ctx.dispatch('NOTIFY', `Ward leader was not found`)
@@ -89,7 +89,7 @@ export async function FETCH_COMMITTEE_PERSONS (ctx, { ward, party }) {
     ctx.commit('END_REQUEST', 'FETCH_COMMITTEE_PERSONS')
     return
   }
-  const committeePersons = response.items.map((item) => item.fields)
+  const committeePersons = response.items.map(getFieldsAndId)
   ctx.commit('FETCH_COMMITTEE_PERSONS_SUCCESS', committeePersons)
   ctx.commit('END_REQUEST', 'FETCH_COMMITTEE_PERSONS')
 }
@@ -136,10 +136,17 @@ export async function FETCH_CONTENT_PAGE (ctx, slug) {
   }
 
   if (response.items.length) {
-    const contentPage = response.items[0].fields
+    const contentPage = getFieldsAndId(response.items[0])
     ctx.commit('FETCH_CONTENT_PAGE_SUCCESS', contentPage)
   } else {
     ctx.dispatch('NOTIFY', `Page not found`)
   }
   ctx.commit('END_REQUEST', 'FETCH_CONTENT_PAGE')
+}
+
+function getFieldsAndId (item) {
+  return {
+    ...item.fields,
+    id: item.sys.id
+  }
 }

@@ -18,6 +18,7 @@
         <div v-if="leaders.length" class="columns is-multiline">
           <baseball-card
             v-for="leader in leaders"
+            :key="leader.id"
             :name="leader.fullName"
             :ward="leader.ward"
             :party="leader.party"

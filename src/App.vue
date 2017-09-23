@@ -4,6 +4,7 @@
     <div class="notifications">
       <notification
          v-for="item in notifications"
+         :key="item.id"
          :msg="item.msg"
          @dismiss="removeNotification(item.id)"></notification>
     </div>
