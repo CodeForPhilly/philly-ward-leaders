@@ -59,8 +59,9 @@ export default {
         }),
         onEachFeature: (feature, layer) => {
           const division = +feature.properties.division
-          const template = this.popupTemplate(division)
-          layer.bindPopup(template)
+          const ordinal = ordinalize(division)
+          const label = `${ordinal} Division`
+          layer.bindTooltip(label)
         }
       }
     }
@@ -84,23 +85,6 @@ export default {
         const bounds = geojsonLayer.getBounds()
         map.fitBounds(bounds)
       }
-    },
-    popupTemplate (division) {
-      const ordinal = ordinalize(division)
-      const persons = this.findCommitteePersons(division)
-      return `
-        <div>
-          <h4 class="title is-4">${ordinal} Division</h4>
-          <ul>
-            ${persons.map((person) => `<li>${person.fullName}</li>`).join('')}
-          </ul>
-        </div>
-      `
-    },
-    findCommitteePersons (division) {
-      return this.committeePersons.filter((person) => {
-        return person.division === division
-      })
     }
   }
 }
