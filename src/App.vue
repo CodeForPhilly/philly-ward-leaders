@@ -7,6 +7,7 @@
          :msg="item.msg"
          @dismiss="removeNotification(item.id)"></notification>
     </div>
+    <b-loading :active="isLoading"></b-loading>
     <router-view></router-view>
   </div>
 </template>
@@ -14,20 +15,28 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 import values from 'lodash/values'
+import Buefy from 'buefy'
 
 import NavBar from './components/nav-bar.vue'
 import Notification from './components/notification.vue'
 
 export default {
-  computed: mapState({
-    notifications: (state) => values(state.notifications)
-  }),
+  computed: {
+    ...mapState({
+      notifications: (state) => values(state.notifications),
+      pendingRequests: (state) => Object.keys(state.pendingRequests)
+    }),
+    isLoading () {
+      return this.pendingRequests.length > 0
+    }
+  },
   methods: mapMutations({
     removeNotification: 'REMOVE_NOTIFICATION'
   }),
   components: {
     'nav-bar': NavBar,
-    'notification': Notification
+    'notification': Notification,
+    'b-loading': Buefy.Loading
   }
 }
 </script>
@@ -43,6 +52,7 @@ $navbar-item-color: $white;
 $primary: $light-blue;
 
 @import "~bulma";
+@import "~buefy/lib/buefy.css";
 
 .navbar-burger span {
   background-color: $white;

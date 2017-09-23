@@ -31,3 +31,11 @@ export function ADD_NOTIFICATION (state, notification) {
 export function REMOVE_NOTIFICATION (state, id) {
   Vue.delete(state.notifications, id)
 }
+
+export function BEGIN_REQUEST (state, name) {
+  Vue.set(state.pendingRequests, name, true)
+}
+
+export function END_REQUEST (state, name) {
+  Vue.delete(state.pendingRequests, name)
+}

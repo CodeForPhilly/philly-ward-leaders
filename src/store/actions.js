@@ -18,6 +18,7 @@ export function NOTIFY ({ commit }, msg) {
 }
 
 export async function FETCH_LEADERS (ctx) {
+  ctx.commit('BEGIN_REQUEST', 'FETCH_LEADERS')
   const fields = [
     'sys.id',
     'fields.ward',
@@ -40,13 +41,16 @@ export async function FETCH_LEADERS (ctx) {
     response = await client.getEntries(opts)
   } catch (err) {
     ctx.dispatch('NOTIFY', `Failed to retrieve ward leaders`)
+    ctx.commit('END_REQUEST', 'FETCH_LEADERS')
     return
   }
   const leaders = response.items.map((item) => item.fields)
   ctx.commit('FETCH_LEADERS_SUCCESS', leaders)
+  ctx.commit('END_REQUEST', 'FETCH_LEADERS')
 }
 
 export async function FETCH_LEADER (ctx, { ward, party }) {
+  ctx.commit('BEGIN_REQUEST', 'FETCH_LEADER')
   let response
   try {
     response = await client.getEntries({
@@ -56,6 +60,7 @@ export async function FETCH_LEADER (ctx, { ward, party }) {
     })
   } catch (err) {
     ctx.dispatch('NOTIFY', `Failed to get information about the ward leader`)
+    ctx.commit('END_REQUEST', 'FETCH_LEADER')
     return
   }
 
@@ -65,9 +70,11 @@ export async function FETCH_LEADER (ctx, { ward, party }) {
   } else {
     ctx.dispatch('NOTIFY', `Ward leader was not found`)
   }
+  ctx.commit('END_REQUEST', 'FETCH_LEADER')
 }
 
 export async function FETCH_COMMITTEE_PERSONS (ctx, { ward, party }) {
+  ctx.commit('BEGIN_REQUEST', 'FETCH_COMMITTEE_PERSONS')
   let response
   try {
     response = await client.getEntries({
@@ -78,13 +85,16 @@ export async function FETCH_COMMITTEE_PERSONS (ctx, { ward, party }) {
     })
   } catch (err) {
     ctx.dispatch('NOTIFY', `Failed to get list of committee persons`)
+    ctx.commit('END_REQUEST', 'FETCH_COMMITTEE_PERSONS')
     return
   }
   const committeePersons = response.items.map((item) => item.fields)
   ctx.commit('FETCH_COMMITTEE_PERSONS_SUCCESS', committeePersons)
+  ctx.commit('END_REQUEST', 'FETCH_COMMITTEE_PERSONS')
 }
 
 export async function FETCH_WARD_BOUNDARIES (ctx, ward) {
+  ctx.commit('BEGIN_REQUEST', 'FETCH_WARD_BOUNDARIES')
   let response
   try {
     const url = `/data/ward-boundaries/${ward}.geojson`
@@ -93,9 +103,11 @@ export async function FETCH_WARD_BOUNDARIES (ctx, ward) {
     return
   }
   ctx.commit('FETCH_WARD_BOUNDARIES_SUCCESS', response.data)
+  ctx.commit('END_REQUEST', 'FETCH_WARD_BOUNDARIES')
 }
 
 export async function FETCH_CITYWIDE_BOUNDARIES (ctx) {
+  ctx.commit('BEGIN_REQUEST', 'FETCH_CITYWIDE_BOUNDARIES')
   let response
   try {
     const url = `/data/citywide-boundaries.geojson`
@@ -105,9 +117,11 @@ export async function FETCH_CITYWIDE_BOUNDARIES (ctx) {
     return
   }
   ctx.commit('FETCH_CITYWIDE_BOUNDARIES_SUCCESS', response.data)
+  ctx.commit('END_REQUEST', 'FETCH_CITYWIDE_BOUNDARIES')
 }
 
 export async function FETCH_CONTENT_PAGE (ctx, slug) {
+  ctx.commit('BEGIN_REQUEST', 'FETCH_CONTENT_PAGE')
   let response
   try {
     response = await client.getEntries({
@@ -116,6 +130,7 @@ export async function FETCH_CONTENT_PAGE (ctx, slug) {
     })
   } catch (err) {
     ctx.dispatch('NOTIFY', `Failed to retrieve content`)
+    ctx.commit('END_REQUEST', 'FETCH_CONTENT_PAGE')
     return
   }
 
@@ -125,4 +140,5 @@ export async function FETCH_CONTENT_PAGE (ctx, slug) {
   } else {
     ctx.dispatch('NOTIFY', `Page not found`)
   }
+  ctx.commit('END_REQUEST', 'FETCH_CONTENT_PAGE')
 }
