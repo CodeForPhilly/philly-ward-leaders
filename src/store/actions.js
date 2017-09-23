@@ -51,6 +51,7 @@ export async function FETCH_LEADERS (ctx) {
 
 export async function FETCH_LEADER (ctx, { ward, party }) {
   ctx.commit('BEGIN_REQUEST', 'FETCH_LEADER')
+  ctx.commit('RESET_LEADER')
   let response
   try {
     response = await client.getEntries({

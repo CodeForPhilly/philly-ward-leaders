@@ -4,6 +4,10 @@ export function FETCH_LEADERS_SUCCESS (state, leaders) {
   state.leaders = leaders
 }
 
+export function RESET_LEADER (state) {
+  state.leader = {}
+}
+
 export function FETCH_LEADER_SUCCESS (state, leader) {
   state.leader = leader
 }
