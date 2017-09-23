@@ -8,28 +8,38 @@
       :attribution="tileAttribution"
     :params="tileOpts"></v-tilelayer>
     <v-geojson-layer
+      ref="geojsonLayer"
       v-if="isBoundariesLoaded"
       :geojson="boundaries"
       :options="geojsonOpts"></v-geojson-layer>
+    <v-geocoder
+      :apikey="geocoderApiKey"
+      placeholder="Search an address"
+      @l-select="onSelectAddress"></v-geocoder>
   </v-map>
 </template>
 
 <script>
 import { Map, TileLayer, GeoJSON } from 'vue2-leaflet'
 import { mapState, mapActions, mapGetters } from 'vuex'
+import leafletPip from '@mapbox/leaflet-pip'
 
+import Geocoder from '../components/geocoder.vue'
 import { ordinalize, slugify } from '../util'
+import { MAPZEN_API_KEY } from '../config'
 
 export default {
   components: {
     'v-map': Map,
     'v-tilelayer': TileLayer,
-    'v-geojson-layer': GeoJSON
+    'v-geojson-layer': GeoJSON,
+    'v-geocoder': Geocoder
   },
   data () {
     return {
       zoom: 12,
       center: [39.9523893, -75.1636291],
+      geocoderApiKey: MAPZEN_API_KEY,
       tileAttribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       tileUrl: 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}',
       tileOpts: {
@@ -68,10 +78,24 @@ export default {
       return ('type' in this.boundaries) && (this.leaders.length > 0)
     }
   },
-  methods: mapActions({
-    fetchCitywideBoundaries: 'FETCH_CITYWIDE_BOUNDARIES',
-    fetchLeaders: 'FETCH_LEADERS'
-  }),
+  methods: {
+    ...mapActions({
+      fetchCitywideBoundaries: 'FETCH_CITYWIDE_BOUNDARIES',
+      fetchLeaders: 'FETCH_LEADERS'
+    }),
+    onSelectAddress (evt) {
+      const point = evt.feature.geometry.coordinates
+      const geojsonLayer = this.$refs.geojsonLayer.$geoJSON
+      const useFirstMatch = true
+      const matches = leafletPip.pointInLayer(point, geojsonLayer, useFirstMatch)
+      if (matches.length > 0) {
+        const match = matches[0]
+        const addressMarker = evt.target.markers[0]
+        addressMarker.bindPopup(match._popup)
+        addressMarker.openPopup()
+      }
+    }
+  },
   created () {
     this.fetchCitywideBoundaries()
     this.fetchLeaders()
