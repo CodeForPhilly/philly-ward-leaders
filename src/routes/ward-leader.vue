@@ -68,13 +68,24 @@
                 ({{ turnoutTotalPercent }}%)
               </dd>
 
-              <dt>Divisions</dt>
+              <dt>
+                <b-tooltip label="How many divisions make up the ward" type="is-black">
+                  Divisions
+                </b-tooltip>
+              </dt>
               <dd>{{ leader.divisionCount }}</dd>
 
-              <dt>Committee Persons</dt>
+              <dt>
+                <b-tooltip label="Each division elects 2 committee persons" type="is-black">
+                  Committee Persons
+                </b-tooltip>
+              </dt>
               <dd>
                 {{ leader.committeePersonCount }}
-                ({{ vacancyCount }} vacancies)
+                ({{ vacancyCount }}
+                <b-tooltip label="Each division elects 2 committee persons" type="is-black">
+                  vacancies
+                </b-tooltip>)
               </dd>
             </dl>
           </div>
@@ -197,6 +208,7 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
+import Buefy from 'buefy'
 
 import StatsBar from '../components/stats-bar.vue'
 import CommitteePerson from '../components/committee-person.vue'
@@ -240,6 +252,7 @@ export default {
     this.fetchWardBoundaries(this.ward)
   },
   components: {
+    'b-tooltip': Buefy.Tooltip,
     'stats-bar': StatsBar,
     'committee-person': CommitteePerson,
     'ward-map': WardMap,
@@ -262,6 +275,10 @@ export default {
 dt {
   font-weight: bold;
   letter-spacing: 1px;
+}
+[data-label] {
+  border-bottom: dotted 1px #4a4a4a;
+  cursor: help;
 }
 dd {
   margin-bottom: 15px;
