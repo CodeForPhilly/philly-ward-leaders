@@ -116,6 +116,7 @@ export async function FETCH_CITYWIDE_BOUNDARIES (ctx) {
     response = await axios.get(url)
   } catch (err) {
     ctx.dispatch('NOTIFY', `Failed to retrieve ward boundaries`)
+    ctx.commit('END_REQUEST', 'FETCH_CITYWIDE_BOUNDARIES')
     return
   }
   ctx.commit('FETCH_CITYWIDE_BOUNDARIES_SUCCESS', response.data)
