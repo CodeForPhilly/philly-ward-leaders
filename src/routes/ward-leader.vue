@@ -110,7 +110,7 @@
               </dd>
 
               <dt>Age</dt>
-              <dd v-if="leader.age">{{ leader.age }}</dd>
+              <dd v-if="age">{{ age }}</dd>
               <dd v-else>
                 <span class="unknown">Unknown</span>
                 <ask-detail
@@ -234,7 +234,8 @@ export default {
       'registeredVotersPercent',
       'turnoutPartyPercent',
       'turnoutTotalPercent',
-      'vacancyCount'
+      'vacancyCount',
+      'age'
     ])
   },
   methods: mapActions({

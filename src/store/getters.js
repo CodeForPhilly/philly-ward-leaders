@@ -40,6 +40,14 @@ export function vacancyCount (state) {
   return divisionCount * 2 - committeePersonCount
 }
 
+export function age (state) {
+  const yearOfBirth = state.leader.yearOfBirth
+  if (!yearOfBirth) return
+
+  const currentYear = (new Date()).getFullYear()
+  return currentYear - yearOfBirth
+}
+
 export function findLeader (state) {
   return function (ward, party) {
     return state.leaders.find((leader) => leader.ward === ward && leader.party === party)
