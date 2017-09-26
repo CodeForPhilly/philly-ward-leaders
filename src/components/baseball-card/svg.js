@@ -3,11 +3,12 @@ import Snap from 'snapsvg'
 import { ordinalize } from '../../util'
 
 export function createFront (el, data) {
+  const isRepublican = (data.party === 'republican')
   const config = {
     cardWidth: 300,
     cardHeight: 450,
     cardBorderWidth: 15,
-    cardBorderColor: '#2284a1',
+    cardBorderColor: isRepublican ? '#a12222' : '#2284a1',
     topLeftCut: 65,
     bottomRightCut: 95
   }
