@@ -5,16 +5,16 @@
         Philly Ward Leaders
       </router-link>
 
-      <div class="navbar-burger" @click="toggleMenu" data-target="navMenu">
+      <div class="navbar-burger" @click="toggleMenu" ref="burger">
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
 
-    <div class="navbar-menu" id="navMenu">
+    <div class="navbar-menu" ref="menu">
       <div class="navbar-start"></div>
-      <div class="navbar-end">
+      <div class="navbar-end" @click="collapseMenu">
         <router-link to="/leaders" class="navbar-item">
           Leaders
         </router-link>
@@ -42,12 +42,18 @@
 export default {
   methods: {
     toggleMenu (evt) {
-      const btnEl = evt.target
-      const menuId = btnEl.dataset.target
-      const menuEl = document.getElementById(menuId)
+      const btnEl = this.$refs.burger
+      const menuEl = this.$refs.menu
 
       btnEl.classList.toggle('is-active')
       menuEl.classList.toggle('is-active')
+    },
+    collapseMenu () {
+      const btnEl = this.$refs.burger
+      const menuEl = this.$refs.menu
+
+      btnEl.classList.remove('is-active')
+      menuEl.classList.remove('is-active')
     }
   }
 }

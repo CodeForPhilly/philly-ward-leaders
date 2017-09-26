@@ -55,7 +55,8 @@ $primary: $light-blue;
 @import "~bulma";
 @import "~buefy/lib/buefy.css";
 
-.navbar-burger span {
+.navbar-burger span,
+.navbar-burger.is-active span {
   background-color: $white;
 }
 
