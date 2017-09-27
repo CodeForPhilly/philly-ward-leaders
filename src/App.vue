@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/initial-variables";
 
 $blue: #04576F;
 $light-blue: #2284a1;
@@ -52,8 +52,8 @@ $navbar-background-color: $light-blue;
 $navbar-item-color: $white;
 $primary: $light-blue;
 
-@import "~bulma";
-@import "~buefy/lib/buefy.css";
+@import "bulma/bulma.sass";
+@import "buefy/src/scss/buefy";
 
 .navbar-burger span,
 .navbar-burger.is-active span {
