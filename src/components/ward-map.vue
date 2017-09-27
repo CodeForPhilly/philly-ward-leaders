@@ -1,20 +1,22 @@
 <template>
-  <v-map
-    v-if="isBoundariesLoaded"
-    class="map"
-    :zoom="zoom"
-    :center="center"
-    :options="mapOpts"
-    ref="map">
-    <v-tilelayer
-      :url="url"
-      :attribution="attribution"
-      :params="tileOpts"></v-tilelayer>
-    <v-geojson-layer
-      :geojson="boundaries"
-      :options="geojsonOpts"
-      ref="geojson"></v-geojson-layer>
-  </v-map>
+  <div class="map-container">
+    <v-map
+      v-if="isBoundariesLoaded"
+      class="map"
+      :zoom="zoom"
+      :center="center"
+      :options="mapOpts"
+      ref="map">
+      <v-tilelayer
+        :url="url"
+        :attribution="attribution"
+        :params="tileOpts"></v-tilelayer>
+      <v-geojson-layer
+        :geojson="boundaries"
+        :options="geojsonOpts"
+        ref="geojson"></v-geojson-layer>
+    </v-map>
+  </div>
 </template>
 
 <script>
@@ -90,10 +92,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "~leaflet/dist/leaflet.css";
-
-.map {
+<style>
+.map-container {
   height: 350px;
 }
 </style>

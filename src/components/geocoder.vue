@@ -8,16 +8,16 @@
 import L from 'leaflet'
 import 'leaflet-geocoder-mapzen'
 import pick from 'lodash/pick'
-import eventsBinder from 'vue2-leaflet/src/utils/eventsBinder'
+import { eventsBinder } from '../util'
 
 // See https://github.com/KoRiGaN/Vue2Leaflet/issues/28
-delete L.Icon.Default.prototype._getIconUrl
+/* delete L.Icon.Default.prototype._getIconUrl
 L.Icon.Default.imagePath = ''
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
   iconUrl: require('leaflet/dist/images/marker-icon.png'),
   shadowUrl: require('leaflet/dist/images/marker-shadow.png')
-})
+}) */
 
 const events = [
   'results',
@@ -88,6 +88,6 @@ export default {
 }
 </script>
 
-<style>
-@import '~leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen.css';
+<style lang="scss">
+@import 'leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen';
 </style>
