@@ -1,11 +1,17 @@
 {
   "presets": [
     ["env", {
-      "modules": false,
-      "targets": { "chrome": 60 },
+      modules: false,
+      useBuiltIns: true,
+      targets: {
+        browsers: [
+          '> 1%',
+          'last 2 versions'
+        ]
+      }
     }]
   ],
   "plugins": [
-    ["transform-object-rest-spread", { "useBuiltIns": true }]
+    "transform-object-rest-spread"
   ]
 }
