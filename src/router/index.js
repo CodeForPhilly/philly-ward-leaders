@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Splash from '../pages/splash.vue'
-import WardLeaderList from '../pages/ward-leader-list.vue'
-import WardLeader from '../pages/ward-leader.vue'
-import CityMap from '../pages/city-map.vue'
-import ContentPage from '../pages/content-page.vue'
+import Splash from '../views/splash.vue'
+import WardLeaderList from '../views/ward-leader-list.vue'
+import WardLeader from '../views/ward-leader.vue'
+import CityMap from '../views/city-map.vue'
+import ContentPage from '../views/content-page.vue'
 
 Vue.use(VueRouter)
 
