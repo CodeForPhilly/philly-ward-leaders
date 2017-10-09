@@ -8,7 +8,6 @@
 import L from 'leaflet'
 import 'leaflet-geocoder-mapzen'
 import pick from 'lodash/pick'
-import eventsBinder from 'vue2-leaflet/src/utils/eventsBinder'
 
 // See https://github.com/KoRiGaN/Vue2Leaflet/issues/28
 delete L.Icon.Default.prototype._getIconUrl
@@ -84,6 +83,18 @@ export default {
         this.parent.removeLayer(this.geocoder)
       }
     }
+  }
+}
+
+// Copied from vue2-leaflet/src/utils/eventsBinder.js
+// Can't import it because babel won't transpile files from node_modules
+function eventsBinder (vueElement, leaflet, events) {
+  for (var i = 0; i < events.length; i++) {
+    const exposedName = 'l-' + events[i]
+    const eventName = events[i]
+    leaflet.on(eventName, (ev) => {
+      vueElement.$emit(exposedName, ev)
+    })
   }
 }
 </script>
