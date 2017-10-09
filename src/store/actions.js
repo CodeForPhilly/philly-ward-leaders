@@ -19,6 +19,7 @@ export async function FETCH_LEADERS (ctx) {
     const leaders = await api.fetchLeaders()
     ctx.commit('FETCH_LEADERS_SUCCESS', leaders)
   } catch (err) {
+    logError(err)
     ctx.dispatch('NOTIFY', `Failed to retrieve ward leaders`)
   }
   ctx.commit('END_REQUEST', 'FETCH_LEADERS')
@@ -31,6 +32,7 @@ export async function FETCH_LEADER (ctx, { ward, party }) {
     const leader = await api.fetchLeader(ward, party)
     ctx.commit('FETCH_LEADER_SUCCESS', leader)
   } catch (err) {
+    logError(err)
     ctx.dispatch('NOTIFY', `Failed to get information about the ward leader`)
   }
   ctx.commit('END_REQUEST', 'FETCH_LEADER')
@@ -42,6 +44,7 @@ export async function FETCH_COMMITTEE_PERSONS (ctx, { ward, party }) {
     const committeePersons = await api.fetchCommitteePersons(ward, party)
     ctx.commit('FETCH_COMMITTEE_PERSONS_SUCCESS', committeePersons)
   } catch (err) {
+    logError(err)
     ctx.dispatch('NOTIFY', `Failed to get list of committee persons`)
   }
   ctx.commit('END_REQUEST', 'FETCH_COMMITTEE_PERSONS')
@@ -53,6 +56,7 @@ export async function FETCH_WARD_BOUNDARIES (ctx, ward) {
     const wardBoundaries = await api.fetchWardBoundaries(ward)
     ctx.commit('FETCH_WARD_BOUNDARIES_SUCCESS', wardBoundaries)
   } catch (err) {
+    logError(err)
     ctx.commit('END_REQUEST', 'FETCH_WARD_BOUNDARIES')
   }
   ctx.commit('END_REQUEST', 'FETCH_WARD_BOUNDARIES')
@@ -62,8 +66,9 @@ export async function FETCH_CITYWIDE_BOUNDARIES (ctx) {
   ctx.commit('BEGIN_REQUEST', 'FETCH_CITYWIDE_BOUNDARIES')
   try {
     const citywideBoundaries = await api.fetchCitywideBoundaries()
-    ctx.commit('CITYWIDE_BOUNDARIES_SUCCESS', citywideBoundaries)
+    ctx.commit('FETCH_CITYWIDE_BOUNDARIES_SUCCESS', citywideBoundaries)
   } catch (err) {
+    logError(err)
     ctx.dispatch('NOTIFY', `Failed to retrieve ward boundaries`)
   }
   ctx.commit('END_REQUEST', 'FETCH_CITYWIDE_BOUNDARIES')
@@ -72,10 +77,17 @@ export async function FETCH_CITYWIDE_BOUNDARIES (ctx) {
 export async function FETCH_CONTENT_PAGE (ctx, slug) {
   ctx.commit('BEGIN_REQUEST', 'FETCH_CONTENT_PAGE')
   try {
-    const contentPage = api.fetchContentPage(slug)
+    const contentPage = await api.fetchContentPage(slug)
     ctx.commit('FETCH_CONTENT_PAGE_SUCCESS', contentPage)
   } catch (err) {
+    logError(err)
     ctx.dispatch('NOTIFY', `Failed to retrieve content`)
   }
   ctx.commit('END_REQUEST', 'FETCH_CONTENT_PAGE')
+}
+
+function logError (err) {
+  if (process.env.NODE_ENV !== 'production') {
+    console.error(err)
+  } // else push to logging service or something
 }

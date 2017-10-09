@@ -27,7 +27,7 @@ export default class Api {
       select: select.join(','),
       limit: 1000
     }
-    return client.getEntries(opts)
+    return this.client.getEntries(opts)
       .then((response) => response.items.map(getFieldsAndId))
   }
 
