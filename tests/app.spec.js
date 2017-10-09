@@ -1,5 +1,4 @@
 import { shallow } from 'vue-test-utils'
-import { stub } from 'sinon'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Buefy from 'buefy'
@@ -66,7 +65,7 @@ describe('App', () => {
   })
 
   test('Dismissing a notification calls store event REMOVE_NOTIFICATION', () => {
-    const removeNotification = stub()
+    const removeNotification = jest.fn()
     const $store = new Vuex.Store({
       state: {
         notifications: {
@@ -85,6 +84,6 @@ describe('App', () => {
 
     const notification = wrapper.find(Notification)
     notification.vm.$emit('dismiss')
-    expect(removeNotification.calledOnce).toBe(true)
+    expect(removeNotification).toBeCalled()
   })
 })

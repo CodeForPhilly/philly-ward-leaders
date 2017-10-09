@@ -1,7 +1,6 @@
 import { mount } from 'vue-test-utils'
 import Vuex from 'vuex'
 import Vue from 'vue'
-import { stub } from 'sinon'
 
 import ContentPage from '../../src/views/content-page.vue'
 
@@ -9,7 +8,7 @@ Vue.use(Vuex)
 
 describe('Content page', () => {
   it('Fetches page based on route', () => {
-    const FETCH_CONTENT_PAGE = stub()
+    const FETCH_CONTENT_PAGE = jest.fn()
     const $store = new Vuex.Store({
       state: {
         contentPage: {}
@@ -22,10 +21,8 @@ describe('Content page', () => {
       propsData
     })
 
-    expect(FETCH_CONTENT_PAGE.calledOnce).toBe(true)
-
-    const { args } = FETCH_CONTENT_PAGE.getCall(0)
-    expect(args[1]).toBe('about')
+    expect(FETCH_CONTENT_PAGE).toBeCalled()
+    expect(FETCH_CONTENT_PAGE.mock.calls[0][1]).toBe('about')
   })
 
   it('Renders markdown', () => {
@@ -36,7 +33,7 @@ describe('Content page', () => {
         }
       },
       actions: {
-        FETCH_CONTENT_PAGE: stub()
+        FETCH_CONTENT_PAGE: jest.fn()
       }
     })
     const wrapper = mount(ContentPage, {

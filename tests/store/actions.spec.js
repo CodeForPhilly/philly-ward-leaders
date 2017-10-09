@@ -1,4 +1,3 @@
-import { stub } from 'sinon'
 import 'babel-polyfill'
 
 import * as actions from '../../src/store/actions'
@@ -6,27 +5,22 @@ import * as actions from '../../src/store/actions'
 describe('Actions', () => {
   describe('Notify', () => {
     it('Adds a notification', () => {
-      const commit = stub()
+      const commit = jest.fn()
       const msg = 'Hello, world!'
       actions.NOTIFY({ commit }, msg)
-      const { args } = commit.getCall(0)
-      expect(args[0]).toBe('ADD_NOTIFICATION')
-      expect(args[1].msg).toBe(msg)
+      expect(commit).toBeCalled()
+      const call = commit.mock.calls[0]
+      expect(call[0]).toBe('ADD_NOTIFICATION')
+      expect(call[1].msg).toBe(msg)
     })
 
     it('Sets a timer to remove the notification', () => {
-      // Monkey patch setTimeout to immediately execute
-      const setTimeout = window.setTimeout
-      window.setTimeout = (cb, duration) => cb()
-
-      const commit = stub()
+      jest.useFakeTimers()
+      const commit = jest.fn()
       actions.NOTIFY({ commit })
-      process.nextTick(() => {
-        const { args } = commit.getCall(1)
-        expect(args[0]).toBe('REMOVE_NOTIFICATION')
-      })
-
-      window.setTimeout = setTimeout
+      jest.runAllTimers()
+      expect(commit.mock.calls.length).toBeGreaterThan(1)
+      expect(commit.mock.calls[1][0]).toBe('REMOVE_NOTIFICATION')
     })
   })
 
