@@ -14,10 +14,12 @@ const store = new Vuex.Store({
     notifications: {},
     contentPage: {},
     leaders: [],
-    leader: {},
-    committeePersons: [], // Of ward currently in view
-    wardBoundaries: {}, // Of ward currently in view
-    citywideBoundaries: {}
+    citywideBoundaries: {},
+    currentLeader: {
+      leader: {},
+      committeePersons: [],
+      wardBoundaries: {}
+    }
   },
   getters,
   mutations,

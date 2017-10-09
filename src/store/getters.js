@@ -1,5 +1,5 @@
 export function partyPlural (state) {
-  const party = state.leader.party
+  const party = state.currentLeader.leader.party
   if (party === 'democratic') {
     return 'democrats'
   } else if (party === 'republican') {
@@ -8,11 +8,11 @@ export function partyPlural (state) {
 }
 
 export function partyAbbr (state) {
-  if (state.leader.party) return state.leader.party[0]
+  if (state.currentLeader.leader.party) return state.currentLeader.leader.party[0]
 }
 
 export function partyTitle (state) {
-  const party = state.leader.party
+  const party = state.currentLeader.leader.party
   if (party === 'democratic') {
     return 'Democratic'
   } else if (party === 'republican') {
@@ -21,27 +21,27 @@ export function partyTitle (state) {
 }
 
 export function registeredVotersPercent (state) {
-  const { registeredVotersParty, registeredVotersTotal } = state.leader
+  const { registeredVotersParty, registeredVotersTotal } = state.currentLeader.leader
   return Math.round(registeredVotersParty / registeredVotersTotal * 100)
 }
 
 export function turnoutPartyPercent (state) {
-  const { turnoutParty, registeredVotersParty } = state.leader
+  const { turnoutParty, registeredVotersParty } = state.currentLeader.leader
   return Math.round(turnoutParty / registeredVotersParty * 100)
 }
 
 export function turnoutTotalPercent (state) {
-  const { turnoutTotal, registeredVotersTotal } = state.leader
+  const { turnoutTotal, registeredVotersTotal } = state.currentLeader.leader
   return Math.round(turnoutTotal / registeredVotersTotal * 100)
 }
 
 export function vacancyCount (state) {
-  const { divisionCount, committeePersonCount } = state.leader
+  const { divisionCount, committeePersonCount } = state.currentLeader.leader
   return divisionCount * 2 - committeePersonCount
 }
 
 export function age (state) {
-  const yearOfBirth = state.leader.yearOfBirth
+  const yearOfBirth = state.currentLeader.leader.yearOfBirth
   if (!yearOfBirth) return
 
   const currentYear = (new Date()).getFullYear()

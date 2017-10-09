@@ -224,9 +224,9 @@ export default {
   ],
   computed: {
     ...mapState({
-      leader: (state) => state.leader,
-      committeePersons: (state) => state.committeePersons,
-      wardBoundaries: (state) => state.wardBoundaries
+      leader: (state) => state.currentLeader.leader,
+      committeePersons: (state) => state.currentLeader.committeePersons,
+      wardBoundaries: (state) => state.currentLeader.wardBoundaries
     }),
     ...mapGetters([
       'partyPlural',

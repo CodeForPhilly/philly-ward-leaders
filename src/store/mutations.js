@@ -5,19 +5,19 @@ export function FETCH_LEADERS_SUCCESS (state, leaders) {
 }
 
 export function RESET_LEADER (state) {
-  state.leader = {}
+  state.currentLeader.leader = {}
 }
 
 export function FETCH_LEADER_SUCCESS (state, leader) {
-  state.leader = leader
+  state.currentLeader.leader = leader
 }
 
 export function FETCH_COMMITTEE_PERSONS_SUCCESS (state, committeePersons) {
-  state.committeePersons = committeePersons
+  state.currentLeader.committeePersons = committeePersons
 }
 
 export function FETCH_WARD_BOUNDARIES_SUCCESS (state, wardBoundaries) {
-  state.wardBoundaries = wardBoundaries
+  state.currentLeader.wardBoundaries = wardBoundaries
 }
 
 export function FETCH_CITYWIDE_BOUNDARIES_SUCCESS (state, citywideBoundaries) {
