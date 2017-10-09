@@ -87,7 +87,7 @@ export async function FETCH_CONTENT_PAGE (ctx, slug) {
 }
 
 function logError (err) {
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV === 'development') {
     console.error(err)
   } // else push to logging service or something
 }
