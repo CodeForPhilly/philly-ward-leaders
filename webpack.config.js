@@ -5,8 +5,8 @@ const MinifyPlugin = require('babel-minify-webpack-plugin')
 module.exports = {
   entry: [ 'babel-polyfill', './src/main.js' ],
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, './public'),
+    publicPath: '/',
     filename: 'build.js'
   },
   module: {
@@ -46,6 +46,7 @@ module.exports = {
     }
   },
   devServer: {
+    contentBase: path.resolve(__dirname, './public'),
     historyApiFallback: true,
     noInfo: true
   },

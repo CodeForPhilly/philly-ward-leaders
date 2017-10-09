@@ -1,6 +1,8 @@
 .DS_Store
 node_modules/
-dist/
+public/build.js
+public/build.js.map
+public/assets
 npm-debug.log
 yarn-error.log
 data-scripts/venv

@@ -59,12 +59,14 @@ If you’ve used a router before, whether in JS or a server-side environment, th
 ```
 .
 ├── 200.html -> index.html
-├── CNAME
 ├── LICENSE
 ├── README.md
 ├── data-scripts
-├── index.html
 ├── package.json
+├── public
+│   ├── data
+│   ├── CNAME
+│   ├── index.html
 ├── src
 │   ├── App.vue
 │   ├── api
@@ -87,6 +89,8 @@ If you’ve used a router before, whether in JS or a server-side environment, th
 ## `src` directory
 | **File / directory** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `public`             | The directory that gets deployed. It includes the static `index.html` in source control, but the `build` script will put additional (compiled) files into this directory.                                                                                                                                                                                                                                                                                            |
+| `public/data`        | Static data files that are requested dynamically by the application (at runtime).                                                                                                                                                                                                                                                                                                                                                                                    |
 | `main.js`            | Primary entry point for the app. Initializes router, store, and the top-level Vue component, mounting it to the `#app` element in `index.html`.                                                                                                                                                                                                                                                                                                                      |
 | `App.vue`            | Top-level Vue component. Provides the layout for the site, including the nav bar, loading indicator, and space for the current route’s view. Also sets up the site’s core styles.                                                                                                                                                                                                                                                                                    |
 | `config.js`          | Configuration values which are **not sensitive**. Any values needed by the app at runtime should be considered “public” in a JavaScript single page app like this.                                                                                                                                                                                                                                                                                                   |
