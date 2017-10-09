@@ -28,8 +28,8 @@ export default {
       pendingRequests: (state) => Object.keys(state.pendingRequests || [])
     }),
     isLoading () {
-      const path = this.$route && this.$route.path
-      return (this.pendingRequests.length > 0) && (path !== 'splash')
+      const routeName = this.$route && this.$route.name
+      return (this.pendingRequests.length > 0) && (routeName !== 'splash')
     }
   },
   methods: mapMutations({

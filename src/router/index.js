@@ -10,12 +10,38 @@ import ContentPage from '../views/content-page.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Splash },
-  { path: '/leaders', redirect: '/leaders/democratic' },
-  { path: '/leaders/:party', component: WardLeaderList, props: true },
-  { path: '/leaders/:party/:ward/:slug', component: WardLeader, props: true },
-  { path: '/map', component: CityMap },
-  { path: '/:slug', component: ContentPage, props: true }
+  {
+    path: '/',
+    name: 'splash',
+    component: Splash
+  },
+  {
+    path: '/leaders',
+    redirect: '/leaders/democratic'
+  },
+  {
+    path: '/leaders/:party',
+    name: 'ward-leader-list',
+    component: WardLeaderList,
+    props: true
+  },
+  {
+    path: '/leaders/:party/:ward/:slug',
+    name: 'ward-leader',
+    component: WardLeader,
+    props: true
+  },
+  {
+    path: '/map',
+    name: 'city-map',
+    component: CityMap
+  },
+  {
+    path: '/:slug',
+    name: 'content-page',
+    component: ContentPage,
+    props: true
+  }
 ]
 
 const router = new VueRouter({
