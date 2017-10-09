@@ -90,75 +90,61 @@ export default {
 
 <style>
 .flip-container {
-	perspective: 1000;
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-		-webkit-transform: rotateY(180deg);
-		-moz-transform: rotateY(180deg);
-	}
+  .flip-container:hover .back {
+    transform: rotateY(0deg);
+  }
+
+  .flip-container:hover .front {
+    transform: rotateY(180deg);
+  }
 
 .flipper {
 	transition: 0.6s;
-	transform-style: preserve-3d;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-
 	position: relative;
 	margin: 0 30px;
 }
 
 .front, .back {
-	backface-visibility: hidden;
-	-webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
 }
 
 .back {
-	position: absolute;
-	top: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .front {
-	z-index: 2;
-	transform: rotateY(0deg);
-	-webkit-transform: rotateY(0deg);
-	-moz-transform: rotateY(0deg);
+  z-index: 2;
+  transform: rotateY(0deg);
 }
 
 .back {
-	transform: rotateY(180deg);
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
-}
-
-.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
-	transform: rotateY(180deg);
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 .stats {
-     padding: 25px 25px;
-
-     /* -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75); */
-     /*-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);*/
-     /* box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75); */
-     /* position: relative; */
+  padding: 25px 25px;
 }
 .stats h3 {
-     font-size: 120%;
+  font-size: 120%;
 }
 .stats h3 .ward-ordinal {
-     display: block;
+  display: block;
 }
 .stats dt, .card .stats dd {
-     margin-bottom: 0;
-     float: left;
+  margin-bottom: 0;
+  float: left;
 }
-.stats dt { width: 60%; overflow: hidden; }
+.stats dt {
+  width: 60%;
+  overflow: hidden;
+}
 .stats .button {
   margin-top: 15px;
   position: static;
