@@ -7,7 +7,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "test": "jest"
+    "test": "npm run lint && jest",
+    "lint": "standard --plugin html '**/*.{js,vue}'"
   },
   "dependencies": {
     "@mapbox/leaflet-pip": "^1.1.0",
@@ -37,6 +38,7 @@
     "babel-preset-env": "^1.5.1",
     "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
+    "eslint-plugin-html": "^3.2.2",
     "file-loader": "^0.9.0",
     "imports-loader": "^0.7.1",
     "jest": "^21.2.1",
@@ -44,6 +46,7 @@
     "jest-vue": "^0.7.0",
     "node-sass": "^4.5.0",
     "sass-loader": "^5.0.1",
+    "standard": "^10.0.3",
     "vue-loader": "^12.1.0",
     "vue-server-renderer": "^2.4.2",
     "vue-template-compiler": "^2.3.3",
@@ -65,5 +68,14 @@
       "<rootDir>/node_modules/jest-serializer-vue"
     ],
     "mapCoverage": true
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "expect",
+      "jest",
+      "test"
+    ]
   }
 }

@@ -16,7 +16,7 @@ describe('Content page', () => {
       actions: { FETCH_CONTENT_PAGE }
     })
     const propsData = { slug: 'about' }
-    const wrapper = mount(ContentPage, {
+    mount(ContentPage, {
       mocks: { $store },
       propsData
     })

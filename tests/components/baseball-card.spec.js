@@ -22,6 +22,7 @@ describe('Baseball card', () => {
     })
     const renderer = createRenderer()
     renderer.renderToString(wrapper.vm, (err, str) => {
+      expect(err).toBeNull()
       expect(str).toMatchSnapshot()
     })
   })
