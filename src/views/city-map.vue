@@ -84,7 +84,7 @@ export default {
     }),
     onSelectAddress (evt) {
       const point = evt.feature.geometry.coordinates
-      const geojsonLayer = this.$refs.geojsonLayer.$geoJSON
+      const geojsonLayer = this.$refs.geojsonLayer.mapObject
       const useFirstMatch = true
       const matches = leafletPip.pointInLayer(point, geojsonLayer, useFirstMatch)
       if (matches.length > 0) {
