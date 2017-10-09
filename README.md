@@ -38,7 +38,7 @@ Poking around [their website](https://www.contentful.com/) may be enough, but it
 [Webpack](https://webpack.js.org/) is a tool that aids you in pulling your hair out, building up frustration, and considering leaving front-end development behind for good. You can also use it to combine JavaScript modules into a bundled file that can be run in the browser. In this project it’s also used to run a local development server. Webpack can do *a ton* of things, and one of the trade-offs is that it’s rather confusing to configure and debug.
 
 **Modern JavaScript features**
-This application is written in modern JavaScript (ES2015-ES2017) with language features such as [arrow functions](https://github.com/DrkSephy/es6-cheatsheet#arrow-functions), [destructuring](https://github.com/DrkSephy/es6-cheatsheet#destructuring), [object spread operator](https://codeburst.io/master-javascripts-object-spread-operator-3803430e99aa), and [async/await](https://ponyfoo.com/articles/understanding-javascript-async-await). 
+This application is written in modern JavaScript (ES2015-ES2017) with language features such as [arrow functions](https://github.com/DrkSephy/es6-cheatsheet#arrow-functions), [destructuring](https://github.com/DrkSephy/es6-cheatsheet#destructuring), [object spread operator](https://codeburst.io/master-javascripts-object-spread-operator-3803430e99aa), and [async/await](http://nikgrozev.com/2017/10/01/async-await/). 
 
 **Babel**
 [Babel](https://babeljs.io/) allows us to support older browsers by transpiling our modern source code into source code that is more widely supported.
