@@ -62,10 +62,12 @@ If you’ve used a router before, whether in JS or a server-side environment, th
 ├── CNAME
 ├── LICENSE
 ├── README.md
+├── data-scripts
 ├── index.html
 ├── package.json
 ├── src
 │   ├── App.vue
+│   ├── api
 │   ├── assets
 │   ├── components
 │   ├── config.js
@@ -78,6 +80,7 @@ If you’ve used a router before, whether in JS or a server-side environment, th
 │   │   └── mutations.js
 │   ├── util.js
 │   └── views
+├── tests
 └── webpack.config.js
 ```
 
@@ -96,6 +99,8 @@ If you’ve used a router before, whether in JS or a server-side environment, th
 | `store/actions.js`   | Functions that have side effects (ie. fetching data from a server), and typically save their results to the state by passing it to a mutation.                                                                                                                                                                                                                                                                                                                       |
 | `store/mutations.js` | Functions that change (mutate) the state. They’re typically called by actions, but could also be called by views (if no side effect is necessary). Note that Vue updates state mutably because YOLO, but has [a couple minor caveats](https://vuejs.org/v2/guide/reactivity.html) when adding or removing object properties.                                                                                                                                         |
 | `store/getters.js`   | Reusable convenience functions for deriving/computing values from the state.                                                                                                                                                                                                                                                                                                                                                                                         |
+| `api`                | Abstraction of the actual interactions with servers. These functions are called by actions and could live inside them but are separated for readability.                                                                                                                                                                                                                                                                                                             |
+| `data-scripts`       | Handy little python scripts to clean and merge voter turnout and registration data. Also a script to migrate content to contentful. See `data-scripts/README.md` for details.                                                                                                                                                                                                                                                                                        |
 
 # Browser testing
 <table><tr>
