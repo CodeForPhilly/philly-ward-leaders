@@ -1,9 +1,11 @@
 import { shallow } from 'vue-test-utils'
+import { stub } from 'sinon'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Buefy from 'buefy'
 
 import App from '../src/App.vue'
+import Notification from '../src/components/notification.vue'
 
 Vue.use(Vuex)
 
@@ -42,5 +44,47 @@ describe('App', () => {
     const indicator = wrapper.find(Buefy.Loading)
     const isActive = indicator.hasProp('active', true)
     expect(isActive).toBe(true)
+  })
+
+  test('Shows notifications', () => {
+    const $store = new Vuex.Store({
+      state: {
+        notifications: {
+          foo: { msg: 'bar' },
+          baz: { msg: 'quz' }
+        }
+      }
+    })
+
+    const wrapper = shallow(App, {
+      mocks: { $store },
+      stubs: ['router-view']
+    })
+
+    const notifications = wrapper.findAll(Notification)
+    expect(notifications.length).toBe(2)
+  })
+
+  test('Dismissing a notification calls store event REMOVE_NOTIFICATION', () => {
+    const removeNotification = stub()
+    const $store = new Vuex.Store({
+      state: {
+        notifications: {
+          foo: { msg: 'bar' }
+        }
+      },
+      mutations: {
+        REMOVE_NOTIFICATION: removeNotification
+      }
+    })
+
+    const wrapper = shallow(App, {
+      mocks: { $store },
+      stubs: ['router-view']
+    })
+
+    const notification = wrapper.find(Notification)
+    notification.vm.$emit('dismiss')
+    expect(removeNotification.calledOnce).toBe(true)
   })
 })

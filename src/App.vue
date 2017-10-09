@@ -25,7 +25,7 @@ export default {
   computed: {
     ...mapState({
       notifications: (state) => values(state.notifications),
-      pendingRequests: (state) => Object.keys(state.pendingRequests)
+      pendingRequests: (state) => Object.keys(state.pendingRequests || [])
     }),
     isLoading () {
       return this.pendingRequests.length > 0

@@ -1,6 +1,6 @@
 import { mount } from 'vue-test-utils'
 
-import Notification from '../src/components/notification.vue'
+import Notification from '../../src/components/notification.vue'
 
 describe('Notification', () => {
   test('Notification displays msg', () => {

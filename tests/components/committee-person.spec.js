@@ -1,6 +1,6 @@
 import { mount } from 'vue-test-utils'
 
-import CommitteePerson from '../src/components/committee-person.vue'
+import CommitteePerson from '../../src/components/committee-person.vue'
 
 describe('Committee person', () => {
   test('Displays full name, division ordinal, and address', () => {
