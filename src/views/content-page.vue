@@ -3,7 +3,7 @@
     <div class="container">
       <div class="content">
         <h1>{{ title }}</h1>
-        <div v-html="content"></div>
+        <div v-html="content" id="content"></div>
       </div>
     </div>
   </section>
