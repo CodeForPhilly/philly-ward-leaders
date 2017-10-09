@@ -42,12 +42,11 @@ export default {
         scrollWheelZoom: false
       },
       attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      url: 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}',
+      url: 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png',
       tileOpts: {
         subdomains: 'abcd',
         minZoom: 0,
-        maxZoom: 20,
-        ext: 'png'
+        maxZoom: 20
       },
       geojsonOpts: {
         style: () => ({
