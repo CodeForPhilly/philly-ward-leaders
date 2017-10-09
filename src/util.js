@@ -1,7 +1,7 @@
 import ordinal from 'ordinal'
 
 export function formatNumber (value) {
-  if (!value) return ''
+  if (value === null) return ''
   const numericValue = parseInt(value, 10)
   return numericValue.toLocaleString()
 }
