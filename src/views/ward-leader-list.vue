@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
 
 import Hero from '../components/hero.vue'
 import BaseballCard from '../components/baseball-card/index.vue'
@@ -44,11 +44,16 @@ import BaseballCard from '../components/baseball-card/index.vue'
 export default {
   name: 'app',
   props: [ 'party' ],
-  computed: mapState({
-    leaders: function (state) {
-      return state.leaders.filter((leader) => leader.party === this.party)
-    }
-  }),
+  computed: {
+    ...mapState({
+      leaders: function (state) {
+        return state.leaders.filter((leader) => leader.party === this.party)
+      }
+    }),
+    ...mapGetters([
+      'isLeadersFetched'
+    ])
+  },
   components: {
     'hero': Hero,
     'baseball-card': BaseballCard
@@ -57,7 +62,9 @@ export default {
     fetchLeaders: 'FETCH_LEADERS'
   }),
   created () {
-    this.fetchLeaders()
+    if (!this.isLeadersFetched) {
+      this.fetchLeaders()
+    }
   }
 }
 </script>

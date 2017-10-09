@@ -53,3 +53,9 @@ export function findLeader (state) {
     return state.leaders.find((leader) => leader.ward === ward && leader.party === party)
   }
 }
+
+export function isLeadersFetched (state) {
+  // TODO: This could produce false positives if there's actually
+  // no data or if the fetch has started but not finished.
+  return state.leaders.length > 0
+}

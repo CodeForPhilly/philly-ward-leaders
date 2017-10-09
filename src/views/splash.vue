@@ -16,6 +16,24 @@
   </section>
 </template>
 
+<script>
+import { mapGetters, mapActions } from 'vuex'
+
+export default {
+  computed: mapGetters([
+    'isLeadersFetched'
+  ]),
+  methods: mapActions({
+    fetchLeaders: 'FETCH_LEADERS'
+  }),
+  created () {
+    if (!this.isLeadersFetched) {
+      this.fetchLeaders()
+    }
+  }
+}
+</script>
+
 <style scoped>
 .button {
   min-width: 250px;
