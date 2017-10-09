@@ -96,3 +96,9 @@ If you’ve used a router before, whether in JS or a server-side environment, th
 | `store/actions.js`   | Functions that have side effects (ie. fetching data from a server), and typically save their results to the state by passing it to a mutation.                                                                                                                                                                                                                                                                                                                       |
 | `store/mutations.js` | Functions that change (mutate) the state. They’re typically called by actions, but could also be called by views (if no side effect is necessary). Note that Vue updates state mutably because YOLO, but has [a couple minor caveats](https://vuejs.org/v2/guide/reactivity.html) when adding or removing object properties.                                                                                                                                         |
 | `store/getters.js`   | Reusable convenience functions for deriving/computing values from the state.                                                                                                                                                                                                                                                                                                                                                                                         |
+
+# Browser testing
+<table><tr>
+<td><img width="150" alt="BrowserStack Logo" src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png"></td>
+<td>BrowserStack kindly provides free access to their cross-browser testing platform since this is an open source project.</td>
+</tr></table>
