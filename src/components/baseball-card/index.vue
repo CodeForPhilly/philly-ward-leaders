@@ -37,17 +37,20 @@ import { createFront, createBack } from './svg'
 import { slugify, ordinalize, formatNumber } from '../../util'
 
 export default {
-  props: [
-    'name',
-    'ward',
-    'party',
-    'photo',
-    'registeredVotersParty',
-    'turnoutParty',
-    'turnoutTotal',
-    'divisionCount',
-    'committeePersonCount'
-  ],
+  props: {
+    name: String,
+    ward: Number,
+    party: String,
+    photo: {
+      type: String,
+      default: '../assets/photo-placeholder.png'
+    },
+    registeredVotersParty: Number,
+    turnoutParty: Number,
+    turnoutTotal: Number,
+    divisionCount: Number,
+    committeePersonCount: Number
+  },
   computed: {
     url () {
       return `/leaders/${this.party}/${this.ward}/${this.slug}`
