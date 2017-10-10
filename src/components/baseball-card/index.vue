@@ -81,7 +81,7 @@ export default {
 
       const backEl = this.$refs.back
       const contentsEl = this.$refs.content
-      createBack(backEl, contentsEl)
+      createBack(backEl, contentsEl, this.$props)
     }
   },
   filters: {

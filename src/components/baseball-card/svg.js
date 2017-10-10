@@ -105,12 +105,13 @@ export function createFront (el, data) {
     .after(nameText)
 }
 
-export function createBack (el, contentsEl) {
+export function createBack (el, contentsEl, data) {
+  const isRepublican = (data.party === 'republican')
   const config = {
     cardWidth: 250,
     cardHeight: 375,
     cardBorderWidth: 15,
-    cardBorderColor: '#2284a1',
+    cardBorderColor: isRepublican ? '#a12222' : '#2284a1',
     cardInsideColor: '#CDD8DB'
   }
 
