@@ -14,12 +14,16 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import { mapState, mapMutations } from 'vuex'
 import values from 'lodash/values'
 import Buefy from 'buefy'
+import Tooltip from 'vue-directive-tooltip'
 
 import NavBar from './components/nav-bar.vue'
 import Notification from './components/notification.vue'
+
+Vue.use(Tooltip)
 
 export default {
   computed: {
@@ -55,6 +59,7 @@ $primary: $light-blue;
 
 @import "~bulma";
 @import "~buefy/lib/buefy.css";
+@import "~vue-directive-tooltip/src/css/index.scss";
 
 .navbar-burger span,
 .navbar-burger.is-active span {

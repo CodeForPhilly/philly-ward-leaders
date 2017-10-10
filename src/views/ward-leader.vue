@@ -69,23 +69,23 @@
               </dd>
 
               <dt>
-                <b-tooltip label="How many divisions make up the ward" type="is-black">
+                <abbr v-tooltip="'How many divisions make up the ward'">
                   Divisions
-                </b-tooltip>
+                </abbr>
               </dt>
               <dd>{{ leader.divisionCount }}</dd>
 
               <dt>
-                <b-tooltip label="Each division elects 2 committee persons" type="is-black">
+                <abbr v-tooltip="'Each division elects 2 committee persons'">
                   Committee Persons
-                </b-tooltip>
+                </abbr>
               </dt>
               <dd>
                 {{ leader.committeePersonCount }}
                 ({{ vacancyCount }}
-                <b-tooltip label="Each division elects 2 committee persons" type="is-black">
+                <abbr v-tooltip="'Each division elects 2 committee persons'">
                   vacancies
-                </b-tooltip>)
+                </abbr>)
               </dd>
             </dl>
           </div>
@@ -208,7 +208,6 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
-import Buefy from 'buefy'
 
 import StatsBar from '../components/stats-bar.vue'
 import CommitteePerson from '../components/committee-person.vue'
@@ -253,7 +252,6 @@ export default {
     this.fetchWardBoundaries(this.ward)
   },
   components: {
-    'b-tooltip': Buefy.Tooltip,
     'stats-bar': StatsBar,
     'committee-person': CommitteePerson,
     'ward-map': WardMap,
@@ -266,7 +264,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .stats-bar {
   padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
@@ -277,7 +275,7 @@ dt {
   font-weight: bold;
   letter-spacing: 1px;
 }
-[data-label] {
+abbr {
   border-bottom: dotted 1px #4a4a4a;
   cursor: help;
 }
