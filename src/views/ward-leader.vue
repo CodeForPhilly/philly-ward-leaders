@@ -31,8 +31,8 @@
       <div class="container">
         <div class="columns">
           <div class="column">
-            <figure class="image" v-if="leader.photoUrl">
-              <img :src="leader.photoUrl">
+            <figure class="image" v-if="leader.photo">
+              <img :src="leader.photo">
               <ask-detail
                 :fullName="leader.fullName"
                 detail="Photo"

@@ -22,7 +22,7 @@
             :name="leader.fullName"
             :ward="leader.ward"
             :party="leader.party"
-            :photo-url="leader.photoUrl"
+            :photo="leader.photo"
             :turnout-party="leader.turnoutParty"
             :registered-voters-party="leader.registeredVotersParty"
             :division-count="leader.divisionCount"

@@ -41,7 +41,7 @@ export default {
     'name',
     'ward',
     'party',
-    'photoUrl',
+    'photo',
     'registeredVotersParty',
     'turnoutParty',
     'turnoutTotal',

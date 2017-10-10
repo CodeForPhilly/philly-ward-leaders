@@ -11,11 +11,10 @@ export default class Api {
 
   fetchLeaders () {
     const select = [
-      'sys.id',
       'fields.ward',
       'fields.party',
       'fields.fullName',
-      'fields.photoUrl',
+      'fields.photo',
       'fields.registeredVotersParty',
       'fields.turnoutParty',
       'fields.divisionCount',
@@ -29,6 +28,7 @@ export default class Api {
     }
     return this.client.getEntries(opts)
       .then((response) => response.items.map(getFieldsAndId))
+      .then((items) => items.map(simplifyLinkedPhoto))
   }
 
   fetchLeader (ward, party) {
@@ -39,7 +39,7 @@ export default class Api {
     })
     .then((response) => {
       if (response.items.length > 0) {
-        return getFieldsAndId(response.items[0])
+        return simplifyLinkedPhoto(getFieldsAndId(response.items[0]))
       } else {
         throw new Error('Ward leader was not found')
       }
@@ -87,5 +87,12 @@ function getFieldsAndId (item) {
   return {
     ...item.fields,
     id: item.sys.id
+  }
+}
+
+function simplifyLinkedPhoto (item) {
+  return {
+    ...item,
+    photo: item.photo && item.photo.fields.file.url
   }
 }
