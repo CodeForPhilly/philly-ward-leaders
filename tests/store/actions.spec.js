@@ -221,7 +221,6 @@ describe('Actions', () => {
         expect(commit).toBeCalledWith('END_REQUEST', 'FETCH_CONTENT_PAGE')
       })
     })
-
   })
 })
 
