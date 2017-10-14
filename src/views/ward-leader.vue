@@ -264,26 +264,25 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.stats-bar {
-  padding: 3rem 1.5rem 1.5rem 1.5rem;
-}
-.leader-info {
-  padding-bottom: 0;
-}
-dt {
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-abbr {
-  border-bottom: dotted 1px #4a4a4a;
-  cursor: help;
-}
-dd {
-  margin-bottom: 15px;
-}
-.unknown {
-  letter-spacing: 1px;
-  font-size: 80%;
-}
+<style lang="sass" scoped>
+.stats-bar
+  padding: 3rem 1.5rem 1.5rem 1.5rem
+
+.leader-info
+  padding-bottom: 0
+
+dt
+  font-weight: bold
+  letter-spacing: 1px
+
+abbr
+  border-bottom: dotted 1px #4a4a4a
+  cursor: help
+
+dd
+  margin-bottom: 15px
+
+.unknown
+  letter-spacing: 1px
+  font-size: 80%
 </style>

@@ -37,16 +37,15 @@ export default {
 }
 </script>
 
-<style scoped>
-.button {
-  min-width: 250px;
-  margin-bottom: 15px;
-}
-p {
-  margin-bottom: 15px;
-}
-abbr {
-  border-bottom: dotted 1px #fff;
-  cursor: help;
-}
+<style scoped lang="sass">
+.button
+  min-width: 250px
+  margin-bottom: 15px
+
+p
+  margin-bottom: 15px
+
+abbr
+  border-bottom: dotted 1px #fff
+  cursor: help
 </style>

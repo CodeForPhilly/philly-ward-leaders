@@ -47,30 +47,28 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "~bulma/sass/utilities/initial-variables";
+<style lang="sass">
+@import "~bulma/sass/utilities/initial-variables"
 
-$blue: #04576F;
-$light-blue: #2284a1;
+$blue: #04576F
+$light-blue: #2284a1
 
-$navbar-background-color: $light-blue;
-$navbar-item-color: $white;
-$primary: $light-blue;
+$navbar-background-color: $light-blue
+$navbar-item-color: $white
+$primary: $light-blue
 
-@import "~bulma";
-@import "~buefy/lib/buefy.css";
-@import "~vue-directive-tooltip/src/css/index.scss";
+@import "~bulma"
+@import "~buefy/lib/buefy.css"
+@import "~vue-directive-tooltip/src/css/index.scss"
 
 .navbar-burger span,
-.navbar-burger.is-active span {
-  background-color: $white;
-}
+.navbar-burger.is-active span
+  background-color: $white
 
-.notifications {
+.notifications
   position: absolute;
   top: 60px;
   left: 0;
   right: 0;
   z-index: 9999;
-}
 </style>

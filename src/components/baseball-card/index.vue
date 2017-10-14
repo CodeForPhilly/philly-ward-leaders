@@ -91,66 +91,56 @@ export default {
 }
 </script>
 
-<style>
-.flip-container {
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-  .flip-container:hover .back {
-    transform: rotateY(0deg);
-  }
+<style lang="sass">
+.flip-container
+  perspective: 1000px
+  transform-style: preserve-3d
 
-  .flip-container:hover .front {
-    transform: rotateY(180deg);
-  }
+  &:hover .back
+    transform: rotateY(0deg)
 
-.flipper {
-	transition: 0.6s;
-	position: relative;
-	margin: 0 30px;
-}
+  &:hover .front
+    transform: rotateY(180deg)
 
-.front, .back {
-  backface-visibility: hidden;
-  transition: 0.6s;
-  transform-style: preserve-3d;
-}
+.flipper
+  transition: 0.6s
+  position: relative
+  margin: 0 30px
 
-.back {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+.front, .back
+  backface-visibility: hidden
+  transition: 0.6s
+  transform-style: preserve-3d
 
-.front {
-  z-index: 2;
-  transform: rotateY(0deg);
-}
+.front
+  z-index: 2
+  transform: rotateY(0deg)
 
-.back {
-  transform: rotateY(-180deg);
-}
+.back
+  transform: rotateY(-180deg)
+  position: absolute
+  top: 0
+  left: 0
 
-.stats {
-  padding: 25px 25px;
-}
-.stats h3 {
-  font-size: 120%;
-}
-.stats h3 .ward-ordinal {
-  display: block;
-}
-.stats dt, .card .stats dd {
-  margin-bottom: 0;
-  float: left;
-}
-.stats dt {
-  width: 60%;
-  overflow: hidden;
-}
-.stats .button {
-  margin-top: 15px;
-  position: static;
-  width: 100%;
-}
+.stats
+  padding: 25px 25px
+
+  h3
+    font-size: 120%
+
+    .ward-ordinal
+      display: block
+
+  dt, dd
+    margin-bottom: 0
+    float: left
+
+  dt
+    width: 60%
+    overflow: hidden
+
+  .button
+    margin-top: 15px
+    position: static
+    width: 100%
 </style>

@@ -12,9 +12,8 @@ export default {
 }
 </script>
 
-<style>
-.notification {
-  margin: 0 auto;
-  width: 80%;
-}
+<style lang="sass">
+.notification
+  margin: 0 auto
+  width: 80%
 </style>

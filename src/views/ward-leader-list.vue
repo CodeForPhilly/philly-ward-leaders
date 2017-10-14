@@ -69,8 +69,7 @@ export default {
 }
 </script>
 
-<style scoped>
-.leader-list {
-  padding-top: 24px;
-}
+<style scoped lang="sass">
+.leader-list
+  padding-top: 24px
 </style>

@@ -89,10 +89,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "~leaflet/dist/leaflet.css";
+<style lang="sass">
+@import "~leaflet/dist/leaflet.css"
 
-.map {
-  height: 350px;
-}
+.map
+  height: 350px
 </style>

@@ -135,13 +135,12 @@ function popupTemplate (ward, democratFullName, republicanFullName) {
 }
 </script>
 
-<style>
-@import "~leaflet/dist/leaflet.css";
+<style lang="sass">
+@import "~leaflet/dist/leaflet.css"
 
-.citywide-map {
-  height: calc(100vh - 52px);
-}
-.leader-buttons .button {
-  width: 100%;
-}
+.citywide-map
+  height: calc(100vh - 52px)
+
+.leader-buttons .button
+  width: 100%
 </style>

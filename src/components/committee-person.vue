@@ -26,8 +26,7 @@ export default {
 }
 </script>
 
-<style scoped>
-.committee-person {
-  min-width: 250px;
-}
+<style scoped lang="sass">
+.committee-person
+  min-width: 250px
 </style>
