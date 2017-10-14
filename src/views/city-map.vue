@@ -6,7 +6,7 @@
     <v-tilelayer
       :url="tileUrl"
       :attribution="tileAttribution"
-    :params="tileOpts"></v-tilelayer>
+      :params="tileOpts"></v-tilelayer>
     <v-geojson-layer
       ref="geojsonLayer"
       v-if="isBoundariesLoaded"
@@ -15,6 +15,7 @@
     <v-geocoder
       :apikey="geocoderApiKey"
       placeholder="Search an address"
+      expanded
       @l-select="onSelectAddress"></v-geocoder>
   </v-map>
 </template>
