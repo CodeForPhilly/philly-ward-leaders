@@ -12,3 +12,8 @@
     </div>
   </section>
 </template>
+
+<script>
+// Without this line, test coverage reporter fails
+export default {}
+</script>
