@@ -4,10 +4,8 @@ node_js:
 script:
   - npm run build
 deploy:
-  provider: pages
+  provider: surge
   skip_cleanup: true
-  local_dir: public
-  github-token:
-    secure: "Mqf24XwTwIVm61Fz5MkKRH0C1XrUbadpNGc3+Zyxzp/IiC7wJ3bDaPBSu7H7SbkJWatcyP7aBZ2Z10wdnEIPHXh4CuVRJfkHAA2miOQ/TfkJcsWWkW3NXdo0Tl6063wPLQXUEUBCEL4VrkZS0m0GU8RA53LV/KygQUZ5r6t/ekE="
+  project: ./public/
   on:
     branch: master
