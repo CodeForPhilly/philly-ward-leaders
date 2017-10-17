@@ -10,6 +10,7 @@
     </div>
     <b-loading :active="isLoading"></b-loading>
     <router-view></router-view>
+    <site-footer v-if="shouldShowFooter"></site-footer>
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import Tooltip from 'vue-directive-tooltip'
 
 import NavBar from './components/nav-bar.vue'
 import Notification from './components/notification.vue'
+import SiteFooter from './components/site-footer.vue'
 
 Vue.use(Tooltip)
 
@@ -34,6 +36,10 @@ export default {
     isLoading () {
       const routeName = this.$route && this.$route.name
       return (this.pendingRequests.length > 0) && (routeName !== 'splash')
+    },
+    shouldShowFooter () {
+      const routeName = this.$route && this.$route.name
+      return routeName !== 'city-map'
     }
   },
   methods: mapMutations({
@@ -42,7 +48,8 @@ export default {
   components: {
     'nav-bar': NavBar,
     'notification': Notification,
-    'b-loading': Buefy.Loading
+    'b-loading': Buefy.Loading,
+    'site-footer': SiteFooter
   }
 }
 </script>
