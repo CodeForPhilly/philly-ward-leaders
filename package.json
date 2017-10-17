@@ -58,6 +58,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "jest": {
+    "testPathIgnorePatterns": [ "/node_modules/", "<rootDir>/tests/app.spec.js" ],
     "moduleFileExtensions": [
       "js",
       "json",
