@@ -1,1 +1,16 @@
-node_modules
+.DS_Store
+node_modules/
+public/build.js
+public/build.js.map
+public/assets
+npm-debug.log
+yarn-error.log
+data-scripts/venv
+data-scripts/__pycache__
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

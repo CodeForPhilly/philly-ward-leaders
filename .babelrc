@@ -1,0 +1,28 @@
+{
+  "presets": [
+    ["env", {
+      modules: false,
+      useBuiltIns: true,
+      targets: {
+        browsers: [
+          '> 1%',
+          'last 2 versions'
+        ]
+      }
+    }]
+  ],
+  "plugins": [
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+       "presets": [
+        ["env", {
+          targets: {
+            "node": "current"
+          }
+        }]
+      ]
+    }
+  }
+}

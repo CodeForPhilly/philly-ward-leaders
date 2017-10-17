@@ -1,0 +1,181 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 1,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2mMPTKQBNCOmYQOqi0eWag",
+        "type": "Entry",
+        "createdAt": "2017-09-12T11:33:36.632Z",
+        "updatedAt": "2017-10-09T21:43:41.974Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "wardLeader"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Tom Rumbaugh",
+        "nickname": null,
+        "ward": 1,
+        "subWard": null,
+        "party": "democratic",
+        "photo": {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "i9q3kobl32q0"
+              }
+            },
+            "id": "2kdCuPDHfKGCqSUUgmq0Oy",
+            "type": "Asset",
+            "createdAt": "2017-10-09T21:42:49.033Z",
+            "updatedAt": "2017-10-09T21:42:49.033Z",
+            "revision": 1,
+            "locale": "en-US"
+          },
+          "fields": {
+            "title": "Tom Rumbaugh",
+            "file": {
+              "url": "//images.contentful.com/i9q3kobl32q0/2kdCuPDHfKGCqSUUgmq0Oy/3461917e55fa7b7a1f8de31ed91b2f02/FE1iRug.jpg",
+              "details": {
+                "size": 136742,
+                "image": {
+                  "width": 268,
+                  "height": 311
+                }
+              },
+              "fileName": "FE1iRug.jpg",
+              "contentType": "image/png"
+            }
+          }
+        },
+        "gender": "Male",
+        "phone": "(215) 468-3554",
+        "address": "1306 S 13th St Philadelphia PA 19147-4905",
+        "wardOfResidence": 1,
+        "yearOfBirth": null,
+        "occupation": null,
+        "linkedin": null,
+        "facebook": null,
+        "twitter": null,
+        "email": null,
+        "divisionCount": 21,
+        "committeePersonCount": 42,
+        "registeredVotersTotal": 11249,
+        "registeredVotersParty": 8360,
+        "turnoutTotal": 3848,
+        "turnoutParty": 3470
+      }
+    }
+  ],
+  "includes": {
+    "Asset": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "i9q3kobl32q0"
+            }
+          },
+          "id": "2kdCuPDHfKGCqSUUgmq0Oy",
+          "type": "Asset",
+          "createdAt": "2017-10-09T21:42:49.033Z",
+          "updatedAt": "2017-10-09T21:42:49.033Z",
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "Tom Rumbaugh",
+          "file": {
+            "url": "//images.contentful.com/i9q3kobl32q0/2kdCuPDHfKGCqSUUgmq0Oy/3461917e55fa7b7a1f8de31ed91b2f02/FE1iRug.jpg",
+            "details": {
+              "size": 136742,
+              "image": {
+                "width": 268,
+                "height": 311
+              }
+            },
+            "fileName": "FE1iRug.jpg",
+            "contentType": "image/png"
+          }
+        }
+      }
+    ],
+    "Entry": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "i9q3kobl32q0"
+            }
+          },
+          "id": "2mMPTKQBNCOmYQOqi0eWag",
+          "type": "Entry",
+          "createdAt": "2017-09-12T11:33:36.632Z",
+          "updatedAt": "2017-10-09T21:43:41.974Z",
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "wardLeader"
+            }
+          },
+          "locale": "en-US"
+        },
+        "fields": {
+          "fullName": "Tom Rumbaugh",
+          "nickname": null,
+          "ward": 1,
+          "subWard": null,
+          "party": "democratic",
+          "photo": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2kdCuPDHfKGCqSUUgmq0Oy"
+            }
+          },
+          "gender": "Male",
+          "phone": "(215) 468-3554",
+          "address": "1306 S 13th St Philadelphia PA 19147-4905",
+          "wardOfResidence": 1,
+          "yearOfBirth": null,
+          "occupation": null,
+          "linkedin": null,
+          "facebook": null,
+          "twitter": null,
+          "email": null,
+          "divisionCount": 21,
+          "committeePersonCount": 42,
+          "registeredVotersTotal": 11249,
+          "registeredVotersParty": 8360,
+          "turnoutTotal": 3848,
+          "turnoutParty": 3470
+        }
+      }
+    ]
+  }
+}
