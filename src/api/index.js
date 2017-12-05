@@ -93,6 +93,6 @@ function getFieldsAndId (item) {
 function simplifyLinkedPhoto (item) {
   return {
     ...item,
-    photo: item.photo && item.photo.fields.file.url
+    photo: item.photo && item.photo.fields && item.photo.fields.file.url
   }
 }
