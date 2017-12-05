@@ -15,13 +15,16 @@
               </h3>
               <dl>
                 <dt>Voters ({{ partyAbbr }})</dt>
-                <dd>{{ registeredVotersParty | formatNumber }}</dd>
+                <dd v-if="registeredVotersParty">{{ registeredVotersParty | formatNumber }}</dd>
+                <dd v-else>Unknown</dd>
 
                 <dt>Turnout ({{ partyAbbr }})</dt>
-                <dd>{{ turnoutPartyPercent }}%</dd>
+                <dd v-if="turnoutPartyPercent">{{ turnoutPartyPercent }}%</dd>
+                <dd v-else>Unknown</dd>
 
                 <dt>Vacancies</dt>
-                <dd>{{ vacancies }}</dd>
+                <dd v-if="vacancies >= 0">{{ vacancies }}</dd>
+                <dd v-else>Unknown</dd>
               </dl>
               <router-link :to="url" class="button is-info details">Details</router-link>
             </div>
