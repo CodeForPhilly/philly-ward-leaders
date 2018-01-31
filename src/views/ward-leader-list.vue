@@ -21,6 +21,7 @@
             :key="leader.id"
             :name="leader.fullName"
             :ward="leader.ward"
+            :subWard="leader.subWard"
             :party="leader.party"
             :photo="leader.photo"
             :turnout-party="leader.turnoutParty"
