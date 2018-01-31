@@ -12,6 +12,7 @@ export default class Api {
   fetchLeaders () {
     const select = [
       'fields.ward',
+      'fields.subWard',
       'fields.party',
       'fields.fullName',
       'fields.photo',
@@ -31,12 +32,15 @@ export default class Api {
       .then((items) => items.map(simplifyLinkedPhoto))
   }
 
-  fetchLeader (ward, party) {
-    return this.client.getEntries({
+  fetchLeader (ward, subWard, party) {
+    const requestOpts = {
       content_type: 'wardLeader',
       'fields.ward': ward,
       'fields.party': party
-    })
+    }
+    if (subWard) requestOpts['fields.subWard'] = subWard
+
+    return this.client.getEntries(requestOpts)
     .then((response) => {
       if (response.items.length > 0) {
         return simplifyLinkedPhoto(getFieldsAndId(response.items[0]))
@@ -47,12 +51,14 @@ export default class Api {
   }
 
   fetchCommitteePersons (ward, party) {
-    return this.client.getEntries({
+    const requestOpts = {
       content_type: 'committeePerson',
       order: 'fields.division',
       'fields.ward': ward,
       'fields.party': party
-    })
+    }
+
+    return this.client.getEntries(requestOpts)
     .then((response) => response.items.map(getFieldsAndId))
   }
 

@@ -25,11 +25,11 @@ export async function FETCH_LEADERS (ctx) {
   ctx.commit('END_REQUEST', 'FETCH_LEADERS')
 }
 
-export async function FETCH_LEADER (ctx, { ward, party }) {
+export async function FETCH_LEADER (ctx, { ward, subWard, party }) {
   ctx.commit('RESET_LEADER')
   ctx.commit('BEGIN_REQUEST', 'FETCH_LEADER')
   try {
-    const leader = await api.fetchLeader(ward, party)
+    const leader = await api.fetchLeader(ward, subWard, party)
     ctx.commit('FETCH_LEADER_SUCCESS', leader)
   } catch (err) {
     logError(err)
@@ -38,7 +38,7 @@ export async function FETCH_LEADER (ctx, { ward, party }) {
   ctx.commit('END_REQUEST', 'FETCH_LEADER')
 }
 
-export async function FETCH_COMMITTEE_PERSONS (ctx, { ward, party }) {
+export async function FETCH_COMMITTEE_PERSONS (ctx, { ward, subWard, party }) {
   ctx.commit('BEGIN_REQUEST', 'FETCH_COMMITTEE_PERSONS')
   try {
     const committeePersons = await api.fetchCommitteePersons(ward, party)

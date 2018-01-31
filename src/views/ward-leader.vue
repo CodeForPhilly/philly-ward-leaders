@@ -244,9 +244,17 @@ export default {
   }),
   created () {
     const opts = {
-      ward: this.ward,
       party: this.party
     }
+
+    if (hasSubWard(this.ward)) {
+      const { ward, subWard } = splitSubWard(this.ward)
+      opts.ward = ward
+      opts.subWard = subWard
+    } else {
+      opts.ward = this.ward
+    }
+
     this.fetchLeader(opts)
     this.fetchCommitteePersons(opts)
     this.fetchWardBoundaries(this.ward)
@@ -260,6 +268,18 @@ export default {
   filters: {
     formatNumber,
     ordinalize
+  }
+}
+
+function hasSubWard (ward) {
+  const lastChar = ward.slice(-1)
+  return /[A-Za-z]/.test(lastChar)
+}
+
+function splitSubWard (ward) {
+  return {
+    ward: ward.slice(0, -1),
+    subWard: ward.slice(-1)
   }
 }
 </script>

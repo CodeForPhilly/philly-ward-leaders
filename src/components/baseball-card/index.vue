@@ -43,6 +43,7 @@ export default {
   props: {
     name: String,
     ward: Number,
+    subWard: String,
     party: String,
     photo: {
       type: String,
@@ -56,7 +57,8 @@ export default {
   },
   computed: {
     url () {
-      return `/leaders/${this.party}/${this.ward}/${this.slug}`
+      const wardString = this.ward + (this.subWard || '')
+      return `/leaders/${this.party}/${wardString}/${this.slug}`
     },
     slug () {
       return slugify(this.name)
