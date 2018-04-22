@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-one-third flip-container">
+  <div class="column is-one-third flip-container" @click="noop">
     <div class="flipper">
       <svg class="front" ref="front"></svg>
       <svg class="back" ref="back"></svg>
@@ -87,6 +87,11 @@ export default {
       const backEl = this.$refs.back
       const contentsEl = this.$refs.content
       createBack(backEl, contentsEl, this.$props)
+    },
+    noop () {
+      // iOS Safari requires a click handler be present in order for the CSS :hover
+      // modifier to work.
+      // https://stackoverflow.com/questions/18047353/fix-css-hover-on-iphone-ipad-ipod
     }
   },
   filters: {
