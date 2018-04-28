@@ -168,6 +168,26 @@
                   detail="Social media"
                   label="Know a link?"></ask-detail>
               </dd>
+
+              <dt>
+                Sample Ballots
+              </dt>
+              <dd>
+                <a :href="submitSampleBallotLink">
+                  Upload a sample ballot
+                </a>
+                <ul v-if="sampleBallots.length > 0">
+                  <li
+                    v-for="ballot in sampleBallots"
+                    :key="ballot.id">
+                    <a :href="ballot.url">
+                      <figure class="image is-48x48">
+                        <img :src="ballot.url" height="48"/>
+                      </figure>
+                    </a>
+                  </li>
+                </ul>
+              </dd>
             </dl>
 
           </div>
@@ -221,9 +241,15 @@ export default {
     'ward',
     'slug'
   ],
+  data () {
+    return {
+      submitSampleBallotLink: 'https://form.jotform.com/81176016314146'
+    }
+  },
   computed: {
     ...mapState({
       leader: (state) => state.currentLeader.leader,
+      sampleBallots: (state) => state.currentLeader.sampleBallots,
       committeePersons: (state) => state.currentLeader.committeePersons,
       wardBoundaries: (state) => state.currentLeader.wardBoundaries
     }),
@@ -239,6 +265,7 @@ export default {
   },
   methods: mapActions({
     fetchLeader: 'FETCH_LEADER',
+    fetchSampleBallots: 'FETCH_SAMPLE_BALLOTS',
     fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS',
     fetchWardBoundaries: 'FETCH_WARD_BOUNDARIES'
   }),
@@ -256,6 +283,7 @@ export default {
     }
 
     this.fetchLeader(opts)
+    this.fetchSampleBallots(opts)
     this.fetchCommitteePersons(opts)
     this.fetchWardBoundaries(this.ward)
   },

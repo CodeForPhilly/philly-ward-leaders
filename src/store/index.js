@@ -17,6 +17,7 @@ const store = new Vuex.Store({
     citywideBoundaries: {},
     currentLeader: {
       leader: {},
+      sampleBallots: [],
       committeePersons: [],
       wardBoundaries: {}
     }
