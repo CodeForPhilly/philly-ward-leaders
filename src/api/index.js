@@ -54,8 +54,7 @@ export default class Api {
     const requestOpts = {
       content_type: 'sampleBallot',
       'fields.ward': ward,
-      'fields.party': party,
-      'fields.isApproved': true
+      'fields.party': party
     }
     if (subWard) requestOpts['fields.subWard'] = subWard
 
