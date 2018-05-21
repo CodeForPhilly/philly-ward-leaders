@@ -173,20 +173,20 @@
                 Sample Ballots
               </dt>
               <dd>
-                <a :href="submitSampleBallotLink">
-                  Upload a sample ballot
-                </a>
-                <ul v-if="sampleBallots.length > 0">
+                <ul v-if="sampleBallots.length > 0" class="sample-ballots">
                   <li
                     v-for="ballot in sampleBallots"
                     :key="ballot.id">
-                    <a :href="ballot.url">
+                    <a @click.prevent="modalUrl = ballot.url">
                       <figure class="image is-48x48">
                         <img :src="ballot.url" height="48"/>
                       </figure>
                     </a>
                   </li>
                 </ul>
+                <a :href="sampleBallotFormPrefilled">
+                  Upload a sample ballot
+                </a>
               </dd>
             </dl>
 
@@ -223,6 +223,16 @@
       </div>
     </section>
 
+    <div class="modal is-active" v-show="modalUrl">
+      <div class="modal-background" @click="modalUrl = null"/>
+      <div class="modal-content">
+        <p class="image">
+          <img :src="modalUrl">
+        </p>
+      </div>
+      <button @click="modalUrl = null" class="modal-close is-large" aria-label="close"/>
+    </div>
+
   </div>
 </template>
 
@@ -234,6 +244,7 @@ import CommitteePerson from '../components/committee-person.vue'
 import WardMap from '../components/ward-map.vue'
 import AskDetail from '../components/ask-detail.vue'
 import { formatNumber, ordinalize } from '../util'
+import { SAMPLE_BALLOT_FORM } from '../config'
 
 export default {
   props: [
@@ -243,7 +254,7 @@ export default {
   ],
   data () {
     return {
-      submitSampleBallotLink: 'https://form.jotform.com/81176016314146'
+      modalUrl: null
     }
   },
   computed: {
@@ -261,7 +272,10 @@ export default {
       'turnoutTotalPercent',
       'vacancyCount',
       'age'
-    ])
+    ]),
+    sampleBallotFormPrefilled () {
+      return `${SAMPLE_BALLOT_FORM}?ward=${this.ward}&party=${this.party}`
+    }
   },
   methods: mapActions({
     fetchLeader: 'FETCH_LEADER',
@@ -333,4 +347,14 @@ dd
 .unknown
   letter-spacing: 1px
   font-size: 80%
+
+.modal
+  z-index: 999999
+
+.sample-ballots
+  margin-bottom: 15px
+
+  li,
+  li figure
+    display: inline-block
 </style>
