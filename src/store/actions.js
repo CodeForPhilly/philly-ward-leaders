@@ -38,6 +38,18 @@ export async function FETCH_LEADER (ctx, { ward, subWard, party }) {
   ctx.commit('END_REQUEST', 'FETCH_LEADER')
 }
 
+export async function FETCH_SAMPLE_BALLOTS (ctx, { ward, subWard, party }) {
+  ctx.commit('BEGIN_REQUEST', 'FETCH_SAMPLE_BALLOTS')
+  try {
+    const sampleBallots = await api.fetchSampleBallots(ward, subWard, party)
+    ctx.commit('FETCH_SAMPLE_BALLOTS_SUCCESS', sampleBallots)
+  } catch (err) {
+    logError(err)
+    ctx.dispatch('NOTIFY', `Failed to get sample ballots`)
+  }
+  ctx.commit('END_REQUEST', 'FETCH_SAMPLE_BALLOTS')
+}
+
 export async function FETCH_COMMITTEE_PERSONS (ctx, { ward, subWard, party }) {
   ctx.commit('BEGIN_REQUEST', 'FETCH_COMMITTEE_PERSONS')
   try {

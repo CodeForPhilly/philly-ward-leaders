@@ -12,6 +12,10 @@ export function FETCH_LEADER_SUCCESS (state, leader) {
   state.currentLeader.leader = leader
 }
 
+export function FETCH_SAMPLE_BALLOTS_SUCCESS (state, sampleBallots) {
+  state.currentLeader.sampleBallots = sampleBallots
+}
+
 export function FETCH_COMMITTEE_PERSONS_SUCCESS (state, committeePersons) {
   state.currentLeader.committeePersons = committeePersons
 }

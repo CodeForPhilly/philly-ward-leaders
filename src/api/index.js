@@ -50,6 +50,18 @@ export default class Api {
     })
   }
 
+  fetchSampleBallots (ward, subWard, party) {
+    const requestOpts = {
+      content_type: 'sampleBallot',
+      'fields.ward': ward,
+      'fields.party': party
+    }
+    if (subWard) requestOpts['fields.subWard'] = subWard
+
+    return this.client.getEntries(requestOpts)
+    .then((response) => response.items.map(getFieldsAndId))
+  }
+
   fetchCommitteePersons (ward, party) {
     const requestOpts = {
       content_type: 'committeePerson',
