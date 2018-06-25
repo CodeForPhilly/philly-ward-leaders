@@ -61,22 +61,21 @@ export function createFront (el, data) {
     })
 
   // Ward text line 1
-  const ordinal = ordinalize(data.ward)
-  svg.text(45, 45, ordinal)
+  svg.text(45, 40, 'Ward')
+    .attr({
+      'text-anchor': 'middle',
+      'font-family': 'arial',
+      'font-size': 12,
+      'fill': config.cardBorderColor
+    })
+
+  // Ward text line 2
+  svg.text(45, 58, data.ward + data.subWard)
     .attr({
       'text-anchor': 'middle',
       'font-family': 'arial',
       'font-weight': 'bold',
       'font-size': 18,
-      'fill': config.cardBorderColor
-    })
-
-  // Ward text line 2
-  svg.text(45, 58, 'Ward')
-    .attr({
-      'text-anchor': 'middle',
-      'font-family': 'arial',
-      'font-size': 12,
       'fill': config.cardBorderColor
     })
 
