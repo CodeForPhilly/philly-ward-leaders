@@ -1,21 +1,32 @@
 import petl as etl
 
-def has_ward_and_division(row):
-    return row['ward'] != '' and row['division'] != ''
+def expand_zip(zip):
+    return '191' + zip
 
-def clean_party(party):
-    return 'democratic' if party == 'Democrat' else 'republican' if party == 'Republican' else None
+
+def create_ward(row):
+    # Get characters before -, trim leading zeros, convert to int
+    return int(row['ward_div'].split('-')[0].lstrip('0'))
+
+def create_division(row):
+    # Get characters after -, trim leading zeros, convert to int
+    return int(row['ward_div'].split('-')[1].lstrip('0'))
 
 def process_committee(filepath):
     table = etl.fromcsv(filepath) \
-        .rename({'name': 'fullName'}) \
-        .cut('ward', 'division', 'party', 'fullName',
+        .rename({'PRECINCT': 'ward_div',
+                 'PARTY': 'party',
+                 'SELECTION': 'fullName',
+                 'STREET': 'address',
+                 'ZIP': 'zip'}) \
+        .cut('ward_div', 'party', 'fullName',
              'address', 'zip') \
-        .select(has_ward_and_division) \
-        .convert({'ward': int,
-                  'division': int,
-                  'fullName': 'title',
+        .convert({'fullName': 'title',
                   'address': 'title'}) \
-        .convert('party', clean_party)
+        .convert('party', 'lower') \
+        .convert('zip', expand_zip) \
+        .addfield('ward', create_ward, index=0) \
+        .addfield('division', create_division, index=1) \
+        .cutout('ward_div')
 
     return table
