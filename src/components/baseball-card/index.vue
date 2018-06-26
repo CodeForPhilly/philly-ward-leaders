@@ -11,6 +11,7 @@
                 {{ name }}
                 <span class="ward-ordinal">
                   {{ ward | ordinalize }} Ward
+                  {{ subWard }}
                 </span>
               </h3>
               <dl>
