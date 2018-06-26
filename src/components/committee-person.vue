@@ -3,8 +3,14 @@
     <div class="card committee-person">
       <div class="card-content">
         <p class="title is-4">{{ fullName }}</p>
-        <p class="subtitle is-6">{{ division | ordinalize }} Division</p>
-        <div class="content">{{ address }}</div>
+        <p class="subtitle is-6">
+          <span>{{ division | ordinalize }} Division</span>
+          <span v-if="title">&amp; {{ title }}</span>
+        </p>
+        <div class="content">
+          <address>{{ address }}</address>
+          <a v-if="email" :href="'mailto:' + email">{{ email }}</a>
+        </div>
       </div>
     </div>
   </div>
@@ -18,7 +24,9 @@ export default {
   props: [
     'fullName',
     'division',
-    'address'
+    'address',
+    'title',
+    'email'
   ],
   filters: {
     ordinalize
@@ -29,4 +37,7 @@ export default {
 <style scoped lang="sass">
 .committee-person
   min-width: 250px
+
+address
+  font-style: inherit
 </style>

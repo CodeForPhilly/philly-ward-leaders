@@ -218,6 +218,8 @@
             :fullName="person.fullName"
             :division="person.division"
             :address="person.address"
+            :title="person.title"
+            :email="person.email"
           ></committee-person>
         </div>
       </div>
