@@ -29,7 +29,7 @@ export default class Api {
     }
     return this.client.getEntries(opts)
       .then((response) => response.items.map(getFieldsAndId))
-      .then((items) => items.map(simplifyLinkedPhoto))
+      .then((items) => items.map(simplifyLinkedItems))
   }
 
   fetchLeader (ward, subWard, party) {
@@ -43,7 +43,7 @@ export default class Api {
     return this.client.getEntries(requestOpts)
     .then((response) => {
       if (response.items.length > 0) {
-        return simplifyLinkedPhoto(getFieldsAndId(response.items[0]))
+        return simplifyLinkedItems(getFieldsAndId(response.items[0]))
       } else {
         throw new Error('Ward leader was not found')
       }
@@ -108,9 +108,13 @@ function getFieldsAndId (item) {
   }
 }
 
-function simplifyLinkedPhoto (item) {
-  return {
+function simplifyLinkedItems (item) {
+  const simplifiedItem = {
     ...item,
     photo: item.photo && item.photo.fields && item.photo.fields.file.url
   }
+  if (item.campaignFinanceReports) {
+    simplifiedItem.campaignFinanceReports = item.campaignFinanceReports.map((report) => report.fields)
+  }
+  return simplifiedItem
 }
