@@ -11,6 +11,7 @@ describe('Ward leader', () => {
     const FETCH_LEADER = jest.fn()
     const FETCH_COMMITTEE_PERSONS = jest.fn()
     const FETCH_WARD_BOUNDARIES = jest.fn()
+    const FETCH_SAMPLE_BALLOTS = jest.fn()
     const $store = new Vuex.Store({
       state: {
         currentLeader: {
@@ -22,7 +23,8 @@ describe('Ward leader', () => {
       actions: {
         FETCH_LEADER,
         FETCH_COMMITTEE_PERSONS,
-        FETCH_WARD_BOUNDARIES
+        FETCH_WARD_BOUNDARIES,
+        FETCH_SAMPLE_BALLOTS
       }
     })
     const propsData = { ward: '66', party: 'democratic' }
@@ -41,6 +43,7 @@ describe('Ward leader', () => {
     const FETCH_LEADER = jest.fn()
     const FETCH_COMMITTEE_PERSONS = jest.fn()
     const FETCH_WARD_BOUNDARIES = jest.fn()
+    const FETCH_SAMPLE_BALLOTS = jest.fn()
     const $store = new Vuex.Store({
       state: {
         currentLeader: {
@@ -52,7 +55,8 @@ describe('Ward leader', () => {
       actions: {
         FETCH_LEADER,
         FETCH_COMMITTEE_PERSONS,
-        FETCH_WARD_BOUNDARIES
+        FETCH_WARD_BOUNDARIES,
+        FETCH_SAMPLE_BALLOTS
       }
     })
     const propsData = { ward: '66A', party: 'democratic' }

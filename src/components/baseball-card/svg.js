@@ -1,7 +1,5 @@
 import Snap from 'snapsvg'
 
-import { ordinalize } from '../../util'
-
 export function createFront (el, data) {
   const isRepublican = (data.party === 'republican')
   const config = {

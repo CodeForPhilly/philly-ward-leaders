@@ -11,6 +11,6 @@ describe('Committee person', () => {
     }
     const wrapper = mount(CommitteePerson, { propsData })
     const wrapperText = wrapper.text().trim()
-    expect(wrapperText).toBe('John Doe 1st Division 123 Main St')
+    expect(wrapperText).toBe('John Doe 1st Division  123 Main St')
   })
 })
