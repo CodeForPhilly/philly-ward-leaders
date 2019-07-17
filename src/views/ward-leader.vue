@@ -57,7 +57,7 @@
                 ({{ registeredVotersPercent }}%)
               </dd>
 
-              <dt>Turnout (2015 Primary)</dt>
+              <dt>Turnout ({{ turnoutElection }})</dt>
               <dd>
                 {{ leader.turnoutParty | formatNumber }}
                 {{ partyPlural }}
@@ -261,7 +261,7 @@ import CommitteePerson from '../components/committee-person.vue'
 import WardMap from '../components/ward-map.vue'
 import AskDetail from '../components/ask-detail.vue'
 import { formatNumber, ordinalize } from '../util'
-import { SAMPLE_BALLOT_FORM } from '../config'
+import { SAMPLE_BALLOT_FORM, TURNOUT_ELECTION } from '../config'
 
 export default {
   props: [
@@ -271,6 +271,7 @@ export default {
   ],
   data () {
     return {
+      turnoutElection: TURNOUT_ELECTION,
       modalUrl: null
     }
   },
