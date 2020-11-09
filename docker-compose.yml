@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  ward-leaders:
+    init: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ${PROJECT_DIR:-.}:/var/ward-leaders:cached
+    working_dir: /var/ward-leaders
+    networks:
+      - front
+      - back
+    ports:
+      - 8080:8080
+
+networks:
+  front: {}
+  back: {}
