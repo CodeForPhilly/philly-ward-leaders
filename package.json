@@ -19,7 +19,7 @@
     "leaflet": "^1.2.0",
     "leaflet-geocoder-mapzen": "^1.9.4",
     "marked": "^0.3.6",
-    "nanoid": "^0.2.1",
+    "nanoid": "^3.1.31",
     "ordinal": "^1.0.2",
     "query-string": "^5.0.0",
     "snapsvg": "^0.5.1",
