@@ -1,8 +1,12 @@
 <template>
   <div class="column is-one-third flip-container" @click="noop">
     <div class="flipper">
-      <svg class="front" ref="front"></svg>
-      <svg class="back" ref="back"></svg>
+      <div class="front">
+        <svg ref="front"></svg>
+      </div>
+      <div class="back">
+        <svg ref="back"></svg>
+      </div>
       <svg class="contents" ref="content">
         <foreignObject width="100%" height="100%">
           <body>
@@ -122,6 +126,8 @@ export default {
   backface-visibility: hidden
   transition: 0.6s
   transform-style: preserve-3d
+  width: 100%
+  height: 100%
 
 .front
   z-index: 2
