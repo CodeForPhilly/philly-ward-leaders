@@ -2,7 +2,9 @@
 
 exports[`Baseball card Matches snapshot 1`] = `
 <div class="column is-one-third flip-container">
-    <div class="flipper"><svg class="front"></svg> <svg class="back"></svg> <svg class="contents">
+    <div class="flipper">
+        <div class="front"><svg></svg></div>
+        <div class="back"><svg></svg></div> <svg class="contents">
             <foreignObject width="100%" height="100%">
 
                 <body>
@@ -22,6 +24,7 @@ exports[`Baseball card Matches snapshot 1`] = `
                     </div>
                 </body>
             </foreignObject>
-        </svg></div>
+        </svg>
+    </div>
 </div>
 `;
