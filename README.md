@@ -14,7 +14,7 @@ Use Docker to start up a container that has working versions.
 ```bash
 # Build and start the Docker container.
 docker-compose build
-docker-composer up -d
+docker-compose up -d
 docker-compose exec ward-leaders /bin/bash
 
 # Install dependencies in the Docker container
