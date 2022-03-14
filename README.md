@@ -6,14 +6,24 @@ Had you heard of all the candidates for judge last time you voted? How about Cit
 These endorsements are determined by Ward Leaders, and have a huge influence over who gets elected in Philadelphia. As powerful and few as they are (69), ward leaders tend to remain behind the scenes and most voters don’t even know who theirs is. This transparency web site aims to bring a level of spotlight to ward leaders that is more proportional to the power they wield.
 
 # Local development
-```bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
+This project currently requires outdated node and npm versions to build.
+
+Use Docker to start up a container that has working versions.
+
+```bash
+# Build and start the Docker container.
+docker-compose build
+docker-compose up -d
+docker-compose exec ward-leaders /bin/bash
+
+# Install dependencies in the Docker container
+npm ci
+
+# In Docker, serve with hot reload at localhost:8080
 npm start
 
-# build for production with minification
+# In Docker, build for production with minification
 npm run build
 ```
 
