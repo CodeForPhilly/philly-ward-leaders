@@ -10,7 +10,7 @@ def process_divisions(filepath, output_dir):
     wards = defaultdict(list)
 
     for feature in features:
-        ward_div = feature['properties']['DIVISION_N']
+        ward_div = feature['properties']['DIVISION_NUM']
         ward = ward_div[:2].lstrip('0')
         division = int(ward_div[2:].lstrip('0'))
 
@@ -25,9 +25,13 @@ def process_divisions(filepath, output_dir):
         })
 
     for ward, features in wards.items():
+        features.sort(key=lambda ele: ele['properties']['ward_div'])
         out_filename = ward + '.geojson'
         out_filepath = path.join(output_dir, out_filename)
         out_data = {'type': 'FeatureCollection', 'features': features}
 
         with open(out_filepath, 'w') as out_file:
-            json.dump(out_data, out_file)
+            # Pretty-print the JSON so we can compare changes over time.
+            # The separators argument prevents trailing whitespace per
+            # https://stackoverflow.com/a/35013643
+            json.dump(out_data, out_file, indent=2, sort_keys=True, separators=(',', ': '))
