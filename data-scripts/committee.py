@@ -6,7 +6,7 @@ def create_ward(row):
 def create_division(row):
     # Delete "DEM" or "REP" from the end of the name
     # Get characters after -, trim leading zeros, convert to int
-    return int(row['ward_div'].split('-')[1].lstrip('0').strip('DEM'))
+    return int(row['ward_div'].split('-')[1].lstrip('0').strip('DEM').strip('REP'))
 
 
 def process_committee(filepath):
