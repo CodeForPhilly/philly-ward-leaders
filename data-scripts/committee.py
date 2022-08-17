@@ -8,7 +8,6 @@ def create_division(row):
     # Get characters after -, trim leading zeros, convert to int
     return int(row['ward_div'].split('-')[1].lstrip('0').strip('DEM').strip('REP'))
 
-
 def process_committee(filepath):
     table = etl.fromcsv(filepath) \
         .rename({'Race': 'ward_div',
