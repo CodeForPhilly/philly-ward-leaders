@@ -1,0 +1,5392 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 138,
+  "skip": 0,
+  "limit": 1000,
+  "items": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "28YIsKm8kgO8YoKowIUaA8",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:39:23.801Z",
+        "updatedAt": "2018-09-19T17:39:23.801Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-55th Ward-Republican",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/55th_ward_republican_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6pAzOOwBwWK4sqiowq6aMm",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:38:40.552Z",
+        "updatedAt": "2018-09-19T17:38:40.552Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-53rd Ward-Republican",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/53rd_ward_gop.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2n1M82mgtmkyiE4yO8WwcI",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:37:48.875Z",
+        "updatedAt": "2018-09-19T17:37:48.875Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-41st Ward-Republican",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/41st_ward_republican_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "45UrttImnYSGAMegSc4UcK",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:31:07.360Z",
+        "updatedAt": "2018-09-19T17:31:07.360Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-35th Ward-Republican",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/35th_ward_gop.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2krQnrQDooGa4KMiQeQqQS",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:26:54.477Z",
+        "updatedAt": "2018-09-19T17:26:54.477Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-31st Ward-Republican",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/31st_ward_republican_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2gkyqRf9fuSIk80Gqm2wi8",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:24:49.649Z",
+        "updatedAt": "2018-09-19T17:24:49.649Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-26th Ward-Republican",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/26th_ward_republican_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2EaBMbIozaC0aKSWGAKsuQ",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:22:28.248Z",
+        "updatedAt": "2018-09-19T17:22:28.248Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-21st Ward-Republican",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/21st_ward_republican_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6frlFDkE36IMKm40auC8kY",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:21:26.516Z",
+        "updatedAt": "2018-09-19T17:21:37.718Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-5th Ward-Republican",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/05th_ward_republican_executive_ward_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5QpkZaO3F6KkAouoi0UGyg",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:17:56.999Z",
+        "updatedAt": "2018-09-19T17:17:56.999Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-66A Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/66a_ward_friends_of_the.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1D2On4lqEAC6O8ukoKO84I",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:16:27.810Z",
+        "updatedAt": "2018-09-19T17:16:27.810Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-63rd Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/63rd_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4kgu5SoGmkocsk6w0AGkMQ",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:15:43.987Z",
+        "updatedAt": "2018-09-19T17:15:43.987Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-62nd Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/62nd_democratic_ward.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2hcVd2Qg4I8sk6GMeCQOsk",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:14:37.982Z",
+        "updatedAt": "2018-09-19T17:14:37.982Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-61st Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/61st_ward_pac.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1eshCrd9DmC0KQQ66iCE82",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:12:58.120Z",
+        "updatedAt": "2018-09-19T17:12:58.120Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-59th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/59th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5GWeMacFheEiasSgwWsSwg",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:12:11.083Z",
+        "updatedAt": "2018-09-19T17:12:11.083Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-58th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/58th_ward_democratic_of_philadelphia.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2h9VVMycSomgaCoiISOee6",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:09:59.858Z",
+        "updatedAt": "2018-09-19T17:09:59.858Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-56th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/56th_ward_democratic_committee__friends_of.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2BsnjWN65qYoSM48G8kQ8K",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:05:16.980Z",
+        "updatedAt": "2018-09-19T17:05:16.980Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-55th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/55th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "hCHF2Dh71uIiQqS0sgq4y",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:04:18.364Z",
+        "updatedAt": "2018-09-19T17:04:18.364Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-54th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/54th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1dQYDcaVeASesSEwq848eY",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:03:12.169Z",
+        "updatedAt": "2018-09-19T17:03:18.058Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-53rd Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/53rd_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5hUZqgk5Zek4Gwu2QKguQQ",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:02:06.757Z",
+        "updatedAt": "2018-09-19T17:02:06.757Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-50th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/50th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1TJ6rnmLGAmYmwiuCc6QiS",
+        "type": "Entry",
+        "createdAt": "2018-09-19T17:00:37.881Z",
+        "updatedAt": "2018-09-19T17:00:37.881Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-46th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/46th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1U34iAcaiUQK022SggS04c",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:58:02.827Z",
+        "updatedAt": "2018-09-19T16:58:02.827Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-43rd Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_6/ward_and_party/43rd_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5e3SSh5NmoQIEyCCI6YUM4",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:57:06.733Z",
+        "updatedAt": "2018-09-19T16:57:06.733Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-42nd Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/42nd_democratic_ward.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2RlSIqPlY4mc8kQYCUgSiM",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:54:05.877Z",
+        "updatedAt": "2018-09-19T16:54:05.877Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-40B Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/40b_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "42X2q2tIveOiM6MsaCaeGW",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:51:49.802Z",
+        "updatedAt": "2018-09-19T16:51:49.802Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-40A Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/40a_ward_democratic_club.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1KNIZIRwRaIiYu6isik6oW",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:48:27.948Z",
+        "updatedAt": "2018-09-19T16:48:27.948Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-39B Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/39b_ward__friends_of.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "60IvmX09aw6c4SgO2wK6Os",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:46:34.312Z",
+        "updatedAt": "2018-09-19T16:46:34.312Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-38th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/38th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3zNjRszzYsSyi8a4AUGw6a",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:37:02.465Z",
+        "updatedAt": "2018-09-19T16:37:02.465Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-36th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/36th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4GjFUPEF3yy0MgE20yKE4Y",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:36:15.894Z",
+        "updatedAt": "2018-09-19T16:36:15.894Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-35th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/35th_ward_democrats__friends_of_the.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "46vfNtxXaoQmuyocIE24ea",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:34:58.135Z",
+        "updatedAt": "2018-09-19T16:34:58.135Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-32nd Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/32nd_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5sCxfOJUasSaYAuiCWySyY",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:33:26.201Z",
+        "updatedAt": "2018-09-19T16:33:26.201Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-31st Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/31st_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2xOkzWNC4ICsCICuwWwqC0",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:32:34.235Z",
+        "updatedAt": "2018-09-19T16:32:34.235Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-30th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/30th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5bxRh3AImcWqWCagUEyeIS",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:31:44.558Z",
+        "updatedAt": "2018-09-19T16:31:44.558Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-29th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/29th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4ff8KBb4mA48yEKSc4Eogk",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:30:55.073Z",
+        "updatedAt": "2018-09-19T16:31:05.759Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-28th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/28th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "377QhPUNNCEEeqakm8WKei",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:28:56.094Z",
+        "updatedAt": "2018-09-19T16:28:56.094Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-26th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/26th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "CAuzxgYYV2SUYaaUk8kMo",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:26:27.365Z",
+        "updatedAt": "2018-09-19T16:26:27.365Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-23rd Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/23rd_democratic_ward.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1PbEPMCOCk0oUMkYiks6WG",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:25:22.545Z",
+        "updatedAt": "2018-09-19T16:25:22.545Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-19th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/19th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2gx95pAK8c4YCOasCiwYKm",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:23:13.169Z",
+        "updatedAt": "2018-09-19T16:23:13.169Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-16th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/16th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3ld3NZRKVaIagkeswuCwqK",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:18:32.071Z",
+        "updatedAt": "2018-09-19T16:18:32.071Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-15th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/15th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3rViWkohOEcm2ue2A4oSoG",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:17:32.379Z",
+        "updatedAt": "2018-09-19T16:17:32.379Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-14th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/14th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1o7U3HBKviCKqyWywu8wSo",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:16:11.857Z",
+        "updatedAt": "2018-09-19T16:16:11.857Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-13th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/13th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "25oLJG2SMQQsG8gMgkSo42",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:11:25.202Z",
+        "updatedAt": "2018-09-19T16:11:25.202Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-10th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/10th_ward_executve_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "DJICYocGisQI8EEq66yYm",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:09:37.652Z",
+        "updatedAt": "2018-09-19T16:09:37.652Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-7th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/07th_ward_friends_of_angel_cruz.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1fwNvZ6uskEaKckIMoaCau",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:06:05.604Z",
+        "updatedAt": "2018-09-19T16:06:05.604Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-5th Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/05th_ward_democratic_executive_ward_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "jWGKyEADhCo8eAmC0qqA2",
+        "type": "Entry",
+        "createdAt": "2018-09-19T16:05:12.258Z",
+        "updatedAt": "2018-09-19T16:05:12.258Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2015-3rd Ward-Democratic",
+        "year": 2015,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2015/cycle_7/ward_and_party/03rd_ward_democratic_executive_ward_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "20eiSTBzY0UOkCsOiU4UuA",
+        "type": "Entry",
+        "createdAt": "2018-09-19T14:10:05.505Z",
+        "updatedAt": "2018-09-19T14:10:05.505Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-58th Ward-Republican",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/58th_ward_executive_committee__friends_of.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "27pB9Q8fSUioyWKkUEqI0u",
+        "type": "Entry",
+        "createdAt": "2018-09-19T14:07:54.766Z",
+        "updatedAt": "2018-09-19T14:07:54.766Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-53rd Ward-Republican",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/53rd_ward_gop.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5WQyq6CYKsa0YcGYAsucc6",
+        "type": "Entry",
+        "createdAt": "2018-09-19T14:04:42.697Z",
+        "updatedAt": "2018-09-19T14:04:42.697Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-41st Ward-Republican",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/41st_ward_republican_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6dwxPr7RZK2WKK4sM6Gcii",
+        "type": "Entry",
+        "createdAt": "2018-09-19T14:04:04.764Z",
+        "updatedAt": "2018-09-19T14:04:04.764Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-41st Ward-Republican",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/41st_ward_republican_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5yNui1nWz68CeG06Msmm66",
+        "type": "Entry",
+        "createdAt": "2018-09-19T13:58:37.645Z",
+        "updatedAt": "2018-09-19T13:58:37.645Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-31st Ward-Republican",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/31st_ward_republican_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "w3hdc7q6Gsyu0S0O6emCa",
+        "type": "Entry",
+        "createdAt": "2018-09-19T13:57:18.439Z",
+        "updatedAt": "2018-09-19T13:57:18.439Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-26th Ward-Republican",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/26th_ward_republican_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2HZ6yNm22cyICQqmu2aO80",
+        "type": "Entry",
+        "createdAt": "2018-09-19T13:53:54.203Z",
+        "updatedAt": "2018-09-19T13:53:54.203Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-14th Ward-Democratic 2",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/14th_ward__friends_of.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3IftJrwT2gO0uoyMeEo2ea",
+        "type": "Entry",
+        "createdAt": "2018-09-19T13:47:55.097Z",
+        "updatedAt": "2018-09-19T13:47:55.097Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-5th Ward-Republicans",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/05th_ward_republican_executive_ward_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6j5AYFoy6Q0o2gqoWsweWE",
+        "type": "Entry",
+        "createdAt": "2018-09-18T20:56:22.022Z",
+        "updatedAt": "2018-09-18T20:56:22.022Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-66A Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/66a_ward__friends_of_the.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "316yvTAkNiyKQk4i6y4MEI",
+        "type": "Entry",
+        "createdAt": "2018-09-18T20:49:25.711Z",
+        "updatedAt": "2018-09-18T20:49:25.711Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-64th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/64th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4045l1dQhOmkcc0s8IsewQ",
+        "type": "Entry",
+        "createdAt": "2018-09-18T19:16:36.008Z",
+        "updatedAt": "2018-09-18T19:16:36.008Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-63rd Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/63rd_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "41aMPON0WcA2O8UaWGQ6iq",
+        "type": "Entry",
+        "createdAt": "2018-09-18T19:13:10.616Z",
+        "updatedAt": "2018-09-18T19:13:10.616Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-61st Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/61st_ward_pac.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "58gOP09EFaCoQswACY08IW",
+        "type": "Entry",
+        "createdAt": "2018-09-18T19:09:43.584Z",
+        "updatedAt": "2018-09-18T19:09:43.585Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-59th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/59th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3iM48vi7ugsQOawwEAYsi",
+        "type": "Entry",
+        "createdAt": "2018-09-18T19:05:01.801Z",
+        "updatedAt": "2018-09-18T19:05:01.801Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-58th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/58th_ward_democratic_of_philadelphia1.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2uWYw376bqA8yw4CiIKQs6",
+        "type": "Entry",
+        "createdAt": "2018-09-18T19:01:50.360Z",
+        "updatedAt": "2018-09-18T19:01:50.360Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-56th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/56th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1w9Ty1ktTK6skk0quOEQ8M",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:58:45.033Z",
+        "updatedAt": "2018-09-18T18:58:45.033Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-55th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/55th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3hWToDXVzicQkeugEsEG0A",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:50:23.269Z",
+        "updatedAt": "2018-09-18T18:50:23.269Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-54th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/54th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5GeR9sGbrUOkKA08AWOwOq",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:49:11.623Z",
+        "updatedAt": "2018-09-18T18:49:11.623Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-53rd Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/53rd_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "NNXWTtWt4OSWimQCC66wI",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:47:32.164Z",
+        "updatedAt": "2018-09-18T18:47:32.164Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-50th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/50th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3FyzynUkaQ2mU2e0mGuw2c",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:45:34.261Z",
+        "updatedAt": "2018-09-18T18:45:34.261Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-49th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/49th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3pUo6BgsTmeIwu0aWC2Q6G",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:44:02.567Z",
+        "updatedAt": "2018-09-18T18:44:02.567Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-46th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/46th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "571jNxILvi2KoyKyYKsWKw",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:40:46.749Z",
+        "updatedAt": "2018-09-18T18:40:46.749Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-42nd Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/42nd_democratic_ward.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4tL6b47YTYecUqCuaK6SsI",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:37:40.814Z",
+        "updatedAt": "2018-09-18T18:37:40.814Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-40B Ward-Democratic",
+        "year": 2013,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/40b_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4EA1QtbIo8WqacmckiMmO6",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:34:58.222Z",
+        "updatedAt": "2018-09-18T18:34:58.222Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-40A Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/40a_ward_democratic_club.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2lpt5LCJvuGgaqikCw0a6K",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:32:33.493Z",
+        "updatedAt": "2018-09-18T18:32:33.493Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-39B Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/39b_ward__friends_of.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "K93xvG0zKeOqYM8Q0Iqk6",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:30:08.265Z",
+        "updatedAt": "2018-09-18T18:30:08.265Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-38th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/38th_ward_democratic_executive_committee1.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3U67WwkjMIKmCuqiqa8gQq",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:21:29.672Z",
+        "updatedAt": "2018-09-18T18:21:29.672Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-35th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/35th_ward_democrats__friends_of_the.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6coQgcO4pi6mQ6ykIWYqsM",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:17:54.548Z",
+        "updatedAt": "2018-09-18T18:17:54.548Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-32nd Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/32nd_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3fc4NlcLdus6EaqKGc6YE0",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:15:15.969Z",
+        "updatedAt": "2018-09-18T18:15:15.969Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-31st Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/31st_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6OycEctPgco6ayYCM4EQQi",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:12:34.598Z",
+        "updatedAt": "2018-09-18T18:12:34.598Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-30th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/30th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4K2tBkBk1aAi0yGqg060Cq",
+        "type": "Entry",
+        "createdAt": "2018-09-18T18:10:04.964Z",
+        "updatedAt": "2018-09-18T18:10:04.964Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-29th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/29th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "7Dbq0LEz0Qmkc0A6eIIu4E",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:59:28.954Z",
+        "updatedAt": "2018-09-18T17:59:28.954Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-28th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/28th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3amNxVKsvmkOyOAsYsG2Ms",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:57:13.159Z",
+        "updatedAt": "2018-09-18T17:57:13.160Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-26th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/26th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1ykYq7BNtO8EuY2YwMq066",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:52:51.207Z",
+        "updatedAt": "2018-09-18T17:52:51.207Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-23rd Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/23rd_democratic_ward.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3yHKzXPniMUo0GsAOKCUgi",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:49:32.467Z",
+        "updatedAt": "2018-09-18T17:49:32.468Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-19th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/19th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3Q4nNQvbGoQIYQoOaGkEm8",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:47:23.918Z",
+        "updatedAt": "2018-09-18T17:47:23.918Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-17th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/17th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5SjphfexoIaiQ4aGEgKIGw",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:38:59.400Z",
+        "updatedAt": "2018-09-18T17:38:59.400Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-16th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/16th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2AE1QaFbBikqKCmWk04ea",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:37:05.010Z",
+        "updatedAt": "2018-09-18T17:37:05.010Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-15th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/15th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3eX4vhhPluiigO00SUkCwm",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:34:04.308Z",
+        "updatedAt": "2018-09-18T17:34:04.308Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-14th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/14th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6WcF7fmzQWW68s8ugIiWGq",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:31:28.147Z",
+        "updatedAt": "2018-09-18T17:31:28.147Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-13th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/13th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2L9Pq4IiXm8o4AgouC4eca",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:29:55.660Z",
+        "updatedAt": "2018-09-18T17:29:55.660Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-10th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/10th_ward_executve_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6zwtYigYdqo2k2C2SUGQ2u",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:27:30.714Z",
+        "updatedAt": "2018-09-18T17:27:30.714Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-8th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/08th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3rCjG865f28Q64iYOg0EiI",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:26:42.843Z",
+        "updatedAt": "2018-09-18T17:26:42.843Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-8th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/08th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1VPVPZHLTeCiaWAIeGuIGy",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:24:33.994Z",
+        "updatedAt": "2018-09-18T17:24:33.994Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-7th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/07th_ward_friends_of_angel_cruz.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3aUwwaB39us0Yy6wA84w8s",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:21:57.009Z",
+        "updatedAt": "2018-09-18T17:21:57.009Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016-5th Ward-Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/05th_ward_democratic_executive_ward_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "YV1buUnOc8geYKamc00iy",
+        "type": "Entry",
+        "createdAt": "2018-09-18T17:20:29.175Z",
+        "updatedAt": "2018-09-18T17:20:29.175Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-5th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/05th_ward_democratic_executive_ward_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "7ziRCEXeDeYiuQOgSuCMqs",
+        "type": "Entry",
+        "createdAt": "2018-09-17T21:19:01.841Z",
+        "updatedAt": "2018-09-17T21:19:01.841Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2016 - 3rd Ward - Democratic",
+        "year": 2016,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2016/cycle_7/20_ward_and_party/03rd_ward_democratic_executive_ward_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1D9WMB14nCwUGQw4642CYs",
+        "type": "Entry",
+        "createdAt": "2018-09-17T20:00:17.939Z",
+        "updatedAt": "2018-09-17T20:00:17.939Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-66A Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/66a_ward_friends_of_the.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2kxDmd5jOsq6USw8Ggowo6",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:57:57.990Z",
+        "updatedAt": "2018-09-17T19:57:57.990Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-65th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/65th_ward_friends_of.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1sKr0tYOr28QCy6aEc4gig",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:57:00.141Z",
+        "updatedAt": "2018-09-17T19:57:00.141Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-64th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/64th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6Og1MURGxisi0KgcQUgEuw",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:53:38.267Z",
+        "updatedAt": "2018-09-17T19:53:38.267Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-63rd Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/63rd_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4BLlJKDXzqkqEsOikGM8K4",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:51:50.142Z",
+        "updatedAt": "2018-09-17T19:51:50.142Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-61st Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/61st_ward.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5vYS06H8NGGues0wcoY4q6",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:40:44.034Z",
+        "updatedAt": "2018-09-17T19:40:44.034Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-59th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/59th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5KyqJHwebuEseuSSc8esuc",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:39:32.865Z",
+        "updatedAt": "2018-09-17T19:39:32.865Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-58th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/58th_ward_democratic_of_philadelphia.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1KAyMp0qggecO8aw4kUyKy",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:32:46.015Z",
+        "updatedAt": "2018-09-17T19:32:46.015Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-56th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/56th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "7g0m3Ovi48og0iu0AieKOe",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:24:05.360Z",
+        "updatedAt": "2018-09-17T19:24:05.361Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-55th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/55th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3og6k61Z2U0u0ei20Sy4Ym",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:19:38.539Z",
+        "updatedAt": "2018-09-17T19:19:38.539Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-54th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/54th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4fEynUFec80E6qQUewq8q",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:16:42.116Z",
+        "updatedAt": "2018-09-17T19:16:42.116Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-53rd Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/53rd_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6vCK7hItoWoA0OgS8QuYMO",
+        "type": "Entry",
+        "createdAt": "2018-09-17T19:01:27.425Z",
+        "updatedAt": "2018-09-17T19:01:27.425Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-50th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/50th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4elAAr1fUQaowe8UIkiEI8",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:57:43.354Z",
+        "updatedAt": "2018-09-17T18:57:43.354Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-49th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/49th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5ZmglKgxUWIIoEUCGGqM8Q",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:54:53.529Z",
+        "updatedAt": "2018-09-17T18:54:53.529Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-46th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/46th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3hbdtdLgjmmGCMKI282IAm",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:51:49.497Z",
+        "updatedAt": "2018-09-17T18:51:49.497Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-41st Ward-Republican",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/41st_ward_republican_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "7BUhYhEBDUEQSgCukAyiIi",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:48:17.548Z",
+        "updatedAt": "2018-09-17T18:48:17.548Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-41st Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/41st_ward_dems_friends_of.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "tKzBkCtlNmgWMwsA8McMA",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:45:14.576Z",
+        "updatedAt": "2018-09-17T18:45:14.576Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-40B Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/40b_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6JGKB8hpC0C46mGaIGasKS",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:42:38.310Z",
+        "updatedAt": "2018-09-17T18:42:38.310Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-40A Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/40a_ward_democratic_club.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "QmNPW7mJAicwwiA2GGw8e",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:40:02.002Z",
+        "updatedAt": "2018-09-17T18:40:02.002Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-39B Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/39b_ward__friends_of.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6o7Zn2Qq9G2Ku6MC4Y8IKE",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:36:00.269Z",
+        "updatedAt": "2018-09-17T18:36:00.269Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-39A Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/39a_ward.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4DPK40ghE4KQegWSU6K0IM",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:27:03.182Z",
+        "updatedAt": "2018-09-17T18:27:03.182Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-38th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/38th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "UU0SgKXZkICoweCGyOcw0",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:18:36.031Z",
+        "updatedAt": "2018-09-17T18:18:36.031Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-36th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/36th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5sSIIX4wggSCg2qMu6uWCE",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:17:32.129Z",
+        "updatedAt": "2018-09-17T18:17:32.129Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-35th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/35th_ward_democrats__friends_of_the.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3V1aaQ9Tw4Q0yW42eyYEsm",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:14:25.499Z",
+        "updatedAt": "2018-09-17T18:14:25.499Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-32nd Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/32nd_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2j4MFKROA4U462maq2GaQQ",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:12:12.524Z",
+        "updatedAt": "2018-09-17T18:12:12.524Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-26th Ward-Republican",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/26th_ward_republican_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5ymwNBFeMweCAMcmuWecqK",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:08:02.211Z",
+        "updatedAt": "2018-09-17T18:09:08.929Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2018-31st Ward-Republican",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/31st_ward_republican_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1uRCuQVcCUAwwuoe8kykYu",
+        "type": "Entry",
+        "createdAt": "2018-09-17T18:08:49.138Z",
+        "updatedAt": "2018-09-17T18:08:49.138Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-31st Ward-Republican",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/31st_ward_republican_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3APdkIiKhOSGIIuCsiYI4G",
+        "type": "Entry",
+        "createdAt": "2018-09-17T17:24:04.923Z",
+        "updatedAt": "2018-09-17T17:24:04.923Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-30th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/30th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4hdmbhQaRqiW8226AcugmS",
+        "type": "Entry",
+        "createdAt": "2018-09-17T17:18:35.983Z",
+        "updatedAt": "2018-09-17T17:18:35.983Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-29th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/29th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3o7vTfeBbiyakyeA0us4EA",
+        "type": "Entry",
+        "createdAt": "2018-09-17T17:16:37.775Z",
+        "updatedAt": "2018-09-17T17:16:37.775Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-28th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/28th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4ZJoELXJq0Eu2oskI6gsqo",
+        "type": "Entry",
+        "createdAt": "2018-09-14T19:54:16.089Z",
+        "updatedAt": "2018-09-14T19:54:16.089Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-26th Ward-Democratic 2",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/26th_ward_republican_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4xENjn6U4E24kaciUQsMam",
+        "type": "Entry",
+        "createdAt": "2018-09-14T19:52:06.117Z",
+        "updatedAt": "2018-09-14T19:52:06.117Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-26th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/26th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1pGIb4veUUewmUyGuCeoIE",
+        "type": "Entry",
+        "createdAt": "2018-09-14T19:47:52.436Z",
+        "updatedAt": "2018-09-14T19:47:52.436Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-23rd Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/23rd_democratic_ward.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4NATPKBhmMYcyAcUwoiIW6",
+        "type": "Entry",
+        "createdAt": "2018-09-14T19:46:26.964Z",
+        "updatedAt": "2018-09-14T19:46:26.964Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-19th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/19th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1PYcjbRAHaqo6C6QCGEMUI",
+        "type": "Entry",
+        "createdAt": "2018-09-14T19:45:12.305Z",
+        "updatedAt": "2018-09-14T19:45:12.305Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-17th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/17th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "29RE9BbRkMGO6YgYY4oqQu",
+        "type": "Entry",
+        "createdAt": "2018-09-14T19:41:20.709Z",
+        "updatedAt": "2018-09-14T19:41:20.709Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-16th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/16th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3okO0p9biwCWSuSwgkYo6k",
+        "type": "Entry",
+        "createdAt": "2018-09-14T18:47:38.242Z",
+        "updatedAt": "2018-09-14T18:47:38.242Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-15th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/15th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1p9vy41DvG0QQGYUcAmuic",
+        "type": "Entry",
+        "createdAt": "2018-09-14T18:45:14.072Z",
+        "updatedAt": "2018-09-14T18:45:14.072Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017- 14th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/14th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "7c9Aju9pRugy8UamOIMYYk",
+        "type": "Entry",
+        "createdAt": "2018-09-14T18:42:42.208Z",
+        "updatedAt": "2018-09-14T18:42:42.208Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-13th Ward-Democratic ",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/13th_ward_democratic_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5KYZGJ351CiI8qYOwsA6K8",
+        "type": "Entry",
+        "createdAt": "2018-09-14T18:32:27.913Z",
+        "updatedAt": "2018-09-14T18:32:27.913Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-12th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/12th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "10NEg7tL60KSuikWkawWKe",
+        "type": "Entry",
+        "createdAt": "2018-09-14T18:30:20.431Z",
+        "updatedAt": "2018-09-14T18:30:20.431Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-10th Ward- Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/10th_ward_executve_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3O2aeC0RuMmOOOwIWmksqs",
+        "type": "Entry",
+        "createdAt": "2018-09-14T18:11:20.764Z",
+        "updatedAt": "2018-09-14T18:11:20.764Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017-7th Ward-Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/07th_ward_friends_of_angel_cruz.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "69U4mKgJtmCaeMcMoUgq4C",
+        "type": "Entry",
+        "createdAt": "2018-09-12T04:09:56.904Z",
+        "updatedAt": "2018-09-12T04:09:56.904Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017 - 8th Ward - Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/08th_ward_democratic_executive_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "8Lw0bmRvO0uC0gKQyoIa6",
+        "type": "Entry",
+        "createdAt": "2018-09-12T04:09:14.382Z",
+        "updatedAt": "2018-09-12T04:09:14.382Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017 - 5th Ward - Republican",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/05th_ward_republican_executive_ward_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "62Rh1STwHukO8Am8Gs4K08",
+        "type": "Entry",
+        "createdAt": "2018-09-12T03:48:11.588Z",
+        "updatedAt": "2018-09-12T03:48:11.588Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017 - 5th Ward - Democratic",
+        "year": 2017,
+        "url": "https://files2.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/05th_ward_democratic_executive_ward_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "11QKH3Z9yuaowmyOkiuqeK",
+        "type": "Entry",
+        "createdAt": "2018-04-28T17:57:25.329Z",
+        "updatedAt": "2018-04-28T17:57:25.329Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017 - 3rd Ward - Democratic",
+        "year": 2017,
+        "url": "https://files1.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/03rd_ward_democratic_executive_ward_committee.pdf"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1p2Z88e4CwGyAKcgqEYEEU",
+        "type": "Entry",
+        "createdAt": "2018-04-28T16:44:36.740Z",
+        "updatedAt": "2018-04-28T16:44:36.740Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "campaignFinanceReport"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "2017 - 1st Ward - Republican",
+        "year": 2017,
+        "url": "https://files1.philadelphiavotes.com/campaign-finance/reports/2017/cycle_7/21_ward_and_party/01st_ward_republican_committee.pdf"
+      }
+    }
+  ]
+}
