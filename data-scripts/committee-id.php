@@ -5,7 +5,7 @@
  * Script to process committee file to JSON, adding a unique ID per row.
  *
  * Example usage:
- * cat input_data/2022/COMMITTEEPEOPLE_WINNERS_REPUBLICAN.csv ./committee-id.php > input_data/2022/COMMITTEEPEOPLE_WINNERS_REPUBLICAN.json
+ * cat input_data/2022/COMMITTEEPEOPLE_WINNERS_REPUBLICAN.csv | ./committee-id.php > input_data/2022/COMMITTEEPEOPLE_WINNERS_REPUBLICAN.json
  */
 
 /**

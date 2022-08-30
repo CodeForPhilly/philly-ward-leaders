@@ -13,6 +13,9 @@ def process_import(filepath, space_id, content_type_id, api_key):
 
         for record in tqdm(records):
             entry_id = None # tell server to auto-generate it
+            if 'ID' in record.keys():
+              entry_id = record['ID']
+              record.pop('ID')
             entry_data = {
                 'content_type_id': content_type_id,
                 'fields': {key: {'en-US': value} for (key, value) in record.items()}
