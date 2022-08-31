@@ -15,8 +15,8 @@ const BOM_UTF8 = "\xEF\xBB\xBF";
 
 $template = [
   'ID' => '',
-  'ward' => '',
-  'division' => '',
+  'ward' => 0,
+  'division' => 0,
   'party' => '',
   'fullName' => '',
   'address' => '',
@@ -55,8 +55,8 @@ while (($raw = fgetcsv(STDIN)) !== FALSE) {
   $new_row['ID'] = str_replace(' ', '-', "$ward_div $ab");
   $matches = [];
   preg_match('/([0-9]{2})-([0-9]{2})/', $ward_div, $matches);
-  $new_row['ward'] = ltrim($matches[1], '0');
-  $new_row['division'] = ltrim($matches[2], '0');
+  $new_row['ward'] = (int) $matches[1];
+  $new_row['division'] = (int) $matches[2];
   $new_row['party'] = mb_strtolower($row[$map['Party']]);
   $new_row['zip'] = $row[$map['Zip']];
   $address = $row[$map['Add1']] . ($row[$map['Add2']] ? ', ' . $row[$map['Add2']] : '');

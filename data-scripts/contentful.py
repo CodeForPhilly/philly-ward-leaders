@@ -23,8 +23,9 @@ def process_import(filepath, space_id, content_type_id, api_key):
 
             try:
                 entry = space.create(entry_id, entry_data)
-            except Exception:
+            except Exception as err:
                 print('Creation failed', json.dumps(record))
+                print(err)
             else:
                 try:
                     entry.publish()
