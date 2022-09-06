@@ -9,22 +9,33 @@ These endorsements are determined by Ward Leaders, and have a huge influence ove
 
 This project currently requires outdated node and npm versions to build.
 
-Use Docker to start up a container that has working versions.
+Use Docker to start up a container that has working versions. The lines with ">"
+are in the native shell, the lines with ~ are in Docker.
 
 ```bash
 # Build and start the Docker container.
-docker-compose build
-docker-compose up -d
-docker-compose exec ward-leaders /bin/bash
+>  docker-compose build
+>  docker-compose up -d
+>  docker-compose exec ward-leaders /bin/bash
 
 # Install dependencies in the Docker container
-npm ci
+~ npm ci
 
 # In Docker, serve with hot reload at localhost:8080
-npm start
+~ npm start
+
+# Inital load of the app in your browser is slow, fyi.
+# The dev server has hot reload - you should see any
+# changes reflected in the browser in about a second.
+# Use ctrl-C to exit the dev server.
 
 # In Docker, build for production with minification
-npm run build
+~ npm run build
+
+# Exit docker and stop the container
+~ exit
+
+>  docker-compose down
 ```
 
 # Technical overview
