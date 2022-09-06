@@ -58,3 +58,9 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+
+.navbar-end
+  background-color: #2284a1
+</style>
