@@ -1,0 +1,682 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 16,
+  "skip": 0,
+  "limit": 1000,
+  "items": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "aZgPtkhnwcgIkauYi6OiK",
+        "type": "Entry",
+        "createdAt": "2018-06-26T01:18:27.284Z",
+        "updatedAt": "2018-06-26T01:18:27.284Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Rudolph Hallman",
+        "ward": 20,
+        "division": 10,
+        "party": "republican",
+        "address": "2159 N Franklin St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3KGb4EdFR6I8qyomsW8sgs",
+        "type": "Entry",
+        "createdAt": "2018-06-26T01:18:26.378Z",
+        "updatedAt": "2018-06-26T01:18:26.378Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Jasper Jones",
+        "ward": 20,
+        "division": 10,
+        "party": "republican",
+        "address": "2154 N 7Th St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1cEdmrkgLAIOeUymqowQwg",
+        "type": "Entry",
+        "createdAt": "2018-06-26T01:18:25.839Z",
+        "updatedAt": "2018-06-26T01:18:25.839Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Quadir Lighty",
+        "ward": 20,
+        "division": 5,
+        "party": "republican",
+        "address": "2145 N 8Th St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4dJTYU6sKsWeQCKcsEaOU8",
+        "type": "Entry",
+        "createdAt": "2018-06-26T01:18:25.308Z",
+        "updatedAt": "2018-06-26T01:18:25.308Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Ernest D Butler",
+        "ward": 20,
+        "division": 5,
+        "party": "republican",
+        "address": "2102 N 8Th St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2lSC3QXVGYAaeW8KiAAo6Y",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:11.045Z",
+        "updatedAt": "2018-06-26T00:48:11.045Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "John Darrel King Sr",
+        "ward": 20,
+        "division": 11,
+        "party": "democratic",
+        "address": "Nrd",
+        "zip": "191"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3WqEELWO7eaw8sUKGOasuW",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:10.349Z",
+        "updatedAt": "2018-06-26T00:48:10.349Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Robert B Jacobs",
+        "ward": 20,
+        "division": 8,
+        "party": "democratic",
+        "address": "1931 N Marshall St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5lzu5DYhHiqqYSequG6C8q",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:09.837Z",
+        "updatedAt": "2018-06-26T00:48:09.837Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Valerie L Jenifer",
+        "ward": 20,
+        "division": 7,
+        "party": "democratic",
+        "address": "2134 N Marvine St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5GQXbm3LFeQ6wOOscwgcwi",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:09.181Z",
+        "updatedAt": "2018-06-26T00:48:09.181Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Beatrice D Jenifer",
+        "ward": 20,
+        "division": 7,
+        "party": "democratic",
+        "address": "2134 N Marvine St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6mVsvR4yHKKwS2I68UYOAG",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:08.619Z",
+        "updatedAt": "2018-06-26T00:48:08.619Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Willie J Deshields",
+        "ward": 20,
+        "division": 6,
+        "party": "democratic",
+        "address": "1227 W Jefferson St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "qPTKgmyoFwmEqioM2qCI4",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:08.027Z",
+        "updatedAt": "2018-06-26T00:48:08.027Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Renee E Mcnear",
+        "ward": 20,
+        "division": 6,
+        "party": "democratic",
+        "address": "1431 Dondill Pl",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2PQ7LOS2WcC2Q6YgkkKGcO",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:07.153Z",
+        "updatedAt": "2018-06-26T00:48:07.153Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Christine Morrison",
+        "ward": 20,
+        "division": 5,
+        "party": "democratic",
+        "address": "2151 N 08Th St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2VDPmsOmEMeKAgUoEocksm",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:06.196Z",
+        "updatedAt": "2018-06-26T00:48:06.196Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Tyree Dixon",
+        "ward": 20,
+        "division": 4,
+        "party": "democratic",
+        "address": "Nrp",
+        "zip": "191"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "69LXWXckqAgEk8UmCgw068",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:04.980Z",
+        "updatedAt": "2018-06-26T00:48:04.980Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "John Darrel King Sr",
+        "ward": 20,
+        "division": 3,
+        "party": "democratic",
+        "address": "1537-A N 11Th St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6zJz6eyJqg6coaYy6escAY",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:03.957Z",
+        "updatedAt": "2018-06-26T00:48:03.957Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Vanessa Cassidy",
+        "ward": 20,
+        "division": 3,
+        "party": "democratic",
+        "address": "1553 N 11Th St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3HjEh0J2IEs4aYYmi2OUoO",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:03.411Z",
+        "updatedAt": "2018-06-26T00:48:03.411Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Matthew Stanton",
+        "ward": 20,
+        "division": 2,
+        "party": "democratic",
+        "address": "Nrp",
+        "zip": "191"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5tv5bHbypymYcyaESiGkWY",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:48:02.861Z",
+        "updatedAt": "2018-06-26T00:48:02.861Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Anthony Ryan",
+        "ward": 20,
+        "division": 1,
+        "party": "democratic",
+        "address": "717 W Montgomery Ave",
+        "zip": "19122"
+      }
+    }
+  ]
+}

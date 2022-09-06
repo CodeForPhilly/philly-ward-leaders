@@ -1,0 +1,976 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 23,
+  "skip": 0,
+  "limit": 1000,
+  "items": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4Re9UmxUHmKCoIIkoqWGSi",
+        "type": "Entry",
+        "createdAt": "2018-06-26T01:17:56.585Z",
+        "updatedAt": "2018-06-26T01:17:56.585Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Alaael Idrissi",
+        "ward": 14,
+        "division": 10,
+        "party": "republican",
+        "address": "Nrd",
+        "zip": "191"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2rlRaEWcXucCWQmYsaoWoy",
+        "type": "Entry",
+        "createdAt": "2018-06-26T01:17:55.935Z",
+        "updatedAt": "2018-06-26T01:17:55.935Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Ernest Welde",
+        "ward": 14,
+        "division": 7,
+        "party": "republican",
+        "address": "Nrp",
+        "zip": "191"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6diKKNSL7Ocy4mccwKcg6q",
+        "type": "Entry",
+        "createdAt": "2018-06-26T01:17:55.320Z",
+        "updatedAt": "2018-06-26T01:17:55.320Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Milton Street Sr",
+        "ward": 14,
+        "division": 3,
+        "party": "republican",
+        "address": "1200 W Master St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6EsyuCiLzqe0ye2iUmeEs6",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:39.999Z",
+        "updatedAt": "2018-06-26T00:45:39.999Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Jacob S Adams",
+        "ward": 14,
+        "division": 11,
+        "party": "democratic",
+        "address": "813 N Hoffman Pl ",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5a7zapBrIc8sq4wQoemQCi",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:39.460Z",
+        "updatedAt": "2018-06-26T00:45:39.460Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Arthur N Green",
+        "ward": 14,
+        "division": 11,
+        "party": "democratic",
+        "address": "545 Wendle Ct Apt C",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5we8dX6HKgWQo0y6gcqUw",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:38.992Z",
+        "updatedAt": "2018-06-26T00:45:38.992Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Rogers James Jr",
+        "ward": 14,
+        "division": 10,
+        "party": "democratic",
+        "address": "705 N 8Th St",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3zk4NLytUcsCUc2QckIAgU",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:38.064Z",
+        "updatedAt": "2018-06-26T00:45:38.064Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Nina Leadum",
+        "ward": 14,
+        "division": 10,
+        "party": "democratic",
+        "address": "532 N Franklin Pl",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5jGAvqKSNOOgO6QUQkgiiq",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:37.426Z",
+        "updatedAt": "2018-06-26T00:45:37.426Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Edna Devlin",
+        "ward": 14,
+        "division": 9,
+        "party": "democratic",
+        "address": "927 George Pl",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "K7Nt7apY2qiCWYWAoAQSm",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:36.848Z",
+        "updatedAt": "2018-06-26T00:45:36.848Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Sheila Ann Morgan",
+        "ward": 14,
+        "division": 8,
+        "party": "democratic",
+        "address": "857 N 11Th St",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1NaARnGHTKqWoeY0oA6a0U",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:35.992Z",
+        "updatedAt": "2018-06-26T00:45:35.992Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Ernest L Welde",
+        "ward": 14,
+        "division": 7,
+        "party": "democratic",
+        "address": "1316 N 7Th St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6VP2G15p0Ai02AwqC4Skim",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:35.489Z",
+        "updatedAt": "2018-06-26T00:45:35.489Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Angel V Palmer",
+        "ward": 14,
+        "division": 7,
+        "party": "democratic",
+        "address": "1001 Flora St",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1GpWMooFMUWS2qymscMWEe",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:34.739Z",
+        "updatedAt": "2018-06-26T00:45:34.739Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Jacqueline Felder",
+        "ward": 14,
+        "division": 6,
+        "party": "democratic",
+        "address": "914 Reno Pl",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6zdDHPW4Q8KIwOq6wG6Ok6",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:33.840Z",
+        "updatedAt": "2018-06-26T00:45:33.840Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Wysenia Williams",
+        "ward": 14,
+        "division": 6,
+        "party": "democratic",
+        "address": "820 N 10Th St",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6DvvdYSXkWCUu4aYIaS8sY",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:33.340Z",
+        "updatedAt": "2018-06-26T00:45:33.340Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Marion Adams",
+        "ward": 14,
+        "division": 5,
+        "party": "democratic",
+        "address": "1127 Wallace St",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "7k9m9vPuF2UscmieoaEOig",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:32.838Z",
+        "updatedAt": "2018-06-26T00:45:32.838Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Sam Cook",
+        "ward": 14,
+        "division": 5,
+        "party": "democratic",
+        "address": "1100 Fairmount Ave Apt 313",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4J71GC7GeAIkI6M0eOayCY",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:31.874Z",
+        "updatedAt": "2018-06-26T00:45:31.874Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Brenda M Tucker",
+        "ward": 14,
+        "division": 4,
+        "party": "democratic",
+        "address": "1221 Fairmount Ave Apt 508",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6yJJ4bJg40WuoAyG6qqCCu",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:31.278Z",
+        "updatedAt": "2018-06-26T00:45:31.278Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Ronald Vann",
+        "ward": 14,
+        "division": 4,
+        "party": "democratic",
+        "address": "1319 Parrish St",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "JtNeOM3zcyYqcEIO6kKEI",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:30.687Z",
+        "updatedAt": "2018-06-26T00:45:30.687Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Willie Beckton",
+        "ward": 14,
+        "division": 3,
+        "party": "democratic",
+        "address": "1226 Valley Forge Pl",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5Mnd1Qc33aA4M8SOS6oCwu",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:29.878Z",
+        "updatedAt": "2018-06-26T00:45:29.878Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Muriel Reviere Taylor",
+        "ward": 14,
+        "division": 3,
+        "party": "democratic",
+        "address": "1237 Cambridge Ct",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "2OYD2xYJJ6AY40Ouw82QaK",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:29.343Z",
+        "updatedAt": "2018-06-26T00:45:29.343Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Sheila E Armstrong",
+        "ward": 14,
+        "division": 2,
+        "party": "democratic",
+        "address": "1350 N 10Th St Apt 13F",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "42uu928ZSwmuuqkAESyWeC",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:28.800Z",
+        "updatedAt": "2018-06-26T00:45:28.800Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Bertram B Martin",
+        "ward": 14,
+        "division": 2,
+        "party": "democratic",
+        "address": "1034 Seybert Mall",
+        "zip": "19122"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "4r0rN29SpqSWciEcwIksU2",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:27.977Z",
+        "updatedAt": "2018-06-26T00:45:27.977Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Diane Monroe",
+        "ward": 14,
+        "division": 1,
+        "party": "democratic",
+        "address": "1117 Mt Vernon St",
+        "zip": "19123"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "6biu0Y8WKAiUiWgsE8K0oU",
+        "type": "Entry",
+        "createdAt": "2018-06-26T00:45:26.929Z",
+        "updatedAt": "2018-06-26T00:45:26.929Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "committeePerson"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "fullName": "Carolyn Y Wilbanks",
+        "ward": 14,
+        "division": 1,
+        "party": "democratic",
+        "address": "1024 Wallace St",
+        "zip": "19123"
+      }
+    }
+  ]
+}

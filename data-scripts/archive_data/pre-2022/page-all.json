@@ -1,0 +1,127 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 3,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "3TArChoOjYqoOiguoGIakM",
+        "type": "Entry",
+        "createdAt": "2017-09-15T11:04:26.418Z",
+        "updatedAt": "2021-04-26T19:51:11.875Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 10,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Learn",
+        "slug": "learn",
+        "content": "# Ward Structure\n\nPhiladelphia is geographically divided into 66 __wards__. Each ward is further divided into 11-51 __divisions__ based on population. Every four years, during the primary election of the governor’s race, registered democratic voters in each division elect two of their neighbors to serve as the division’s democratic __committeepersons__. Likewise, registered republican voters elect two republican committee persons. The elected committee persons make up each party’s __ward committee__, and vote for a __ward leader__ shortly after the election, usually informally at a meeting of the ward committee.\n\n> At full capacity, there are both a republican and democratic ward leader for each ward as well as two republican and two democratic committeepersons per division.\n\nThe ward leaders form the party’s __city committee__, and elect its chair. The chair of the Democratic City Committee is Robert A. Brady, and the chair of the Republican City Committee is Martina White.\n\n# What They Do\n\nWard leaders and committee persons make up the democratic and republican party structures in the City of Philadelphia, and serve to drive voter registration for their party and support of endorsed candidates. This involves\n\n- Getting signatures from voters to to get candidates on the ballot\n- Building a network of reliable voters\n- Working outside the polling places on election day to distribute campaign materials\n\nIn addition, because primary elections involve candidates of the same party running against each other, ward leaders vote to decide which candidates receive the official party endorsement. In practice, ward leaders often have their own priorities and support their own slate of candidates on election day.\n\n# Why They Matter\n\nWith the exception of races like President or Mayor, where many voters are familiar with the candidates, most elections in Philadelphia are significantly influenced by the support of ward leaders. As a result, candidates often court ward leaders. This can include:\n\n- Financial contributions known as “street money” used to pay committeepersons to get petition signatures door-to-door or hand out flyers at their polling place on election day\n- Direct lines of communication after being elected\n- A promise of a job in the candidate’s office for one of the ward leader’s committeepersons\n\nEven more significant is the ability for ward leaders to nominate who the party’s candidate will be in a special election. For example, if a City Council member or state representative resigns in the middle of their term, rather than conducting a primary election where voters choose their party’s candidate to face-off against the other party’s, the candidates for each party are chosen by the ward leaders. This grants a relatively small number of people significant influence in choosing individuals who may go on to become public officials.\n\nElected only by their committeepersons, the position of ward leader is typically a steady (albeit unpaid) gig once obtained. Helping to ensure this is their ability to fill vacant committeeperson slots by simply appointing someone. The access, cash, jobs, and other favors at their disposal makes ward leaders powerful players in Philadelphia elections. This transparency web site aims to bring a level of spotlight to ward leaders that is more proportional to the power they wield.\n\n# Frequently asked questions\n## Can elected officials be ward leaders?\n\nYes. Ward leader is an unpaid position within the party. Many elected officials were ward leaders before they were elected to office and retained their position.\n\n## Why are there two ward leaders for the 39th, 40th, and 66th wards?\n\nThese wards are represented by two ward leaders due to their size.\n\n## Who made this site?\n\nThis project came out of a [Code for Philly](http://codeforphilly.org) weekend hackathon and had a team of folks working on it. Read more on the About page at the top.\n\n# Other Resources\n\n- [How to Run for Committee Person](https://seventy.org/uploads/files/481393998453086249-committeeperson-manual-c70-5-25-18.pdf) - Committee of Seventy\n- [SixtySixWards blog by Jonathan Tannen](http://www.sixtysixwards.com/)\n- [Philly Ballots](https://phillyballots.tumblr.com/)\n- What else should we include here? [Tell us](http://form.jotform.us/form/50926595605160?thePage=learn&whatHappened=I%20have%20a%20suggestion)"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "1dRRiMCnKQ8cgqksaeIoMA",
+        "type": "Entry",
+        "createdAt": "2017-09-15T11:14:57.966Z",
+        "updatedAt": "2020-02-11T17:23:16.942Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Party Rules",
+        "slug": "party-rules",
+        "content": "Each party is organized, elected, and managed according to its party's rules.\n\n- [Democratic Party Rules](//assets.ctfassets.net/i9q3kobl32q0/6psE5JM6jKEuKU8ccqU4ie/663146ba4a6b906ab54a802612bddfd4/PhilaDemRules.pdf)\n- [Republican Party Rules](//assets.contentful.com/i9q3kobl32q0/2Fl5mMO5dKQkKkI6SKeM4S/cc1f29f4ca07370fa160bed0726b3554/Republican_City_Committee_Rules__REVISED_ByLAWS__April_2014__1_.pdf)\n"
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "i9q3kobl32q0"
+          }
+        },
+        "id": "5y5xlkrBGo6AaKmAUsGCmo",
+        "type": "Entry",
+        "createdAt": "2017-09-15T11:11:44.361Z",
+        "updatedAt": "2020-02-11T15:47:44.643Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "About the Project",
+        "slug": "about",
+        "content": "This project was built by volunteers in March 2015 at a weekend hackathon called [Apps for Democracy](http://appsforphilly.org/events/democracy-2015). It's not affiliated with any political party or faction; rather, its purpose is simply transparency.\n\nPhilly Ward Leaders is maintained by [Committee of Seventy](http://seventy.org/) and [Philadelphia 3.0](http://www.phila3-0.org/) with support from [Code for Philly](https://codeforphilly.org/) volunteers.\n\n# What's Next\n\nWe'd love to add more data and features to this site. We've thought of [a few ideas](https://github.com/CodeForPhilly/philly-ward-leaders/labels/enhancement) but we'd love to hear yours. [Tell us](https://docs.google.com/forms/d/e/1FAIpQLSekEaz9pd9arzfDy14PoNX9CdQ0MWon-ppMYokOm966aAVPBg/viewform)!\n\n# Contributing\n\nThere's always room on the team. We can use help in several ways\n\n- __Research__ - Searching google for photos, contact info, news stories, and anything else interesting, and then adding them to our database\n- __Writing__ - How can we best explain the ward and committee system to the general public?\n- __Data Analysis__ - There's [a lot of data out there](https://www.opendataphilly.org/). Some of it just needs some basic extracting/analysis to be added to the app.\n- __Design__ - How can we improve the user experience of the site?\n- __Development__ - Adding features and functionality requires front-end coding\n\nJoin us at the weekly [Code for Philly](https://codeforphilly.org/) meetup, dive into the [source code](https://github.com/CodeForPhilly/philly-ward-leaders), or join the conversation around [pending issues](https://github.com/CodeForPhilly/philly-ward-leaders/issues).\n\n# Sources\n\nWe used several official data sources and a lot of research on google for the rest. The combined data was put into a spreadsheet that powered this site.\n\n- [Ward Leader List](https://seventy.org/publications/ward-leaders-committeepeople), Committee of Seventy\n- [Voter Turnout](https://www.opendataphilly.org/dataset/voter-turnout), City of Philadelphia\n- [Elected Committee People](https://www.opendataphilly.org/dataset/elected-committeepeople), City of Philadelphia\n- [Division Boundaries](https://www.opendataphilly.org/dataset/political-ward-divisions), City of Philadelphia\n- [Qualified Voter Registry](https://www.opendataphilly.org/dataset/qualified-voter-registry), City of Philadelphia\n- And lots of googling!"
+      }
+    }
+  ]
+}
