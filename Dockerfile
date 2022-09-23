@@ -1,4 +1,4 @@
-FROM  phusion/baseimage:18.04-1.0.0-amd64
+FROM  phusion/baseimage:focal-1.0.0-amd64
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
  DEBIAN_FRONTEND=noninteractive apt-get install -y npm && \
