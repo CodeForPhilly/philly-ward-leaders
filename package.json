@@ -11,6 +11,7 @@
     "lint": "standard --plugin html '**/*.{js,vue}'"
   },
   "dependencies": {
+    "14": "^3.1.6",
     "@mapbox/leaflet-pip": "^1.1.0",
     "axios": "^0.16.2",
     "buefy": "^0.5.2",
