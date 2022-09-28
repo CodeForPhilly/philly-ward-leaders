@@ -2,6 +2,7 @@ version: '3.7'
 services:
   ward-leaders:
     init: true
+    tty: true
     build:
       context: .
       dockerfile: Dockerfile
