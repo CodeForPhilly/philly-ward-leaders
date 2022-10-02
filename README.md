@@ -16,7 +16,7 @@ are in the native shell, the lines with ~ are in Docker.
 # Build and start the Docker container.
 >  docker-compose build
 >  docker-compose up -d
->  docker-compose exec ward-leaders /bin/bash
+>  docker-compose exec ward-leaders bash
 
 # Install dependencies in the Docker container
 ~ npm ci
