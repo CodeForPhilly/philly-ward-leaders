@@ -22,4 +22,4 @@ https://www.philadelphiavotes.com/en/home/item/2126-2022_primary_committeepeople
 
 From Pat Christmas at Committee of Seventy via the party city committees
 
-Ward_Leader_Updates-2022.csv
+[Ward_Leader_Updates-2022.csv](https://github.com/CodeForPhilly/philly-ward-leaders/blob/master/data-scripts/input_data/2022/Ward_Leader_Updates-2022.csv)
