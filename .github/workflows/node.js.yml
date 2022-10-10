@@ -30,3 +30,12 @@ jobs:
     - run: npm run lint
     - run: npm run build
     - run: npm test
+
+
+    #Deployment
+     - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          BRANCH: master # The branch the action should deploy to.
+          folder: . # The folder the action should deploy.
+    
