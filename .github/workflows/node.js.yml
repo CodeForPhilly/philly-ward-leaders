@@ -32,8 +32,10 @@ jobs:
     - run: npm test
 
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.5.9
+      uses: JamesIves/github-pages-deploy-action@3.7.1
       with:       
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: . # The folder the action should deploy.
+
+
     
