@@ -24,7 +24,24 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+    matrix:
+      node-version: [14.x]
+      # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - run: npm test
+
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
@@ -33,7 +50,7 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
-          destination: ./_site
+          destination: ./public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
