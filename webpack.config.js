@@ -2,12 +2,12 @@ const path = require('path')
 const webpack = require('webpack')
 const MinifyPlugin = require('babel-minify-webpack-plugin')
 
-const config = {
+module.exports = {
   entry: [ 'babel-polyfill', './src/main.js' ],
   output: {
     path: path.resolve(__dirname, './public'),
-    publicPath: './',
-    filename: './build.js'
+    publicPath: '/',
+    filename: 'build.js'
   },
   module: {
     rules: [
@@ -62,10 +62,8 @@ const config = {
     })
   ]
 }
-module.exports = config;
 
 if (process.env.NODE_ENV === 'production') {
-  console.log('=======config========', config.output);
   module.exports.devtool = '#cheap-source-map' // See https://github.com/webpack-contrib/babel-minify-webpack-plugin/issues/68
   module.exports.plugins = module.exports.plugins.concat([
     new MinifyPlugin({}, { sourceMap: true }),
