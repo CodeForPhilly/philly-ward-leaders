@@ -1,5 +1,5 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+# Workflow for building and deploying production site to GitHub Pages
+name: Auto deploy with GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -20,22 +20,41 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          branch: gh-pages
-          destination: ./public
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public
+
+
 
   # Deployment job
   deploy:
@@ -48,3 +67,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+
