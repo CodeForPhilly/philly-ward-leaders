@@ -66,6 +66,13 @@ jobs:
       - run: npm test
 
       #add review and manual trigger steps
+      - name: Wait for approval
+        uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ steps.generate_token.outputs.token }}
+          approvers: katedev21
+          minimum-approvals: 1
+          issue-title: " "
 
       - name: Setup Pages
         id: pages
