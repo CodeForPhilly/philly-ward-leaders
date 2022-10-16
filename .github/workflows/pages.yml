@@ -1,5 +1,5 @@
 # Workflow for building and deploying production site to GitHub Pages
-name: Auto deploy with GitHub Pages
+name:  GitHub Pages Deployment
 
 on:
   # Runs on pushes targeting the default branch
@@ -61,7 +61,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm ci
+      - run: npm run lint
       - run: npm run build
+      - run: npm test
+
+      #add review and manual trigger steps
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
