@@ -55,7 +55,8 @@ jobs:
       #add review and manual trigger steps
       - name: Wait for approval
         uses: trstringer/manual-approval@v1
-        with:        
+        with: 
+          secret: ${{ github.TOKEN }}
           approvers: katedev21
           minimum-approvals: 1
           issue-title: ${{github.event.inputs.reason}}
