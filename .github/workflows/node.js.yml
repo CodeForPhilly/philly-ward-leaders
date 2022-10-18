@@ -30,13 +30,4 @@ jobs:
     - run: npm run lint
     - run: npm run build
     - run: npm test
-   
-
-    # - name: Deploy 🚀
-    #   uses: JamesIves/github-pages-deploy-action@v4.4.0
-    #   with:       
-    #     BRANCH: gh-pages # The branch the action should deploy to.
-    #     FOLDER: public # The folder the action should deploy.
-
-
     
