@@ -64,6 +64,7 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
+  module.exports.mode = 'production'
   module.exports.devtool = '#cheap-source-map' // See https://github.com/webpack-contrib/babel-minify-webpack-plugin/issues/68
   module.exports.plugins = module.exports.plugins.concat([
     new MinifyPlugin({}, { sourceMap: true }),

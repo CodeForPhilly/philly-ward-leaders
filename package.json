@@ -33,29 +33,30 @@
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-jest": "^21.2.0",
-    "babel-loader": "^6.0.0",
-    "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-loader": "^7.1.5",
+    "babel-minify-webpack-plugin": "^0.3.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.5.1",
     "cross-env": "^3.0.0",
-    "css-loader": "^0.25.0",
+    "css-loader": "^1.0.1",
     "eslint-plugin-html": "^3.2.2",
-    "file-loader": "^0.9.0",
+    "file-loader": "^1.1.11",
     "imports-loader": "^0.7.1",
     "jest": "^21.2.1",
     "jest-serializer-vue": "^0.2.0",
     "jest-vue": "^0.7.0",
     "node-sass": "^4.14.1",
-    "postcss-loader": "^2.0.6",
+    "postcss-loader": "^4.3.0",
     "sass-loader": "^7.3.1",
     "standard": "^10.0.3",
-    "vue-loader": "^12.1.0",
+    "vue-loader": "^14.2.2",
     "vue-server-renderer": "^2.4.2",
     "vue-template-compiler": "^2.3.3",
     "vue-test-utils": "^1.0.0-beta.1",
-    "webpack": "^3.12.0",
-    "webpack-dev-server": "^2.11.5"
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.3"
   },
   "jest": {
     "testPathIgnorePatterns": [
@@ -90,4 +91,3 @@
     ]
   }
 }
-
