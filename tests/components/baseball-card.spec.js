@@ -1,4 +1,4 @@
-import { mount } from 'vue-test-utils'
+import { mount } from '@vue/test-utils'
 import { createRenderer } from 'vue-server-renderer'
 
 import BaseballCard from '../../src/components/baseball-card/index.vue'

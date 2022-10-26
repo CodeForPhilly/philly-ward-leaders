@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Baseball card Matches snapshot 1`] = `
-<div class="column is-one-third flip-container">
+<div photoUrl="https://example.com/image.png" class="column is-one-third flip-container">
     <div class="flipper">
         <div class="front"><svg></svg></div>
         <div class="back"><svg></svg></div> <svg class="contents">
@@ -14,13 +14,16 @@ exports[`Baseball card Matches snapshot 1`] = `
                             <span class="ward-ordinal">
                                 1st Ward
 
-                            </span></h3>
-                        <dl><dt>Voters (D)</dt>
-                            <dd>1,000</dd> <dt>Turnout (D)</dt>
-                            <dd>40%</dd> <dt>Vacancies</dt>
+                            </span>
+                        </h3>
+                        <dl>
+                            <dt>Voters (D)</dt>
+                            <dd>1,000</dd>
+                            <dt>Turnout (D)</dt>
+                            <dd>40%</dd>
+                            <dt>Vacancies</dt>
                             <dd>35</dd>
-                        </dl>
-                        <!---->
+                        </dl> <router-link-stub to="/leaders/democratic/1/john-doe" class="button is-info details">Details</router-link-stub>
                     </div>
                 </body>
             </foreignObject>

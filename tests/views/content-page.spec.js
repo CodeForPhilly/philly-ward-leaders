@@ -1,4 +1,4 @@
-import { mount } from 'vue-test-utils'
+import { mount } from '@vue/test-utils'
 import Vuex from 'vuex'
 import Vue from 'vue'
 
@@ -40,7 +40,7 @@ describe('Content page', () => {
       mocks: { $store }
     })
     const contentEl = wrapper.find('#content')
-    const html = '<div id="content"><p><em>Italic text</em></p>\n</div>'
+    const html = '<div id="content">\n  <p><em>Italic text</em></p>\n</div>'
     expect(contentEl.html().trim()).toBe(html)
   })
 })
