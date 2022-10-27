@@ -13,7 +13,7 @@
   "dependencies": {
     "@mapbox/leaflet-pip": "^1.1.0",
     "axios": "^0.16.2",
-    "buefy": "^0.5.2",
+    "buefy": "^0.7.2",
     "bulma": "^0.5.1",
     "contentful": "^4.6.1",
     "leaflet": "^1.2.0",
