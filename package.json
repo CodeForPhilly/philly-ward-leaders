@@ -15,7 +15,7 @@
     "axios": "^0.16.2",
     "buefy": "^0.5.2",
     "bulma": "^0.5.1",
-    "contentful": "^4.6.1",
+    "contentful": "^9.2.7",
     "leaflet": "^1.2.0",
     "leaflet-geocoder-mapzen": "^1.9.4",
     "marked": "^0.3.6",
