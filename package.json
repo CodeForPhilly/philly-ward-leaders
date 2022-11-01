@@ -7,7 +7,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "test": "npm run lint && jest",
+    "test": "jest --testPathIgnorePatterns ./e2e",
     "lint": "standard --plugin html '**/*.{js,vue}'",
     "playwright": "playwright",
     "e2e": "playwright test"
