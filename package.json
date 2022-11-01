@@ -8,7 +8,9 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "test": "npm run lint && jest",
-    "lint": "standard --plugin html '**/*.{js,vue}'"
+    "lint": "standard --plugin html '**/*.{js,vue}'",
+    "playwright": "playwright",
+    "e2e": "playwright test"
   },
   "dependencies": {
     "@mapbox/leaflet-pip": "^1.1.0",
@@ -31,6 +33,7 @@
     "vuex": "^2.4.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.27.1",
     "@vue/test-utils": "^1.3.0",
     "autoprefixer": "^9.8.8",
     "babel-core": "^6.0.0",

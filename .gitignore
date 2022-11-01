@@ -15,3 +15,6 @@ data-scripts/*.pyc
 *.ntvs*
 *.njsproj
 *.sln
+/test-results/
+/playwright-report/
+/playwright/.cache/
