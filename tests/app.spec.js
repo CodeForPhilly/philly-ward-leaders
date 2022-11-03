@@ -20,7 +20,7 @@ describe('App', () => {
       mocks: { $store },
       stubs: ['router-view']
     })
-  
+
     const indicator = wrapper.findComponent(Buefy.Loading)
 
     expect(indicator.props('active')).toBe(false)
