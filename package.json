@@ -9,8 +9,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "test": "jest --testPathIgnorePatterns ./e2e",
     "lint": "standard --plugin html '**/*.{js,vue}'",
-    "playwright": "playwright",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "e2e-ci": "playwright install --with-deps && playwright test"
   },
   "dependencies": {
     "@mapbox/leaflet-pip": "^1.1.0",
