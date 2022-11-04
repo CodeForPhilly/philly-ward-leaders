@@ -24,11 +24,6 @@ describe('App', () => {
     const indicator = wrapper.findComponent(Buefy.Loading)
 
     expect(indicator.props('active')).toBe(false)
-
-    // const isActive = indicator.hasProp('active', false)
-    // expect(isActive).toBe(true)
-
-    // expect(indicator.props('active')).toBe(false)
   })
 
   test('Shows loading indicator when there are pending requests', () => {
