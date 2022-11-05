@@ -33,7 +33,7 @@ const config = {
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   webServer: {
-    command: 'npm run start',
+    command: process.env.CI ? 'npm run serve-http' : 'npm run start',
     url: 'http://localhost:8080',
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI
