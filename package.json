@@ -7,8 +7,11 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "test": "npm run lint && jest",
-    "lint": "standard --plugin html '**/*.{js,vue}'"
+    "test": "jest --testPathIgnorePatterns ./e2e",
+    "lint": "standard --plugin html '**/*.{js,vue}'",
+    "e2e": "playwright test",
+    "e2e-ci": "playwright install --with-deps && playwright test",
+    "serve-http": "http-server ./public -p 8080"
   },
   "dependencies": {
     "@mapbox/leaflet-pip": "^1.1.0",
@@ -31,6 +34,7 @@
     "vuex": "^2.4.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.27.1",
     "@vue/test-utils": "^1.3.0",
     "autoprefixer": "^9.8.8",
     "babel-core": "^6.0.0",
@@ -44,6 +48,7 @@
     "css-loader": "^1.0.1",
     "eslint-plugin-html": "^3.2.2",
     "file-loader": "^1.1.11",
+    "http-server": "^14.1.1",
     "imports-loader": "^0.7.1",
     "jest": "^21.2.1",
     "jest-serializer-vue": "^0.2.0",

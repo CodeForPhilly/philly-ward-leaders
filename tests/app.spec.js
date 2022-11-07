@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Buefy from 'buefy'
@@ -16,14 +16,14 @@ describe('App', () => {
       }
     })
 
-    const wrapper = shallow(App, {
+    const wrapper = shallowMount(App, {
       mocks: { $store },
       stubs: ['router-view']
     })
 
-    const indicator = wrapper.find(Buefy.Loading)
-    const isActive = indicator.hasProp('active', false)
-    expect(isActive).toBe(true)
+    const indicator = wrapper.findComponent(Buefy.Loading)
+
+    expect(indicator.props('active')).toBe(false)
   })
 
   test('Shows loading indicator when there are pending requests', () => {
@@ -35,14 +35,13 @@ describe('App', () => {
       }
     })
 
-    const wrapper = shallow(App, {
+    const wrapper = shallowMount(App, {
       mocks: { $store },
       stubs: ['router-view']
     })
 
-    const indicator = wrapper.find(Buefy.Loading)
-    const isActive = indicator.hasProp('active', true)
-    expect(isActive).toBe(true)
+    const indicator = wrapper.findComponent(Buefy.Loading)
+    expect(indicator.props('active')).toBe(true)
   })
 
   test('Shows notifications', () => {
@@ -55,12 +54,12 @@ describe('App', () => {
       }
     })
 
-    const wrapper = shallow(App, {
+    const wrapper = shallowMount(App, {
       mocks: { $store },
       stubs: ['router-view']
     })
 
-    const notifications = wrapper.findAll(Notification)
+    const notifications = wrapper.findAllComponents(Notification)
     expect(notifications.length).toBe(2)
   })
 
@@ -77,12 +76,12 @@ describe('App', () => {
       }
     })
 
-    const wrapper = shallow(App, {
+    const wrapper = shallowMount(App, {
       mocks: { $store },
       stubs: ['router-view']
     })
 
-    const notification = wrapper.find(Notification)
+    const notification = wrapper.findComponent(Notification)
     notification.vm.$emit('dismiss')
     expect(removeNotification).toBeCalled()
   })
