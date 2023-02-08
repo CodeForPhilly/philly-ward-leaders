@@ -168,27 +168,6 @@
                   detail="Social media"
                   label="Know a link?"></ask-detail>
               </dd>
-
-              <dt>
-                Sample Ballots
-              </dt>
-              <dd>
-                <ul v-if="sampleBallots.length > 0" class="sample-ballots">
-                  <li
-                    v-for="ballot in sampleBallots"
-                    :key="ballot.id">
-                    <a @click.prevent="modalUrl = ballot.url">
-                      <figure class="image is-48x48">
-                        <img :src="ballot.url" height="48"/>
-                      </figure>
-                    </a>
-                  </li>
-                </ul>
-                <a :href="sampleBallotFormPrefilled">
-                  Upload a sample ballot
-                </a>
-              </dd>
-
               <dt v-if="leader.campaignFinanceReports && leader.campaignFinanceReports.length > 0">
                 Campaign Finance Reports
               </dt>
@@ -261,7 +240,7 @@ import CommitteePerson from '../components/committee-person.vue'
 import WardMap from '../components/ward-map.vue'
 import AskDetail from '../components/ask-detail.vue'
 import { formatNumber, ordinalize } from '../util'
-import { SAMPLE_BALLOT_FORM, TURNOUT_ELECTION } from '../config'
+import { TURNOUT_ELECTION } from '../config'
 
 export default {
   props: [

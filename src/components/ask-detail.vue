@@ -1,30 +1,31 @@
 <template>
-  <a :href="href">{{ label }}</a>
+  <router-link :to="feedbackLink">{{ label }}</router-link>
 </template>
 
 <script>
-import qs from 'query-string'
-
-const FEEDBACK_URL = 'http://form.jotform.us/form/50926595605160'
 
 export default {
   props: {
     fullName: { type: String },
     detail: { type: String },
-    label: { type: String, default: 'Know it?' }
+    label: { type: String, default: 'Know it?' },
+    defaultValue: { type: String, default: '' }
   },
   computed: {
-    href () {
+    feedbackLink () {
       const opts = {
         thePage: this.fullName,
-        whatHappened: 'I found a content or data error'
+        defaultValue: this.defaultValue,
+        selectedOption: this.detail ? '3' : null
       }
-      if (this.detail) {
-        opts.tellUs = `${this.detail} should be: `
+      return {
+        name: 'feedback',
+        query: opts
       }
-      const query = qs.stringify(opts)
-      return `${FEEDBACK_URL}?${query}`
     }
   }
 }
 </script>
+
+
+

@@ -6,6 +6,7 @@ import WardLeaderList from '../views/ward-leader-list.vue'
 import WardLeader from '../views/ward-leader.vue'
 import CityMap from '../views/city-map.vue'
 import ContentPage from '../views/content-page.vue'
+import Feedback from '../views/feedback.vue'
 
 Vue.use(VueRouter)
 
@@ -35,6 +36,11 @@ const routes = [
     path: '/map',
     name: 'city-map',
     component: CityMap
+  },
+  {
+    path: '/feedback',
+    name: 'feedback',
+    component: Feedback
   },
   {
     path: '/:slug',

@@ -30,9 +30,9 @@
         <router-link to="/about" class="navbar-item">
           About
         </router-link>
-        <a class="navbar-item" href="https://form.jotform.us/form/50926595605160">
+        <router-link to="/feedback" class="navbar-item">
           Feedback
-        </a>
+        </router-link>
       </div>
     </div>
   </nav>
