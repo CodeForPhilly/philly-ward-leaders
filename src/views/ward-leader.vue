@@ -317,12 +317,8 @@ export default {
     this.fetchLeader(opts)
     this.fetchSampleBallots(opts)
     this.fetchCommitteePersons(opts)
-    if (hasSubWard(this.ward)) {
-      this.fetchWardBoundaries(`${opts.ward}${opts.subWard}`)
-    }
-    else {
-      this.fetchWardBoundaries(opts.ward)
-    }
+    this.fetchWardBoundaries(this.ward)
+    
   },
   components: {
     'stats-bar': StatsBar,
