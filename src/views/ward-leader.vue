@@ -318,7 +318,6 @@ export default {
     this.fetchSampleBallots(opts)
     this.fetchCommitteePersons(opts)
     this.fetchWardBoundaries(this.ward)
-    
   },
   components: {
     'stats-bar': StatsBar,
