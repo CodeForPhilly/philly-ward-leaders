@@ -317,7 +317,7 @@ export default {
     this.fetchLeader(opts)
     this.fetchSampleBallots(opts)
     this.fetchCommitteePersons(opts)
-    this.fetchWardBoundaries(this.ward)
+    this.fetchWardBoundaries(this.ward) // `ward` prop may include suffix for sub ward
   },
   components: {
     'stats-bar': StatsBar,
