@@ -49,14 +49,7 @@ def process_divisions(filepath, output_dir):
         ward_div = feature['properties']['DIVISION_NUM']
         ward = ward_div[:2].lstrip('0')
         division = int(ward_div[2:].lstrip('0'))
-
-        if ward in split_wards_data.keys():
-            sub_ward = "A" if (
-                            division in split_wards_data[ward]["A"]
-                        ) else "B"
-            ward = f"{ward}{sub_ward}"
-
-        wards[ward].append({
+        ward_data = {
             'type': 'Feature',
             'properties': {
                 'ward_div': ward_div,
@@ -64,8 +57,16 @@ def process_divisions(filepath, output_dir):
                 'division': division,
             },
             'geometry': feature['geometry']
-        })
-        print(ward)
+        }
+        # Add entry for split wards
+        if ward in split_wards_data.keys():
+            sub_ward = "A" if (
+                            division in split_wards_data[ward]["A"]
+                        ) else "B"
+            sp_ward = f"{ward}{sub_ward}"
+            wards[sp_ward].append(ward_data)
+
+        wards[ward].append(ward_data)
 
     for ward, features in wards.items():
         features.sort(key=lambda ele: ele['properties']['ward_div'])
