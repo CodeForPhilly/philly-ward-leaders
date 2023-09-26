@@ -295,19 +295,20 @@ export default {
       return `${SAMPLE_BALLOT_FORM}?ward=${this.ward}&party=${this.party}`
     },
     allCommitteePersons: function () {
-      // Create deep copy of wardBoundaries
-      let commPersons = JSON.parse(JSON.stringify(this.committeePersons))
+      let commPersons = this.committeePersons
       // Get all divisions from ward boundaries
       let allDivisions = this.wardBoundaries.features.map(x => x.properties.division)
       // Default committe person data for Vacant divisions
-      let personDefault = {
-        'ward': this.ward,
-        'fullName': 'VACANT',
-        'division': '',
-        'party': this.party,
-        'address': '',
-        'id': '',
-        'zip': ''
+      let personDefault = function (ward, party) {
+        return {
+          'ward': ward,
+          'fullName': 'VACANT',
+          'division': '',
+          'party': party,
+          'address': '',
+          'id': '',
+          'zip': ''
+        }
       }
       let committeePersonsList = []
       // Add placeholder objects for vacant divisions
@@ -317,7 +318,6 @@ export default {
       }
       let wardString = wardName.toString().padStart(2, '0')
       let partyString = this.party.slice(0, 3).toUpperCase()
-      console.log(`Ward String : ${wardString}`)
       for (let a in allDivisions) {
         let division = allDivisions[a]
         let divisionId = `${wardString}-${division.toString().padStart(2, '0')}-${partyString}`
@@ -329,12 +329,11 @@ export default {
           // Check for sub division id in ward leader data and add placeholder if missing
           let personData = commPersons.find(c => c.id === subDivisionId)
           if (personData === undefined) {
-            personData = JSON.parse(JSON.stringify(personDefault))
+            personData = personDefault(this.ward, this.party)
             personData.id = subDivisionId
             personData.division = division
             personData.address = `Division ${subDivision}`
           }
-          // console.log(`Division: ${division}, id: ${subDivisionId}, data:${JSON.stringify(personData)}`)
           committeePersonsList.push(personData)
         }
       }
