@@ -294,19 +294,18 @@ export default {
     sampleBallotFormPrefilled () {
       return `${SAMPLE_BALLOT_FORM}?ward=${this.ward}&party=${this.party}`
     },
-    allCommitteePersons: function () {
-      let commPersons = this.committeePersons
+    allCommitteePersons () {
+      const commPersons = this.committeePersons
       // Get all divisions from ward boundaries
-      let allDivisions = this.wardBoundaries.features.map(x => x.properties.division)
-      // Default committe person data for Vacant divisions
-      let personDefault = function (ward, party) {
+      const allDivisions = this.wardBoundaries.features.map(x => x.properties.division)
+      const vacantPerson = (division, subDivision, subDivisionId) => {
         return {
-          'ward': ward,
+          'ward': this.ward,
           'fullName': 'VACANT',
-          'division': '',
-          'party': party,
-          'address': '',
-          'id': '',
+          'division': division,
+          'party': this.party,
+          'address': `Division ${subDivision}`,
+          'id': subDivisionId,
           'zip': ''
         }
       }
@@ -318,35 +317,25 @@ export default {
       }
       let wardString = wardName.toString().padStart(2, '0')
       let partyString = this.party.slice(0, 3).toUpperCase()
-      for (let a in allDivisions) {
-        let division = allDivisions[a]
+      for (let div in allDivisions) {
+        let division = allDivisions[div]
         let divisionId = `${wardString}-${division.toString().padStart(2, '0')}-${partyString}`
         let subDivisions = ['A', 'B']
 
-        for (let b in subDivisions) {
-          let subDivision = subDivisions[b]
+        for (let subDiv in subDivisions) {
+          let subDivision = subDivisions[subDiv]
           let subDivisionId = `${divisionId}-${subDivision}`
           // Check for sub division id in ward leader data and add placeholder if missing
           let personData = commPersons.find(c => c.id === subDivisionId)
-          if (personData === undefined) {
-            personData = personDefault(this.ward, this.party)
-            personData.id = subDivisionId
-            personData.division = division
-            personData.address = `Division ${subDivision}`
-          }
-          committeePersonsList.push(personData)
+          committeePersonsList.push(personData || vacantPerson(division, subDivision, subDivisionId))
         }
       }
       // Sort output by id
       committeePersonsList.sort((a, b) => {
-        if (a.id < b.id) {
-          return -1
+        if (a.id === b.id) {
+          return 0
         }
-        if (a.id > b.id) {
-          return 1
-        }
-        // names must be equal
-        return 0
+        return (a.id < b.id) ? -1 : 1
       })
       return committeePersonsList
     },
@@ -354,8 +343,7 @@ export default {
       return this.wardBoundaries.features.length * 2
     },
     vacanciesCount () {
-      let vacantDivisions = this.allCommitteePersons.filter((p) => p.fullName === 'VACANT')
-      return (vacantDivisions.length)
+      return this.allCommitteePersons.filter((p) => p.fullName === 'VACANT').length
     }
   },
   methods: mapActions({
