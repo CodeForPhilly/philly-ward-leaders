@@ -22,7 +22,7 @@
         :party="leader.party"
         :registered-voters-party="leader.registeredVotersParty"
         :turnout-party-percent="turnoutPartyPercent"
-        :division-count="leader.divisionCount"
+        :division-count="wardBoundaries.features.length"
         :vacancy-count="vacancyCount"
       ></stats-bar>
     </section>
@@ -73,7 +73,7 @@
                   Divisions
                 </abbr>
               </dt>
-              <dd>{{ leader.divisionCount }}</dd>
+              <dd>{{ wardBoundaries.features.length }}</dd>
 
               <dt>
                 <abbr v-tooltip="'Each division elects 2 committee persons'">
@@ -81,8 +81,8 @@
                 </abbr>
               </dt>
               <dd>
-                {{ leader.committeePersonCount }}
-                ({{ vacancyCount }}
+                {{ wardBoundaries.features.length*2 }}
+                ({{ vacanciesCount }}
                 <abbr v-tooltip="'Each division elects 2 committee persons'">
                   vacancies
                 </abbr>)
@@ -228,7 +228,7 @@
         <h2 class="title is-2">Committee Persons</h2>
         <div class="columns is-multiline">
           <committee-person
-            v-for="person in committeePersons"
+            v-for="person in allCommitteePersons"
             :key="person.id"
             :fullName="person.fullName"
             :division="person.division"
@@ -293,6 +293,57 @@ export default {
     ]),
     sampleBallotFormPrefilled () {
       return `${SAMPLE_BALLOT_FORM}?ward=${this.ward}&party=${this.party}`
+    },
+    allCommitteePersons () {
+      const commPersons = this.committeePersons
+      // Get all divisions from ward boundaries
+      const allDivisions = this.wardBoundaries.features.map(x => x.properties.division)
+      const vacantPerson = (division, subDivision, subDivisionId) => {
+        return {
+          'ward': this.ward,
+          'fullName': 'VACANT',
+          'division': division,
+          'party': this.party,
+          'address': `Division ${subDivision}`,
+          'id': subDivisionId,
+          'zip': ''
+        }
+      }
+      let committeePersonsList = []
+      // Add placeholder objects for vacant divisions
+      let wardName = this.ward
+      if (hasSubWard(this.ward)) {
+        wardName = splitSubWard(this.ward).ward
+      }
+      let wardString = wardName.toString().padStart(2, '0')
+      let partyString = this.party.slice(0, 3).toUpperCase()
+      for (let div in allDivisions) {
+        let division = allDivisions[div]
+        let divisionId = `${wardString}-${division.toString().padStart(2, '0')}-${partyString}`
+        let subDivisions = ['A', 'B']
+
+        for (let subDiv in subDivisions) {
+          let subDivision = subDivisions[subDiv]
+          let subDivisionId = `${divisionId}-${subDivision}`
+          // Check for sub division id in ward leader data and add placeholder if missing
+          let personData = commPersons.find(c => c.id === subDivisionId)
+          committeePersonsList.push(personData || vacantPerson(division, subDivision, subDivisionId))
+        }
+      }
+      // Sort output by id
+      committeePersonsList.sort((a, b) => {
+        if (a.id === b.id) {
+          return 0
+        }
+        return (a.id < b.id) ? -1 : 1
+      })
+      return committeePersonsList
+    },
+    divisionsCount () {
+      return this.wardBoundaries.features.length * 2
+    },
+    vacanciesCount () {
+      return this.allCommitteePersons.filter((p) => p.fullName === 'VACANT').length
     }
   },
   methods: mapActions({
