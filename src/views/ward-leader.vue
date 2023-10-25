@@ -270,9 +270,6 @@ export default {
       'vacancyCount',
       'age'
     ]),
-    sampleBallotFormPrefilled () {
-      return `${SAMPLE_BALLOT_FORM}?ward=${this.ward}&party=${this.party}`
-    },
     allCommitteePersons () {
       const commPersons = this.committeePersons
       // Get all divisions from ward boundaries
