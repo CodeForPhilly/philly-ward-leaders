@@ -6,6 +6,7 @@
         <div class="container">
           <h1 class="title">
             {{ leader.fullName }}
+            <span v-if="leader.nickname"><br />({{ leader.nickname }})</span>
           </h1>
           <h2 class="subtitle">
             {{ leader.ward | ordinalize }}
