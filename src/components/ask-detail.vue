@@ -16,7 +16,7 @@ export default {
       const opts = {
         thePage: this.fullName,
         defaultValue: this.defaultValue,
-        selectedOption: this.detail ? '3' : null
+        selectedOption: this.detail ? 'what-error' : null
       }
       return {
         name: 'feedback',

@@ -15,7 +15,7 @@
                   <label :for="radio.id">{{ radio.label }}</label>
                 </div>
               </div>
-              <div class="form-text" v-if="formData.selectedOption === '6'">
+              <div class="form-text" v-if="formData.selectedOption === 'what-other'">
                 <label for="otherText">Please specify</label>
                 <input type="text" id="otherText" name="otherText" v-model="formData.otherText" />
               </div>
@@ -23,7 +23,7 @@
               <div class="form-text">
                 <label for="tellUsAboutIt">Tell us about it <span aria-label="Required question">*</span></label>
                 <textarea name="tellUsAboutIt" id="tellUsAboutIt" v-model="formData.tellUsAboutIt" cols="40"
-                  rows="4"></textarea>
+                  rows="4" required></textarea>
               </div>
               <div class="form-text">
                 <label for="howDoYouKnow">How do you know</label>
@@ -62,12 +62,12 @@ export default {
       submitted: false,
       msg: 'What happened?',
       radioList: [
-        { id: '1', label: 'Something went wrong', entryId: 'entry.564578111' },
-        { id: '2', label: 'I have a suggestion', entryId: 'entry.564578111' },
-        { id: '3', label: 'I found a content or data error', entryId: 'entry.564578111' },
-        { id: '4', label: 'Something is confusing', entryId: 'entry.564578111' },
-        { id: '5', label: 'Nothing, I just want to say something nice', entryId: 'entry.564578111' },
-        { id: '6', label: 'Other', entryId: 'entry.564578111' }
+        { id: 'what-wrong', label: 'Something went wrong' },
+        { id: 'what-suggest', label: 'I have a suggestion' },
+        { id: 'what-error', label: 'I found a content or data error' },
+        { id: 'what-confused', label: 'Something is confusing' },
+        { id: 'what-nice', label: 'Nothing, I just want to say something nice' },
+        { id: 'what-other', label: 'Other' }
       ],
 
       formData: {
@@ -105,11 +105,12 @@ export default {
       }
 
       if (selectedRadio) {
-        if (selectedRadio.label === 'Other') {
-          params[selectedRadio.entryId] = '__other_option__'
-          params[`${selectedRadio.entryId}.other_option_response`] = this.formData.otherText
+        const entryId = 'entry.564578111';
+        if (selectedRadio.id === 'what-other') {
+          params[entryId] = '__other_option__'
+          params[`${entryId}.other_option_response`] = this.formData.otherText
         } else {
-          params[selectedRadio.entryId] = selectedRadio.label
+          params[entryId] = selectedRadio.label
         }
       }
       return params
@@ -138,7 +139,7 @@ export default {
   }
 }
 </script>
-   
+
 <style scoped lang="sass">
 .hero.is-info
   display: flex
