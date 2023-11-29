@@ -105,7 +105,7 @@ export default {
       }
 
       if (selectedRadio) {
-        const entryId = 'entry.564578111';
+        const entryId = 'entry.564578111'
         if (selectedRadio.id === 'what-other') {
           params[entryId] = '__other_option__'
           params[`${entryId}.other_option_response`] = this.formData.otherText
