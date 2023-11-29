@@ -17,7 +17,7 @@
               </div>
               <div class="form-text" v-if="formData.selectedOption === 'what-other'">
                 <label for="otherText">Please specify</label>
-                <input type="text" id="otherText" name="otherText" v-model="formData.otherText" />
+                <input type="text" id="otherText" name="otherText" v-model="formData.otherText" size="40"/>
               </div>
               <br>
               <div class="form-text">
@@ -28,16 +28,16 @@
               <div class="form-text">
                 <label for="howDoYouKnow">How do you know</label>
                 <textarea name="howDoYouKnow" id="howDoYouKnow" v-model="formData.howDoYouKnow" cols="40"
-                  rows="2"></textarea>
+                  rows="2" size="40"></textarea>
               </div>
               <div class="form-text">
                 <label for="thePageWhereItHappened">The page where it happened</label>
                 <input type="text" id="thePageWhereItHappened" name="thePageWhereItHappened"
-                  v-model="formData.thePageWhereItHappened" />
+                  v-model="formData.thePageWhereItHappened" size="40"/>
               </div>
               <div class="form-text">
                 <label for="yourEmail">Your email</label>
-                <input type='text' id='yourEmail' name='yourEmail' v-model="formData.yourEmail" />
+                <input type='text' id='yourEmail' name='yourEmail' v-model="formData.yourEmail" size="40"/>
               </div>
               <br>
               <div class="form-text">
@@ -71,7 +71,7 @@ export default {
       ],
 
       formData: {
-        selectedOption: null,
+        selectedOption: 'what-suggest',
         otherText: '',
         tellUsAboutIt: '',
         howDoYouKnow: '',

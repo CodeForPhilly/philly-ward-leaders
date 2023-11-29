@@ -6,7 +6,7 @@
 
 export default {
   props: {
-    fullName: { type: String },
+    thePage: { type: String },
     detail: { type: String },
     label: { type: String, default: 'Know it?' },
     defaultValue: { type: String, default: '' }
@@ -14,9 +14,12 @@ export default {
   computed: {
     feedbackLink () {
       const opts = {
-        thePage: this.fullName,
+        thePage: this.thePage,
         defaultValue: this.defaultValue,
-        selectedOption: this.detail ? 'what-error' : null
+      }
+      if (this.detail) {
+        opts.selectedOption ='what-error';
+        opts.defaultValue = `${this.detail} should be: `
       }
       return {
         name: 'feedback',
