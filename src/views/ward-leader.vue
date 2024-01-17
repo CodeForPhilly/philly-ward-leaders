@@ -270,7 +270,7 @@ export default {
       'vacancyCount',
       'age'
     ]),
-    feedbackPage() {
+    feedbackPage () {
       return `${this.leader.fullName} (Ward ${this.leader.ward} ${this.leader.party})`
     },
     allCommitteePersons () {

@@ -15,10 +15,10 @@ export default {
     feedbackLink () {
       const opts = {
         thePage: this.thePage,
-        defaultValue: this.defaultValue,
+        defaultValue: this.defaultValue
       }
       if (this.detail) {
-        opts.selectedOption ='what-error';
+        opts.selectedOption = 'what-error'
         opts.defaultValue = `${this.detail} should be: `
       }
       return {

@@ -94,14 +94,13 @@ export default {
   computed: {
     formParams () {
       const selectedRadio = this.radioList.find(radio => radio.id === this.formData.selectedOption)
-      const currTime = Date.now()
       const params = {
         submit: 'Submit',
         'entry.843445704': this.formData.tellUsAboutIt,
         'entry.584749072': this.formData.howDoYouKnow,
         'entry.1794541886': this.formData.thePageWhereItHappened,
         'entry.1040622557': this.formData.yourEmail,
-        'entry.852279778': currTime.toString()
+        'entry.852279778': Date.now().toString()
       }
 
       if (selectedRadio) {
