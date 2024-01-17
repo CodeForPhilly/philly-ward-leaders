@@ -1,13 +1,10 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter } from 'vue-router'
 
 import Splash from '../views/splash.vue'
 import WardLeaderList from '../views/ward-leader-list.vue'
 import WardLeader from '../views/ward-leader.vue'
 import CityMap from '../views/city-map.vue'
 import ContentPage from '../views/content-page.vue'
-
-Vue.use(VueRouter)
 
 const routes = [
   {
@@ -44,7 +41,7 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
+const router = createRouter({
   mode: 'history',
   routes,
   scrollBehavior

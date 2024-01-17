@@ -1,4 +1,4 @@
-import nanoid from 'nanoid'
+import { nanoid } from 'nanoid'
 
 import Api from '../api'
 import { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } from '../config'

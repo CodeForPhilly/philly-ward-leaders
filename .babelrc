@@ -1,8 +1,8 @@
 {
   "presets": [
-    ["env", {
+    ["@babel/preset-env", {
       modules: false,
-      useBuiltIns: true,
+      useBuiltIns: "entry",
       targets: {
         browsers: [
           '> 1%',

@@ -8,7 +8,7 @@
          :msg="item.msg"
          @dismiss="removeNotification(item.id)"></notification>
     </div>
-    <b-loading :active="isLoading"></b-loading>
+    <!-- <b-loading :active="isLoading"></b-loading> -->
     <router-view></router-view>
     <site-footer v-if="shouldShowFooter"></site-footer>
   </div>
@@ -18,7 +18,7 @@
 import Vue from 'vue'
 import { mapState, mapMutations } from 'vuex'
 import values from 'lodash/values'
-import Buefy from 'buefy'
+// import Buefy from 'buefy'
 import Tooltip from 'vue-directive-tooltip'
 
 import NavBar from './components/nav-bar.vue'
@@ -48,7 +48,7 @@ export default {
   components: {
     'nav-bar': NavBar,
     'notification': Notification,
-    'b-loading': Buefy.Loading,
+    // 'b-loading': Buefy.Loading,
     'site-footer': SiteFooter
   }
 }
