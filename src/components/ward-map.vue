@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { Map, TileLayer, GeoJSON } from 'vue2-leaflet'
+import { LGeoJson, LMap, LTileLayer } from '@vue-leaflet/vue-leaflet'
 
 import { ordinalize } from '../util'
 
@@ -30,9 +30,9 @@ export default {
     'committeePersons'
   ],
   components: {
-    'v-map': Map,
-    'v-tilelayer': TileLayer,
-    'v-geojson-layer': GeoJSON
+    'v-map': LMap,
+    'v-tilelayer': LTileLayer,
+    'v-geojson-layer': LGeoJson
   },
   data () {
     return {
@@ -90,7 +90,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import "~leaflet/dist/leaflet.css"
+@import "leaflet/dist/leaflet.css"
 
 .map
   height: 350px

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { Map, TileLayer, GeoJSON } from 'vue2-leaflet'
+import { LMap, LTileLayer, LGeoJson } from '@vue-leaflet/vue-leaflet'
 import { mapState, mapActions, mapGetters } from 'vuex'
 import leafletPip from '@mapbox/leaflet-pip'
 
@@ -31,9 +31,9 @@ import { MAPZEN_API_KEY } from '../config'
 
 export default {
   components: {
-    'v-map': Map,
-    'v-tilelayer': TileLayer,
-    'v-geojson-layer': GeoJSON,
+    'v-map': LMap,
+    'v-tilelayer': LTileLayer,
+    'v-geojson-layer': LGeoJson,
     'v-geocoder': Geocoder
   },
   data () {
@@ -136,7 +136,7 @@ function popupTemplate (ward, democratFullName, republicanFullName) {
 </script>
 
 <style lang="sass">
-@import "~leaflet/dist/leaflet.css"
+@import "leaflet/dist/leaflet.css"
 
 .citywide-map
   height: calc(100vh - 52px)

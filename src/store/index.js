@@ -1,10 +1,10 @@
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 
 import * as getters from './getters'
 import * as mutations from './mutations'
 import * as actions from './actions'
 
-const store = new Vuex.Store({
+const store = createStore({
   strict: (process.env.NODE_ENV !== 'production'),
   state: {
     pendingRequests: {},

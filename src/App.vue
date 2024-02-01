@@ -18,14 +18,11 @@
 import Vue from 'vue'
 import { mapState, mapMutations } from 'vuex'
 import values from 'lodash/values'
-// import Buefy from 'buefy'
-import Tooltip from 'vue-directive-tooltip'
 
 import NavBar from './components/nav-bar.vue'
 import Notification from './components/notification.vue'
 import SiteFooter from './components/site-footer.vue'
 
-Vue.use(Tooltip)
 
 export default {
   computed: {
@@ -55,7 +52,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import "~bulma/sass/utilities/initial-variables"
+@import "node_modules/bulma/sass/utilities/initial-variables"
 
 $blue: #04576F
 $light-blue: #2284a1
@@ -64,18 +61,16 @@ $navbar-background-color: $light-blue
 $navbar-item-color: $white
 $primary: $light-blue
 
-@import "~bulma"
-@import "~buefy/lib/buefy.css"
-@import "~vue-directive-tooltip/src/css/index.scss"
+@import "node_modules/vue-directive-tooltip/src/css/index.scss"
 
 .navbar-burger span,
 .navbar-burger.is-active span
   background-color: $white
 
 .notifications
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
-  z-index: 9999;
+  position: absolute
+  top: 60px
+  left: 0
+  right: 0
+  z-index: 9999
 </style>
