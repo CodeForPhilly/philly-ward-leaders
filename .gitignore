@@ -8,7 +8,7 @@ yarn-error.log
 data-scripts/venv
 data-scripts/__pycache__
 data-scripts/*.pyc
-
+public/build
 # Editor directories and files
 .idea
 *.suo
