@@ -28,7 +28,7 @@
     "nanoid": "^5.0.4",
     "ordinal": "^1.0.3",
     "query-string": "^8.1.0",
-    "snapsvg": "^0.5.1",
+    "snapsvg-cjs": "^0.0.6",
     "vue": "^3.3.9",
     "vue-bulma-tooltip": "^2.0.0-alpha.0",
     "vue-directive-tooltip": "^1.4.0",

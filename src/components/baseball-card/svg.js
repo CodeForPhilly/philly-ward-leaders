@@ -1,4 +1,4 @@
-import Snap from 'snapsvg'
+import Snap from 'snapsvg-cjs'
 
 export function createFront (el, data) {
   const isRepublican = (data.party === 'republican')

@@ -1,4 +1,4 @@
-import { createRouter } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 import Splash from '../views/splash.vue'
 import WardLeaderList from '../views/ward-leader-list.vue'
@@ -42,7 +42,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  mode: 'history',
+  history: createWebHistory(),
   routes,
   scrollBehavior
 })
