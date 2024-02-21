@@ -99,7 +99,8 @@
       "expect",
       "jest",
       "test",
-      "beforeEach"
+      "beforeEach",
+      "FormData"
     ]
   }
 }

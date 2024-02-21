@@ -35,14 +35,14 @@
             <figure class="image" v-if="leader.photo">
               <img :src="leader.photo">
               <ask-detail
-                :fullName="leader.fullName"
+                :thePage="feedbackPage"
                 detail="Photo"
                 label="Have a better photo?"></ask-detail>
             </figure>
             <figure class="image" v-else>
               <img src="../assets/photo-placeholder.png">
               <ask-detail
-                :fullName="leader.fullName"
+                :thePage="feedbackPage"
                 detail="Photo"
                 label="Have a photo?"></ask-detail>
             </figure>
@@ -82,7 +82,7 @@
                 </abbr>
               </dt>
               <dd>
-                {{ wardBoundaries.features.length*2 }}
+                {{ committeePersonCount }}
                 ({{ vacanciesCount }}
                 <abbr v-tooltip="'Each division elects 2 committee persons'">
                   vacancies
@@ -97,7 +97,7 @@
               <dd v-else>
                 <span class="unknown">Unknown</span>
                 <ask-detail
-                  :fullName="leader.fullName"
+                  :thePage="feedbackPage"
                   detail="Address"></ask-detail>
               </dd>
 
@@ -106,7 +106,7 @@
               <dd v-else>
                 <span class="unknown">Unknown</span>
                 <ask-detail
-                  :fullName="leader.fullName"
+                  :thePage="feedbackPage"
                   detail="Phone"></ask-detail>
               </dd>
 
@@ -115,7 +115,7 @@
               <dd v-else>
                 <span class="unknown">Unknown</span>
                 <ask-detail
-                  :fullName="leader.fullName"
+                  :thePage="feedbackPage"
                   detail="Age"></ask-detail>
               </dd>
 
@@ -124,7 +124,7 @@
               <dd v-else>
                 <span class="unknown">Unknown</span>
                 <ask-detail
-                  :fullName="leader.fullName"
+                  :thePage="feedbackPage"
                   detail="Gender"></ask-detail>
               </dd>
 
@@ -133,7 +133,7 @@
               <dd v-else>
                 <span class="unknown">Unknown</span>
                 <ask-detail
-                  :fullName="leader.fullName"
+                  :thePage="feedbackPage"
                   detail="Occupation"></ask-detail>
               </dd>
             </dl>
@@ -147,7 +147,7 @@
               <dd v-else>
                 <span class="unknown">Unknown</span>
                 <ask-detail
-                  :fullName="leader.fullName"
+                  :thePage="feedbackPage"
                   detail="Email"></ask-detail>
               </dd>
 
@@ -165,31 +165,10 @@
                   </li>
                 </ul>
                 <ask-detail
-                  :fullName="leader.fullName"
+                  :thePage="feedbackPage"
                   detail="Social media"
                   label="Know a link?"></ask-detail>
               </dd>
-
-              <dt>
-                Sample Ballots
-              </dt>
-              <dd>
-                <ul v-if="sampleBallots.length > 0" class="sample-ballots">
-                  <li
-                    v-for="ballot in sampleBallots"
-                    :key="ballot.id">
-                    <a @click.prevent="modalUrl = ballot.url">
-                      <figure class="image is-48x48">
-                        <img :src="ballot.url" height="48"/>
-                      </figure>
-                    </a>
-                  </li>
-                </ul>
-                <a :href="sampleBallotFormPrefilled">
-                  Upload a sample ballot
-                </a>
-              </dd>
-
               <dt v-if="leader.campaignFinanceReports && leader.campaignFinanceReports.length > 0">
                 Campaign Finance Reports
               </dt>
@@ -211,7 +190,7 @@
         <p class="has-text-centered">
           Is this information incorrect?
           <ask-detail
-            :fullName="leader.fullName"
+            :thePage="feedbackPage"
             label="Let us know"></ask-detail>
         </p>
       </div>
@@ -262,7 +241,7 @@ import CommitteePerson from '../components/committee-person.vue'
 import WardMap from '../components/ward-map.vue'
 import AskDetail from '../components/ask-detail.vue'
 import { formatNumber, ordinalize } from '../util'
-import { SAMPLE_BALLOT_FORM, TURNOUT_ELECTION } from '../config'
+import { TURNOUT_ELECTION } from '../config'
 
 export default {
   props: [
@@ -292,8 +271,8 @@ export default {
       'vacancyCount',
       'age'
     ]),
-    sampleBallotFormPrefilled () {
-      return `${SAMPLE_BALLOT_FORM}?ward=${this.ward}&party=${this.party}`
+    feedbackPage () {
+      return `${this.leader.fullName} (Ward ${this.leader.ward} ${this.leader.party})`
     },
     allCommitteePersons () {
       const commPersons = this.committeePersons
@@ -340,7 +319,7 @@ export default {
       })
       return committeePersonsList
     },
-    divisionsCount () {
+    committeePersonCount () {
       return this.wardBoundaries.features.length * 2
     },
     vacanciesCount () {
