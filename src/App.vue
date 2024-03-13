@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import "node_modules/bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/initial-variables"
 
 $blue: #04576F
 $light-blue: #2284a1
@@ -60,7 +60,7 @@ $navbar-background-color: $light-blue
 $navbar-item-color: $white
 $primary: $light-blue
 
-@import "node_modules/vue-directive-tooltip/src/css/index.scss"
+@import "bulma/bulma.sass"
 
 .navbar-burger span,
 .navbar-burger.is-active span
