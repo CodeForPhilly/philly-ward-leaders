@@ -1,20 +1,20 @@
 <template>
-  <v-map
+  <l-map
     v-if="isBoundariesLoaded"
     class="map"
     :zoom="zoom"
     :center="center"
     :options="mapOpts"
     ref="map">
-    <v-tilelayer
+    <l-tilelayer
       :url="url"
       :attribution="attribution"
-      :params="tileOpts"></v-tilelayer>
-    <v-geojson-layer
+      :params="tileOpts"></l-tilelayer>
+    <l-geojson-layer
       :geojson="boundaries"
       :options="geojsonOpts"
-      ref="geojson"></v-geojson-layer>
-  </v-map>
+      ref="geojson"></l-geojson-layer>
+  </l-map>
 </template>
 
 <script>
@@ -30,9 +30,9 @@ export default {
     'committeePersons'
   ],
   components: {
-    'v-map': LMap,
-    'v-tilelayer': LTileLayer,
-    'v-geojson-layer': LGeoJson
+    LMap,
+    LTileLayer,
+    LGeoJson
   },
   data () {
     return {

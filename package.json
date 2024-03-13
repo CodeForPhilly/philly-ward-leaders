@@ -9,7 +9,7 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --hot",
     "build": "vite build",
     "test": "jest --testPathIgnorePatterns ./e2e",
-    "lint": "standard --plugin html '**/*.{js,vue}'",
+    "lint": "standard --plugin html 'src/**/*.{js,vue}'",
     "e2e": "playwright test",
     "e2e-ci": "playwright install --with-deps && playwright test",
     "serve-http": "http-server ./public -p 8080",
