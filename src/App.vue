@@ -8,7 +8,6 @@
          :msg="item.msg"
          @dismiss="removeNotification(item.id)"></notification>
     </div>
-    <!-- <b-loading :active="isLoading"></b-loading> -->
     <router-view></router-view>
     <site-footer v-if="shouldShowFooter"></site-footer>
   </div>

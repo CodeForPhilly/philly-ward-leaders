@@ -69,24 +69,25 @@
                 ({{ turnoutTotalPercent }}%)
               </dd>
 
-              <dt>
+              <!-- <dt>
                 <abbr v-tooltip="'How many divisions make up the ward'">
                   Divisions
                 </abbr>
-              </dt>
+              </dt> -->
               <dd>{{ wardBoundaries.features.length }}</dd>
 
-              <dt>
+              <!-- <dt>
                 <abbr v-tooltip="'Each division elects 2 committee persons'">
                   Committee Persons
                 </abbr>
-              </dt>
+              </dt> -->
               <dd>
                 {{ committeePersonCount }}
                 ({{ vacanciesCount }}
-                <abbr v-tooltip="'Each division elects 2 committee persons'">
+                <!-- <abbr v-tooltip="'Each division elects 2 committee persons'">
                   vacancies
-                </abbr>)
+                </abbr> -->
+                )
               </dd>
             </dl>
           </div>
@@ -196,8 +197,8 @@
       </div>
     </section>
 
-    <section class="section">
-      <ward-map
+    <section v-if="wardBoundaries">
+      <ward-map style="height: 350px; margin: 10px"
         :ward="leader.ward"
         :boundaries="wardBoundaries"
         :committeePersons="committeePersons"></ward-map>

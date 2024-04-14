@@ -5,22 +5,24 @@
     :zoom="zoom"
     :center="center"
     :options="mapOpts"
+    :use-global-leaflet="false"
     ref="map">
-    <l-tilelayer
+    <l-tile-layer
       :url="url"
       :attribution="attribution"
-      :params="tileOpts"></l-tilelayer>
-    <l-geojson-layer
+      :params="tileOpts"></l-tile-layer>
+    <l-geo-json
+      v-if="isBoundariesLoaded"
       :geojson="boundaries"
       :options="geojsonOpts"
-      ref="geojson"></l-geojson-layer>
+      ref="geojsonLayer"></l-geo-json>
   </l-map>
 </template>
 
 <script>
 import { LGeoJson, LMap, LTileLayer } from '@vue-leaflet/vue-leaflet'
-
 import { ordinalize } from '../util'
+import "leaflet/dist/leaflet.css";
 
 export default {
   name: 'ward-map',
@@ -36,7 +38,7 @@ export default {
   },
   data () {
     return {
-      zoom: 12,
+      zoom: 14,
       center: [39.9523893, -75.1636291],
       mapOpts: {
         scrollWheelZoom: false
@@ -67,6 +69,7 @@ export default {
   },
   computed: {
     isBoundariesLoaded () {
+      console.log("Boundaries",JSON.stringify(this.boundaries))
       return ('type' in this.boundaries)
     }
   },
@@ -76,10 +79,18 @@ export default {
   updated () {
     this.zoomToWard()
   },
+  watch: {
+    // Watching a single property
+    boundaries(newVal, oldVal) {
+      if (oldVal === undefined) {
+        this.zoomToWard()
+      }
+    }},
   methods: {
     zoomToWard () {
       const map = this.$refs.map
-      const geojsonLayer = this.$refs.geojson
+      const geojsonLayer = this.$refs.geojsonLayer
+      console.log("Hey Hey I am zomming. See my map and geojson",JSON.stringify(map),JSON.stringify(geojsonLayer))
       if (map && geojsonLayer) {
         const bounds = geojsonLayer.getBounds()
         map.fitBounds(bounds)
@@ -89,9 +100,8 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import "leaflet/dist/leaflet.css"
-
-.map
-  height: 350px
+<style>
+.map {
+  height: 400px;
+}
 </style>
