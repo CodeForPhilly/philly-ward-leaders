@@ -1,5 +1,5 @@
 <template>
-  <div v-if="leader.fullName">
+  <div v-if="leader.fullName && wardBoundaries.features">
 
     <section class="hero is-info">
       <div class="hero-body">
@@ -69,24 +69,24 @@
                 ({{ turnoutTotalPercent }}%)
               </dd>
 
-              <!-- <dt>
-                <abbr v-tooltip="'How many divisions make up the ward'">
-                  Divisions
-                </abbr>
-              </dt> -->
+              <dt>
+                <!--    <abbr v-tooltip="'How many divisions make up the ward'"> -->
+                     Divisions
+               <!--      </abbr> -->
+                </dt>
               <dd>{{ wardBoundaries.features.length }}</dd>
 
-              <!-- <dt>
-                <abbr v-tooltip="'Each division elects 2 committee persons'">
+              <dt>
+               <!--  <abbr v-tooltip="'Each division elects 2 committee persons'"> -->
                   Committee Persons
-                </abbr>
-              </dt> -->
+               <!--  </abbr>-->
+              </dt>
               <dd>
                 {{ committeePersonCount }}
                 ({{ vacanciesCount }}
-                <!-- <abbr v-tooltip="'Each division elects 2 committee persons'">
+                <!-- <abbr v-tooltip="'Each division elects 2 committee persons'">  -->
                   vacancies
-                </abbr> -->
+                <!-- </abbr> -->
                 )
               </dd>
             </dl>
@@ -259,7 +259,6 @@ export default {
   computed: {
     ...mapState({
       leader: (state) => state.currentLeader.leader,
-      sampleBallots: (state) => state.currentLeader.sampleBallots,
       committeePersons: (state) => state.currentLeader.committeePersons,
       wardBoundaries: (state) => state.currentLeader.wardBoundaries
     }),
@@ -329,11 +328,10 @@ export default {
   },
   methods: mapActions({
     fetchLeader: 'FETCH_LEADER',
-    fetchSampleBallots: 'FETCH_SAMPLE_BALLOTS',
     fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS',
     fetchWardBoundaries: 'FETCH_WARD_BOUNDARIES'
   }),
-  created () {
+  async created () {
     const opts = {
       party: this.party
     }
@@ -346,10 +344,9 @@ export default {
       opts.ward = this.ward
     }
 
-    this.fetchLeader(opts)
-    this.fetchSampleBallots(opts)
-    this.fetchCommitteePersons(opts)
-    this.fetchWardBoundaries(this.ward) // `ward` prop may include suffix for sub ward
+    await this.fetchLeader(opts)
+    await this.fetchCommitteePersons(opts)
+    await this.fetchWardBoundaries(this.ward) // `ward` prop may include suffix for sub ward
   },
   components: {
     'stats-bar': StatsBar,

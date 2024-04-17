@@ -1,6 +1,5 @@
 <template>
   <l-map
-    v-if="isBoundariesLoaded"
     class="map"
     :zoom="zoom"
     :center="center"
@@ -12,7 +11,7 @@
       :attribution="attribution"
       :params="tileOpts"></l-tile-layer>
     <l-geo-json
-      v-if="isBoundariesLoaded"
+      @ready="zoomToWard"
       :geojson="boundaries"
       :options="geojsonOpts"
       ref="geojsonLayer"></l-geo-json>
@@ -59,7 +58,7 @@ export default {
           fillOpacity: 0.4
         }),
         onEachFeature: (feature, layer) => {
-          const division = +feature.properties.division
+          const division = feature.properties.division
           const ordinal = ordinalize(division)
           const label = `${ordinal} Division`
           layer.bindTooltip(label)
@@ -67,22 +66,13 @@ export default {
       }
     }
   },
-  computed: {
-    isBoundariesLoaded () {
-      console.log("Boundaries",JSON.stringify(this.boundaries))
-      return ('type' in this.boundaries)
-    }
-  },
-  mounted () {
-    this.zoomToWard()
-  },
   updated () {
     this.zoomToWard()
   },
   watch: {
     // Watching a single property
     boundaries(newVal, oldVal) {
-      if (oldVal === undefined) {
+      if (oldVal !== newVal) {
         this.zoomToWard()
       }
     }},
@@ -90,10 +80,9 @@ export default {
     zoomToWard () {
       const map = this.$refs.map
       const geojsonLayer = this.$refs.geojsonLayer
-      console.log("Hey Hey I am zomming. See my map and geojson",JSON.stringify(map),JSON.stringify(geojsonLayer))
       if (map && geojsonLayer) {
-        const bounds = geojsonLayer.getBounds()
-        map.fitBounds(bounds)
+        const bounds = geojsonLayer.leafletObject.getBounds()
+        map.leafletObject.fitBounds(bounds)
       }
     }
   }
