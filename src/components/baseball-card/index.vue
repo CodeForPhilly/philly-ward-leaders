@@ -14,13 +14,13 @@
               <h3>
                 {{ name }}
                 <span class="ward-ordinal">
-                  {{ ward | ordinalize }} Ward
+                  {{ ordinalizedWard }} Ward
                   {{ subWard }}
                 </span>
               </h3>
               <dl>
                 <dt>Voters ({{ partyAbbr }})</dt>
-                <dd v-if="registeredVotersParty">{{ registeredVotersParty | formatNumber }}</dd>
+                <dd v-if="registeredVotersParty">{{ registeredVotersPartyFormatted }}</dd>
                 <dd v-else>Unknown</dd>
 
                 <dt>Turnout ({{ partyAbbr }})</dt>
@@ -76,6 +76,12 @@ export default {
     },
     vacancies () {
       return this.divisionCount * 2 - this.committeePersonCount
+    },
+    registeredVotersPartyFormatted () {
+      return formatNumber(this.registeredVotersParty)
+    },
+    ordinalizedWard () {
+      return ordinalize(this.ward)
     }
   },
   mounted () {
@@ -98,10 +104,6 @@ export default {
       // modifier to work.
       // https://stackoverflow.com/questions/18047353/fix-css-hover-on-iphone-ipad-ipod
     }
-  },
-  filters: {
-    ordinalize,
-    formatNumber
   }
 }
 </script>

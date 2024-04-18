@@ -9,7 +9,7 @@
             <span v-if="leader.nickname"><br />({{ leader.nickname }})</span>
           </h1>
           <h2 class="subtitle">
-            {{ leader.ward | ordinalize }}
+            {{ ordinalizeNumber(leader.ward) }}
             <span v-if="leader.subWard">({{ leader.subWard }})</span>
             Ward Leader,
             {{ partyTitle }} Party
@@ -51,20 +51,20 @@
             <dl>
               <dt>Registered voters</dt>
               <dd>
-                {{ leader.registeredVotersParty | formatNumber }}
+                {{ formatNumber(leader.registeredVotersParty) }}
                 {{ partyPlural }} of
-                {{ leader.registeredVotersTotal | formatNumber }}
+                {{ formatNumber(leader.registeredVotersTotal) }}
                 total
                 ({{ registeredVotersPercent }}%)
               </dd>
 
               <dt>Turnout ({{ turnoutElection }})</dt>
               <dd>
-                {{ leader.turnoutParty | formatNumber }}
+                {{ formatNumber(leader.turnoutParty) }}
                 {{ partyPlural }}
                 ({{ turnoutPartyPercent }}%)
                 <br>
-                {{ leader.turnoutTotal | formatNumber }}
+                {{ formatNumber(leader.turnoutTotal) }}
                 total
                 ({{ turnoutTotalPercent }}%)
               </dd>
@@ -326,11 +326,19 @@ export default {
       return this.allCommitteePersons.filter((p) => p.fullName === 'VACANT').length
     }
   },
-  methods: mapActions({
+  methods: {
+   ...mapActions({
     fetchLeader: 'FETCH_LEADER',
     fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS',
     fetchWardBoundaries: 'FETCH_WARD_BOUNDARIES'
-  }),
+    }),
+    ordinalizeNumber(number) {
+      return ordinalize(number)
+    },
+    formatNumber(number) {
+      return formatNumber(number)
+    }
+  },
   async created () {
     const opts = {
       party: this.party
@@ -353,10 +361,6 @@ export default {
     'committee-person': CommitteePerson,
     'ward-map': WardMap,
     'ask-detail': AskDetail
-  },
-  filters: {
-    formatNumber,
-    ordinalize
   }
 }
 
