@@ -70,23 +70,23 @@
               </dd>
 
               <dt>
-                <!--    <abbr v-tooltip="'How many divisions make up the ward'"> -->
+                <span class="explanation" title="How many divisions make up the ward">
                      Divisions
-               <!--      </abbr> -->
-                </dt>
+                </span>
+              </dt>
               <dd>{{ wardBoundaries.features.length }}</dd>
 
               <dt>
-               <!--  <abbr v-tooltip="'Each division elects 2 committee persons'"> -->
+                <span class="explanation" title="Each division elects 2 committee persons">
                   Committee Persons
-               <!--  </abbr>-->
+                </span>
               </dt>
               <dd>
                 {{ committeePersonCount }}
                 ({{ vacanciesCount }}
-                <!-- <abbr v-tooltip="'Each division elects 2 committee persons'">  -->
+                <span class="explanation" title="Each division elects 2 committee persons">
                   vacancies
-                <!-- </abbr> -->
+                </span>
                 )
               </dd>
             </dl>
@@ -388,7 +388,7 @@ dt
   font-weight: bold
   letter-spacing: 1px
 
-abbr
+.explanation
   border-bottom: dotted 1px #4a4a4a
   cursor: help
 
