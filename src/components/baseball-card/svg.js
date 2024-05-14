@@ -34,7 +34,7 @@ export function createFront (el, data) {
 
   const photoPattern = photo.toPattern()
     .attr({
-      viewBox: [ photoX, photoY, photoWidth, photoHeight ]
+      viewBox: [photoX, photoY, photoWidth, photoHeight]
     })
 
   // Photo container
@@ -64,7 +64,7 @@ export function createFront (el, data) {
       'text-anchor': 'middle',
       'font-family': 'arial',
       'font-size': 12,
-      'fill': config.cardBorderColor
+      fill: config.cardBorderColor
     })
 
   // Ward text line 2
@@ -74,7 +74,7 @@ export function createFront (el, data) {
       'font-family': 'arial',
       'font-weight': 'bold',
       'font-size': 18,
-      'fill': config.cardBorderColor
+      fill: config.cardBorderColor
     })
 
   const nameWidth = config.cardWidth - 19
@@ -82,7 +82,7 @@ export function createFront (el, data) {
   const nameText = svg.text(nameWidth, nameHeight, data.name)
     .attr({
       'text-anchor': 'end',
-      'fill': config.cardBorderColor,
+      fill: config.cardBorderColor,
       'font-size': 22,
       'font-family': 'Arial'
     })

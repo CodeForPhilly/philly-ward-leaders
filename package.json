@@ -6,14 +6,13 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --hot",
+    "preview": "vite build && vite preview --port 8080",
     "build": "vite build",
     "test": "jest --testPathIgnorePatterns ./e2e",
     "lint": "standard --plugin html 'src/**/*.{js,vue}'",
     "e2e": "playwright test",
     "e2e-ci": "playwright install --with-deps && playwright test",
-    "serve-http": "http-server ./public -p 8080",
-    "preview": "vite preview"
+    "serve-http": "vite preview --port 8080"
   },
   "dependencies": {
     "@mapbox/leaflet-pip": "^1.1.0",

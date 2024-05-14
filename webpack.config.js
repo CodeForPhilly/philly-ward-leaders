@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: [ 'babel-polyfill', './src/main.js' ],
+  entry: ['babel-polyfill', './src/main.js'],
   output: {
     path: path.resolve(__dirname, './public'),
     publicPath: '/',
@@ -12,15 +12,15 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: 'vue-loader'
       },
       {
-          test: /\.scss$/,
-          use: [
-            'vue-style-loader',
-            'css-loader',
-            'sass-loader'
-          ]
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.sass$/,
@@ -37,7 +37,7 @@ module.exports = {
             }
           }
         ]
-    },
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -55,9 +55,9 @@ module.exports = {
         loader: 'imports-loader',
         options: {
           wrapper: {
-            thisArg:'window',
-            args:{
-              fix:module.exports=0
+            thisArg: 'window',
+            args: {
+              fix: module.exports = 0
             }
           }
         }
@@ -66,7 +66,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.runtime.esm-bundler.js',
+      vue$: 'vue/dist/vue.runtime.esm-bundler.js',
       snapsvg: 'snapsvg/dist/snap.svg.js'
     }
   },

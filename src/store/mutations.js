@@ -31,7 +31,7 @@ export function FETCH_CONTENT_PAGE_SUCCESS (state, contentPage) {
 }
 
 export function ADD_NOTIFICATION (state, notification) {
-  state.notifications[notification.id] =  notification
+  state.notifications[notification.id] = notification
 }
 
 export function REMOVE_NOTIFICATION (state, id) {

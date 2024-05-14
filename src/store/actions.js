@@ -20,7 +20,7 @@ export async function FETCH_LEADERS (ctx) {
     ctx.commit('FETCH_LEADERS_SUCCESS', leaders)
   } catch (err) {
     logError(err)
-    ctx.dispatch('NOTIFY', `Failed to retrieve ward leaders`)
+    ctx.dispatch('NOTIFY', 'Failed to retrieve ward leaders')
   }
   ctx.commit('END_REQUEST', 'FETCH_LEADERS')
 }
@@ -33,7 +33,7 @@ export async function FETCH_LEADER (ctx, { ward, subWard, party }) {
     ctx.commit('FETCH_LEADER_SUCCESS', leader)
   } catch (err) {
     logError(err)
-    ctx.dispatch('NOTIFY', `Failed to get information about the ward leader`)
+    ctx.dispatch('NOTIFY', 'Failed to get information about the ward leader')
   }
   ctx.commit('END_REQUEST', 'FETCH_LEADER')
 }
@@ -45,7 +45,7 @@ export async function FETCH_SAMPLE_BALLOTS (ctx, { ward, subWard, party }) {
     ctx.commit('FETCH_SAMPLE_BALLOTS_SUCCESS', sampleBallots)
   } catch (err) {
     logError(err)
-    ctx.dispatch('NOTIFY', `Failed to get sample ballots`)
+    ctx.dispatch('NOTIFY', 'Failed to get sample ballots')
   }
   ctx.commit('END_REQUEST', 'FETCH_SAMPLE_BALLOTS')
 }
@@ -57,7 +57,7 @@ export async function FETCH_COMMITTEE_PERSONS (ctx, { ward, subWard, party }) {
     ctx.commit('FETCH_COMMITTEE_PERSONS_SUCCESS', committeePersons)
   } catch (err) {
     logError(err)
-    ctx.dispatch('NOTIFY', `Failed to get list of committee persons`)
+    ctx.dispatch('NOTIFY', 'Failed to get list of committee persons')
   }
   ctx.commit('END_REQUEST', 'FETCH_COMMITTEE_PERSONS')
 }
@@ -81,7 +81,7 @@ export async function FETCH_CITYWIDE_BOUNDARIES (ctx) {
     ctx.commit('FETCH_CITYWIDE_BOUNDARIES_SUCCESS', citywideBoundaries)
   } catch (err) {
     logError(err)
-    ctx.dispatch('NOTIFY', `Failed to retrieve ward boundaries`)
+    ctx.dispatch('NOTIFY', 'Failed to retrieve ward boundaries')
   }
   ctx.commit('END_REQUEST', 'FETCH_CITYWIDE_BOUNDARIES')
 }
@@ -93,7 +93,7 @@ export async function FETCH_CONTENT_PAGE (ctx, slug) {
     ctx.commit('FETCH_CONTENT_PAGE_SUCCESS', contentPage)
   } catch (err) {
     logError(err)
-    ctx.dispatch('NOTIFY', `Failed to retrieve content`)
+    ctx.dispatch('NOTIFY', 'Failed to retrieve content')
   }
   ctx.commit('END_REQUEST', 'FETCH_CONTENT_PAGE')
 }

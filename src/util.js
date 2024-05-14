@@ -14,7 +14,7 @@ export function ordinalize (value) {
 
 export function slugify (value) {
   return value.toString().toLowerCase().trim()
-    .replace(/[^a-zA-Z0-9]/g, '-')  // Replace non-alphanumeric chars with -
-    .replace(/--+/g, '-')         // Replace multiple - with single -
-    .replace(/^-|-$/i, '')        // Remove leading/trailing hyphen
+    .replace(/[^a-zA-Z0-9]/g, '-') // Replace non-alphanumeric chars with -
+    .replace(/--+/g, '-') // Replace multiple - with single -
+    .replace(/^-|-$/i, '') // Remove leading/trailing hyphen
 }
