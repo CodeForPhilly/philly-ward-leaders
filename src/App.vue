@@ -53,6 +53,7 @@ export default {
 @import "bulma/sass/utilities/initial-variables"
 
 $blue: #04576F
+
 $light-blue: #2284a1
 
 $navbar-background-color: $light-blue
@@ -60,6 +61,9 @@ $navbar-item-color: $white
 $primary: $light-blue
 
 @import "bulma/bulma.sass"
+
+.hero.is-info
+  background-color: #04576F
 
 .navbar-burger span,
 .navbar-burger.is-active span
