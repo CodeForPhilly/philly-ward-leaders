@@ -1,13 +1,9 @@
 {
   "presets": [
     ["@babel/preset-env", {
-      modules: false,
-      useBuiltIns: "entry",
-      targets: {
-        browsers: [
-          '> 1%',
-          'last 2 versions'
-        ]
+      "useBuiltIns": "entry",
+      "targets": {
+        "node": "current"
       }
     }]
   ],
@@ -18,7 +14,7 @@
     "test": {
        "presets": [
         ["env", {
-          targets: {
+          "targets": {
             "node": "current"
           }
         }]
