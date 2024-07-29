@@ -1,8 +1,5 @@
 import { mount,shallowMount,RouterLinkStub, renderToString  } from '@vue/test-utils'
-//import router from '../../src/router'
-
 import BaseballCard from '../../src/components/baseball-card/index.vue'
-import { createSSRApp } from 'vue'
 
 describe('Baseball card', () => {
   it('Matches snapshot', async () => {

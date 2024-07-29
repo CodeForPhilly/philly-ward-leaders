@@ -68,38 +68,5 @@
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "<rootDir>/tests/app.spec.js"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "vue"
-    ],
-    "transform": {
-      ".*\\.(vue)$": "<rootDir>node_modules/jest-vue",
-      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
-    },
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/jest-serializer-vue"
-    ],
-    "mapCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.{js,vue}"
-    ]
-  },
-  "standard": {
-    "globals": [
-      "describe",
-      "it",
-      "expect",
-      "jest",
-      "test",
-      "beforeEach",
-      "FormData"
-    ]
   }
 }
