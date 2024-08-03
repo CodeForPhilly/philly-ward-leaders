@@ -25,6 +25,7 @@ module.exports = {
     testEnvironment: 'jsdom',
     testEnvironmentOptions: {
       customExportConditions: ["node", "node-addons"],
-    setupFiles: ['jest.setup.js']
+    setupFiles: ['jest.setup.js'],
+    verbose: true
    }
   }
