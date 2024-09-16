@@ -27,5 +27,8 @@ module.exports = {
       customExportConditions: ["node", "node-addons"],
     setupFiles: ['jest.setup.js'],
     verbose: true
-   }
+   },
+   moduleNameMapper: {
+    '\\.(css|less)$': '<rootDir>/tests/testMocks.js'
   }
+}

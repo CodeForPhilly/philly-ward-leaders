@@ -135,7 +135,8 @@
                 <span class="unknown">Unknown</span>
                 <ask-detail
                   :thePage="feedbackPage"
-                  detail="Occupation"></ask-detail>
+                  detail="Occupation">
+                </ask-detail>
               </dd>
             </dl>
           </div>
