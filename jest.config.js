@@ -12,6 +12,7 @@ module.exports = {
       "json",
       "vue"
     ],
+    transformIgnorePatterns: ['node_modules/(?!(nanoid)/)'],
     transform: {
       ".*\\.(vue)$": "@vue/vue3-jest",
       "^.+\\.js$": "babel-jest"
