@@ -19,3 +19,4 @@ public/build
 /test-results/
 /playwright-report/
 /playwright/.cache/
+cypress/screenshots/baseball-card.cy.js
