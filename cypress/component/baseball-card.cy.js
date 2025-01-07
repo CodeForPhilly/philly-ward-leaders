@@ -69,8 +69,20 @@ describe('BaseballCard Component', () => {
 
     cy.mount(BaseballCard, { props });
 
-    // Simulate hover interaction
+    // // Simulate hover interaction
+    cy.get('.front').should('have.css', 'transform', 'matrix(1, 0, 0, 1, 0, 0)');
+    
+    // Check that the back side is rotated out of view
+    cy.get('.back').should('have.css', 'transform', 'matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1)');
+  
+
     cy.get('.flip-container').trigger('mouseover');
+    
+    // Check that the back side is now visible
     cy.get('.back').should('have.css', 'transform', 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)');
+    
+    // Check that the front side is now rotated out of view
+    cy.get('.front').should('have.css', 'transform', 'matrix3d(-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)');
+  
   });
-});
+})
