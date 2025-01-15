@@ -77,16 +77,18 @@ describe('BaseballCard Component', () => {
     cy.get('.back').should('have.css', 'transform', 'matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1)')
       .and('not.be.visible');
 
-    cy.get('.flip-container').realHover().should(($div) => {
-      expect($div.find('.front')).to.not.be.visible;
+    cy.get('.flip-container').realHover().find('.front').should(($front) => {
+      expect($front).to.not.be.visible;
+      expect($front).to.be.hidden;
+      //expect($front).to.have.css('transform', 'matrix3d(-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)');
     });
+    // Still flipped.
+    cy.get('.front').should('be.hidden');
 
-    // Check that the back side is now visible
-//    cy.get('.back').realHover().should('have.css', 'transform', 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)');
-
-    // Check that the front side is now rotated out of view
- //   cy.get('.flipcontainer').realHover().should('not.be.visible');
-//.should('have.css', 'transform', 'matrix3d(-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)');
+    cy.get('.flip-container').realHover().find('.back').should(($back) => {
+      expect($back).to.be.visible;
+      //expect($back).to.have.css('transform', 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)');
+    });
 
   });
 })
