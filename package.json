@@ -13,6 +13,7 @@
     "e2e": "playwright test",
     "e2e-ci": "playwright install --with-deps && playwright test",
     "serve-http": "vite preview --port 8080",
+    "cy:open": "cypress open",
     "cy:run": "cypress run --component"
   },
   "dependencies": {
@@ -51,6 +52,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "cypress": "^13.17.0",
+    "cypress-real-events": "^1.13.0",
     "eslint-plugin-html": "^7.1.0",
     "file-loader": "^6.2.0",
     "http-server": "^14.1.1",
