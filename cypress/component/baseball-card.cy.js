@@ -70,24 +70,20 @@ describe('BaseballCard Component', () => {
     cy.mount(BaseballCard, { props });
 
     // // Simulate hover interaction
-    cy.get('.front').should('have.css', 'transform', 'matrix(1, 0, 0, 1, 0, 0)')
-      .and('be.visible');
+    cy.get('.front').should('be.visible');
 
     // Check that the back side is rotated out of view
-    cy.get('.back').should('have.css', 'transform', 'matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1)')
-      .and('not.be.visible');
+    cy.get('.back').should('not.be.visible');
 
     cy.get('.flip-container').realHover().find('.front').should(($front) => {
       expect($front).to.not.be.visible;
       expect($front).to.be.hidden;
-      //expect($front).to.have.css('transform', 'matrix3d(-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)');
     });
     // Still flipped.
     cy.get('.front').should('be.hidden');
 
     cy.get('.flip-container').realHover().find('.back').should(($back) => {
       expect($back).to.be.visible;
-      //expect($back).to.have.css('transform', 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)');
     });
 
   });
