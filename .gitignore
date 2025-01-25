@@ -20,3 +20,4 @@ public/build
 /playwright-report/
 /playwright/.cache/
 cypress/screenshots/*
+cypress/videos/*
