@@ -1,6 +1,10 @@
 let store;  
 describe('E2E Tests', () => {
-   
+  let demLeader;
+  let repLeader;
+  let demURL;
+  let repURL;
+  
   describe('Ward Leaders List', () => {
     beforeEach(() => {
       // Visit the page before each test
@@ -34,12 +38,15 @@ describe('E2E Tests', () => {
         const democrats = leaders.filter((leader) => leader.party === 'democratic');
         // Select random leader for each party
         const [demIndex,repIndex] = [democrats,republicans].map(party => Math.floor(Math.random() * party.length))
-        const demLeader = democrats[demIndex];
-        const repLeader = republicans[repIndex];
+        demLeader = democrats[demIndex];
+        repLeader = republicans[repIndex];
         
         // Update ward if subward for selected leader is not null
         demLeader.ward = !demLeader.subWard ? demLeader.ward : `${demLeader.ward}${demLeader.subWard}`;
         repLeader.ward = !repLeader.subWard ? repLeader.ward : `${repLeader.ward}${repLeader.subWard}`;
+
+        demURL = `/leaders/democratic/${demLeader.ward}/${demLeader.fullName.replace(/\s/g, '-').toLowerCase()}`
+        repURL = `/leaders/republican/${repLeader.ward}/${repLeader.fullName.replace(/\s/g, '-').toLowerCase()}`
         
         // Check data on page for randomly selected leader matches API response and validate correct leader page opens when clicking on leader
         cy.get('.column').should('have.length', democrats.length);
@@ -47,7 +54,7 @@ describe('E2E Tests', () => {
           cy.get('h3').should('contain',demLeader.fullName);
           cy.get('.is-info')
             .invoke('attr', 'href')
-            .should('eq', `/leaders/democratic/${demLeader.ward}/${demLeader.fullName.replace(/\s/g, '-').toLowerCase()}`);
+            .should('eq', demURL );
         });
         
         cy.visit('/leaders/democratic'); // Goes back to Leaders page
@@ -58,7 +65,7 @@ describe('E2E Tests', () => {
           cy.get('h3').should('contain',republicans[repIndex].fullName);
           cy.get('.is-info')
             .invoke('attr', 'href')
-            .should('eq', `/leaders/republican/${repLeader.ward}/${repLeader.fullName.replace(/\s/g, '-').toLowerCase()}`);
+            .should('eq', repURL );
         });
         //
       });
@@ -68,7 +75,7 @@ describe('E2E Tests', () => {
 
   describe('Homepage', () => {
     it('has "Philly Ward Leaders" as the page title and clicking "Get started" navigates to "/leaders/democratic"', () => {
-      cy.visit('http://localhost:5173');
+      cy.visit('/');
   
       // Assert the page title
       cy.title().should('eq', 'Philly Ward Leaders');
@@ -82,5 +89,56 @@ describe('E2E Tests', () => {
       cy.url().should('include', '/leaders/democratic');
     });
   });
+
+  describe('Ward Leader Page', () => {
+    beforeEach(() => {
+      cy.visit(`/leaders/democratic/${demLeader.ward}/${demLeader.fullName.replace(/\s/g, '-').toLowerCase()}`);
+    });
+  
+    it('should display the leaders name and ward information', () => {
+      cy.get('.hero').find('.title').should('be.visible');
+      cy.get('.hero').find('.title').should('contain.text',demLeader.fullName);
+      cy.get('.hero').find('.subtitle').should('contain.text', 'Ward Leader');
+      cy.get('.hero').find('.subtitle').should('contain.text',demLeader.ward);
+    });
+  
+    it('should show statistics in the stats bar', () => {
+      cy.get('.stats-bar').should('be.visible');
+      cy.get('.stats-bar').within(() => {
+        cy.contains('Divisions');
+        cy.contains('Voters');
+      });
+    });
+  
+    it('should display leaders contact details if available', () => {
+      cy.get('dt').contains('Address').next('dd').should('exist');
+      cy.get('dt').contains('Phone').next('dd').should('exist');
+      cy.get('dt').contains('Email').next('dd').within(() => {
+        cy.get('a').should('have.attr', 'href').and('include', 'mailto:');
+      });
+    });
+  
+    it('should display placeholders when information is missing', () => {
+      if (Object.values(demLeader).some(value => !value)) {
+        cy.get('.unknown').should('have.length.at.least', 1);
+      }
+    });
+  
+    it('should list committee persons with names and divisions', () => {
+      cy.get('.committee-person').should('have.length.at.least', 1);
+      cy.get('.committee-person').first().within(() => {
+        cy.get('.title').should('be.visible');
+        cy.get('.subtitle').should('be.visible');
+        cy.get('.content').should('be.visible');
+      });
+    });
+  
+    it('should show social media links if available', () => {
+      cy.get('dt').contains('Social Media').next('dd').within(() => {
+        cy.get('a').should('have.length.at.least', 1);
+      });
+    });
+  });
+  
   
 });

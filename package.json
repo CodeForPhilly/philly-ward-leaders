@@ -14,7 +14,8 @@
     "e2e-ci": "playwright install --with-deps && playwright test",
     "serve-http": "vite preview --port 8080",
     "cy:open": "cypress open",
-    "cy:run": "cypress run --component"
+    "cy:run": "cypress run --component",
+    "cy:e2e": "cypress run --e2e"
   },
   "dependencies": {
     "@mapbox/leaflet-pip": "^1.1.0",
