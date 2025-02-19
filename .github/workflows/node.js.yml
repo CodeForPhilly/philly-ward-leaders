@@ -31,7 +31,11 @@ jobs:
     - run: npm run build
     - run: npm run cy:run
 #    - run: npm test
-    - run: npm run serve-http && npm run e2e-ci
+    - name: Cypress e2e run
+      uses: cypress-io/github-action@v6
+      with:
+        start: npm run serve-http
+#    - run: npm run serve-http && npm run e2e-ci
     - name: Upload E2E Test Report
       uses: actions/upload-artifact@v4
       if: always()
