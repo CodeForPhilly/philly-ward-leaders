@@ -20,5 +20,8 @@ export default defineConfig({
   build: {
     outDir: './build'
   },
-  plugins: [vue()]
+  plugins: [vue()],
+  server: {
+    port: 8080,
+  },
 })
