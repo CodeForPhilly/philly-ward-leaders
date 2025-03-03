@@ -30,16 +30,14 @@ jobs:
 #    - run: npm run lint
     - run: npm run build
     - run: npm run cy:run
-#    - run: npm test
     - name: Cypress e2e run
       uses: cypress-io/github-action@v6
       with:
         start: npm run serve-http
-#    - run: npm run serve-http && npm run e2e-ci
     - name: Upload E2E Test Artifacts
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: e2e_tests.cy.js.mp4
+        name: e2e_tests
         path: cypress/videos/e2e_tests.cy.js.mp4
         retention-days: 30
