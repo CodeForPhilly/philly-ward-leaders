@@ -7,16 +7,16 @@ These endorsements are determined by Ward Leaders, and have a huge influence ove
 
 # Local development
 
-This project currently requires outdated node and npm versions to build.
+This project currently uses node version 20 to build.
 
-Use Docker to start up a container that has working versions. The lines with ">"
+You can use Docker to start up a container that has node 20 if you don't have it for local development. The lines with ">"
 are in the native shell, the lines with ~ are in Docker.
 
 ```bash
 # Build and start the Docker container.
->  docker-compose build
->  docker-compose up -d
->  docker-compose exec ward-leaders bash
+>  docker compose build
+>  docker compose up -d
+>  docker compose exec ward-leaders bash
 
 # Install dependencies in the Docker container
 ~ npm ci
@@ -35,7 +35,7 @@ are in the native shell, the lines with ~ are in Docker.
 # Exit docker and stop the container
 ~ exit
 
->  docker-compose down
+>  docker compose down
 ```
 
 # Technical overview
@@ -55,14 +55,11 @@ While this application runs in the browser, completely client-side, [Node.js](ht
 **Contentful**
 Poking around [their website](https://www.contentful.com/) may be enough, but it would be helpful to create a free account and poke around to make sure you understand the concept of a CMS-as-a-Service.
 
-**Webpack**
-[Webpack](https://webpack.js.org/) is a tool that aids you in pulling your hair out, building up frustration, and considering leaving front-end development behind for good. You can also use it to combine JavaScript modules into a bundled file that can be run in the browser. In this project it’s also used to run a local development server. Webpack can do *a ton* of things, and one of the trade-offs is that it’s rather confusing to configure and debug.
+**Vite**
+[Vite](https://vite.dev/guide/) Is used to build and combine JavaScript modules into a bundled file that can be run in the browser. In this project it’s also used to run a local development server and the server for e2e tests.
 
 **Modern JavaScript features**
 This application is written in modern JavaScript (ES2015-ES2017) with language features such as [arrow functions](https://github.com/DrkSephy/es6-cheatsheet#arrow-functions), [destructuring](https://github.com/DrkSephy/es6-cheatsheet#destructuring), [object spread operator](https://codeburst.io/master-javascripts-object-spread-operator-3803430e99aa), and [async/await](http://nikgrozev.com/2017/10/01/async-await/). 
-
-**Babel**
-[Babel](https://babeljs.io/) allows us to support older browsers by transpiling our modern source code into source code that is more widely supported.
 
 **Vue.js**
 We chose this framework because it’s relatively easy to get up-to-speed in, even if you’ve never used a JS framework before. But there are probably a few Vue.js-only things you’ll find yourself scratching your head about if it’s your first Vue.js app. It would be worth reading through their [really great guide](https://vuejs.org/v2/guide/).
@@ -76,6 +73,9 @@ We use Vue.js’ official centralized state management library, vuex. If you’r
 **Vue-router**
 If you’ve used a router before, whether in JS or a server-side environment, this should seem pretty familiar. But it will be helpful to have the [vue-router docs](https://router.vuejs.org/en/) handy for anything that’s not obvious.
 
+**Testing**
+[Cypress](https://www.cypress.io/) Only the Cypress component and e2e tests are currently being utilized. The tests are run automatically using github actions, but also can be run locally with npm.
+
 ## Directory structure
 ```
 .
@@ -84,10 +84,11 @@ If you’ve used a router before, whether in JS or a server-side environment, th
 ├── README.md
 ├── data-scripts
 ├── package.json
+├── index.html
 ├── public
 │   ├── data
 │   ├── CNAME
-│   ├── index.html
+│   ├── 404.html
 ├── src
 │   ├── App.vue
 │   ├── api
@@ -103,14 +104,15 @@ If you’ve used a router before, whether in JS or a server-side environment, th
 │   │   └── mutations.js
 │   ├── util.js
 │   └── views
-├── tests
-└── webpack.config.js
+├── cypress
+└── vite.config.js
 ```
 
 ## `src` directory
 | **File / directory** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `public`             | The directory that gets deployed. It includes the static `index.html` in source control, but the `build` script will put additional (compiled) files into this directory.                                                                                                                                                                                                                                                                                            |
+| `index.html`         | Vite uses this as the basis for serving the site. Inline JS code works together with code in 404.html to made this work as a single page app on github pages.
+| `public`             | Static assests that are copied to the build to be deployed. The `build` script will put additional (compiled) files together with these files and `index.html` in a `build/` directory.                                                                                                                                                                                                                                                                                            |
 | `public/data`        | Static data files that are requested dynamically by the application (at runtime).                                                                                                                                                                                                                                                                                                                                                                                    |
 | `main.js`            | Primary entry point for the app. Initializes router, store, and the top-level Vue component, mounting it to the `#app` element in `index.html`.                                                                                                                                                                                                                                                                                                                      |
 | `App.vue`            | Top-level Vue component. Provides the layout for the site, including the nav bar, loading indicator, and space for the current route’s view. Also sets up the site’s core styles.                                                                                                                                                                                                                                                                                    |

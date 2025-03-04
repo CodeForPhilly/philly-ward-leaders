@@ -43,7 +43,6 @@ export default {
   components: {
     'nav-bar': NavBar,
     'notification': Notification,
-    // 'b-loading': Buefy.Loading,
     'site-footer': SiteFooter
   }
 }
