@@ -21,8 +21,8 @@ are in the native shell, the lines with ~ are in Docker.
 # Install dependencies in the Docker container
 ~ npm ci
 
-# In Docker, serve with hot reload at localhost:8080
-~ npm start
+# In Docker, serve at localhost:8080
+~ npm run dev
 
 # Inital load of the app in your browser is slow, fyi.
 # The dev server has hot reload - you should see any
@@ -62,13 +62,13 @@ Poking around [their website](https://www.contentful.com/) may be enough, but it
 This application is written in modern JavaScript (ES2015-ES2017) with language features such as [arrow functions](https://github.com/DrkSephy/es6-cheatsheet#arrow-functions), [destructuring](https://github.com/DrkSephy/es6-cheatsheet#destructuring), [object spread operator](https://codeburst.io/master-javascripts-object-spread-operator-3803430e99aa), and [async/await](http://nikgrozev.com/2017/10/01/async-await/). 
 
 **Vue.js**
-We chose this framework because it’s relatively easy to get up-to-speed in, even if you’ve never used a JS framework before. But there are probably a few Vue.js-only things you’ll find yourself scratching your head about if it’s your first Vue.js app. It would be worth reading through their [really great guide](https://vuejs.org/v2/guide/).
+We chose this framework because it’s relatively easy to get up-to-speed in, even if you’ve never used a JS framework before. But there are probably a few Vue.js-only things you’ll find yourself scratching your head about if it’s your first Vue.js app. It would be worth reading through their [really great guide](https://vuejs.org/guide/introduction.html). This project was initially developed with Vue 2 and later upgraded to Vue 3. It uses the Options API.
 
 **Composing components**
 This is a concept that you’ll already know if you’ve used React, Angular, choo, or other modern JS frameworks. If not, you’ll come across it [in the Vue.js guide](https://vuejs.org/v2/guide/#Composing-with-Components). [React’s docs](https://reactjs.org/docs/thinking-in-react.html) are also helpful for the concept.
 
 **Vuex**
-We use Vue.js’ official centralized state management library, vuex. If you’re familiar with flux, redux, or elm, this will be pretty recognizable. If it’s your first time with centralized state management, this may be the most complex concept. Read over the [vuex docs](https://vuex.vuejs.org/en/) — specifically “What is vuex?”
+We use Vue.js’ centralized state management library, vuex. If you’re familiar with flux, redux, or elm, this will be pretty recognizable. If it’s your first time with centralized state management, this may be the most complex concept. Read over the [vuex docs](https://vuex.vuejs.org/en/) — specifically “What is vuex?”
 
 **Vue-router**
 If you’ve used a router before, whether in JS or a server-side environment, this should seem pretty familiar. But it will be helpful to have the [vue-router docs](https://router.vuejs.org/en/) handy for anything that’s not obvious.
@@ -106,6 +106,7 @@ If you’ve used a router before, whether in JS or a server-side environment, th
 │   └── views
 ├── cypress
 └── vite.config.js
+└── cypress.config.js
 ```
 
 ## `src` directory
