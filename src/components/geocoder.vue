@@ -100,5 +100,5 @@ function eventsBinder (vueElement, leaflet, events) {
 </script>
 
 <style>
-@import '~leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen.css';
+@import 'leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen.css';
 </style>

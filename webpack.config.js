@@ -1,9 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
-const MinifyPlugin = require('babel-minify-webpack-plugin')
 
 module.exports = {
-  entry: [ 'babel-polyfill', './src/main.js' ],
+  entry: ['babel-polyfill', './src/main.js'],
   output: {
     path: path.resolve(__dirname, './public'),
     publicPath: '/',
@@ -13,13 +12,31 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+        loader: 'vue-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.sass$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              indentedSyntax: true,
+              sassOptions: {
+                indentedSyntax: true
+              }
+            }
           }
-        }
+        ]
       },
       {
         test: /\.js$/,
@@ -35,13 +52,21 @@ module.exports = {
       },
       {
         test: require.resolve('snapsvg/dist/snap.svg.js'),
-        use: 'imports-loader?this=>window,fix=>module.exports=0'
+        loader: 'imports-loader',
+        options: {
+          wrapper: {
+            thisArg: 'window',
+            args: {
+              fix: module.exports = 0
+            }
+          }
+        }
       }
     ]
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
+      vue$: 'vue/dist/vue.runtime.esm-bundler.js',
       snapsvg: 'snapsvg/dist/snap.svg.js'
     }
   },
@@ -53,7 +78,7 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map',
+  devtool: 'eval-source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
@@ -65,11 +90,5 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.mode = 'production'
-  module.exports.devtool = '#cheap-source-map' // See https://github.com/webpack-contrib/babel-minify-webpack-plugin/issues/68
-  module.exports.plugins = module.exports.plugins.concat([
-    new MinifyPlugin({}, { sourceMap: true }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
-  ])
+  module.exports.devtool = 'cheap-source-map'
 }

@@ -41,13 +41,13 @@ export default class Api {
     if (subWard) requestOpts['fields.subWard'] = subWard
 
     return this.client.getEntries(requestOpts)
-    .then((response) => {
-      if (response.items.length > 0) {
-        return simplifyLinkedItems(getFieldsAndId(response.items[0]))
-      } else {
-        throw new Error('Ward leader was not found')
-      }
-    })
+      .then((response) => {
+        if (response.items.length > 0) {
+          return simplifyLinkedItems(getFieldsAndId(response.items[0]))
+        } else {
+          throw new Error('Ward leader was not found')
+        }
+      })
   }
 
   fetchSampleBallots (ward, subWard, party) {
@@ -59,7 +59,7 @@ export default class Api {
     if (subWard) requestOpts['fields.subWard'] = subWard
 
     return this.client.getEntries(requestOpts)
-    .then((response) => response.items.map(getFieldsAndId))
+      .then((response) => response.items.map(getFieldsAndId))
   }
 
   fetchCommitteePersons (ward, party) {
@@ -71,7 +71,7 @@ export default class Api {
     }
 
     return this.client.getEntries(requestOpts)
-    .then((response) => response.items.map(getFieldsAndId))
+      .then((response) => response.items.map(getFieldsAndId))
   }
 
   fetchContentPage (slug) {
@@ -79,13 +79,13 @@ export default class Api {
       content_type: 'page',
       'fields.slug': slug
     })
-    .then((response) => {
-      if (response.items.length > 0) {
-        return getFieldsAndId(response.items[0])
-      } else {
-        throw new Error('Page not found')
-      }
-    })
+      .then((response) => {
+        if (response.items.length > 0) {
+          return getFieldsAndId(response.items[0])
+        } else {
+          throw new Error('Page not found')
+        }
+      })
   }
 
   fetchWardBoundaries (ward) {
@@ -95,7 +95,7 @@ export default class Api {
   }
 
   fetchCitywideBoundaries () {
-    const url = `/data/citywide-boundaries.geojson`
+    const url = '/data/citywide-boundaries.geojson'
     return axios.get(url)
       .then((response) => response.data)
   }

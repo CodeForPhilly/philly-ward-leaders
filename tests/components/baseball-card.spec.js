@@ -1,10 +1,8 @@
-import { mount } from '@vue/test-utils'
-import { createRenderer } from 'vue-server-renderer'
-
+import { mount,shallowMount,RouterLinkStub, renderToString  } from '@vue/test-utils'
 import BaseballCard from '../../src/components/baseball-card/index.vue'
 
 describe('Baseball card', () => {
-  it('Matches snapshot', () => {
+  it('Matches snapshot', async () => {
     const propsData = {
       name: 'John Doe',
       ward: 1,
@@ -16,15 +14,16 @@ describe('Baseball card', () => {
       divisionCount: 30,
       committeePersonCount: 25
     }
-    const wrapper = mount(BaseballCard, {
+    const htmL_text = await renderToString(BaseballCard, {
       propsData,
-      stubs: ['router-link']
+      stubs: {
+        'router-link': {
+          template: '<a><slot /></a>'
+        }
+      }
     })
-    const renderer = createRenderer()
-    renderer.renderToString(wrapper.vm, (err, str) => {
-      expect(err).toBeNull()
-      expect(str).toMatchSnapshot()
-    })
+    console.log(htmL_text)
+    expect(htmL_text).toMatchSnapshot()
   })
 
   it('Includes subward in URL', () => {
@@ -42,8 +41,7 @@ describe('Baseball card', () => {
     }
     const wrapper = mount(BaseballCard, {
       propsData,
-      stubs: ['router-link']
-    })
+     })
     const url = wrapper.vm.url
     expect(url).toBe('/leaders/democratic/1A/john-doe')
   })

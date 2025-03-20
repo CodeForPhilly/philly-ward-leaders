@@ -4,7 +4,7 @@
       <div class="card-content">
         <p class="title is-4">{{ fullName }}</p>
         <p class="subtitle is-6">
-          <span>{{ division | ordinalize }} Division</span>
+          <span>{{ ordinalizeNumber(division) }} Division</span>
           <span v-if="title">&amp; {{ title }}</span>
         </p>
         <div class="content">
@@ -28,8 +28,10 @@ export default {
     'title',
     'email'
   ],
-  filters: {
-    ordinalize
+  methods: {
+    ordinalizeNumber(number) {
+      return ordinalize(number)
+    }
   }
 }
 </script>

@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+build/
 public/build.js
 public/build.js.map
 public/assets
@@ -8,7 +9,7 @@ yarn-error.log
 data-scripts/venv
 data-scripts/__pycache__
 data-scripts/*.pyc
-
+public/build
 # Editor directories and files
 .idea
 *.suo
@@ -18,3 +19,5 @@ data-scripts/*.pyc
 /test-results/
 /playwright-report/
 /playwright/.cache/
+cypress/screenshots/*
+cypress/videos/*

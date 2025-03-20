@@ -1,52 +1,44 @@
 <template>
-  <v-map
-    class="map citywide-map"
+  <l-map
+    ref="map"
+    class="citywide-map"
     :zoom="zoom"
-    :center="center">
-    <v-tilelayer
+    :center="center"
+    :use-global-leaflet="false">
+    <l-tile-layer
       :url="tileUrl"
       :attribution="tileAttribution"
-      :params="tileOpts"></v-tilelayer>
-    <v-geojson-layer
+      :params="tileOpts"></l-tile-layer>
+    <l-geo-json
       ref="geojsonLayer"
       v-if="isBoundariesLoaded"
       :geojson="boundaries"
-      :options="geojsonOpts"></v-geojson-layer>
-    <v-geocoder
-      :apikey="geocoderApiKey"
-      placeholder="Search an address"
-      expanded
-      @l-select="onSelectAddress"></v-geocoder>
-  </v-map>
+      :options="geojsonOpts"></l-geo-json>
+  </l-map>
 </template>
 
 <script>
-import { Map, TileLayer, GeoJSON } from 'vue2-leaflet'
+import { LMap, LTileLayer, LGeoJson } from '@vue-leaflet/vue-leaflet'
 import { mapState, mapActions, mapGetters } from 'vuex'
-import leafletPip from '@mapbox/leaflet-pip'
 
-import Geocoder from '../components/geocoder.vue'
 import { ordinalize, slugify } from '../util'
-import { MAPZEN_API_KEY } from '../config'
+import "leaflet/dist/leaflet.css";
 
 export default {
   components: {
-    'v-map': Map,
-    'v-tilelayer': TileLayer,
-    'v-geojson-layer': GeoJSON,
-    'v-geocoder': Geocoder
+    LMap,
+    LTileLayer,
+    LGeoJson,
   },
   data () {
     return {
       zoom: 12,
       center: [39.9523893, -75.1636291],
-      geocoderApiKey: MAPZEN_API_KEY,
       tileAttribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> <a href="https://stamen.com/" target="_blank">&copy; Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a> contributors',
       tileUrl: 'https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}.png',
       tileOpts: {
-        subdomains: 'abcd',
-        minZoom: 0,
-        maxZoom: 20
+        minZoom: 11,
+        maxZoom: 100
       },
       geojsonOpts: {
         style: () => ({
@@ -83,23 +75,11 @@ export default {
       fetchCitywideBoundaries: 'FETCH_CITYWIDE_BOUNDARIES',
       fetchLeaders: 'FETCH_LEADERS'
     }),
-    onSelectAddress (evt) {
-      const point = evt.feature.geometry.coordinates
-      const geojsonLayer = this.$refs.geojsonLayer.mapObject
-      const useFirstMatch = true
-      const matches = leafletPip.pointInLayer(point, geojsonLayer, useFirstMatch)
-      if (matches.length > 0) {
-        const match = matches[0]
-        const addressMarker = evt.target.markers[0]
-        addressMarker.bindPopup(match._popup)
-        addressMarker.openPopup()
-      }
-    }
   },
   created () {
     this.fetchCitywideBoundaries()
     this.fetchLeaders()
-  }
+  },
 }
 
 function popupTemplate (ward, democratFullName, republicanFullName) {
@@ -135,12 +115,13 @@ function popupTemplate (ward, democratFullName, republicanFullName) {
 }
 </script>
 
-<style lang="sass">
-@import "~leaflet/dist/leaflet.css"
+<style>
+.citywide-map {
+  position:absolute;
+  height: 100%;
+}
 
-.citywide-map
-  height: calc(100vh - 52px)
-
-.leader-buttons .button
-  width: 100%
+.leader-buttons .button {
+  width: 100%;
+}
 </style>

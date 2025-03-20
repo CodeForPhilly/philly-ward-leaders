@@ -1,5 +1,3 @@
-import Vue from 'vue'
-
 export function FETCH_LEADERS_SUCCESS (state, leaders) {
   state.leaders = leaders
 }
@@ -33,17 +31,17 @@ export function FETCH_CONTENT_PAGE_SUCCESS (state, contentPage) {
 }
 
 export function ADD_NOTIFICATION (state, notification) {
-  Vue.set(state.notifications, notification.id, notification)
+  state.notifications[notification.id] = notification
 }
 
 export function REMOVE_NOTIFICATION (state, id) {
-  Vue.delete(state.notifications, id)
+  delete state.notifications[id]
 }
 
 export function BEGIN_REQUEST (state, name) {
-  Vue.set(state.pendingRequests, name, true)
+  state.pendingRequests[name] = true
 }
 
 export function END_REQUEST (state, name) {
-  Vue.delete(state.pendingRequests, name)
+  delete state.pendingRequests[name]
 }

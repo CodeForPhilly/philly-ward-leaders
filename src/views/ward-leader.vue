@@ -1,5 +1,5 @@
 <template>
-  <div v-if="leader.fullName">
+  <div v-if="leader.fullName && wardBoundaries.features">
 
     <section class="hero is-info">
       <div class="hero-body">
@@ -9,7 +9,7 @@
             <span v-if="leader.nickname"><br />({{ leader.nickname }})</span>
           </h1>
           <h2 class="subtitle">
-            {{ leader.ward | ordinalize }}
+            {{ ordinalizeNumber(leader.ward) }}
             <span v-if="leader.subWard">({{ leader.subWard }})</span>
             Ward Leader,
             {{ partyTitle }} Party
@@ -51,42 +51,43 @@
             <dl>
               <dt>Registered voters</dt>
               <dd>
-                {{ leader.registeredVotersParty | formatNumber }}
+                {{ formatNumber(leader.registeredVotersParty) }}
                 {{ partyPlural }} of
-                {{ leader.registeredVotersTotal | formatNumber }}
+                {{ formatNumber(leader.registeredVotersTotal) }}
                 total
                 ({{ registeredVotersPercent }}%)
               </dd>
 
               <dt>Turnout ({{ turnoutElection }})</dt>
               <dd>
-                {{ leader.turnoutParty | formatNumber }}
+                {{ formatNumber(leader.turnoutParty) }}
                 {{ partyPlural }}
                 ({{ turnoutPartyPercent }}%)
                 <br>
-                {{ leader.turnoutTotal | formatNumber }}
+                {{ formatNumber(leader.turnoutTotal) }}
                 total
                 ({{ turnoutTotalPercent }}%)
               </dd>
 
               <dt>
-                <abbr v-tooltip="'How many divisions make up the ward'">
-                  Divisions
-                </abbr>
+                <span class="explanation" title="How many divisions make up the ward">
+                     Divisions
+                </span>
               </dt>
               <dd>{{ wardBoundaries.features.length }}</dd>
 
               <dt>
-                <abbr v-tooltip="'Each division elects 2 committee persons'">
+                <span class="explanation" title="Each division elects 2 committee persons">
                   Committee Persons
-                </abbr>
+                </span>
               </dt>
               <dd>
                 {{ committeePersonCount }}
                 ({{ vacanciesCount }}
-                <abbr v-tooltip="'Each division elects 2 committee persons'">
+                <span class="explanation" title="Each division elects 2 committee persons">
                   vacancies
-                </abbr>)
+                </span>
+                )
               </dd>
             </dl>
           </div>
@@ -134,7 +135,8 @@
                 <span class="unknown">Unknown</span>
                 <ask-detail
                   :thePage="feedbackPage"
-                  detail="Occupation"></ask-detail>
+                  detail="Occupation">
+                </ask-detail>
               </dd>
             </dl>
           </div>
@@ -196,8 +198,8 @@
       </div>
     </section>
 
-    <section class="section">
-      <ward-map
+    <section v-if="wardBoundaries">
+      <ward-map style="height: 350px; margin: 10px"
         :ward="leader.ward"
         :boundaries="wardBoundaries"
         :committeePersons="committeePersons"></ward-map>
@@ -258,7 +260,6 @@ export default {
   computed: {
     ...mapState({
       leader: (state) => state.currentLeader.leader,
-      sampleBallots: (state) => state.currentLeader.sampleBallots,
       committeePersons: (state) => state.currentLeader.committeePersons,
       wardBoundaries: (state) => state.currentLeader.wardBoundaries
     }),
@@ -326,13 +327,20 @@ export default {
       return this.allCommitteePersons.filter((p) => p.fullName === 'VACANT').length
     }
   },
-  methods: mapActions({
+  methods: {
+   ...mapActions({
     fetchLeader: 'FETCH_LEADER',
-    fetchSampleBallots: 'FETCH_SAMPLE_BALLOTS',
     fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS',
     fetchWardBoundaries: 'FETCH_WARD_BOUNDARIES'
-  }),
-  created () {
+    }),
+    ordinalizeNumber(number) {
+      return ordinalize(number)
+    },
+    formatNumber(number) {
+      return formatNumber(number)
+    }
+  },
+  async created () {
     const opts = {
       party: this.party
     }
@@ -345,20 +353,15 @@ export default {
       opts.ward = this.ward
     }
 
-    this.fetchLeader(opts)
-    this.fetchSampleBallots(opts)
-    this.fetchCommitteePersons(opts)
-    this.fetchWardBoundaries(this.ward) // `ward` prop may include suffix for sub ward
+    await this.fetchLeader(opts)
+    await this.fetchCommitteePersons(opts)
+    await this.fetchWardBoundaries(this.ward) // `ward` prop may include suffix for sub ward
   },
   components: {
     'stats-bar': StatsBar,
     'committee-person': CommitteePerson,
     'ward-map': WardMap,
     'ask-detail': AskDetail
-  },
-  filters: {
-    formatNumber,
-    ordinalize
   }
 }
 
@@ -386,7 +389,7 @@ dt
   font-weight: bold
   letter-spacing: 1px
 
-abbr
+.explanation
   border-bottom: dotted 1px #4a4a4a
   cursor: help
 

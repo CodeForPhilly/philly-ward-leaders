@@ -1,5 +1,4 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 import Splash from '../views/splash.vue'
 import WardLeaderList from '../views/ward-leader-list.vue'
@@ -7,8 +6,6 @@ import WardLeader from '../views/ward-leader.vue'
 import CityMap from '../views/city-map.vue'
 import ContentPage from '../views/content-page.vue'
 import Feedback from '../views/feedback.vue'
-
-Vue.use(VueRouter)
 
 const routes = [
   {
@@ -50,8 +47,8 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
+const router = createRouter({
+  history: createWebHistory(),
   routes,
   scrollBehavior
 })

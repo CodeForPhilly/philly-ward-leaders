@@ -1,12 +1,10 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 
 import router from './router'
 import store from './store'
 
-new Vue({ // eslint-disable-line
-  el: '#app',
-  render: h => h(App),
-  router,
-  store
-})
+const app = createApp(App)
+app.use(store)
+app.use(router)
+app.mount('#app')

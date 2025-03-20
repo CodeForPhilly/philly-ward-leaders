@@ -3,7 +3,7 @@
     <div class="level-item has-text-centered">
       <div>
         <p class="heading">Voters ({{ partyAbbr }})</p>
-        <p class="title">{{ registeredVotersParty | formatNumber }}</p>
+        <p class="title">{{ voterCount }}</p>
       </div>
     </div>
     <div class="level-item has-text-centered">
@@ -40,11 +40,13 @@ export default {
     'division-count',
     'vacancy-count'
   ],
-  computed: mapGetters([
+  computed: {
+    ...mapGetters([
     'partyAbbr'
   ]),
-  filters: {
-    formatNumber
+    voterCount() {
+      return formatNumber(this.registeredVotersParty)
+    }
   }
 }
 </script>

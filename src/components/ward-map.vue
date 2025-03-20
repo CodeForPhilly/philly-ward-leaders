@@ -1,26 +1,27 @@
 <template>
-  <v-map
-    v-if="isBoundariesLoaded"
+  <l-map
     class="map"
     :zoom="zoom"
     :center="center"
     :options="mapOpts"
+    :use-global-leaflet="false"
     ref="map">
-    <v-tilelayer
+    <l-tile-layer
       :url="url"
       :attribution="attribution"
-      :params="tileOpts"></v-tilelayer>
-    <v-geojson-layer
+      :params="tileOpts"></l-tile-layer>
+    <l-geo-json
+      @ready="zoomToWard"
       :geojson="boundaries"
       :options="geojsonOpts"
-      ref="geojson"></v-geojson-layer>
-  </v-map>
+      ref="geojsonLayer"></l-geo-json>
+  </l-map>
 </template>
 
 <script>
-import { Map, TileLayer, GeoJSON } from 'vue2-leaflet'
-
+import { LGeoJson, LMap, LTileLayer } from '@vue-leaflet/vue-leaflet'
 import { ordinalize } from '../util'
+import "leaflet/dist/leaflet.css";
 
 export default {
   name: 'ward-map',
@@ -30,13 +31,13 @@ export default {
     'committeePersons'
   ],
   components: {
-    'v-map': Map,
-    'v-tilelayer': TileLayer,
-    'v-geojson-layer': GeoJSON
+    LMap,
+    LTileLayer,
+    LGeoJson
   },
   data () {
     return {
-      zoom: 12,
+      zoom: 14,
       center: [39.9523893, -75.1636291],
       mapOpts: {
         scrollWheelZoom: false
@@ -57,7 +58,7 @@ export default {
           fillOpacity: 0.4
         }),
         onEachFeature: (feature, layer) => {
-          const division = +feature.properties.division
+          const division = feature.properties.division
           const ordinal = ordinalize(division)
           const label = `${ordinal} Division`
           layer.bindTooltip(label)
@@ -65,33 +66,31 @@ export default {
       }
     }
   },
-  computed: {
-    isBoundariesLoaded () {
-      return ('type' in this.boundaries)
-    }
-  },
-  mounted () {
-    this.zoomToWard()
-  },
   updated () {
     this.zoomToWard()
   },
+  watch: {
+    // Watching a single property
+    boundaries(newVal, oldVal) {
+      if (oldVal !== newVal) {
+        this.zoomToWard()
+      }
+    }},
   methods: {
     zoomToWard () {
       const map = this.$refs.map
-      const geojsonLayer = this.$refs.geojson
+      const geojsonLayer = this.$refs.geojsonLayer
       if (map && geojsonLayer) {
-        const bounds = geojsonLayer.getBounds()
-        map.fitBounds(bounds)
+        const bounds = geojsonLayer.leafletObject.getBounds()
+        map.leafletObject.fitBounds(bounds)
       }
     }
   }
 }
 </script>
 
-<style lang="sass">
-@import "~leaflet/dist/leaflet.css"
-
-.map
-  height: 350px
+<style>
+.map {
+  height: 400px;
+}
 </style>

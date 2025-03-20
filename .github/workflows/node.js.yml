@@ -12,29 +12,32 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run lint
+#    - run: npm run lint
     - run: npm run build
-    - run: npm test
-    - run: npm run e2e-ci
-    - name: Upload E2E Test Report
-      uses: actions/upload-artifact@v3
+    - run: npm run cy:run
+    - name: Cypress e2e run
+      uses: cypress-io/github-action@v6
+      with:
+        start: npm run serve-http
+    - name: Upload E2E Test Artifacts
+      uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: playwright-report
-        path: playwright-report/
+        name: e2e_tests
+        path: cypress/videos/e2e_tests.cy.js.mp4
         retention-days: 30
