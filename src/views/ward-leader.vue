@@ -1,6 +1,5 @@
 <template>
   <div v-if="leader.fullName && wardBoundaries.features">
-
     <section class="hero is-info">
       <div class="hero-body">
         <div class="container">
@@ -33,18 +32,20 @@
         <div class="columns">
           <div class="column">
             <figure class="image" v-if="leader.photo">
-              <img :src="leader.photo">
+              <img :src="leader.photo" />
               <ask-detail
                 :thePage="feedbackPage"
                 detail="Photo"
-                label="Have a better photo?"></ask-detail>
+                label="Have a better photo?"
+              ></ask-detail>
             </figure>
             <figure class="image" v-else>
-              <img src="../assets/photo-placeholder.png">
+              <img src="../assets/photo-placeholder.png" />
               <ask-detail
                 :thePage="feedbackPage"
                 detail="Photo"
-                label="Have a photo?"></ask-detail>
+                label="Have a photo?"
+              ></ask-detail>
             </figure>
           </div>
           <div class="column">
@@ -54,8 +55,7 @@
                 {{ formatNumber(leader.registeredVotersParty) }}
                 {{ partyPlural }} of
                 {{ formatNumber(leader.registeredVotersTotal) }}
-                total
-                ({{ registeredVotersPercent }}%)
+                total ({{ registeredVotersPercent }}%)
               </dd>
 
               <dt>Turnout ({{ turnoutElection }})</dt>
@@ -63,28 +63,36 @@
                 {{ formatNumber(leader.turnoutParty) }}
                 {{ partyPlural }}
                 ({{ turnoutPartyPercent }}%)
-                <br>
+                <br />
                 {{ formatNumber(leader.turnoutTotal) }}
-                total
-                ({{ turnoutTotalPercent }}%)
+                total ({{ turnoutTotalPercent }}%)
               </dd>
 
               <dt>
-                <span class="explanation" title="How many divisions make up the ward">
-                     Divisions
+                <span
+                  class="explanation"
+                  title="How many divisions make up the ward"
+                >
+                  Divisions
                 </span>
               </dt>
               <dd>{{ wardBoundaries.features.length }}</dd>
 
               <dt>
-                <span class="explanation" title="Each division elects 2 committee persons">
+                <span
+                  class="explanation"
+                  title="Each division elects 2 committee persons"
+                >
                   Committee Persons
                 </span>
               </dt>
               <dd>
                 {{ committeePersonCount }}
                 ({{ vacanciesCount }}
-                <span class="explanation" title="Each division elects 2 committee persons">
+                <span
+                  class="explanation"
+                  title="Each division elects 2 committee persons"
+                >
                   vacancies
                 </span>
                 )
@@ -99,25 +107,22 @@
                 <span class="unknown">Unknown</span>
                 <ask-detail
                   :thePage="feedbackPage"
-                  detail="Address"></ask-detail>
+                  detail="Address"
+                ></ask-detail>
               </dd>
 
               <dt>Phone</dt>
               <dd v-if="leader.phone">{{ leader.phone }}</dd>
               <dd v-else>
                 <span class="unknown">Unknown</span>
-                <ask-detail
-                  :thePage="feedbackPage"
-                  detail="Phone"></ask-detail>
+                <ask-detail :thePage="feedbackPage" detail="Phone"></ask-detail>
               </dd>
 
               <dt>Age</dt>
               <dd v-if="age">{{ age }}</dd>
               <dd v-else>
                 <span class="unknown">Unknown</span>
-                <ask-detail
-                  :thePage="feedbackPage"
-                  detail="Age"></ask-detail>
+                <ask-detail :thePage="feedbackPage" detail="Age"></ask-detail>
               </dd>
 
               <dt>Gender</dt>
@@ -126,16 +131,15 @@
                 <span class="unknown">Unknown</span>
                 <ask-detail
                   :thePage="feedbackPage"
-                  detail="Gender"></ask-detail>
+                  detail="Gender"
+                ></ask-detail>
               </dd>
 
               <dt>Occupation</dt>
               <dd v-if="leader.occupation">{{ leader.occupation }}</dd>
               <dd v-else>
                 <span class="unknown">Unknown</span>
-                <ask-detail
-                  :thePage="feedbackPage"
-                  detail="Occupation">
+                <ask-detail :thePage="feedbackPage" detail="Occupation">
                 </ask-detail>
               </dd>
             </dl>
@@ -148,9 +152,7 @@
               </dd>
               <dd v-else>
                 <span class="unknown">Unknown</span>
-                <ask-detail
-                  :thePage="feedbackPage"
-                  detail="Email"></ask-detail>
+                <ask-detail :thePage="feedbackPage" detail="Email"></ask-detail>
               </dd>
 
               <dt>Social Media</dt>
@@ -169,16 +171,23 @@
                 <ask-detail
                   :thePage="feedbackPage"
                   detail="Social media"
-                  label="Know a link?"></ask-detail>
+                  label="Know a link?"
+                ></ask-detail>
               </dd>
-              <dt v-if="leader.campaignFinanceReports && leader.campaignFinanceReports.length > 0">
+              <dt
+                v-if="
+                  leader.campaignFinanceReports &&
+                  leader.campaignFinanceReports.length > 0
+                "
+              >
                 Campaign Finance Reports
               </dt>
               <dd>
                 <ul>
                   <li
                     v-for="report in leader.campaignFinanceReports"
-                    :key="report.title">
+                    :key="report.title"
+                  >
                     <a :href="report.url">
                       {{ report.year }}
                     </a>
@@ -186,23 +195,22 @@
                 </ul>
               </dd>
             </dl>
-
           </div>
         </div>
         <p class="has-text-centered">
           Is this information incorrect?
-          <ask-detail
-            :thePage="feedbackPage"
-            label="Let us know"></ask-detail>
+          <ask-detail :thePage="feedbackPage" label="Let us know"></ask-detail>
         </p>
       </div>
     </section>
 
     <section v-if="wardBoundaries">
-      <ward-map style="height: 350px; margin: 10px"
+      <ward-map
+        style="height: 350px; margin: 10px"
         :ward="leader.ward"
         :boundaries="wardBoundaries"
-        :committeePersons="committeePersons"></ward-map>
+        :committeePersons="committeePersons"
+      ></ward-map>
     </section>
 
     <section class="section" v-if="committeePersons">
@@ -223,158 +231,162 @@
     </section>
 
     <div class="modal is-active" v-show="modalUrl">
-      <div class="modal-background" @click="modalUrl = null"/>
+      <div class="modal-background" @click="modalUrl = null" />
       <div class="modal-content">
         <p class="image">
-          <img :src="modalUrl">
+          <img :src="modalUrl" />
         </p>
       </div>
-      <button @click="modalUrl = null" class="modal-close is-large" aria-label="close"/>
+      <button
+        @click="modalUrl = null"
+        class="modal-close is-large"
+        aria-label="close"
+      />
     </div>
-
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters, mapActions } from "vuex";
 
-import StatsBar from '../components/stats-bar.vue'
-import CommitteePerson from '../components/committee-person.vue'
-import WardMap from '../components/ward-map.vue'
-import AskDetail from '../components/ask-detail.vue'
-import { formatNumber, ordinalize } from '../util'
-import { TURNOUT_ELECTION } from '../config'
+import StatsBar from "../components/stats-bar.vue";
+import CommitteePerson from "../components/committee-person.vue";
+import WardMap from "../components/ward-map.vue";
+import AskDetail from "../components/ask-detail.vue";
+import { formatNumber, ordinalize } from "../util";
+import { TURNOUT_ELECTION } from "../config";
 
 export default {
-  props: [
-    'party',
-    'ward',
-    'slug'
-  ],
-  data () {
+  props: ["party", "ward", "slug"],
+  data() {
     return {
       turnoutElection: TURNOUT_ELECTION,
-      modalUrl: null
-    }
+      modalUrl: null,
+    };
   },
   computed: {
     ...mapState({
       leader: (state) => state.currentLeader.leader,
       committeePersons: (state) => state.currentLeader.committeePersons,
-      wardBoundaries: (state) => state.currentLeader.wardBoundaries
+      wardBoundaries: (state) => state.currentLeader.wardBoundaries,
     }),
     ...mapGetters([
-      'partyPlural',
-      'partyTitle',
-      'registeredVotersPercent',
-      'turnoutPartyPercent',
-      'turnoutTotalPercent',
-      'vacancyCount',
-      'age'
+      "partyPlural",
+      "partyTitle",
+      "registeredVotersPercent",
+      "turnoutPartyPercent",
+      "turnoutTotalPercent",
+      "vacancyCount",
+      "age",
     ]),
-    feedbackPage () {
-      return `${this.leader.fullName} (Ward ${this.leader.ward} ${this.leader.party})`
+    feedbackPage() {
+      return `${this.leader.fullName} (Ward ${this.leader.ward} ${this.leader.party})`;
     },
-    allCommitteePersons () {
-      const commPersons = this.committeePersons
+    allCommitteePersons() {
+      const commPersons = this.committeePersons;
       // Get all divisions from ward boundaries
-      const allDivisions = this.wardBoundaries.features.map(x => x.properties.division)
+      const allDivisions = this.wardBoundaries.features.map(
+        (x) => x.properties.division,
+      );
       const vacantPerson = (division, subDivision, subDivisionId) => {
         return {
-          'ward': this.ward,
-          'fullName': 'VACANT',
-          'division': division,
-          'party': this.party,
-          'address': `Division ${subDivision}`,
-          'id': subDivisionId,
-          'zip': ''
-        }
-      }
-      let committeePersonsList = []
+          ward: this.ward,
+          fullName: "VACANT",
+          division: division,
+          party: this.party,
+          address: `Division ${subDivision}`,
+          id: subDivisionId,
+          zip: "",
+        };
+      };
+      let committeePersonsList = [];
       // Add placeholder objects for vacant divisions
-      let wardName = this.ward
+      let wardName = this.ward;
       if (hasSubWard(this.ward)) {
-        wardName = splitSubWard(this.ward).ward
+        wardName = splitSubWard(this.ward).ward;
       }
-      let wardString = wardName.toString().padStart(2, '0')
-      let partyString = this.party.slice(0, 3).toUpperCase()
+      let wardString = wardName.toString().padStart(2, "0");
+      let partyString = this.party.slice(0, 3).toUpperCase();
       for (let div in allDivisions) {
-        let division = allDivisions[div]
-        let divisionId = `${wardString}-${division.toString().padStart(2, '0')}-${partyString}`
-        let subDivisions = ['A', 'B']
+        let division = allDivisions[div];
+        let divisionId = `${wardString}-${division.toString().padStart(2, "0")}-${partyString}`;
+        let subDivisions = ["A", "B"];
 
         for (let subDiv in subDivisions) {
-          let subDivision = subDivisions[subDiv]
-          let subDivisionId = `${divisionId}-${subDivision}`
+          let subDivision = subDivisions[subDiv];
+          let subDivisionId = `${divisionId}-${subDivision}`;
           // Check for sub division id in ward leader data and add placeholder if missing
-          let personData = commPersons.find(c => c.id === subDivisionId)
-          committeePersonsList.push(personData || vacantPerson(division, subDivision, subDivisionId))
+          let personData = commPersons.find((c) => c.id === subDivisionId);
+          committeePersonsList.push(
+            personData || vacantPerson(division, subDivision, subDivisionId),
+          );
         }
       }
       // Sort output by id
       committeePersonsList.sort((a, b) => {
         if (a.id === b.id) {
-          return 0
+          return 0;
         }
-        return (a.id < b.id) ? -1 : 1
-      })
-      return committeePersonsList
+        return a.id < b.id ? -1 : 1;
+      });
+      return committeePersonsList;
     },
-    committeePersonCount () {
-      return this.wardBoundaries.features.length * 2
+    committeePersonCount() {
+      return this.wardBoundaries.features.length * 2;
     },
-    vacanciesCount () {
-      return this.allCommitteePersons.filter((p) => p.fullName === 'VACANT').length
-    }
+    vacanciesCount() {
+      return this.allCommitteePersons.filter((p) => p.fullName === "VACANT")
+        .length;
+    },
   },
   methods: {
-   ...mapActions({
-    fetchLeader: 'FETCH_LEADER',
-    fetchCommitteePersons: 'FETCH_COMMITTEE_PERSONS',
-    fetchWardBoundaries: 'FETCH_WARD_BOUNDARIES'
+    ...mapActions({
+      fetchLeader: "FETCH_LEADER",
+      fetchCommitteePersons: "FETCH_COMMITTEE_PERSONS",
+      fetchWardBoundaries: "FETCH_WARD_BOUNDARIES",
     }),
     ordinalizeNumber(number) {
-      return ordinalize(number)
+      return ordinalize(number);
     },
     formatNumber(number) {
-      return formatNumber(number)
-    }
+      return formatNumber(number);
+    },
   },
-  async created () {
+  async created() {
     const opts = {
-      party: this.party
-    }
+      party: this.party,
+    };
 
     if (hasSubWard(this.ward)) {
-      const { ward, subWard } = splitSubWard(this.ward)
-      opts.ward = ward
-      opts.subWard = subWard
+      const { ward, subWard } = splitSubWard(this.ward);
+      opts.ward = ward;
+      opts.subWard = subWard;
     } else {
-      opts.ward = this.ward
+      opts.ward = this.ward;
     }
 
-    await this.fetchLeader(opts)
-    await this.fetchCommitteePersons(opts)
-    await this.fetchWardBoundaries(this.ward) // `ward` prop may include suffix for sub ward
+    await this.fetchLeader(opts);
+    await this.fetchCommitteePersons(opts);
+    await this.fetchWardBoundaries(this.ward); // `ward` prop may include suffix for sub ward
   },
   components: {
-    'stats-bar': StatsBar,
-    'committee-person': CommitteePerson,
-    'ward-map': WardMap,
-    'ask-detail': AskDetail
-  }
+    "stats-bar": StatsBar,
+    "committee-person": CommitteePerson,
+    "ward-map": WardMap,
+    "ask-detail": AskDetail,
+  },
+};
+
+function hasSubWard(ward) {
+  const lastChar = ward.slice(-1);
+  return /[A-Za-z]/.test(lastChar);
 }
 
-function hasSubWard (ward) {
-  const lastChar = ward.slice(-1)
-  return /[A-Za-z]/.test(lastChar)
-}
-
-function splitSubWard (ward) {
+function splitSubWard(ward) {
   return {
     ward: ward.slice(0, -1),
-    subWard: ward.slice(-1)
-  }
+    subWard: ward.slice(-1),
+  };
 }
 </script>
 

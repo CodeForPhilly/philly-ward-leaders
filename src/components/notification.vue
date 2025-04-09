@@ -7,9 +7,9 @@
 
 <script>
 export default {
-  name: 'notification',
-  props: [ 'msg' ]
-}
+  name: "notification",
+  props: ["msg"],
+};
 </script>
 
 <style lang="sass">

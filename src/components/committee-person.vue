@@ -17,23 +17,17 @@
 </template>
 
 <script>
-import { ordinalize } from '../util'
+import { ordinalize } from "../util";
 
 export default {
-  name: 'CommitteePerson',
-  props: [
-    'fullName',
-    'division',
-    'address',
-    'title',
-    'email'
-  ],
+  name: "CommitteePerson",
+  props: ["fullName", "division", "address", "title", "email"],
   methods: {
     ordinalizeNumber(number) {
-      return ordinalize(number)
-    }
-  }
-}
+      return ordinalize(number);
+    },
+  },
+};
 </script>
 
 <style scoped lang="sass">

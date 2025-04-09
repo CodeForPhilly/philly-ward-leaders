@@ -1,64 +1,64 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
-import Splash from '../views/splash.vue'
-import WardLeaderList from '../views/ward-leader-list.vue'
-import WardLeader from '../views/ward-leader.vue'
-import CityMap from '../views/city-map.vue'
-import ContentPage from '../views/content-page.vue'
-import Feedback from '../views/feedback.vue'
+import Splash from "../views/splash.vue";
+import WardLeaderList from "../views/ward-leader-list.vue";
+import WardLeader from "../views/ward-leader.vue";
+import CityMap from "../views/city-map.vue";
+import ContentPage from "../views/content-page.vue";
+import Feedback from "../views/feedback.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'splash',
-    component: Splash
+    path: "/",
+    name: "splash",
+    component: Splash,
   },
   {
-    path: '/leaders',
-    redirect: '/leaders/democratic'
+    path: "/leaders",
+    redirect: "/leaders/democratic",
   },
   {
-    path: '/leaders/:party',
-    name: 'ward-leader-list',
+    path: "/leaders/:party",
+    name: "ward-leader-list",
     component: WardLeaderList,
-    props: true
+    props: true,
   },
   {
-    path: '/leaders/:party/:ward/:slug',
-    name: 'ward-leader',
+    path: "/leaders/:party/:ward/:slug",
+    name: "ward-leader",
     component: WardLeader,
-    props: true
+    props: true,
   },
   {
-    path: '/map',
-    name: 'city-map',
-    component: CityMap
+    path: "/map",
+    name: "city-map",
+    component: CityMap,
   },
   {
-    path: '/feedback',
-    name: 'feedback',
-    component: Feedback
+    path: "/feedback",
+    name: "feedback",
+    component: Feedback,
   },
   {
-    path: '/:slug',
-    name: 'content-page',
+    path: "/:slug",
+    name: "content-page",
     component: ContentPage,
-    props: true
-  }
-]
+    props: true,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior
-})
+  scrollBehavior,
+});
 
-function scrollBehavior (to, from, savedPosition) {
+function scrollBehavior(to, from, savedPosition) {
   if (savedPosition) {
-    return savedPosition
+    return savedPosition;
   } else {
-    return { x: 0, y: 0 }
+    return { x: 0, y: 0 };
   }
 }
 
-export default router
+export default router;

@@ -28,25 +28,23 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 
-import { formatNumber } from '../util'
+import { formatNumber } from "../util";
 
 export default {
   props: [
-    'party',
-    'registered-voters-party',
-    'turnout-party-percent',
-    'division-count',
-    'vacancy-count'
+    "party",
+    "registered-voters-party",
+    "turnout-party-percent",
+    "division-count",
+    "vacancy-count",
   ],
   computed: {
-    ...mapGetters([
-    'partyAbbr'
-  ]),
+    ...mapGetters(["partyAbbr"]),
     voterCount() {
-      return formatNumber(this.registeredVotersParty)
-    }
-  }
-}
+      return formatNumber(this.registeredVotersParty);
+    },
+  },
+};
 </script>
