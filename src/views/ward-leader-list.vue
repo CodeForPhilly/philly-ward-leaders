@@ -2,13 +2,20 @@
   <div>
     <hero></hero>
     <section class="section leader-list">
-
       <div class="tabs is-large is-centered">
         <ul>
-          <router-link to="/leaders/democratic" tag="li" active-class="is-active">
+          <router-link
+            to="/leaders/democratic"
+            tag="li"
+            active-class="is-active"
+          >
             <a>Democrats</a>
           </router-link>
-          <router-link to="/leaders/republican" tag="li" active-class="is-active">
+          <router-link
+            to="/leaders/republican"
+            tag="li"
+            active-class="is-active"
+          >
             <a>Republicans</a>
           </router-link>
         </ul>
@@ -31,43 +38,40 @@
           ></baseball-card>
         </div>
       </div>
-
     </section>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters, mapActions } from "vuex";
 
-import Hero from '../components/hero.vue'
-import BaseballCard from '../components/baseball-card/index.vue'
+import Hero from "../components/hero.vue";
+import BaseballCard from "../components/baseball-card/index.vue";
 
 export default {
-  name: 'app',
-  props: [ 'party' ],
+  name: "app",
+  props: ["party"],
   computed: {
     ...mapState({
       leaders: function (state) {
-        return state.leaders.filter((leader) => leader.party === this.party)
-      }
+        return state.leaders.filter((leader) => leader.party === this.party);
+      },
     }),
-    ...mapGetters([
-      'isLeadersFetched'
-    ])
+    ...mapGetters(["isLeadersFetched"]),
   },
   components: {
-    'hero': Hero,
-    'baseball-card': BaseballCard
+    hero: Hero,
+    "baseball-card": BaseballCard,
   },
   methods: mapActions({
-    fetchLeaders: 'FETCH_LEADERS'
+    fetchLeaders: "FETCH_LEADERS",
   }),
-  created () {
+  created() {
     if (!this.isLeadersFetched) {
-      this.fetchLeaders()
+      this.fetchLeaders();
     }
-  }
-}
+  },
+};
 </script>
 
 <style scoped lang="sass">

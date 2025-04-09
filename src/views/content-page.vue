@@ -10,29 +10,29 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
-import { marked } from 'marked'
+import { mapState, mapActions } from "vuex";
+import { marked } from "marked";
 
 export default {
-  props: [ 'slug' ],
+  props: ["slug"],
   computed: mapState({
     title: (state) => state.contentPage.title,
     content: (state) => {
       if (state.contentPage.content) {
-        return marked(state.contentPage.content)
+        return marked(state.contentPage.content);
       }
-    }
+    },
   }),
   methods: mapActions({
-    fetchContentPage: 'FETCH_CONTENT_PAGE'
+    fetchContentPage: "FETCH_CONTENT_PAGE",
   }),
-  created () {
-    this.fetchContentPage(this.slug)
+  created() {
+    this.fetchContentPage(this.slug);
   },
   watch: {
-    slug (newValue) {
-      this.fetchContentPage(newValue)
-    }
-  }
-}
+    slug(newValue) {
+      this.fetchContentPage(newValue);
+    },
+  },
+};
 </script>

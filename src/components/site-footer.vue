@@ -3,8 +3,8 @@
     <div class="container">
       <div class="content has-text-centered">
         <p>
-          <img src="../assets/code-for-liberty.png" class="icon">
-          A 
+          <img src="../assets/code-for-liberty.png" class="icon" />
+          A
           <a href="https://codeforphilly.org">Code for Philly</a>
           project maintained by
           <a href="https://seventy.org">Committee of Seventy</a>.
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style scoped lang="sass">

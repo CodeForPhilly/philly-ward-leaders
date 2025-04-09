@@ -15,24 +15,14 @@
     <div class="navbar-menu" ref="menu">
       <div class="navbar-start"></div>
       <div class="navbar-end" @click="collapseMenu">
-        <router-link to="/leaders" class="navbar-item">
-          Leaders
-        </router-link>
-        <router-link to="/map" class="navbar-item">
-          Ward Map
-        </router-link>
-        <router-link to="/learn" class="navbar-item">
-          Learn More
-        </router-link>
+        <router-link to="/leaders" class="navbar-item"> Leaders </router-link>
+        <router-link to="/map" class="navbar-item"> Ward Map </router-link>
+        <router-link to="/learn" class="navbar-item"> Learn More </router-link>
         <router-link to="/party-rules" class="navbar-item">
           Party Rules
         </router-link>
-        <router-link to="/about" class="navbar-item">
-          About
-        </router-link>
-        <router-link to="/feedback" class="navbar-item">
-          Feedback
-        </router-link>
+        <router-link to="/about" class="navbar-item"> About </router-link>
+        <router-link to="/feedback" class="navbar-item"> Feedback </router-link>
       </div>
     </div>
   </nav>
@@ -41,22 +31,22 @@
 <script>
 export default {
   methods: {
-    toggleMenu (evt) {
-      const btnEl = this.$refs.burger
-      const menuEl = this.$refs.menu
+    toggleMenu(evt) {
+      const btnEl = this.$refs.burger;
+      const menuEl = this.$refs.menu;
 
-      btnEl.classList.toggle('is-active')
-      menuEl.classList.toggle('is-active')
+      btnEl.classList.toggle("is-active");
+      menuEl.classList.toggle("is-active");
     },
-    collapseMenu () {
-      const btnEl = this.$refs.burger
-      const menuEl = this.$refs.menu
+    collapseMenu() {
+      const btnEl = this.$refs.burger;
+      const menuEl = this.$refs.menu;
 
-      btnEl.classList.remove('is-active')
-      menuEl.classList.remove('is-active')
-    }
-  }
-}
+      btnEl.classList.remove("is-active");
+      menuEl.classList.remove("is-active");
+    },
+  },
+};
 </script>
 
 <style lang="sass">

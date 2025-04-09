@@ -20,7 +20,9 @@
               </h3>
               <dl>
                 <dt>Voters ({{ partyAbbr }})</dt>
-                <dd v-if="registeredVotersParty">{{ registeredVotersPartyFormatted }}</dd>
+                <dd v-if="registeredVotersParty">
+                  {{ registeredVotersPartyFormatted }}
+                </dd>
                 <dd v-else>Unknown</dd>
 
                 <dt>Turnout ({{ partyAbbr }})</dt>
@@ -31,7 +33,9 @@
                 <dd v-if="vacancies >= 0">{{ vacancies }}</dd>
                 <dd v-else>Unknown</dd>
               </dl>
-              <router-link :to="url" class="button is-info details">Details</router-link>
+              <router-link :to="url" class="button is-info details"
+                >Details</router-link
+              >
             </div>
           </body>
         </foreignObject>
@@ -41,8 +45,8 @@
 </template>
 
 <script>
-import { createFront, createBack } from './svg'
-import { slugify, ordinalize, formatNumber } from '../../util'
+import { createFront, createBack } from "./svg";
+import { slugify, ordinalize, formatNumber } from "../../util";
 
 export default {
   props: {
@@ -52,60 +56,60 @@ export default {
     party: String,
     photo: {
       type: String,
-      default: '../assets/photo-placeholder.png'
+      default: "../assets/photo-placeholder.png",
     },
     registeredVotersParty: Number,
     turnoutParty: Number,
     turnoutTotal: Number,
     divisionCount: Number,
-    committeePersonCount: Number
+    committeePersonCount: Number,
   },
   computed: {
-    url () {
-      const wardString = this.ward + (this.subWard || '')
-      return `/leaders/${this.party}/${wardString}/${this.slug}`
+    url() {
+      const wardString = this.ward + (this.subWard || "");
+      return `/leaders/${this.party}/${wardString}/${this.slug}`;
     },
-    slug () {
-      return slugify(this.name)
+    slug() {
+      return slugify(this.name);
     },
-    partyAbbr () {
-      return this.party && this.party[0].toUpperCase()
+    partyAbbr() {
+      return this.party && this.party[0].toUpperCase();
     },
-    turnoutPartyPercent () {
-      return Math.round(this.turnoutParty / this.registeredVotersParty * 100)
+    turnoutPartyPercent() {
+      return Math.round((this.turnoutParty / this.registeredVotersParty) * 100);
     },
-    vacancies () {
-      return this.divisionCount * 2 - this.committeePersonCount
+    vacancies() {
+      return this.divisionCount * 2 - this.committeePersonCount;
     },
-    registeredVotersPartyFormatted () {
-      return formatNumber(this.registeredVotersParty)
+    registeredVotersPartyFormatted() {
+      return formatNumber(this.registeredVotersParty);
     },
-    ordinalizedWard () {
-      return ordinalize(this.ward)
-    }
+    ordinalizedWard() {
+      return ordinalize(this.ward);
+    },
   },
-  mounted () {
-    this.createCard()
+  mounted() {
+    this.createCard();
   },
-  updated () {
-    this.createCard()
+  updated() {
+    this.createCard();
   },
   methods: {
-    createCard () {
-      const frontEl = this.$refs.front
-      createFront(frontEl, this.$props)
+    createCard() {
+      const frontEl = this.$refs.front;
+      createFront(frontEl, this.$props);
 
-      const backEl = this.$refs.back
-      const contentsEl = this.$refs.content
-      createBack(backEl, contentsEl, this.$props)
+      const backEl = this.$refs.back;
+      const contentsEl = this.$refs.content;
+      createBack(backEl, contentsEl, this.$props);
     },
-    noop () {
+    noop() {
       // iOS Safari requires a click handler be present in order for the CSS :hover
       // modifier to work.
       // https://stackoverflow.com/questions/18047353/fix-css-hover-on-iphone-ipad-ipod
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="sass">

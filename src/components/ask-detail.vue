@@ -3,32 +3,28 @@
 </template>
 
 <script>
-
 export default {
   props: {
     thePage: { type: String },
     detail: { type: String },
-    label: { type: String, default: 'Know it?' },
-    defaultValue: { type: String, default: '' }
+    label: { type: String, default: "Know it?" },
+    defaultValue: { type: String, default: "" },
   },
   computed: {
-    feedbackLink () {
+    feedbackLink() {
       const opts = {
         thePage: this.thePage,
-        defaultValue: this.defaultValue
-      }
+        defaultValue: this.defaultValue,
+      };
       if (this.detail) {
-        opts.selectedOption = 'what-error'
-        opts.defaultValue = `${this.detail} should be: `
+        opts.selectedOption = "what-error";
+        opts.defaultValue = `${this.detail} should be: `;
       }
       return {
-        name: 'feedback',
-        query: opts
-      }
-    }
-  }
-}
+        name: "feedback",
+        query: opts,
+      };
+    },
+  },
+};
 </script>
-
-
-

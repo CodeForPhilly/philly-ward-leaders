@@ -1,14 +1,17 @@
 module.exports = {
-  "presets": [
-    ["@babel/preset-env", {
-      "useBuiltIns": "entry",
-      "targets": {
-        "node": "current"
-      }
-    }]
+  presets: [
+    [
+      "@babel/preset-env",
+      {
+        useBuiltIns: "entry",
+        targets: {
+          node: "current",
+        },
+      },
+    ],
   ],
-  "plugins": [
-    '@babel/plugin-transform-modules-commonjs',
-    "transform-object-rest-spread"
-  ]
-}
+  plugins: [
+    "@babel/plugin-transform-modules-commonjs",
+    "transform-object-rest-spread",
+  ],
+};

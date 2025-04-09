@@ -3,10 +3,11 @@
     <nav-bar></nav-bar>
     <div class="notifications">
       <notification
-         v-for="item in notifications"
-         :key="item.id"
-         :msg="item.msg"
-         @dismiss="removeNotification(item.id)"></notification>
+        v-for="item in notifications"
+        :key="item.id"
+        :msg="item.msg"
+        @dismiss="removeNotification(item.id)"
+      ></notification>
     </div>
     <router-view></router-view>
     <site-footer v-if="shouldShowFooter"></site-footer>
@@ -14,38 +15,37 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
-import values from 'lodash/values'
+import { mapState, mapMutations } from "vuex";
+import values from "lodash/values";
 
-import NavBar from './components/nav-bar.vue'
-import Notification from './components/notification.vue'
-import SiteFooter from './components/site-footer.vue'
-
+import NavBar from "./components/nav-bar.vue";
+import Notification from "./components/notification.vue";
+import SiteFooter from "./components/site-footer.vue";
 
 export default {
   computed: {
     ...mapState({
       notifications: (state) => values(state.notifications),
-      pendingRequests: (state) => Object.keys(state.pendingRequests || [])
+      pendingRequests: (state) => Object.keys(state.pendingRequests || []),
     }),
-    isLoading () {
-      const routeName = this.$route && this.$route.name
-      return (this.pendingRequests.length > 0) && (routeName !== 'splash')
+    isLoading() {
+      const routeName = this.$route && this.$route.name;
+      return this.pendingRequests.length > 0 && routeName !== "splash";
     },
-    shouldShowFooter () {
-      const routeName = this.$route && this.$route.name
-      return routeName !== 'city-map'
-    }
+    shouldShowFooter() {
+      const routeName = this.$route && this.$route.name;
+      return routeName !== "city-map";
+    },
   },
   methods: mapMutations({
-    removeNotification: 'REMOVE_NOTIFICATION'
+    removeNotification: "REMOVE_NOTIFICATION",
   }),
   components: {
-    'nav-bar': NavBar,
-    'notification': Notification,
-    'site-footer': SiteFooter
-  }
-}
+    "nav-bar": NavBar,
+    notification: Notification,
+    "site-footer": SiteFooter,
+  },
+};
 </script>
 
 <style lang="sass">
