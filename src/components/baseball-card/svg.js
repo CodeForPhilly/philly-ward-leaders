@@ -83,10 +83,11 @@ export function createFront(el, data) {
 
   const nameWidth = config.cardWidth - 19;
   const nameHeight = config.cardHeight - 17;
+  const nameFontSize = data.name.length < 28 ? 22 : 20
   const nameText = svg.text(nameWidth, nameHeight, data.name).attr({
     "text-anchor": "end",
     fill: config.cardBorderColor,
-    "font-size": 22,
+    "font-size": nameFontSize,
     "font-family": "Arial",
   });
 
