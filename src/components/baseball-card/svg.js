@@ -88,6 +88,7 @@ export function createFront(el, data) {
     "text-anchor": "end",
     fill: config.cardBorderColor,
     "font-size": nameFontSize,
+    "font-size": nameFontSize,
     "font-family": "Arial",
   });
 

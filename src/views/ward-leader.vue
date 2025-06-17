@@ -167,6 +167,15 @@
                   <li v-if="leader.twitter">
                     <a :href="leader.twitter">Twitter</a>
                   </li>
+                  <li v-if="leader.instagram">
+                    <a :href="leader.instagram">Twitter</a>
+                  </li>
+                  <li v-if="leader.mastodon">
+                    <a :href="leader.mastodon">Twitter</a>
+                  </li>
+                  <li v-if="leader.bluesky">
+                    <a :href="leader.bluseky">Twitter</a>
+                  </li>
                 </ul>
                 <ask-detail
                   :thePage="feedbackPage"
