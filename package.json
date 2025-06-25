@@ -8,8 +8,6 @@
     "dev": "vite",
     "preview": "vite build && vite preview --port 8080",
     "build": "vite build",
-    "test": "jest --testPathIgnorePatterns ./e2e",
-    "lint": "standard --plugin html 'src/**/*.{js,vue}'",
     "format:check": "prettier --check src ./*.js",
     "format": "prettier --write src ./*.js",
     "serve-http": "vite preview --port 8080",

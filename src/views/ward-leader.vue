@@ -104,7 +104,7 @@
               <dt>Address</dt>
               <dd v-if="leader.address">{{ leader.address }}</dd>
               <dd v-else>
-                <span class="unknown">Unknown</span>
+                <span class="unknown">Unknown | </span>
                 <ask-detail
                   :thePage="feedbackPage"
                   detail="Address"
@@ -114,21 +114,21 @@
               <dt>Phone</dt>
               <dd v-if="leader.phone">{{ leader.phone }}</dd>
               <dd v-else>
-                <span class="unknown">Unknown</span>
+                <span class="unknown">Unknown | </span>
                 <ask-detail :thePage="feedbackPage" detail="Phone"></ask-detail>
               </dd>
 
               <dt>Age</dt>
               <dd v-if="age">{{ age }}</dd>
               <dd v-else>
-                <span class="unknown">Unknown</span>
+                <span class="unknown">Unknown | </span>
                 <ask-detail :thePage="feedbackPage" detail="Age"></ask-detail>
               </dd>
 
               <dt>Gender</dt>
               <dd v-if="leader.gender">{{ leader.gender }}</dd>
               <dd v-else>
-                <span class="unknown">Unknown</span>
+                <span class="unknown">Unknown | </span>
                 <ask-detail
                   :thePage="feedbackPage"
                   detail="Gender"
@@ -138,7 +138,7 @@
               <dt>Occupation</dt>
               <dd v-if="leader.occupation">{{ leader.occupation }}</dd>
               <dd v-else>
-                <span class="unknown">Unknown</span>
+                <span class="unknown">Unknown | </span>
                 <ask-detail :thePage="feedbackPage" detail="Occupation">
                 </ask-detail>
               </dd>
@@ -151,7 +151,7 @@
                 <a :href="'mailto:' + leader.email">{{ leader.email }}</a>
               </dd>
               <dd v-else>
-                <span class="unknown">Unknown</span>
+                <span class="unknown">Unknown | </span>
                 <ask-detail :thePage="feedbackPage" detail="Email"></ask-detail>
               </dd>
 
