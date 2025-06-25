@@ -23,7 +23,7 @@
     "contentful": "^10.6.14",
     "leaflet": "^1.9.4",
     "marked": "^11.0.0",
-    "nanoid": "^5.0.4",
+    "nanoid": "^5.1.5",
     "ordinal": "^1.0.3",
     "query-string": "^8.1.0",
     "snapsvg-cjs": "^0.0.6",
