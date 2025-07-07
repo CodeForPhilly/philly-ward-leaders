@@ -167,16 +167,8 @@
                   <li v-if="leader.twitter">
                     <a :href="leader.twitter">Twitter</a>
                   </li>
-                  <li v-if="leader.instagram">
-                    <a :href="leader.instagram">Twitter</a>
-                  </li>
-                  <li v-if="leader.mastodon">
-                    <a :href="leader.mastodon">Twitter</a>
-                  </li>
-                  <li v-if="leader.bluesky">
-                    <a :href="leader.bluseky">Twitter</a>
-                  </li>
                 </ul>
+                <links-list :links="leaderLinks"></links-list>
                 <ask-detail
                   :thePage="feedbackPage"
                   detail="Social media"
@@ -261,6 +253,7 @@ import { mapState, mapGetters, mapActions } from "vuex";
 import StatsBar from "../components/stats-bar.vue";
 import CommitteePerson from "../components/committee-person.vue";
 import WardMap from "../components/ward-map.vue";
+import LinksList from "../components/links-list.vue";
 import AskDetail from "../components/ask-detail.vue";
 import { formatNumber, ordinalize } from "../util";
 import { TURNOUT_ELECTION } from "../config";
@@ -347,6 +340,22 @@ export default {
       return this.allCommitteePersons.filter((p) => p.fullName === "VACANT")
         .length;
     },
+    leaderLinks() {
+      let websites = this.leader.websites;
+      let linkData = websites.map((obj) =>
+        Object.fromEntries(
+          Object.entries(obj).filter(([key]) => key === "fields"),
+        ),
+      );
+
+      linkData = linkData.map((item) => {
+        return {
+          title: `${item.fields.title} - ${item.fields.platform.charAt(0).toUpperCase() + item.fields.platform.slice(1)}`,
+          url: item.fields.url,
+        };
+      });
+      return linkData;
+    },
   },
   methods: {
     ...mapActions({
@@ -383,6 +392,7 @@ export default {
     "committee-person": CommitteePerson,
     "ward-map": WardMap,
     "ask-detail": AskDetail,
+    "links-list": LinksList,
   },
 };
 
