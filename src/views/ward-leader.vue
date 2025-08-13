@@ -167,8 +167,8 @@
                   <li v-if="leader.twitter">
                     <a :href="leader.twitter">Twitter</a>
                   </li>
+                  <links-list :links="leaderLinks"></links-list>
                 </ul>
-                <links-list :links="leaderLinks"></links-list>
                 <ask-detail
                   :thePage="feedbackPage"
                   detail="Social media"
