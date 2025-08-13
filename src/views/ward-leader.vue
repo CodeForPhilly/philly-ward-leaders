@@ -342,6 +342,9 @@ export default {
     },
     leaderLinks() {
       let websites = this.leader.websites;
+      if (websites === undefined) {
+        return [];
+      }
       let linkData = websites.map((obj) =>
         Object.fromEntries(
           Object.entries(obj).filter(([key]) => key === "fields"),

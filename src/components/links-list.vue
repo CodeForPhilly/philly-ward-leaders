@@ -1,11 +1,13 @@
 <template>
-  <ul>
-    <li v-for="(link, index) in links" :key="index">
-      <a :href="link.url" target="_blank" rel="noopener noreferrer">{{
-        link.title
-      }}</a>
-    </li>
-  </ul>
+  <li v-for="(link, index) in links" :key="index">
+    <a
+      :href="link.url"
+      target="_blank"
+      rel="noopener noreferrer"
+      :title="link.title"
+      >{{ link.platform }}</a
+    >
+  </li>
 </template>
 
 <script>
