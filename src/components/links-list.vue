@@ -5,7 +5,7 @@
       target="_blank"
       rel="noopener noreferrer"
       :title="link.title"
-      >{{ link.platform }}</a
+      >{{ link.title }}</a
     >
   </li>
 </template>

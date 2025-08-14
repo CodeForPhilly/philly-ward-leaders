@@ -345,18 +345,26 @@ export default {
       if (websites === undefined) {
         return [];
       }
-      let linkData = websites.map((obj) =>
-        Object.fromEntries(
-          Object.entries(obj).filter(([key]) => key === "fields"),
-        ),
-      );
+      console.log(websites);
+      let linkData = websites
+        .map((obj) =>
+          Object.fromEntries(
+            Object.entries(obj).filter(([key]) => key === "fields"),
+          ),
+        )
+        .sort((a, b) => {
+          const platformA = a.fields.platform.toUpperCase();
+          const platformB = b.fields.platform.toUpperCase();
+          return platformA.localeCompare(platformB);
+        });
 
       linkData = linkData.map((item) => {
         return {
-          title: `${item.fields.title} - ${item.fields.platform.charAt(0).toUpperCase() + item.fields.platform.slice(1)}`,
+          title: `${item.fields.platform} - ${item.fields.title}`,
           url: item.fields.url,
         };
       });
+      console.log(linkData);
       return linkData;
     },
   },
