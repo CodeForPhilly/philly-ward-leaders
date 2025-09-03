@@ -345,7 +345,6 @@ export default {
       if (websites === undefined) {
         return [];
       }
-      console.log(websites);
       let linkData = websites
         .map((obj) =>
           Object.fromEntries(
@@ -364,7 +363,6 @@ export default {
           url: item.fields.url,
         };
       });
-      console.log(linkData);
       return linkData;
     },
   },
