@@ -167,6 +167,7 @@
                   <li v-if="leader.twitter">
                     <a :href="leader.twitter">Twitter</a>
                   </li>
+                  <links-list :links="leaderLinks"></links-list>
                 </ul>
                 <ask-detail
                   :thePage="feedbackPage"
@@ -252,6 +253,7 @@ import { mapState, mapGetters, mapActions } from "vuex";
 import StatsBar from "../components/stats-bar.vue";
 import CommitteePerson from "../components/committee-person.vue";
 import WardMap from "../components/ward-map.vue";
+import LinksList from "../components/links-list.vue";
 import AskDetail from "../components/ask-detail.vue";
 import { formatNumber, ordinalize } from "../util";
 import { TURNOUT_ELECTION } from "../config";
@@ -338,6 +340,31 @@ export default {
       return this.allCommitteePersons.filter((p) => p.fullName === "VACANT")
         .length;
     },
+    leaderLinks() {
+      let websites = this.leader.websites;
+      if (websites === undefined) {
+        return [];
+      }
+      let linkData = websites
+        .map((obj) =>
+          Object.fromEntries(
+            Object.entries(obj).filter(([key]) => key === "fields"),
+          ),
+        )
+        .sort((a, b) => {
+          const platformA = a.fields.platform.toUpperCase();
+          const platformB = b.fields.platform.toUpperCase();
+          return platformA.localeCompare(platformB);
+        });
+
+      linkData = linkData.map((item) => {
+        return {
+          title: `${item.fields.platform} - ${item.fields.title}`,
+          url: item.fields.url,
+        };
+      });
+      return linkData;
+    },
   },
   methods: {
     ...mapActions({
@@ -374,6 +401,7 @@ export default {
     "committee-person": CommitteePerson,
     "ward-map": WardMap,
     "ask-detail": AskDetail,
+    "links-list": LinksList,
   },
 };
 
