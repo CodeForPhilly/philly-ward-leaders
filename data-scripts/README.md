@@ -5,6 +5,9 @@ and registration data. Also a script to migrate content.
 You should use the `pipenv` command to install the dependencies.
 Install that with a package manager or `pip install pipenv`.
 
+After you have pipenv, change in to this data-scripts directory and
+run `pipenv install`
+
 To run the commands, use a pipenv shell like:
 
 ```
