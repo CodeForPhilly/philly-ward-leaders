@@ -28,7 +28,8 @@ module.exports = {
     'no-debugger': 'warn',
     'prefer-const': 'error',
     'no-var': 'error',
-    
+    "prefer-destructuring": "off",
+
     // Cypress specific rules
     'cypress/no-unnecessary-waiting': 'warn',
     'cypress/assertion-before-screenshot': 'warn',

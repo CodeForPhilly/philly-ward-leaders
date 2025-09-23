@@ -103,6 +103,7 @@
 
 <script>
 import axios from "axios";
+
 export default {
   name: "Feedback",
   data() {
@@ -181,7 +182,7 @@ export default {
       Object.entries(this.formParams).forEach(([key, value]) => {
         bodyFormData.append(key, value);
       });
-      axios.post(this.formUrl, bodyFormData).catch(function (error) {
+      axios.post(this.formUrl, bodyFormData).catch((error) => {
         console.log(error);
       });
       this.submitted = true;

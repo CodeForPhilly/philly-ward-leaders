@@ -53,7 +53,7 @@ export default {
   props: ["party"],
   computed: {
     ...mapState({
-      leaders: function (state) {
+      leaders (state) {
         return state.leaders.filter((leader) => leader.party === this.party);
       },
     }),
