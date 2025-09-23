@@ -1,0 +1,8 @@
+node_modules/
+dist/
+build/
+public/
+data-scripts/
+*.min.js
+coverage/
+.nyc_output/
