@@ -17,7 +17,8 @@ export default {
     links: {
       type: Array,
       required: true,
-      validator: (links) => links.every((link) => "title" in link && "url" in link),
+      validator: (links) =>
+        links.every((link) => "title" in link && "url" in link),
     },
   },
 };

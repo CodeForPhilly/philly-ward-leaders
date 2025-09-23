@@ -63,7 +63,7 @@ export default {
       "expanded",
       "position",
     ]);
-    const opts = { ...this.options, ...overrides};
+    const opts = { ...this.options, ...overrides };
 
     this.geocoder = L.control.geocoder(this.apikey, opts);
     eventsBinder(this, this.geocoder, events);
@@ -94,7 +94,7 @@ export default {
 // Can't import it because babel won't transpile files from node_modules
 function eventsBinder(vueElement, leaflet, events) {
   for (let i = 0; i < events.length; i++) {
-    const exposedName = `l-${  events[i]}`;
+    const exposedName = `l-${events[i]}`;
     const eventName = events[i];
     leaflet.on(eventName, (ev) => {
       vueElement.$emit(exposedName, ev);

@@ -44,9 +44,8 @@ export default class Api {
     return this.client.getEntries(requestOpts).then((response) => {
       if (response.items.length > 0) {
         return simplifyLinkedItems(getFieldsAndId(response.items[0]));
-      } 
-        throw new Error("Ward leader was not found");
-      
+      }
+      throw new Error("Ward leader was not found");
     });
   }
 
@@ -85,9 +84,8 @@ export default class Api {
       .then((response) => {
         if (response.items.length > 0) {
           return getFieldsAndId(response.items[0]);
-        } 
-          throw new Error("Page not found");
-        
+        }
+        throw new Error("Page not found");
       });
   }
 

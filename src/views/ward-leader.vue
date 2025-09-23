@@ -291,14 +291,14 @@ export default {
         (x) => x.properties.division,
       );
       const vacantPerson = (division, subDivision, subDivisionId) => ({
-          ward: this.ward,
-          fullName: "VACANT",
-          division,
-          party: this.party,
-          address: `Division ${subDivision}`,
-          id: subDivisionId,
-          zip: "",
-        });
+        ward: this.ward,
+        fullName: "VACANT",
+        division,
+        party: this.party,
+        address: `Division ${subDivision}`,
+        id: subDivisionId,
+        zip: "",
+      });
       const committeePersonsList = [];
       // Add placeholder objects for vacant divisions
       let wardName = this.ward;
@@ -356,9 +356,9 @@ export default {
         });
 
       linkData = linkData.map((item) => ({
-          title: `${item.fields.platform} - ${item.fields.title}`,
-          url: item.fields.url,
-        }));
+        title: `${item.fields.platform} - ${item.fields.title}`,
+        url: item.fields.url,
+      }));
       return linkData;
     },
   },
