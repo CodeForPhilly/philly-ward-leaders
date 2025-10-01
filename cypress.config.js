@@ -22,14 +22,14 @@ module.exports = defineConfig({
       openMode: 0,
     },
     setupNodeEvents(on, config) {
-      on("dev-server:start", (options) => {
-        return startDevServer({
+      on("dev-server:start", (options) =>
+        startDevServer({
           options,
           viteConfig: {
             configFile: "vite.config.js", // Path to your Vite config file
           },
-        });
-      });
+        }),
+      );
 
       return config;
     },

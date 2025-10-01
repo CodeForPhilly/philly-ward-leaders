@@ -13,7 +13,10 @@
     "serve-http": "vite preview --port 8080",
     "cy:open": "cypress open",
     "cy:run": "cypress run --component",
-    "cy:e2e": "cypress run --e2e"
+    "cy:e2e": "cypress run --e2e",
+    "lint": "eslint . --ext .js,.vue",
+    "lint:fix": "eslint . --ext .js,.vue --fix",
+    "lint:cypress": "eslint cypress/ --ext .js"
   },
   "dependencies": {
     "@mapbox/leaflet-pip": "^1.1.0",
@@ -44,7 +47,13 @@
     "css-loader": "^6.8.1",
     "cypress": "^13.17.0",
     "cypress-real-events": "^1.13.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-cypress": "^3.6.0",
     "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-vue": "^9.33.0",
     "file-loader": "^6.2.0",
     "http-server": "^14.1.1",
     "imports-loader": "^4.0.1",

@@ -290,35 +290,33 @@ export default {
       const allDivisions = this.wardBoundaries.features.map(
         (x) => x.properties.division,
       );
-      const vacantPerson = (division, subDivision, subDivisionId) => {
-        return {
-          ward: this.ward,
-          fullName: "VACANT",
-          division: division,
-          party: this.party,
-          address: `Division ${subDivision}`,
-          id: subDivisionId,
-          zip: "",
-        };
-      };
-      let committeePersonsList = [];
+      const vacantPerson = (division, subDivision, subDivisionId) => ({
+        ward: this.ward,
+        fullName: "VACANT",
+        division,
+        party: this.party,
+        address: `Division ${subDivision}`,
+        id: subDivisionId,
+        zip: "",
+      });
+      const committeePersonsList = [];
       // Add placeholder objects for vacant divisions
       let wardName = this.ward;
       if (hasSubWard(this.ward)) {
         wardName = splitSubWard(this.ward).ward;
       }
-      let wardString = wardName.toString().padStart(2, "0");
-      let partyString = this.party.slice(0, 3).toUpperCase();
-      for (let div in allDivisions) {
-        let division = allDivisions[div];
-        let divisionId = `${wardString}-${division.toString().padStart(2, "0")}-${partyString}`;
-        let subDivisions = ["A", "B"];
+      const wardString = wardName.toString().padStart(2, "0");
+      const partyString = this.party.slice(0, 3).toUpperCase();
+      for (const div in allDivisions) {
+        const division = allDivisions[div];
+        const divisionId = `${wardString}-${division.toString().padStart(2, "0")}-${partyString}`;
+        const subDivisions = ["A", "B"];
 
-        for (let subDiv in subDivisions) {
-          let subDivision = subDivisions[subDiv];
-          let subDivisionId = `${divisionId}-${subDivision}`;
+        for (const subDiv in subDivisions) {
+          const subDivision = subDivisions[subDiv];
+          const subDivisionId = `${divisionId}-${subDivision}`;
           // Check for sub division id in ward leader data and add placeholder if missing
-          let personData = commPersons.find((c) => c.id === subDivisionId);
+          const personData = commPersons.find((c) => c.id === subDivisionId);
           committeePersonsList.push(
             personData || vacantPerson(division, subDivision, subDivisionId),
           );
@@ -341,7 +339,7 @@ export default {
         .length;
     },
     leaderLinks() {
-      let websites = this.leader.websites;
+      const websites = this.leader.websites;
       if (websites === undefined) {
         return [];
       }
@@ -357,12 +355,10 @@ export default {
           return platformA.localeCompare(platformB);
         });
 
-      linkData = linkData.map((item) => {
-        return {
-          title: `${item.fields.platform} - ${item.fields.title}`,
-          url: item.fields.url,
-        };
-      });
+      linkData = linkData.map((item) => ({
+        title: `${item.fields.platform} - ${item.fields.title}`,
+        url: item.fields.url,
+      }));
       return linkData;
     },
   },

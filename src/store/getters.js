@@ -2,7 +2,8 @@ export function partyPlural(state) {
   const party = state.currentLeader.leader.party;
   if (party === "democratic") {
     return "democrats";
-  } else if (party === "republican") {
+  }
+  if (party === "republican") {
     return "republicans";
   }
 }
@@ -16,7 +17,8 @@ export function partyTitle(state) {
   const party = state.currentLeader.leader.party;
   if (party === "democratic") {
     return "Democratic";
-  } else if (party === "republican") {
+  }
+  if (party === "republican") {
     return "Republican";
   }
 }

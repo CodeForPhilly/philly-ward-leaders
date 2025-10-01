@@ -63,7 +63,7 @@ export default {
       "expanded",
       "position",
     ]);
-    const opts = Object.assign({}, this.options, overrides);
+    const opts = { ...this.options, ...overrides };
 
     this.geocoder = L.control.geocoder(this.apikey, opts);
     eventsBinder(this, this.geocoder, events);
@@ -75,7 +75,7 @@ export default {
     deferredMountedTo(parent) {
       this.parent = parent;
       this.geocoder.addTo(parent);
-      for (var i = 0; i < this.$children.lenth; i++) {
+      for (let i = 0; i < this.$children.lenth; i++) {
         this.$children[i].deferredMountedTo(parent);
       }
     },
@@ -93,8 +93,8 @@ export default {
 // Copied from vue2-leaflet/src/utils/eventsBinder.js
 // Can't import it because it's not available as a separate module
 function eventsBinder(vueElement, leaflet, events) {
-  for (var i = 0; i < events.length; i++) {
-    const exposedName = "l-" + events[i];
+  for (let i = 0; i < events.length; i++) {
+    const exposedName = `l-${events[i]}`;
     const eventName = events[i];
     leaflet.on(eventName, (ev) => {
       vueElement.$emit(exposedName, ev);

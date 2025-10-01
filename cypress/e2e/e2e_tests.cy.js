@@ -5,8 +5,8 @@ describe('E2E Tests', () => {
   let demURL;
   let repURL;
   // Set indices for Leaders used in tests
-  let demIndex = 22;
-  let repIndex = 46;
+  const demIndex = 22;
+  const repIndex = 46;
   
   describe('Ward Leaders List', () => {
     beforeEach(() => {
@@ -120,9 +120,9 @@ describe('E2E Tests', () => {
     });
   
     it('should display placeholders when information is missing', () => {
-      let missingData = Object.keys(demLeader).filter(key => demLeader[key] === null || demLeader[key] === undefined);
+      const missingData = Object.keys(demLeader).filter(key => demLeader[key] === null || demLeader[key] === undefined);
       // Look for missing data in fields besides subward and photo
-      let filteredMissingData = missingData.filter(item => !['subWard','photo'].includes(item))
+      const filteredMissingData = missingData.filter(item => !['subWard','photo'].includes(item))
       if (filteredMissingData.length > 0) {
         cy.get('.unknown').should('have.length.at.least', 1);
       }
