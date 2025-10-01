@@ -91,7 +91,7 @@ export default {
 };
 
 // Copied from vue2-leaflet/src/utils/eventsBinder.js
-// Can't import it because babel won't transpile files from node_modules
+// Can't import it because it's not available as a separate module
 function eventsBinder(vueElement, leaflet, events) {
   for (var i = 0; i < events.length; i++) {
     const exposedName = "l-" + events[i];
