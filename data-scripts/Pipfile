@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+contentful-management = "~=2.14"
+click = "~=8.2"
+petl = "~=1.7"
+ratelimit = "~=2.2"
+tqdm = "~=4.67"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
