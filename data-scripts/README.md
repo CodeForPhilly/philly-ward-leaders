@@ -2,6 +2,26 @@
 Handy little python scripts to clean and merge voter turnout
 and registration data. Also a script to migrate content.
 
+## Install dependencies
+
+This project uses [pipenv](https://pipenv.pypa.io/) to manage Python dependencies.
+
+```bash
+# Install pipenv if you don't have it
+pip install --user pipenv
+
+# Install dependencies
+pipenv install
+
+# Run a script
+pipenv run python cli.py --help
+
+# Start a virtual environment to run multiple commands
+pipenv shell
+```
+
+## Usage
+
 ```
 Usage: cli.py [OPTIONS] COMMAND [ARGS]...
 
