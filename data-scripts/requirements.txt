@@ -1,5 +1,0 @@
-click==6.7
-petl==1.1.1
-ratelimit==1.4.1
-contentful_management==1.4.0
-tqdm==4.19.2
