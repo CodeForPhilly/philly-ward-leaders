@@ -13,6 +13,9 @@ pip install --user pipenv
 # Install dependencies
 pipenv install
 
+# Or to install the versions in the lock file without updating
+pipenv sync
+
 # Run a script
 pipenv run python cli.py --help
 

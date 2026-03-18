@@ -4,11 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-click = "*"
-petl = "*"
-ratelimit = "*"
-tqdm = "*"
-contentful-management = "*"
+click = ">=8.3.1"
+petl = ">=1.7.17"
+ratelimit = ">=2.2.1"
+tqdm = ">=4.67.3"
+contentful-management = ">=2.15.1"
 
 [dev-packages]
 
