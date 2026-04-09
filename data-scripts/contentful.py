@@ -57,6 +57,7 @@ def process_fetch(space_id, content_type_id, api_key, environment_id='master'):
     records = []
     for entry in entries:
         record = {}
+        record['ID'] = entry.id
         for field_name, field_value in entry.fields().items():
             record[field_name] = field_value
         records.append(record)
