@@ -29,6 +29,7 @@ FIELD_MAP = {
 }
 
 REVERSE_FIELD_MAP = {v: k for k, v in FIELD_MAP.items()}
+REVERSE_HEADERS = list(FIELD_MAP.values())
 
 def remove_dash_lines(value):
     """Some social media values are '---------'"""
@@ -70,7 +71,7 @@ def process_leaders(filepath):
 
 def export_leaders(records):
     """Converts Contentful leader records back to CSV-style table"""
-    table = etl.fromdicts(records) \
+    table = etl.fromdicts(records, REVERSE_HEADERS) \
         .convert('party', collapse_party) \
         .convert('gender', collapse_gender) \
         .convertall(none_to_empty) \

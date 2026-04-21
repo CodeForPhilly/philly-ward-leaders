@@ -1,4 +1,5 @@
 import json
+import pprint
 
 from contentful_management import Client
 from tqdm import tqdm
@@ -58,8 +59,9 @@ def process_fetch(space_id, content_type_id, api_key, environment_id='master'):
     for entry in entries:
         record = {}
         record['ID'] = entry.id
-        for field_name, field_value in entry.fields().items():
-            record[field_name] = field_value
+        """pprint.pprint(entry.__dict__)"""
+        for field_name, field_value in entry.raw.get('fields').items():
+            record[field_name] = field_value['en-US']
         records.append(record)
     return records
 
