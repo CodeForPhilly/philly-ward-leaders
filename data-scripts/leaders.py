@@ -4,6 +4,7 @@ import petl as etl
 
 # Mapping from CSV column names to Contentful field names
 FIELD_MAP = {
+    'ID':          'ID',
     'Name':        'fullName',
     'Ward':        'ward',
     'Sub-Ward':    'subWard',
