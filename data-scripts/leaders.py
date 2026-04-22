@@ -56,8 +56,7 @@ def none_to_empty(value):
 def process_leaders(filepath):
     table = etl.fromcsv(filepath) \
         .rename(FIELD_MAP) \
-        .cutout('Lat', 'Lng', 'Last Voted', 'Photo Offset',
-                '2014 General Party Turnout', '2014 General Total Turnout') \
+        .cut(REVERSE_HEADERS) \
         .convert(('ward', 'wardOfResidence', 'yearOfBirth',
                   'divisionCount', 'committeePersonCount',
                   'registeredVotersParty', 'registeredVotersTotal',
@@ -72,6 +71,7 @@ def process_leaders(filepath):
 def export_leaders(records):
     """Converts Contentful leader records back to CSV-style table"""
     table = etl.fromdicts(records, REVERSE_HEADERS) \
+        .sort(['party', 'ward', 'subWard']) \
         .convert('party', collapse_party) \
         .convert('gender', collapse_gender) \
         .convertall(none_to_empty) \
