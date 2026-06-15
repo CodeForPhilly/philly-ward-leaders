@@ -83,7 +83,17 @@ export function createFront(el, data) {
 
   const nameWidth = config.cardWidth - 19;
   const nameHeight = config.cardHeight - 17;
-  const nameFontSize = data.name.length < 28 ? 22 : 20;
+  // Shrink the font on longer names so hyphenated double-barrelled names
+  // like "Katherine Gilmore-Richardson" don't get cut off at the left edge
+  // of the card (see #311).
+  const nameFontSize =
+    data.name.length < 24
+      ? 22
+      : data.name.length < 28
+        ? 20
+        : data.name.length < 32
+          ? 18
+          : 16;
   const nameText = svg.text(nameWidth, nameHeight, data.name).attr({
     "text-anchor": "end",
     fill: config.cardBorderColor,
