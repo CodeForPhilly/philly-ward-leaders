@@ -2,6 +2,7 @@ import json
 import pprint
 
 from contentful_management import Client
+from contentful_management.utils import snake_case
 from tqdm import tqdm
 from ratelimit import rate_limited
 
@@ -19,18 +20,23 @@ def process_import(filepath, space_id, content_type_id, api_key,
               entry_id = record['ID']
               record.pop('ID')
             fields = {key: {'en-US': value} for (key, value) in record.items()}
-            entry_data = {
-                'content_type_id': content_type_id,
-                'fields': fields
-            }
 
             try:
                 if update and entry_id:
                     entry = space.find(entry_id)
-                    for key, value in fields.items():
-                        entry.fields()[key] = value
+                    pprint.pprint(entry.fields())
+                    """ todo: handle photos """
+                    record.pop('photoUrl')
+                    for key, value in record:
+                        snake_key = snake_case(key)
+                        entry.fields()[snake_key] = value
+                    pprint.pprint(entry.fields())
                     entry.save()
                 else:
+                    entry_data = {
+                        'content_type_id': content_type_id,
+                        'fields': fields
+                    }
                     entry = space.create(entry_id, entry_data)
             except Exception as err:
                 action = 'Update' if update and entry_id else 'Creation'
@@ -41,6 +47,7 @@ def process_import(filepath, space_id, content_type_id, api_key,
                     entry.publish()
                 except Exception:
                     pass
+            break
 
 @rate_limited(78)
 def delete_entry(entry):
