@@ -7,8 +7,8 @@ from registry import process_registry
 from turnout import process_turnout
 from committee import process_committee
 from divisions import process_divisions
-from leaders import process_leaders
-from contentful import process_import, process_drop
+from leaders import process_leaders, export_leaders, collapse_party
+from contentful import process_import, process_fetch, process_drop
 
 @click.group()
 def cli():
@@ -55,9 +55,37 @@ def leaders(leaders_file):
               help='Contentful.com Content type ID')
 @click.option('--apikey', 'api_key', required=True,
               help='Contentful.com API key')
-def import_contentful(import_file, space_id, content_type, api_key):
+@click.option('--environment', '-e', 'environment_id', default='master',
+              help='Contentful.com environment ID (default: master)')
+@click.option('--update', '-u', is_flag=True, default=False,
+              help='Update existing entries instead of creating new ones')
+def import_contentful(import_file, space_id, content_type, api_key,
+                      environment_id, update):
     """Imports a JSON file to a contentful.com space"""
-    process_import(import_file, space_id, content_type, api_key)
+    process_import(import_file, space_id, content_type, api_key,
+                   environment_id, update)
+
+@cli.command('export_leaders')
+@click.option('--space', 'space_id', required=True,
+              help='Contentful.com Space ID')
+@click.option('--apikey', 'api_key', required=True,
+              help='Contentful.com API key')
+@click.option('--environment', '-e', 'environment_id', default='master',
+              help='Contentful.com environment ID (default: master)')
+@click.option('--party', '-p', type=click.Choice(
+              ['democratic', 'republican', 'D', 'R'], case_sensitive=False),
+              default=None, help='Filter by party (democratic/D or republican/R)')
+@click.option('--out', '-o', 'output_file', type=click.Path(),
+              required=True, help='Output CSV file path')
+def export_leaders_cmd(space_id, api_key, environment_id,
+                       party, output_file):
+    """Exports leaders from a contentful.com space to CSV"""
+    records = process_fetch(space_id, 'wardLeader', api_key, environment_id)
+    table = export_leaders(records)
+    if party:
+        table = table.select(lambda row: row['Party'] == collapse_party(party))
+    table.tocsv(output_file)
+    click.echo(f'Exported {etl.nrows(table)} records to {output_file}')
 
 @cli.command('drop')
 @click.option('--space', 'space_id', required=True,

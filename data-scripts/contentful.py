@@ -1,12 +1,15 @@
 import json
+import pprint
 
 from contentful_management import Client
+from contentful_management.utils import snake_case
 from tqdm import tqdm
 from ratelimit import rate_limited
 
-def process_import(filepath, space_id, content_type_id, api_key):
+def process_import(filepath, space_id, content_type_id, api_key,
+                   environment_id='master', update=False):
     client = Client(api_key)
-    space = client.entries(space_id)
+    space = client.entries(space_id, environment_id)
 
     with open(filepath) as import_file:
         records = json.load(import_file)
@@ -16,21 +19,35 @@ def process_import(filepath, space_id, content_type_id, api_key):
             if 'ID' in record.keys():
               entry_id = record['ID']
               record.pop('ID')
-            entry_data = {
-                'content_type_id': content_type_id,
-                'fields': {key: {'en-US': value} for (key, value) in record.items()}
-            }
+            fields = {key: {'en-US': value} for (key, value) in record.items()}
 
             try:
-                entry = space.create(entry_id, entry_data)
+                if update and entry_id:
+                    entry = space.find(entry_id)
+                    pprint.pprint(entry.fields())
+                    """ todo: handle photos """
+                    record.pop('photoUrl')
+                    for key, value in record:
+                        snake_key = snake_case(key)
+                        entry.fields()[snake_key] = value
+                    pprint.pprint(entry.fields())
+                    entry.save()
+                else:
+                    entry_data = {
+                        'content_type_id': content_type_id,
+                        'fields': fields
+                    }
+                    entry = space.create(entry_id, entry_data)
             except Exception as err:
-                print('Creation failed', json.dumps(record))
+                action = 'Update' if update and entry_id else 'Creation'
+                print(f'{action} failed', json.dumps(record))
                 print(err)
             else:
                 try:
                     entry.publish()
                 except Exception:
                     pass
+            break
 
 @rate_limited(78)
 def delete_entry(entry):
@@ -38,6 +55,22 @@ def delete_entry(entry):
         entry.unpublish()
 
     entry.delete()
+
+def process_fetch(space_id, content_type_id, api_key, environment_id='master'):
+    """Fetches all entries for a content type and returns them as a list of dicts"""
+    client = Client(api_key)
+    content_type = client.content_types(space_id, environment_id).find(content_type_id)
+    entries = content_type.entries().all({'limit': 1000})
+
+    records = []
+    for entry in entries:
+        record = {}
+        record['ID'] = entry.id
+        """pprint.pprint(entry.__dict__)"""
+        for field_name, field_value in entry.raw.get('fields').items():
+            record[field_name] = field_value['en-US']
+        records.append(record)
+    return records
 
 def process_drop(space_id, content_type_id, api_key):
     client = Client(api_key)
