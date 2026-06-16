@@ -1,0 +1,2434 @@
+[
+    {
+        "ward": 1,
+        "division": 1,
+        "party": "republican",
+        "fullName": "Billy Lanzilotti Sr",
+        "address": "1026 Greenwich St",
+        "zip": "19147"
+    },
+    {
+        "ward": 1,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Palma Digerolamo",
+        "address": "829 Mountain St",
+        "zip": "19148"
+    },
+    {
+        "ward": 1,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Fran Esposito",
+        "address": "1205 Dickinson St",
+        "zip": "19147"
+    },
+    {
+        "ward": 1,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Frank Fral",
+        "address": "1335 S Fairhill St",
+        "zip": "19147"
+    },
+    {
+        "ward": 1,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Marjilyn Murray",
+        "address": "130 Tasker St",
+        "zip": "19148"
+    },
+    {
+        "ward": 1,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Anthony Barbera",
+        "address": "440 Wharton St",
+        "zip": "19147"
+    },
+    {
+        "ward": 1,
+        "division": 20,
+        "party": "republican",
+        "fullName": "Matt Mayfield",
+        "address": "1332 S Clarion St",
+        "zip": "19147"
+    },
+    {
+        "ward": 3,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Ronald Blue",
+        "address": "6006 Cobbs Creek Pkw",
+        "zip": "19143"
+    },
+    {
+        "ward": 5,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Michael J Mclaughlin",
+        "address": "315 S Broad St 1020",
+        "zip": "19107"
+    },
+    {
+        "ward": 5,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Lynn Landes",
+        "address": "217 S Jessup St",
+        "zip": "19107"
+    },
+    {
+        "ward": 5,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Louisa Fredlyn Elfman",
+        "address": "221 S 12Th St 309S",
+        "zip": "19107"
+    },
+    {
+        "ward": 7,
+        "division": 20,
+        "party": "republican",
+        "fullName": "Kathleen Torres",
+        "address": "2953 D St",
+        "zip": "19134"
+    },
+    {
+        "ward": 8,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Sarah E Robbertze",
+        "address": "22 S 22Nd St 819",
+        "zip": "19103"
+    },
+    {
+        "ward": 9,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Charles E Humphreys",
+        "address": "8504 Ardleigh St",
+        "zip": "19118"
+    },
+    {
+        "ward": 9,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Mark A Umansky",
+        "address": "8521 Germantown Ave 2",
+        "zip": "19118"
+    },
+    {
+        "ward": 9,
+        "division": 8,
+        "party": "republican",
+        "fullName": "John J Soroko",
+        "address": "8730 Germantown Ave",
+        "zip": "19118"
+    },
+    {
+        "ward": 9,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Ryan N Wleklinski",
+        "address": "150 W Evergreen Ave B1",
+        "zip": "19118"
+    },
+    {
+        "ward": 9,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Casandra Leal Keen",
+        "address": "150 W Evergreen Ave B1",
+        "zip": "19118"
+    },
+    {
+        "ward": 9,
+        "division": 10,
+        "party": "republican",
+        "fullName": "Aristarchus Patrinos",
+        "address": "8025 Seminole Ave",
+        "zip": "19118"
+    },
+    {
+        "ward": 9,
+        "division": 12,
+        "party": "republican",
+        "fullName": "Susan E Segal Bonavitacola",
+        "address": "60 Gowen Cir",
+        "zip": "19119"
+    },
+    {
+        "ward": 9,
+        "division": 12,
+        "party": "republican",
+        "fullName": "Garrett A Miller",
+        "address": "768 Saint Georges Rd",
+        "zip": "19119"
+    },
+    {
+        "ward": 18,
+        "division": 5,
+        "party": "republican",
+        "fullName": "John F Szymanski Sr",
+        "address": "622 E Girard Ave",
+        "zip": "19125"
+    },
+    {
+        "ward": 18,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Anthony Kuczynski",
+        "address": "420 Belgrade St",
+        "zip": "19125"
+    },
+    {
+        "ward": 18,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Veronica Dejesus",
+        "address": "2023 N Leithgow St",
+        "zip": "19122"
+    },
+    {
+        "ward": 18,
+        "division": 14,
+        "party": "republican",
+        "fullName": "Anita Moore",
+        "address": "1400 John F Kennedy Blv Room 142",
+        "zip": "19107"
+    },
+    {
+        "ward": 19,
+        "division": 1,
+        "party": "republican",
+        "fullName": "Rosa C Cabrera",
+        "address": "3424 N Randolph St",
+        "zip": "19140"
+    },
+    {
+        "ward": 19,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Carlos A Santiago",
+        "address": "2630 N Fairhill St",
+        "zip": "19133"
+    },
+    {
+        "ward": 21,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Alexander L Khanuja",
+        "address": "471 Kingsley St",
+        "zip": "19128"
+    },
+    {
+        "ward": 21,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Nicholas Kevin Salerno",
+        "address": "5420 Ridge Ave 309",
+        "zip": "19128"
+    },
+    {
+        "ward": 21,
+        "division": 40,
+        "party": "republican",
+        "fullName": "Stanton M Popewiny",
+        "address": "6919 Shalkop St",
+        "zip": "19128"
+    },
+    {
+        "ward": 21,
+        "division": 42,
+        "party": "republican",
+        "fullName": "Eugene N Cipriani",
+        "address": "769 Shawmont Ave",
+        "zip": "19128"
+    },
+    {
+        "ward": 21,
+        "division": 42,
+        "party": "republican",
+        "fullName": "Nancy K Cipriani",
+        "address": "769 Shawmont Ave",
+        "zip": "19128"
+    },
+    {
+        "ward": 22,
+        "division": 2,
+        "party": "republican",
+        "fullName": "Calvin R Tucker",
+        "address": "6644 Lincoln Dr",
+        "zip": "19119"
+    },
+    {
+        "ward": 22,
+        "division": 2,
+        "party": "republican",
+        "fullName": "Aaron C R Tucker",
+        "address": "6644 Lincoln Dr",
+        "zip": "19119"
+    },
+    {
+        "ward": 22,
+        "division": 6,
+        "party": "republican",
+        "fullName": "David E Pearson",
+        "address": "6983 Weatham St",
+        "zip": "19119"
+    },
+    {
+        "ward": 22,
+        "division": 6,
+        "party": "republican",
+        "fullName": "William F Snodgrass",
+        "address": "6966 Weatham St",
+        "zip": "19119"
+    },
+    {
+        "ward": 23,
+        "division": 14,
+        "party": "republican",
+        "fullName": "Anyssa Kellenbenz",
+        "address": "4523 Pearce St",
+        "zip": "19124"
+    },
+    {
+        "ward": 23,
+        "division": 14,
+        "party": "republican",
+        "fullName": "Michael Della Polla",
+        "address": "4523 Pearce St",
+        "zip": "19124"
+    },
+    {
+        "ward": 25,
+        "division": 3,
+        "party": "republican",
+        "fullName": "Robyn L Bird",
+        "address": "3184 Livingston St",
+        "zip": "19134"
+    },
+    {
+        "ward": 25,
+        "division": 3,
+        "party": "republican",
+        "fullName": "Benjamin Tribuiani",
+        "address": "3152 Miller St",
+        "zip": "19134"
+    },
+    {
+        "ward": 25,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Brandy M Myers",
+        "address": "2995 Edgemont St",
+        "zip": "19134"
+    },
+    {
+        "ward": 25,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Joseph Petaccio",
+        "address": "2940 Richmond St",
+        "zip": "19134"
+    },
+    {
+        "ward": 25,
+        "division": 5,
+        "party": "republican",
+        "fullName": "John Burke",
+        "address": "3068 Mercer St",
+        "zip": "19134"
+    },
+    {
+        "ward": 25,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Deborah Clegg",
+        "address": "2836 Edgemont St",
+        "zip": "19134"
+    },
+    {
+        "ward": 25,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Paul Furness",
+        "address": "2714 E Cambria St",
+        "zip": "19134"
+    },
+    {
+        "ward": 25,
+        "division": 12,
+        "party": "republican",
+        "fullName": "Mary Dunbar",
+        "address": "2948 Almond St",
+        "zip": "19134"
+    },
+    {
+        "ward": 25,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Harris Steinberg",
+        "address": "2861 Kensington Ave",
+        "zip": "19134"
+    },
+    {
+        "ward": 26,
+        "division": 1,
+        "party": "republican",
+        "fullName": "Sue Rago",
+        "address": "1531 Packer Ave 3",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 1,
+        "party": "republican",
+        "fullName": "Sandra M Lavini",
+        "address": "3156 S 17Th St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 2,
+        "party": "republican",
+        "fullName": "Andrea  Pellicane ",
+        "address": "3240 Chaucer St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 2,
+        "party": "republican",
+        "fullName": "Dominique A Strati ",
+        "address": "1515 Hulseman St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 3,
+        "party": "republican",
+        "fullName": "John Avicolli",
+        "address": "3134 S 18Th St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 3,
+        "party": "republican",
+        "fullName": "Anthony Christina",
+        "address": "1813 Schley St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Billy Lanzilotti",
+        "address": "2845 S 16Th St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Eve Jankovic",
+        "address": "2845 S 16Th St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 5,
+        "party": "republican",
+        "fullName": "Mario Bocelli",
+        "address": "2828 S Smedley St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 5,
+        "party": "republican",
+        "fullName": "Rita Delvecchio",
+        "address": "2945 S Smedley St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Danny Mcmichen",
+        "address": "2748 S Cleveland St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Grace Delspechio",
+        "address": "1835 W Moyamensing Ave",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Ricky Lees",
+        "address": "2610 S Hicks St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Nicky Deihl",
+        "address": "2716 S Mole St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Yvonne Giorgio",
+        "address": "1606 W Ritner St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Michelle Leone",
+        "address": "1628 W Ritner St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Steve Quici",
+        "address": "2632 S Bouvier St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Donna Cesari",
+        "address": "2643 S 18Th St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 10,
+        "party": "republican",
+        "fullName": "Peter J Spurio Jr",
+        "address": "1944 Wolf St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Sydney Duer",
+        "address": "1509 W Porter St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Marylou E Gdowik",
+        "address": "2543 S Hicks St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 12,
+        "party": "republican",
+        "fullName": "Theresa A Dintino",
+        "address": "1729 Jackson St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 12,
+        "party": "republican",
+        "fullName": "Rosemarie Rauser",
+        "address": "1731 Jackson St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 13,
+        "party": "republican",
+        "fullName": "Paula A Terreri",
+        "address": "1840 Gladstone St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 13,
+        "party": "republican",
+        "fullName": "Stephen A Schaefer",
+        "address": "1815 Gladstone St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 14,
+        "party": "republican",
+        "fullName": "Ava Tolomeo",
+        "address": "1922 Durfor St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 14,
+        "party": "republican",
+        "fullName": "Pam Capocci Tolomeo",
+        "address": "1922 Durfor St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Joseph Derita",
+        "address": "2125 W Porter St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Alice Derita",
+        "address": "2125 W Porter St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Denise Delullo",
+        "address": "1524 Wolf St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Joseph Delullo",
+        "address": "1524 Wolf St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 18,
+        "party": "republican",
+        "fullName": "Kelly M Seppy",
+        "address": "2414 S 20Th St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 19,
+        "party": "republican",
+        "fullName": "Sonny Mazzone",
+        "address": "2226 S Chadwick St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 19,
+        "party": "republican",
+        "fullName": "Melissa E Hosbach",
+        "address": "2226 S Chadwick St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 20,
+        "party": "republican",
+        "fullName": "Maria G Tiernan",
+        "address": "3210 E Trieste Way",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 20,
+        "party": "republican",
+        "fullName": "Christa A Lerro",
+        "address": "3210 E Trieste Way",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 22,
+        "party": "republican",
+        "fullName": "Joseph D Dinicolantonio",
+        "address": "2108 S Hicks St",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 23,
+        "party": "republican",
+        "fullName": "Gianni Matteo",
+        "address": "3509 S Reserve Dr",
+        "zip": "19145"
+    },
+    {
+        "ward": 26,
+        "division": 23,
+        "party": "republican",
+        "fullName": "Juliet Capetola",
+        "address": "3415 Trevi Ct",
+        "zip": "19145"
+    },
+    {
+        "ward": 27,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Leon Bey",
+        "address": "4039 Chestnut St 306",
+        "zip": "19104"
+    },
+    {
+        "ward": 27,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Jonathan Monsalvo",
+        "address": "20 S 40Th St",
+        "zip": "19104"
+    },
+    {
+        "ward": 27,
+        "division": 12,
+        "party": "republican",
+        "fullName": "Antoinette Campbell",
+        "address": "1220 S Greylock St",
+        "zip": "19143"
+    },
+    {
+        "ward": 30,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Scott Cohen",
+        "address": "1012 S 20Th St 1",
+        "zip": "19146"
+    },
+    {
+        "ward": 31,
+        "division": 3,
+        "party": "republican",
+        "fullName": "Jennifer Gudknecht",
+        "address": "2036 Blair St",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Danielle Borman",
+        "address": "2625 E Lehigh Ave",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Ronald Simonds",
+        "address": "2603 E Lehigh Ave",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 8,
+        "party": "republican",
+        "fullName": "William J Petrucci",
+        "address": "2457 Amber St",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Matthew T Davalos",
+        "address": "2406 Frankford Ave",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 13,
+        "party": "republican",
+        "fullName": "Barbara J Morehead",
+        "address": "2171 E Letterly St",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 13,
+        "party": "republican",
+        "fullName": "Michael Lang",
+        "address": "2211 E Boston St",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Donald Evans",
+        "address": "2456 Almond St",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Robin Schaffer",
+        "address": "2456 Almond St",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Bernadette M Cimini",
+        "address": "2433 E Cumberland St",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Ann Marie Winning",
+        "address": "2429 E Cumberland St",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Thomas Nickels",
+        "address": "2643 Mercer St",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Adrienne Mcallister",
+        "address": "2577 E Huntingdon St",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 19,
+        "party": "republican",
+        "fullName": "Dominic J Pennachietti",
+        "address": "2322 E Lehigh Ave",
+        "zip": "19125"
+    },
+    {
+        "ward": 31,
+        "division": 19,
+        "party": "republican",
+        "fullName": "Dominic P Pennachietti",
+        "address": "2322 E Lehigh Ave",
+        "zip": "19125"
+    },
+    {
+        "ward": 33,
+        "division": 1,
+        "party": "republican",
+        "fullName": "Erlinda Quetulio Garcia",
+        "address": "4258 I St",
+        "zip": "19124"
+    },
+    {
+        "ward": 33,
+        "division": 1,
+        "party": "republican",
+        "fullName": "Regina P Neels",
+        "address": "4405 Malta St",
+        "zip": "19124"
+    },
+    {
+        "ward": 33,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Luis A Cabrera Sr",
+        "address": "1238 E Cayuga St",
+        "zip": "19124"
+    },
+    {
+        "ward": 33,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Israel Casiano",
+        "address": "835 E Ontario St 2",
+        "zip": "19134"
+    },
+    {
+        "ward": 33,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Francis J Coyle",
+        "address": "1117 E Tioga St",
+        "zip": "19134"
+    },
+    {
+        "ward": 34,
+        "division": 14,
+        "party": "republican",
+        "fullName": "Jerome S Szpila",
+        "address": "1808 Wynnewood Rd",
+        "zip": "19151"
+    },
+    {
+        "ward": 34,
+        "division": 20,
+        "party": "republican",
+        "fullName": "Susan A Mcglone",
+        "address": "876 N 66Th St",
+        "zip": "19151"
+    },
+    {
+        "ward": 34,
+        "division": 20,
+        "party": "republican",
+        "fullName": "Patrick C Mcglone",
+        "address": "876 N 66Th St",
+        "zip": "19151"
+    },
+    {
+        "ward": 34,
+        "division": 31,
+        "party": "republican",
+        "fullName": "Tiffany Vann",
+        "address": "1804 Pennington Rd",
+        "zip": "19151"
+    },
+    {
+        "ward": 35,
+        "division": 2,
+        "party": "republican",
+        "fullName": "Gary Grisafi",
+        "address": "6908 Oakley St",
+        "zip": "19111"
+    },
+    {
+        "ward": 35,
+        "division": 5,
+        "party": "republican",
+        "fullName": "Barbara A Dougherty",
+        "address": "6524 Montour St",
+        "zip": "19111"
+    },
+    {
+        "ward": 35,
+        "division": 5,
+        "party": "republican",
+        "fullName": "Victor J Czapor",
+        "address": "6514 Montour St",
+        "zip": "19111"
+    },
+    {
+        "ward": 35,
+        "division": 32,
+        "party": "republican",
+        "fullName": "Theresa Wilson",
+        "address": "6628 Tabor Ave",
+        "zip": "19111"
+    },
+    {
+        "ward": 35,
+        "division": 32,
+        "party": "republican",
+        "fullName": "Joanne May",
+        "address": "726 Kerper St",
+        "zip": "19111"
+    },
+    {
+        "ward": 36,
+        "division": 33,
+        "party": "republican",
+        "fullName": "Nayips Constantini",
+        "address": "1548 S 30Th St",
+        "zip": "19146"
+    },
+    {
+        "ward": 37,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Jessica Arriaga",
+        "address": "2610 N Franklin St",
+        "zip": "19133"
+    },
+    {
+        "ward": 37,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Juan O Centeno",
+        "address": "3143 N 7Th St",
+        "zip": "19133"
+    },
+    {
+        "ward": 37,
+        "division": 20,
+        "party": "republican",
+        "fullName": "Luis A Monta\u00f1ez",
+        "address": "3030 N 7Th St",
+        "zip": "19133"
+    },
+    {
+        "ward": 39,
+        "division": 1,
+        "party": "republican",
+        "fullName": "Donna Juriel Ciarrocchi",
+        "address": "2404 S Percy St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Rick Rosati",
+        "address": "2622 S Percy St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Sophia Coccia",
+        "address": "2610 S Hutchinson St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Mary Listman",
+        "address": "327 Cantrell St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 25,
+        "party": "republican",
+        "fullName": "Greg Vlassopoulos",
+        "address": "1318 W Porter St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 25,
+        "party": "republican",
+        "fullName": "Colleen Vlassopoulos",
+        "address": "1318 W Porter St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 27,
+        "party": "republican",
+        "fullName": "Brittany Panichelli",
+        "address": "1922 S Alder St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 27,
+        "party": "republican",
+        "fullName": "Janet Coccia",
+        "address": "1922 S Alder St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 30,
+        "party": "republican",
+        "fullName": "Chloe Nicolina Siligrini",
+        "address": "1313 Mcclellan St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 30,
+        "party": "republican",
+        "fullName": "Joelle Siligrini",
+        "address": "1313 Mcclellan St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 31,
+        "party": "republican",
+        "fullName": "Christina Iaconelli",
+        "address": "1121 W Porter St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 34,
+        "party": "republican",
+        "fullName": "Cory Mecca",
+        "address": "1005 Winton St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 36,
+        "party": "republican",
+        "fullName": "Jaden Gdowik",
+        "address": "1222 Mollbore Ter",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 36,
+        "party": "republican",
+        "fullName": "Carol Rafferty",
+        "address": "1310 Bigler St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 37,
+        "party": "republican",
+        "fullName": "Marisa Pierandozzi",
+        "address": "1104 Jackson St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 37,
+        "party": "republican",
+        "fullName": "Vinny Iannece",
+        "address": "1133 Wolf St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 38,
+        "party": "republican",
+        "fullName": "Patty Cosenza",
+        "address": "931 Tree St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 39,
+        "party": "republican",
+        "fullName": "Tommy Forte",
+        "address": "2629 S Jessup St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 39,
+        "party": "republican",
+        "fullName": "Lisa Lepore",
+        "address": "2629 S Jessup St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 41,
+        "party": "republican",
+        "fullName": "Joe Baba Micali",
+        "address": "2709 S Alder St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 41,
+        "party": "republican",
+        "fullName": "Freddy Micali",
+        "address": "2709 S Alder St",
+        "zip": "19148"
+    },
+    {
+        "ward": 39,
+        "division": 44,
+        "party": "republican",
+        "fullName": "Margie Curran",
+        "address": "2824 S Beulah St",
+        "zip": "19148"
+    },
+    {
+        "ward": 40,
+        "division": 25,
+        "party": "republican",
+        "fullName": "Craig N Melidosian",
+        "address": "1911 S 68Th St",
+        "zip": "19142"
+    },
+    {
+        "ward": 40,
+        "division": 28,
+        "party": "republican",
+        "fullName": "Deborah P Ferkler",
+        "address": "2850 S 64Th St",
+        "zip": "19142"
+    },
+    {
+        "ward": 40,
+        "division": 28,
+        "party": "republican",
+        "fullName": "Edwin V Dunfee",
+        "address": "6200 Eastwick Ave 108",
+        "zip": "19142"
+    },
+    {
+        "ward": 40,
+        "division": 49,
+        "party": "republican",
+        "fullName": "Diane Ruggeri",
+        "address": "7434 Peregrine Pl",
+        "zip": "19153"
+    },
+    {
+        "ward": 41,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Minerva A B\u00e1ez",
+        "address": "6339 Hegerman St",
+        "zip": "19135"
+    },
+    {
+        "ward": 41,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Michael G Spinosa",
+        "address": "6430 Marsden St 1",
+        "zip": "19135"
+    },
+    {
+        "ward": 41,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Robert Kownacki",
+        "address": "6319 Ditman St",
+        "zip": "19135"
+    },
+    {
+        "ward": 41,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Leonard J Hughes",
+        "address": "6630 Ditman St",
+        "zip": "19135"
+    },
+    {
+        "ward": 41,
+        "division": 15,
+        "party": "republican",
+        "fullName": "James F Taylor Jr",
+        "address": "7038 Vandike St",
+        "zip": "19135"
+    },
+    {
+        "ward": 41,
+        "division": 19,
+        "party": "republican",
+        "fullName": "Michael Mroz",
+        "address": "7244 Walker St",
+        "zip": "19135"
+    },
+    {
+        "ward": 42,
+        "division": 3,
+        "party": "republican",
+        "fullName": "Estefany Banegas",
+        "address": "4544 N Palethorp St",
+        "zip": "19140"
+    },
+    {
+        "ward": 42,
+        "division": 3,
+        "party": "republican",
+        "fullName": "David Rodriguez",
+        "address": "4544 N Palethorp St",
+        "zip": "19140"
+    },
+    {
+        "ward": 42,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Dennis Burgos",
+        "address": "326 W Raymond St",
+        "zip": "19140"
+    },
+    {
+        "ward": 42,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Chanele Deloatch",
+        "address": "326 W Raymond St",
+        "zip": "19140"
+    },
+    {
+        "ward": 42,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Richard Pekach",
+        "address": "4705 B St",
+        "zip": "19120"
+    },
+    {
+        "ward": 42,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Michael B Berry",
+        "address": "4715 N 4Th St",
+        "zip": "19120"
+    },
+    {
+        "ward": 42,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Franklin Romero",
+        "address": "4754 N Mascher St",
+        "zip": "19120"
+    },
+    {
+        "ward": 42,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Karl Ingram",
+        "address": "441 E Loudon St",
+        "zip": "19120"
+    },
+    {
+        "ward": 42,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Carmen M Vargas",
+        "address": "4945 Ormes St 2",
+        "zip": "19120"
+    },
+    {
+        "ward": 42,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Mara Ortiz",
+        "address": "4945 Ormes St 1",
+        "zip": "19120"
+    },
+    {
+        "ward": 42,
+        "division": 18,
+        "party": "republican",
+        "fullName": "Alexandra I Mindziak",
+        "address": "711 Marwood Rd",
+        "zip": "19120"
+    },
+    {
+        "ward": 42,
+        "division": 22,
+        "party": "republican",
+        "fullName": "Tiffany M Martinez",
+        "address": "4545 Hurley St",
+        "zip": "19120"
+    },
+    {
+        "ward": 42,
+        "division": 22,
+        "party": "republican",
+        "fullName": "Evelyn Jackson",
+        "address": "4646 Hurley St",
+        "zip": "19120"
+    },
+    {
+        "ward": 42,
+        "division": 23,
+        "party": "republican",
+        "fullName": "Enriqueta Estrada",
+        "address": "4504 Weymouth St",
+        "zip": "19120"
+    },
+    {
+        "ward": 42,
+        "division": 23,
+        "party": "republican",
+        "fullName": "Barbara J Du Brul",
+        "address": "4657 Whitaker Ave",
+        "zip": "19120"
+    },
+    {
+        "ward": 43,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Emilio A Vazquez Iii",
+        "address": "4042 N Reese St",
+        "zip": "19140"
+    },
+    {
+        "ward": 44,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Bobby Stewart",
+        "address": "123 N Lindenwood St",
+        "zip": "19139"
+    },
+    {
+        "ward": 45,
+        "division": 1,
+        "party": "republican",
+        "fullName": "Richard H Pyott Jr",
+        "address": "4770 Garden St",
+        "zip": "19137"
+    },
+    {
+        "ward": 45,
+        "division": 1,
+        "party": "republican",
+        "fullName": "Ian P Ferry",
+        "address": "4767 Garden St",
+        "zip": "19137"
+    },
+    {
+        "ward": 45,
+        "division": 2,
+        "party": "republican",
+        "fullName": "Bridgette D Kueny",
+        "address": "2335 Margaret St",
+        "zip": "19137"
+    },
+    {
+        "ward": 45,
+        "division": 3,
+        "party": "republican",
+        "fullName": "Brian Winans",
+        "address": "2612 Pratt St",
+        "zip": "19137"
+    },
+    {
+        "ward": 45,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Aaron Jones",
+        "address": "4484 Salmon St",
+        "zip": "19137"
+    },
+    {
+        "ward": 45,
+        "division": 5,
+        "party": "republican",
+        "fullName": "Charlie O'Connor",
+        "address": "3628 E Thompson St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 5,
+        "party": "republican",
+        "fullName": "Gary Schroeder",
+        "address": "3636 Belgrade St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Robert J Horn",
+        "address": "3325 Edgemont St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Douglas M Baron",
+        "address": "3421 Richmond St 214",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Georgeann Newman",
+        "address": "3225 Aramingo Ave",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Faith Hueber",
+        "address": "2114 E Ontario St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Daniel Hueber",
+        "address": "2114 E Ontario St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Dawn O'Neill",
+        "address": "3265 Tilton St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Mary Jane Burns",
+        "address": "3265 Tilton St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Kathleen M Schweiker",
+        "address": "3614 Frankford Ave",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 17,
+        "party": "republican",
+        "fullName": "James D Ridgeway",
+        "address": "3626 Frankford Ave",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 19,
+        "party": "republican",
+        "fullName": "Frank Cristinzio",
+        "address": "3557 Stouton St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 20,
+        "party": "republican",
+        "fullName": "Charlotte R Delaney",
+        "address": "2540 Gillingham St",
+        "zip": "19137"
+    },
+    {
+        "ward": 45,
+        "division": 20,
+        "party": "republican",
+        "fullName": "Bruce Francis Reikow Sr",
+        "address": "2601 Eddington St",
+        "zip": "19137"
+    },
+    {
+        "ward": 45,
+        "division": 21,
+        "party": "republican",
+        "fullName": "Jessica P Lubin",
+        "address": "2304 E Venango St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 21,
+        "party": "republican",
+        "fullName": "Billy Cortes",
+        "address": "2233 E Venango St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 22,
+        "party": "republican",
+        "fullName": "Joseph B Siegle Jr",
+        "address": "3315 Belgrade St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 22,
+        "party": "republican",
+        "fullName": "Walt Mazur",
+        "address": "3374 Livingston St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 23,
+        "party": "republican",
+        "fullName": "Amy Grace",
+        "address": "4428 Garden St",
+        "zip": "19137"
+    },
+    {
+        "ward": 45,
+        "division": 23,
+        "party": "republican",
+        "fullName": "Daniel R Nardi Jr",
+        "address": "4405 Garden St",
+        "zip": "19137"
+    },
+    {
+        "ward": 45,
+        "division": 24,
+        "party": "republican",
+        "fullName": "Kevin M Pasquay",
+        "address": "3454 Livingston St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 24,
+        "party": "republican",
+        "fullName": "Jeffrey J Sweet Sr",
+        "address": "2603 E Schiller St",
+        "zip": "19134"
+    },
+    {
+        "ward": 45,
+        "division": 25,
+        "party": "republican",
+        "fullName": "Allen R Smith",
+        "address": "2874 Orthodox St",
+        "zip": "19137"
+    },
+    {
+        "ward": 45,
+        "division": 25,
+        "party": "republican",
+        "fullName": "Janet A Smith",
+        "address": "2874 Orthodox St",
+        "zip": "19137"
+    },
+    {
+        "ward": 46,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Andrew C Wheeler",
+        "address": "1025 S Farragut Ter",
+        "zip": "19143"
+    },
+    {
+        "ward": 48,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Christopher C Reese",
+        "address": "2118 S Garnet St",
+        "zip": "19145"
+    },
+    {
+        "ward": 51,
+        "division": 1,
+        "party": "republican",
+        "fullName": "Ranee H Means",
+        "address": "1040 S Ithan St",
+        "zip": "19143"
+    },
+    {
+        "ward": 51,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Morris Manson",
+        "address": "5238 Kingsessing Ave 2",
+        "zip": "19143"
+    },
+    {
+        "ward": 51,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Gabrielle F Kittreles",
+        "address": "5345 Greenway Ave",
+        "zip": "19143"
+    },
+    {
+        "ward": 51,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Maria Ewell",
+        "address": "5345 Greenway Ave",
+        "zip": "19143"
+    },
+    {
+        "ward": 51,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Donna Thomas",
+        "address": "919 S 55Th St",
+        "zip": "19143"
+    },
+    {
+        "ward": 51,
+        "division": 24,
+        "party": "republican",
+        "fullName": "Andrew Gentsch",
+        "address": "5513 Paschall Ave",
+        "zip": "19143"
+    },
+    {
+        "ward": 53,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Thomas Brady",
+        "address": "1133 Unruh Ave",
+        "zip": "19111"
+    },
+    {
+        "ward": 53,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Marvin Mitchell",
+        "address": "1349 Saint Vincent St",
+        "zip": "19111"
+    },
+    {
+        "ward": 53,
+        "division": 19,
+        "party": "republican",
+        "fullName": "Biran Mahmoud",
+        "address": "905 Princeton Ave",
+        "zip": "19111"
+    },
+    {
+        "ward": 53,
+        "division": 21,
+        "party": "republican",
+        "fullName": "Paul Scally",
+        "address": "7254 Lawndale Ave",
+        "zip": "19111"
+    },
+    {
+        "ward": 53,
+        "division": 21,
+        "party": "republican",
+        "fullName": "Jeanette Scally",
+        "address": "7254 Lawndale Ave",
+        "zip": "19111"
+    },
+    {
+        "ward": 53,
+        "division": 23,
+        "party": "republican",
+        "fullName": "Eric Eissler",
+        "address": "926 Magee Ave A",
+        "zip": "19111"
+    },
+    {
+        "ward": 54,
+        "division": 10,
+        "party": "republican",
+        "fullName": "Aaron Bashir",
+        "address": "2217 Glenview St",
+        "zip": "19149"
+    },
+    {
+        "ward": 54,
+        "division": 10,
+        "party": "republican",
+        "fullName": "Saima Haroon Bashir",
+        "address": "2217 Glenview St",
+        "zip": "19149"
+    },
+    {
+        "ward": 54,
+        "division": 22,
+        "party": "republican",
+        "fullName": "Khurram Samson",
+        "address": "7247 Kindred St",
+        "zip": "19149"
+    },
+    {
+        "ward": 54,
+        "division": 22,
+        "party": "republican",
+        "fullName": "Yaqoob Samson",
+        "address": "7247 Kindred St",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Kathleen Mcglynn",
+        "address": "4238 Levick St",
+        "zip": "19135"
+    },
+    {
+        "ward": 55,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Robert J Dillon",
+        "address": "2937 Elbridge St",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 10,
+        "party": "republican",
+        "fullName": "Garry Thomas",
+        "address": "3130 Levick St",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 12,
+        "party": "republican",
+        "fullName": "Patricia F Vogler",
+        "address": "3121 Knorr St",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 12,
+        "party": "republican",
+        "fullName": "Christopher M Vogler",
+        "address": "3121 Knorr St",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Dennis J Ranieri",
+        "address": "3027 Unruh Ave",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 15,
+        "party": "republican",
+        "fullName": "Lawrence A Ranieri Iii",
+        "address": "3027 Unruh Ave",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 19,
+        "party": "republican",
+        "fullName": "John C Kovacs",
+        "address": "3104 Englewood St",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 22,
+        "party": "republican",
+        "fullName": "Carolyn J Boxmeyer",
+        "address": "3471 Friendship St",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 24,
+        "party": "republican",
+        "fullName": "Kevin P Leonard",
+        "address": "3342 Wellington St",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 24,
+        "party": "republican",
+        "fullName": "Kevin W Leonard",
+        "address": "3342 Wellington St",
+        "zip": "19149"
+    },
+    {
+        "ward": 55,
+        "division": 27,
+        "party": "republican",
+        "fullName": "Richard G Cellucci",
+        "address": "4128 Longshore Ave",
+        "zip": "19135"
+    },
+    {
+        "ward": 55,
+        "division": 27,
+        "party": "republican",
+        "fullName": "Anne L Cellucci",
+        "address": "4128 Longshore Ave",
+        "zip": "19135"
+    },
+    {
+        "ward": 56,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Asif John Gill",
+        "address": "7600 Algon Ave",
+        "zip": "19111"
+    },
+    {
+        "ward": 56,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Salim John",
+        "address": "1400 Napfle Ave",
+        "zip": "19111"
+    },
+    {
+        "ward": 56,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Peter A Gill",
+        "address": "1128 Tabor Ln",
+        "zip": "19111"
+    },
+    {
+        "ward": 56,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Aizaz J Gill",
+        "address": "1128 Tabor Ln",
+        "zip": "19111"
+    },
+    {
+        "ward": 56,
+        "division": 33,
+        "party": "republican",
+        "fullName": "Shahzad Anjum",
+        "address": "1844 Afton St",
+        "zip": "19111"
+    },
+    {
+        "ward": 56,
+        "division": 33,
+        "party": "republican",
+        "fullName": "Rockas Maurice",
+        "address": "1833 Faunce St",
+        "zip": "19111"
+    },
+    {
+        "ward": 57,
+        "division": 8,
+        "party": "republican",
+        "fullName": "Lucas Albeser",
+        "address": "8831 Manchester Ave",
+        "zip": "19152"
+    },
+    {
+        "ward": 57,
+        "division": 12,
+        "party": "republican",
+        "fullName": "Adam Hancock",
+        "address": "9103 Wooden Bridge Rd",
+        "zip": "19136"
+    },
+    {
+        "ward": 57,
+        "division": 13,
+        "party": "republican",
+        "fullName": "E Marc Costanzo",
+        "address": "8009 Colfax St",
+        "zip": "19136"
+    },
+    {
+        "ward": 57,
+        "division": 13,
+        "party": "republican",
+        "fullName": "Lisa Costanzo",
+        "address": "8009 Colfax St",
+        "zip": "19136"
+    },
+    {
+        "ward": 57,
+        "division": 14,
+        "party": "republican",
+        "fullName": "Lindsay Smith",
+        "address": "3038 Holme Ave",
+        "zip": "19136"
+    },
+    {
+        "ward": 57,
+        "division": 14,
+        "party": "republican",
+        "fullName": "Leigh Ann O'Neill",
+        "address": "8232 Wilson St",
+        "zip": "19136"
+    },
+    {
+        "ward": 57,
+        "division": 18,
+        "party": "republican",
+        "fullName": "Regina Chepelevich",
+        "address": "8803 Crispin St",
+        "zip": "19136"
+    },
+    {
+        "ward": 57,
+        "division": 21,
+        "party": "republican",
+        "fullName": "Michael Gallagher",
+        "address": "9235 Lansford St",
+        "zip": "19114"
+    },
+    {
+        "ward": 57,
+        "division": 24,
+        "party": "republican",
+        "fullName": "Michael O'Drain",
+        "address": "3463 Eden St",
+        "zip": "19114"
+    },
+    {
+        "ward": 57,
+        "division": 25,
+        "party": "republican",
+        "fullName": "Felicia C Sweeney",
+        "address": "3429 Holyoke Rd",
+        "zip": "19114"
+    },
+    {
+        "ward": 58,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Christina Haney",
+        "address": "13037 Dorothy Dr",
+        "zip": "19116"
+    },
+    {
+        "ward": 58,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Brandan Patrick Mccammitt",
+        "address": "1015 Larkspur St",
+        "zip": "19116"
+    },
+    {
+        "ward": 58,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Edward J Mccammitt",
+        "address": "1015 Larkspur St",
+        "zip": "19116"
+    },
+    {
+        "ward": 58,
+        "division": 12,
+        "party": "republican",
+        "fullName": "Patricia M Dowd",
+        "address": "424 Regina St",
+        "zip": "19116"
+    },
+    {
+        "ward": 58,
+        "division": 13,
+        "party": "republican",
+        "fullName": "Madonna Duffy",
+        "address": "9893 Ferndale St",
+        "zip": "19115"
+    },
+    {
+        "ward": 58,
+        "division": 14,
+        "party": "republican",
+        "fullName": "Michael Gozzi",
+        "address": "1912 Morrell St",
+        "zip": "19115"
+    },
+    {
+        "ward": 58,
+        "division": 21,
+        "party": "republican",
+        "fullName": "Jerry Rocks",
+        "address": "418 Maple Ave",
+        "zip": "19116"
+    },
+    {
+        "ward": 58,
+        "division": 23,
+        "party": "republican",
+        "fullName": "Sean M Mcnicholas",
+        "address": "9962 Wistaria St",
+        "zip": "19115"
+    },
+    {
+        "ward": 58,
+        "division": 23,
+        "party": "republican",
+        "fullName": "Diane Rizzo",
+        "address": "9946 Wistaria St",
+        "zip": "19115"
+    },
+    {
+        "ward": 58,
+        "division": 24,
+        "party": "republican",
+        "fullName": "James Pietrowski",
+        "address": "15070 Carter Rd",
+        "zip": "19116"
+    },
+    {
+        "ward": 58,
+        "division": 34,
+        "party": "republican",
+        "fullName": "Harry F Ley Jr",
+        "address": "11042 Greiner Pl",
+        "zip": "19116"
+    },
+    {
+        "ward": 58,
+        "division": 39,
+        "party": "republican",
+        "fullName": "Jonathan Greaves",
+        "address": "13017 Stevens Rd",
+        "zip": "19116"
+    },
+    {
+        "ward": 58,
+        "division": 41,
+        "party": "republican",
+        "fullName": "Joseph A Picozzi",
+        "address": "15050 Kelvin Ave",
+        "zip": "19116"
+    },
+    {
+        "ward": 58,
+        "division": 41,
+        "party": "republican",
+        "fullName": "Alice M Udovich",
+        "address": "15209 Bernita Dr",
+        "zip": "19116"
+    },
+    {
+        "ward": 60,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Ed Williams",
+        "address": "5323 Pine St",
+        "zip": "19143"
+    },
+    {
+        "ward": 61,
+        "division": 3,
+        "party": "republican",
+        "fullName": "John James Yust",
+        "address": "5616 N 4Th St",
+        "zip": "19120"
+    },
+    {
+        "ward": 63,
+        "division": 2,
+        "party": "republican",
+        "fullName": "John F Gill",
+        "address": "411 Hartel Ave",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 3,
+        "party": "republican",
+        "fullName": "Charles W Mathues Iii",
+        "address": "7954 Ridgeway St",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 3,
+        "party": "republican",
+        "fullName": "Trey Greenwood",
+        "address": "809 Rhawn St",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Linda Gaynor",
+        "address": "917 Ripley St",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Al Taubenberger",
+        "address": "1213 Loney St",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Casey M Wech",
+        "address": "802 Griffith St",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 10,
+        "party": "republican",
+        "fullName": "Mike Bobby",
+        "address": "8014 Tabor Ave",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 10,
+        "party": "republican",
+        "fullName": "Deborah Press",
+        "address": "1202 Fuller St 1",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 14,
+        "party": "republican",
+        "fullName": "Lisa Katuran",
+        "address": "8330 Ridgeway St",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 16,
+        "party": "republican",
+        "fullName": "Susan K Pinkerton",
+        "address": "1005 Bingham St",
+        "zip": "19115"
+    },
+    {
+        "ward": 63,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Susan Macartney",
+        "address": "714 Millwood Rd",
+        "zip": "19115"
+    },
+    {
+        "ward": 63,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Joseph Regan",
+        "address": "8594 Bloomfield Ave",
+        "zip": "19115"
+    },
+    {
+        "ward": 63,
+        "division": 18,
+        "party": "republican",
+        "fullName": "Maria Myers",
+        "address": "139 Greycourt Rd",
+        "zip": "19115"
+    },
+    {
+        "ward": 63,
+        "division": 18,
+        "party": "republican",
+        "fullName": "James J Nicolo Sr",
+        "address": "9000 Cargill Ln",
+        "zip": "19115"
+    },
+    {
+        "ward": 63,
+        "division": 21,
+        "party": "republican",
+        "fullName": "Janice Manton",
+        "address": "101 Almatt Dr",
+        "zip": "19115"
+    },
+    {
+        "ward": 63,
+        "division": 22,
+        "party": "republican",
+        "fullName": "Duke Sladek",
+        "address": "1050 Surrey Rd",
+        "zip": "19115"
+    },
+    {
+        "ward": 63,
+        "division": 23,
+        "party": "republican",
+        "fullName": "Debra Brewster",
+        "address": "703 Bergen St",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 23,
+        "party": "republican",
+        "fullName": "John Brewster",
+        "address": "703 Bergen St",
+        "zip": "19111"
+    },
+    {
+        "ward": 63,
+        "division": 24,
+        "party": "republican",
+        "fullName": "Dan Andrews",
+        "address": "106 Flagstaff Rd",
+        "zip": "19115"
+    },
+    {
+        "ward": 64,
+        "division": 4,
+        "party": "republican",
+        "fullName": "Michael J Straughn",
+        "address": "3404 Rhawn St 1R",
+        "zip": "19136"
+    },
+    {
+        "ward": 64,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Vincent P Mariano",
+        "address": "3436 Meridian St",
+        "zip": "19136"
+    },
+    {
+        "ward": 64,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Maria Conden",
+        "address": "3207 Cottman Ave",
+        "zip": "19149"
+    },
+    {
+        "ward": 64,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Joseph Kinee",
+        "address": "3207 Cottman Ave",
+        "zip": "19149"
+    },
+    {
+        "ward": 64,
+        "division": 18,
+        "party": "republican",
+        "fullName": "Roman Hryhorchuk",
+        "address": "7818 Lister St",
+        "zip": "19152"
+    },
+    {
+        "ward": 65,
+        "division": 2,
+        "party": "republican",
+        "fullName": "Caroline Belger",
+        "address": "9314 Hegerman St",
+        "zip": "19114"
+    },
+    {
+        "ward": 65,
+        "division": 7,
+        "party": "republican",
+        "fullName": "Joseph Moore",
+        "address": "9546 State Rd A",
+        "zip": "19114"
+    },
+    {
+        "ward": 66,
+        "division": 2,
+        "party": "republican",
+        "fullName": "Jason J Grensky",
+        "address": "2813 Nightingale Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 2,
+        "party": "republican",
+        "fullName": "Robert Norton",
+        "address": "2821 Nightingale Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Raymond H Kampf Jr",
+        "address": "12434 Wyndom Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 6,
+        "party": "republican",
+        "fullName": "Patricia Kampf",
+        "address": "12434 Wyndom Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 9,
+        "party": "republican",
+        "fullName": "David P Breslin",
+        "address": "3214 Atmore Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 9,
+        "party": "republican",
+        "fullName": "Warren Walters",
+        "address": "12703 Medford Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 10,
+        "party": "republican",
+        "fullName": "Michael Costanzo",
+        "address": "9701 Berea St",
+        "zip": "19114"
+    },
+    {
+        "ward": 66,
+        "division": 11,
+        "party": "republican",
+        "fullName": "Danielle Mcdermond",
+        "address": "3427 Chalfont Dr",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 13,
+        "party": "republican",
+        "fullName": "John F Irwin",
+        "address": "12460 Balston Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Walter Mulholland",
+        "address": "3269 Comly Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 17,
+        "party": "republican",
+        "fullName": "Camille G Mccolgan",
+        "address": "11821 Brandon Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 20,
+        "party": "republican",
+        "fullName": "Matthew Jones",
+        "address": "4170 Whiting Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 30,
+        "party": "republican",
+        "fullName": "Francis John Dauber Jr",
+        "address": "4110 Fairdale Rd",
+        "zip": "19154"
+    },
+    {
+        "ward": 66,
+        "division": 43,
+        "party": "republican",
+        "fullName": "William P Rapone",
+        "address": "228 Greendale Rd",
+        "zip": "19154"
+    }
+]

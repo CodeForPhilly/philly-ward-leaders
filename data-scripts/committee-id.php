@@ -34,7 +34,7 @@ if (($line = fgets(STDIN)) !== FALSE) {
     fwrite(STDERR, "UTF-8 BOM not found\n");
   }
   $row = array_map('trim', str_getcsv($line));
-  $expected_keys = ['Race', 'Party', 'Name', 'Add1', 'Add2', 'Zip'];
+  $expected_keys = ['Race', 'Party', 'Name', 'Address', 'Zip'];
   if (count(array_intersect($row, $expected_keys)) != count($expected_keys)) {
     throw new \Exception('Missing expected header');
   } 
@@ -59,7 +59,7 @@ while (($raw = fgetcsv(STDIN)) !== FALSE) {
   $new_row['division'] = (int) $matches[2];
   $new_row['party'] = mb_strtolower($row[$map['Party']]);
   $new_row['zip'] = $row[$map['Zip']];
-  $address = $row[$map['Add1']] . ($row[$map['Add2']] ? ', ' . $row[$map['Add2']] : '');
+  $address = $row[$map['Address']];
   $new_row['address'] = mb_convert_case($address, MB_CASE_TITLE);
   $new_row['fullName'] = mb_convert_case($row[$map['Name']], MB_CASE_TITLE);
   $rows[] = $new_row;
