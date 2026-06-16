@@ -1,28 +1,16 @@
 import petl as etl
-import pprint
 
-ab_track = {}
-
-# This is not working - all are B
-def create_id(row):
-    # Append A or B like: "01-01-DEM-A"
-    ab = 'B'
-    wd = row['ward_div']
-    if wd not in ab_track:
-        ab = 'A'
-        ab_track[wd] = 'B'
-    id = row['ward_div'] + ' ' + ab
-    # pprint.pprint(id)
-    return id.replace(' ', '-')
 
 def create_ward(row):
     # Incoming data like: "21-20 DEM"
     return int(row['ward_div'].split('-')[0].lstrip('0'))
 
+
 def create_division(row):
     # Delete "DEM" or "REP" from the end of the name
     # Get characters after -, trim leading zeros, convert to int
     return int(row['ward_div'].split('-')[1].lstrip('0').strip('DEM').strip('REP'))
+
 
 def process_committee(filepath):
     table = etl.fromcsv(filepath) \
@@ -36,9 +24,22 @@ def process_committee(filepath):
         .convert({'fullName': 'title',
                   'address': 'title'}) \
         .convert('party', 'lower') \
-        .addfield('ID', create_id, index=0) \
-        .addfield('ward', create_ward, index=1) \
-        .addfield('division', create_division, index=2) \
-        .cutout('ward_div')
-    
-    return table
+        .addfield('ward', create_ward, index=0) \
+        .addfield('division', create_division, index=1)
+
+    # Assign the A/B suffix in a single deterministic pass over the
+    # materialized rows. petl re-invokes row functions an unspecified number
+    # of times (tables are lazy and re-iterable), so the first-seen suffix
+    # cannot be derived from mutable state inside a petl transform -- doing so
+    # makes every row 'B'. Build the IDs here instead.
+    seen = set()
+    rows = []
+    for rec in etl.dicts(table):
+        wd = rec['ward_div']
+        suffix = 'A' if wd not in seen else 'B'
+        seen.add(wd)
+        rec['ID'] = (wd + ' ' + suffix).replace(' ', '-')
+        rows.append(rec)
+
+    return etl.fromdicts(rows) \
+        .cut('ID', 'ward', 'division', 'party', 'fullName', 'address', 'zip')
