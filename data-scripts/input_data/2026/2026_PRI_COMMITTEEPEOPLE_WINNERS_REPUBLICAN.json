@@ -1,5 +1,6 @@
 [
     {
+        "ID": "01-01-REP-A",
         "ward": 1,
         "division": 1,
         "party": "republican",
@@ -8,6 +9,7 @@
         "zip": "19147"
     },
     {
+        "ID": "01-09-REP-A",
         "ward": 1,
         "division": 9,
         "party": "republican",
@@ -16,6 +18,7 @@
         "zip": "19148"
     },
     {
+        "ID": "01-11-REP-A",
         "ward": 1,
         "division": 11,
         "party": "republican",
@@ -24,6 +27,7 @@
         "zip": "19147"
     },
     {
+        "ID": "01-16-REP-A",
         "ward": 1,
         "division": 16,
         "party": "republican",
@@ -32,6 +36,7 @@
         "zip": "19147"
     },
     {
+        "ID": "01-17-REP-A",
         "ward": 1,
         "division": 17,
         "party": "republican",
@@ -40,6 +45,7 @@
         "zip": "19148"
     },
     {
+        "ID": "01-17-REP-B",
         "ward": 1,
         "division": 17,
         "party": "republican",
@@ -48,6 +54,7 @@
         "zip": "19147"
     },
     {
+        "ID": "01-20-REP-A",
         "ward": 1,
         "division": 20,
         "party": "republican",
@@ -56,6 +63,7 @@
         "zip": "19147"
     },
     {
+        "ID": "03-17-REP-A",
         "ward": 3,
         "division": 17,
         "party": "republican",
@@ -64,6 +72,7 @@
         "zip": "19143"
     },
     {
+        "ID": "05-09-REP-A",
         "ward": 5,
         "division": 9,
         "party": "republican",
@@ -72,6 +81,7 @@
         "zip": "19107"
     },
     {
+        "ID": "05-11-REP-A",
         "ward": 5,
         "division": 11,
         "party": "republican",
@@ -80,6 +90,7 @@
         "zip": "19107"
     },
     {
+        "ID": "05-11-REP-B",
         "ward": 5,
         "division": 11,
         "party": "republican",
@@ -88,6 +99,7 @@
         "zip": "19107"
     },
     {
+        "ID": "07-20-REP-A",
         "ward": 7,
         "division": 20,
         "party": "republican",
@@ -96,6 +108,7 @@
         "zip": "19134"
     },
     {
+        "ID": "08-07-REP-A",
         "ward": 8,
         "division": 7,
         "party": "republican",
@@ -104,6 +117,7 @@
         "zip": "19103"
     },
     {
+        "ID": "09-06-REP-A",
         "ward": 9,
         "division": 6,
         "party": "republican",
@@ -112,6 +126,7 @@
         "zip": "19118"
     },
     {
+        "ID": "09-06-REP-B",
         "ward": 9,
         "division": 6,
         "party": "republican",
@@ -120,6 +135,7 @@
         "zip": "19118"
     },
     {
+        "ID": "09-08-REP-A",
         "ward": 9,
         "division": 8,
         "party": "republican",
@@ -128,6 +144,7 @@
         "zip": "19118"
     },
     {
+        "ID": "09-09-REP-A",
         "ward": 9,
         "division": 9,
         "party": "republican",
@@ -136,6 +153,7 @@
         "zip": "19118"
     },
     {
+        "ID": "09-09-REP-B",
         "ward": 9,
         "division": 9,
         "party": "republican",
@@ -144,6 +162,7 @@
         "zip": "19118"
     },
     {
+        "ID": "09-10-REP-A",
         "ward": 9,
         "division": 10,
         "party": "republican",
@@ -152,6 +171,7 @@
         "zip": "19118"
     },
     {
+        "ID": "09-12-REP-A",
         "ward": 9,
         "division": 12,
         "party": "republican",
@@ -160,6 +180,7 @@
         "zip": "19119"
     },
     {
+        "ID": "09-12-REP-B",
         "ward": 9,
         "division": 12,
         "party": "republican",
@@ -168,6 +189,7 @@
         "zip": "19119"
     },
     {
+        "ID": "18-05-REP-A",
         "ward": 18,
         "division": 5,
         "party": "republican",
@@ -176,6 +198,7 @@
         "zip": "19125"
     },
     {
+        "ID": "18-07-REP-A",
         "ward": 18,
         "division": 7,
         "party": "republican",
@@ -184,6 +207,7 @@
         "zip": "19125"
     },
     {
+        "ID": "18-08-REP-A",
         "ward": 18,
         "division": 8,
         "party": "republican",
@@ -192,6 +216,7 @@
         "zip": "19122"
     },
     {
+        "ID": "18-14-REP-A",
         "ward": 18,
         "division": 14,
         "party": "republican",
@@ -200,6 +225,7 @@
         "zip": "19107"
     },
     {
+        "ID": "19-01-REP-A",
         "ward": 19,
         "division": 1,
         "party": "republican",
@@ -208,6 +234,7 @@
         "zip": "19140"
     },
     {
+        "ID": "19-16-REP-A",
         "ward": 19,
         "division": 16,
         "party": "republican",
@@ -216,6 +243,7 @@
         "zip": "19133"
     },
     {
+        "ID": "21-16-REP-A",
         "ward": 21,
         "division": 16,
         "party": "republican",
@@ -224,6 +252,7 @@
         "zip": "19128"
     },
     {
+        "ID": "21-16-REP-B",
         "ward": 21,
         "division": 16,
         "party": "republican",
@@ -232,6 +261,7 @@
         "zip": "19128"
     },
     {
+        "ID": "21-40-REP-A",
         "ward": 21,
         "division": 40,
         "party": "republican",
@@ -240,6 +270,7 @@
         "zip": "19128"
     },
     {
+        "ID": "21-42-REP-A",
         "ward": 21,
         "division": 42,
         "party": "republican",
@@ -248,6 +279,7 @@
         "zip": "19128"
     },
     {
+        "ID": "21-42-REP-B",
         "ward": 21,
         "division": 42,
         "party": "republican",
@@ -256,6 +288,7 @@
         "zip": "19128"
     },
     {
+        "ID": "22-02-REP-A",
         "ward": 22,
         "division": 2,
         "party": "republican",
@@ -264,6 +297,7 @@
         "zip": "19119"
     },
     {
+        "ID": "22-02-REP-B",
         "ward": 22,
         "division": 2,
         "party": "republican",
@@ -272,6 +306,7 @@
         "zip": "19119"
     },
     {
+        "ID": "22-06-REP-A",
         "ward": 22,
         "division": 6,
         "party": "republican",
@@ -280,6 +315,7 @@
         "zip": "19119"
     },
     {
+        "ID": "22-06-REP-B",
         "ward": 22,
         "division": 6,
         "party": "republican",
@@ -288,6 +324,7 @@
         "zip": "19119"
     },
     {
+        "ID": "23-14-REP-A",
         "ward": 23,
         "division": 14,
         "party": "republican",
@@ -296,6 +333,7 @@
         "zip": "19124"
     },
     {
+        "ID": "23-14-REP-B",
         "ward": 23,
         "division": 14,
         "party": "republican",
@@ -304,6 +342,7 @@
         "zip": "19124"
     },
     {
+        "ID": "25-03-REP-A",
         "ward": 25,
         "division": 3,
         "party": "republican",
@@ -312,6 +351,7 @@
         "zip": "19134"
     },
     {
+        "ID": "25-03-REP-B",
         "ward": 25,
         "division": 3,
         "party": "republican",
@@ -320,6 +360,7 @@
         "zip": "19134"
     },
     {
+        "ID": "25-04-REP-A",
         "ward": 25,
         "division": 4,
         "party": "republican",
@@ -328,6 +369,7 @@
         "zip": "19134"
     },
     {
+        "ID": "25-04-REP-B",
         "ward": 25,
         "division": 4,
         "party": "republican",
@@ -336,6 +378,7 @@
         "zip": "19134"
     },
     {
+        "ID": "25-05-REP-A",
         "ward": 25,
         "division": 5,
         "party": "republican",
@@ -344,6 +387,7 @@
         "zip": "19134"
     },
     {
+        "ID": "25-07-REP-A",
         "ward": 25,
         "division": 7,
         "party": "republican",
@@ -352,6 +396,7 @@
         "zip": "19134"
     },
     {
+        "ID": "25-07-REP-B",
         "ward": 25,
         "division": 7,
         "party": "republican",
@@ -360,6 +405,7 @@
         "zip": "19134"
     },
     {
+        "ID": "25-12-REP-A",
         "ward": 25,
         "division": 12,
         "party": "republican",
@@ -368,6 +414,7 @@
         "zip": "19134"
     },
     {
+        "ID": "25-15-REP-A",
         "ward": 25,
         "division": 15,
         "party": "republican",
@@ -376,6 +423,7 @@
         "zip": "19134"
     },
     {
+        "ID": "26-01-REP-A",
         "ward": 26,
         "division": 1,
         "party": "republican",
@@ -384,6 +432,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-01-REP-B",
         "ward": 26,
         "division": 1,
         "party": "republican",
@@ -392,22 +441,25 @@
         "zip": "19145"
     },
     {
+        "ID": "26-02-REP-A",
         "ward": 26,
         "division": 2,
         "party": "republican",
-        "fullName": "Andrea  Pellicane ",
+        "fullName": "Andrea  Pellicane",
         "address": "3240 Chaucer St",
         "zip": "19145"
     },
     {
+        "ID": "26-02-REP-B",
         "ward": 26,
         "division": 2,
         "party": "republican",
-        "fullName": "Dominique A Strati ",
+        "fullName": "Dominique A Strati",
         "address": "1515 Hulseman St",
         "zip": "19145"
     },
     {
+        "ID": "26-03-REP-A",
         "ward": 26,
         "division": 3,
         "party": "republican",
@@ -416,6 +468,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-03-REP-B",
         "ward": 26,
         "division": 3,
         "party": "republican",
@@ -424,6 +477,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-04-REP-A",
         "ward": 26,
         "division": 4,
         "party": "republican",
@@ -432,6 +486,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-04-REP-B",
         "ward": 26,
         "division": 4,
         "party": "republican",
@@ -440,6 +495,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-05-REP-A",
         "ward": 26,
         "division": 5,
         "party": "republican",
@@ -448,6 +504,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-05-REP-B",
         "ward": 26,
         "division": 5,
         "party": "republican",
@@ -456,6 +513,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-06-REP-A",
         "ward": 26,
         "division": 6,
         "party": "republican",
@@ -464,6 +522,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-06-REP-B",
         "ward": 26,
         "division": 6,
         "party": "republican",
@@ -472,6 +531,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-07-REP-A",
         "ward": 26,
         "division": 7,
         "party": "republican",
@@ -480,6 +540,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-07-REP-B",
         "ward": 26,
         "division": 7,
         "party": "republican",
@@ -488,6 +549,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-08-REP-A",
         "ward": 26,
         "division": 8,
         "party": "republican",
@@ -496,6 +558,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-08-REP-B",
         "ward": 26,
         "division": 8,
         "party": "republican",
@@ -504,6 +567,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-09-REP-A",
         "ward": 26,
         "division": 9,
         "party": "republican",
@@ -512,6 +576,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-09-REP-B",
         "ward": 26,
         "division": 9,
         "party": "republican",
@@ -520,6 +585,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-10-REP-A",
         "ward": 26,
         "division": 10,
         "party": "republican",
@@ -528,6 +594,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-11-REP-A",
         "ward": 26,
         "division": 11,
         "party": "republican",
@@ -536,6 +603,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-11-REP-B",
         "ward": 26,
         "division": 11,
         "party": "republican",
@@ -544,6 +612,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-12-REP-A",
         "ward": 26,
         "division": 12,
         "party": "republican",
@@ -552,6 +621,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-12-REP-B",
         "ward": 26,
         "division": 12,
         "party": "republican",
@@ -560,6 +630,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-13-REP-A",
         "ward": 26,
         "division": 13,
         "party": "republican",
@@ -568,6 +639,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-13-REP-B",
         "ward": 26,
         "division": 13,
         "party": "republican",
@@ -576,6 +648,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-14-REP-A",
         "ward": 26,
         "division": 14,
         "party": "republican",
@@ -584,6 +657,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-14-REP-B",
         "ward": 26,
         "division": 14,
         "party": "republican",
@@ -592,6 +666,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-15-REP-A",
         "ward": 26,
         "division": 15,
         "party": "republican",
@@ -600,6 +675,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-15-REP-B",
         "ward": 26,
         "division": 15,
         "party": "republican",
@@ -608,6 +684,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-17-REP-A",
         "ward": 26,
         "division": 17,
         "party": "republican",
@@ -616,6 +693,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-17-REP-B",
         "ward": 26,
         "division": 17,
         "party": "republican",
@@ -624,6 +702,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-18-REP-A",
         "ward": 26,
         "division": 18,
         "party": "republican",
@@ -632,6 +711,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-19-REP-A",
         "ward": 26,
         "division": 19,
         "party": "republican",
@@ -640,6 +720,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-19-REP-B",
         "ward": 26,
         "division": 19,
         "party": "republican",
@@ -648,6 +729,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-20-REP-A",
         "ward": 26,
         "division": 20,
         "party": "republican",
@@ -656,6 +738,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-20-REP-B",
         "ward": 26,
         "division": 20,
         "party": "republican",
@@ -664,6 +747,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-22-REP-A",
         "ward": 26,
         "division": 22,
         "party": "republican",
@@ -672,6 +756,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-23-REP-A",
         "ward": 26,
         "division": 23,
         "party": "republican",
@@ -680,6 +765,7 @@
         "zip": "19145"
     },
     {
+        "ID": "26-23-REP-B",
         "ward": 26,
         "division": 23,
         "party": "republican",
@@ -688,6 +774,7 @@
         "zip": "19145"
     },
     {
+        "ID": "27-06-REP-A",
         "ward": 27,
         "division": 6,
         "party": "republican",
@@ -696,6 +783,7 @@
         "zip": "19104"
     },
     {
+        "ID": "27-06-REP-B",
         "ward": 27,
         "division": 6,
         "party": "republican",
@@ -704,6 +792,7 @@
         "zip": "19104"
     },
     {
+        "ID": "27-12-REP-A",
         "ward": 27,
         "division": 12,
         "party": "republican",
@@ -712,6 +801,7 @@
         "zip": "19143"
     },
     {
+        "ID": "30-11-REP-A",
         "ward": 30,
         "division": 11,
         "party": "republican",
@@ -720,6 +810,7 @@
         "zip": "19146"
     },
     {
+        "ID": "31-03-REP-A",
         "ward": 31,
         "division": 3,
         "party": "republican",
@@ -728,6 +819,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-07-REP-A",
         "ward": 31,
         "division": 7,
         "party": "republican",
@@ -736,6 +828,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-07-REP-B",
         "ward": 31,
         "division": 7,
         "party": "republican",
@@ -744,6 +837,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-08-REP-A",
         "ward": 31,
         "division": 8,
         "party": "republican",
@@ -752,6 +846,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-08-REP-B",
         "ward": 31,
         "division": 8,
         "party": "republican",
@@ -760,6 +855,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-13-REP-A",
         "ward": 31,
         "division": 13,
         "party": "republican",
@@ -768,6 +864,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-13-REP-B",
         "ward": 31,
         "division": 13,
         "party": "republican",
@@ -776,6 +873,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-15-REP-A",
         "ward": 31,
         "division": 15,
         "party": "republican",
@@ -784,6 +882,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-15-REP-B",
         "ward": 31,
         "division": 15,
         "party": "republican",
@@ -792,6 +891,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-16-REP-A",
         "ward": 31,
         "division": 16,
         "party": "republican",
@@ -800,6 +900,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-16-REP-B",
         "ward": 31,
         "division": 16,
         "party": "republican",
@@ -808,6 +909,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-17-REP-A",
         "ward": 31,
         "division": 17,
         "party": "republican",
@@ -816,6 +918,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-17-REP-B",
         "ward": 31,
         "division": 17,
         "party": "republican",
@@ -824,6 +927,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-19-REP-A",
         "ward": 31,
         "division": 19,
         "party": "republican",
@@ -832,6 +936,7 @@
         "zip": "19125"
     },
     {
+        "ID": "31-19-REP-B",
         "ward": 31,
         "division": 19,
         "party": "republican",
@@ -840,6 +945,7 @@
         "zip": "19125"
     },
     {
+        "ID": "33-01-REP-A",
         "ward": 33,
         "division": 1,
         "party": "republican",
@@ -848,6 +954,7 @@
         "zip": "19124"
     },
     {
+        "ID": "33-01-REP-B",
         "ward": 33,
         "division": 1,
         "party": "republican",
@@ -856,6 +963,7 @@
         "zip": "19124"
     },
     {
+        "ID": "33-04-REP-A",
         "ward": 33,
         "division": 4,
         "party": "republican",
@@ -864,6 +972,7 @@
         "zip": "19124"
     },
     {
+        "ID": "33-15-REP-A",
         "ward": 33,
         "division": 15,
         "party": "republican",
@@ -872,6 +981,7 @@
         "zip": "19134"
     },
     {
+        "ID": "33-16-REP-A",
         "ward": 33,
         "division": 16,
         "party": "republican",
@@ -880,6 +990,7 @@
         "zip": "19134"
     },
     {
+        "ID": "34-14-REP-A",
         "ward": 34,
         "division": 14,
         "party": "republican",
@@ -888,6 +999,7 @@
         "zip": "19151"
     },
     {
+        "ID": "34-20-REP-A",
         "ward": 34,
         "division": 20,
         "party": "republican",
@@ -896,6 +1008,7 @@
         "zip": "19151"
     },
     {
+        "ID": "34-20-REP-B",
         "ward": 34,
         "division": 20,
         "party": "republican",
@@ -904,6 +1017,7 @@
         "zip": "19151"
     },
     {
+        "ID": "34-31-REP-A",
         "ward": 34,
         "division": 31,
         "party": "republican",
@@ -912,6 +1026,7 @@
         "zip": "19151"
     },
     {
+        "ID": "35-02-REP-A",
         "ward": 35,
         "division": 2,
         "party": "republican",
@@ -920,6 +1035,7 @@
         "zip": "19111"
     },
     {
+        "ID": "35-05-REP-A",
         "ward": 35,
         "division": 5,
         "party": "republican",
@@ -928,6 +1044,7 @@
         "zip": "19111"
     },
     {
+        "ID": "35-05-REP-B",
         "ward": 35,
         "division": 5,
         "party": "republican",
@@ -936,6 +1053,7 @@
         "zip": "19111"
     },
     {
+        "ID": "35-32-REP-A",
         "ward": 35,
         "division": 32,
         "party": "republican",
@@ -944,6 +1062,7 @@
         "zip": "19111"
     },
     {
+        "ID": "35-32-REP-B",
         "ward": 35,
         "division": 32,
         "party": "republican",
@@ -952,6 +1071,7 @@
         "zip": "19111"
     },
     {
+        "ID": "36-33-REP-A",
         "ward": 36,
         "division": 33,
         "party": "republican",
@@ -960,6 +1080,7 @@
         "zip": "19146"
     },
     {
+        "ID": "37-15-REP-A",
         "ward": 37,
         "division": 15,
         "party": "republican",
@@ -968,6 +1089,7 @@
         "zip": "19133"
     },
     {
+        "ID": "37-16-REP-A",
         "ward": 37,
         "division": 16,
         "party": "republican",
@@ -976,6 +1098,7 @@
         "zip": "19133"
     },
     {
+        "ID": "37-20-REP-A",
         "ward": 37,
         "division": 20,
         "party": "republican",
@@ -984,6 +1107,7 @@
         "zip": "19133"
     },
     {
+        "ID": "39-01-REP-A",
         "ward": 39,
         "division": 1,
         "party": "republican",
@@ -992,6 +1116,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-04-REP-A",
         "ward": 39,
         "division": 4,
         "party": "republican",
@@ -1000,6 +1125,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-04-REP-B",
         "ward": 39,
         "division": 4,
         "party": "republican",
@@ -1008,6 +1134,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-08-REP-A",
         "ward": 39,
         "division": 8,
         "party": "republican",
@@ -1016,6 +1143,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-25-REP-A",
         "ward": 39,
         "division": 25,
         "party": "republican",
@@ -1024,6 +1152,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-25-REP-B",
         "ward": 39,
         "division": 25,
         "party": "republican",
@@ -1032,6 +1161,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-27-REP-A",
         "ward": 39,
         "division": 27,
         "party": "republican",
@@ -1040,6 +1170,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-27-REP-B",
         "ward": 39,
         "division": 27,
         "party": "republican",
@@ -1048,6 +1179,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-30-REP-A",
         "ward": 39,
         "division": 30,
         "party": "republican",
@@ -1056,6 +1188,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-30-REP-B",
         "ward": 39,
         "division": 30,
         "party": "republican",
@@ -1064,6 +1197,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-31-REP-A",
         "ward": 39,
         "division": 31,
         "party": "republican",
@@ -1072,6 +1206,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-34-REP-A",
         "ward": 39,
         "division": 34,
         "party": "republican",
@@ -1080,6 +1215,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-36-REP-A",
         "ward": 39,
         "division": 36,
         "party": "republican",
@@ -1088,6 +1224,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-36-REP-B",
         "ward": 39,
         "division": 36,
         "party": "republican",
@@ -1096,6 +1233,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-37-REP-A",
         "ward": 39,
         "division": 37,
         "party": "republican",
@@ -1104,6 +1242,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-37-REP-B",
         "ward": 39,
         "division": 37,
         "party": "republican",
@@ -1112,6 +1251,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-38-REP-A",
         "ward": 39,
         "division": 38,
         "party": "republican",
@@ -1120,6 +1260,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-39-REP-A",
         "ward": 39,
         "division": 39,
         "party": "republican",
@@ -1128,6 +1269,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-39-REP-B",
         "ward": 39,
         "division": 39,
         "party": "republican",
@@ -1136,6 +1278,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-41-REP-A",
         "ward": 39,
         "division": 41,
         "party": "republican",
@@ -1144,6 +1287,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-41-REP-B",
         "ward": 39,
         "division": 41,
         "party": "republican",
@@ -1152,6 +1296,7 @@
         "zip": "19148"
     },
     {
+        "ID": "39-44-REP-A",
         "ward": 39,
         "division": 44,
         "party": "republican",
@@ -1160,6 +1305,7 @@
         "zip": "19148"
     },
     {
+        "ID": "40-25-REP-A",
         "ward": 40,
         "division": 25,
         "party": "republican",
@@ -1168,6 +1314,7 @@
         "zip": "19142"
     },
     {
+        "ID": "40-28-REP-A",
         "ward": 40,
         "division": 28,
         "party": "republican",
@@ -1176,6 +1323,7 @@
         "zip": "19142"
     },
     {
+        "ID": "40-28-REP-B",
         "ward": 40,
         "division": 28,
         "party": "republican",
@@ -1184,6 +1332,7 @@
         "zip": "19142"
     },
     {
+        "ID": "40-49-REP-A",
         "ward": 40,
         "division": 49,
         "party": "republican",
@@ -1192,6 +1341,7 @@
         "zip": "19153"
     },
     {
+        "ID": "41-06-REP-A",
         "ward": 41,
         "division": 6,
         "party": "republican",
@@ -1200,6 +1350,7 @@
         "zip": "19135"
     },
     {
+        "ID": "41-08-REP-A",
         "ward": 41,
         "division": 8,
         "party": "republican",
@@ -1208,6 +1359,7 @@
         "zip": "19135"
     },
     {
+        "ID": "41-08-REP-B",
         "ward": 41,
         "division": 8,
         "party": "republican",
@@ -1216,6 +1368,7 @@
         "zip": "19135"
     },
     {
+        "ID": "41-11-REP-A",
         "ward": 41,
         "division": 11,
         "party": "republican",
@@ -1224,6 +1377,7 @@
         "zip": "19135"
     },
     {
+        "ID": "41-15-REP-A",
         "ward": 41,
         "division": 15,
         "party": "republican",
@@ -1232,6 +1386,7 @@
         "zip": "19135"
     },
     {
+        "ID": "41-19-REP-A",
         "ward": 41,
         "division": 19,
         "party": "republican",
@@ -1240,6 +1395,7 @@
         "zip": "19135"
     },
     {
+        "ID": "42-03-REP-A",
         "ward": 42,
         "division": 3,
         "party": "republican",
@@ -1248,6 +1404,7 @@
         "zip": "19140"
     },
     {
+        "ID": "42-03-REP-B",
         "ward": 42,
         "division": 3,
         "party": "republican",
@@ -1256,6 +1413,7 @@
         "zip": "19140"
     },
     {
+        "ID": "42-04-REP-A",
         "ward": 42,
         "division": 4,
         "party": "republican",
@@ -1264,6 +1422,7 @@
         "zip": "19140"
     },
     {
+        "ID": "42-04-REP-B",
         "ward": 42,
         "division": 4,
         "party": "republican",
@@ -1272,6 +1431,7 @@
         "zip": "19140"
     },
     {
+        "ID": "42-06-REP-A",
         "ward": 42,
         "division": 6,
         "party": "republican",
@@ -1280,6 +1440,7 @@
         "zip": "19120"
     },
     {
+        "ID": "42-07-REP-A",
         "ward": 42,
         "division": 7,
         "party": "republican",
@@ -1288,6 +1449,7 @@
         "zip": "19120"
     },
     {
+        "ID": "42-07-REP-B",
         "ward": 42,
         "division": 7,
         "party": "republican",
@@ -1296,6 +1458,7 @@
         "zip": "19120"
     },
     {
+        "ID": "42-08-REP-A",
         "ward": 42,
         "division": 8,
         "party": "republican",
@@ -1304,6 +1467,7 @@
         "zip": "19120"
     },
     {
+        "ID": "42-11-REP-A",
         "ward": 42,
         "division": 11,
         "party": "republican",
@@ -1312,6 +1476,7 @@
         "zip": "19120"
     },
     {
+        "ID": "42-11-REP-B",
         "ward": 42,
         "division": 11,
         "party": "republican",
@@ -1320,6 +1485,7 @@
         "zip": "19120"
     },
     {
+        "ID": "42-18-REP-A",
         "ward": 42,
         "division": 18,
         "party": "republican",
@@ -1328,6 +1494,7 @@
         "zip": "19120"
     },
     {
+        "ID": "42-22-REP-A",
         "ward": 42,
         "division": 22,
         "party": "republican",
@@ -1336,6 +1503,7 @@
         "zip": "19120"
     },
     {
+        "ID": "42-22-REP-B",
         "ward": 42,
         "division": 22,
         "party": "republican",
@@ -1344,6 +1512,7 @@
         "zip": "19120"
     },
     {
+        "ID": "42-23-REP-A",
         "ward": 42,
         "division": 23,
         "party": "republican",
@@ -1352,6 +1521,7 @@
         "zip": "19120"
     },
     {
+        "ID": "42-23-REP-B",
         "ward": 42,
         "division": 23,
         "party": "republican",
@@ -1360,6 +1530,7 @@
         "zip": "19120"
     },
     {
+        "ID": "43-07-REP-A",
         "ward": 43,
         "division": 7,
         "party": "republican",
@@ -1368,6 +1539,7 @@
         "zip": "19140"
     },
     {
+        "ID": "44-06-REP-A",
         "ward": 44,
         "division": 6,
         "party": "republican",
@@ -1376,6 +1548,7 @@
         "zip": "19139"
     },
     {
+        "ID": "45-01-REP-A",
         "ward": 45,
         "division": 1,
         "party": "republican",
@@ -1384,6 +1557,7 @@
         "zip": "19137"
     },
     {
+        "ID": "45-01-REP-B",
         "ward": 45,
         "division": 1,
         "party": "republican",
@@ -1392,6 +1566,7 @@
         "zip": "19137"
     },
     {
+        "ID": "45-02-REP-A",
         "ward": 45,
         "division": 2,
         "party": "republican",
@@ -1400,6 +1575,7 @@
         "zip": "19137"
     },
     {
+        "ID": "45-03-REP-A",
         "ward": 45,
         "division": 3,
         "party": "republican",
@@ -1408,6 +1584,7 @@
         "zip": "19137"
     },
     {
+        "ID": "45-04-REP-A",
         "ward": 45,
         "division": 4,
         "party": "republican",
@@ -1416,6 +1593,7 @@
         "zip": "19137"
     },
     {
+        "ID": "45-05-REP-A",
         "ward": 45,
         "division": 5,
         "party": "republican",
@@ -1424,6 +1602,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-05-REP-B",
         "ward": 45,
         "division": 5,
         "party": "republican",
@@ -1432,6 +1611,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-06-REP-A",
         "ward": 45,
         "division": 6,
         "party": "republican",
@@ -1440,6 +1620,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-06-REP-B",
         "ward": 45,
         "division": 6,
         "party": "republican",
@@ -1448,6 +1629,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-07-REP-A",
         "ward": 45,
         "division": 7,
         "party": "republican",
@@ -1456,6 +1638,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-08-REP-A",
         "ward": 45,
         "division": 8,
         "party": "republican",
@@ -1464,6 +1647,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-08-REP-B",
         "ward": 45,
         "division": 8,
         "party": "republican",
@@ -1472,6 +1656,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-15-REP-A",
         "ward": 45,
         "division": 15,
         "party": "republican",
@@ -1480,6 +1665,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-15-REP-B",
         "ward": 45,
         "division": 15,
         "party": "republican",
@@ -1488,6 +1674,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-17-REP-A",
         "ward": 45,
         "division": 17,
         "party": "republican",
@@ -1496,6 +1683,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-17-REP-B",
         "ward": 45,
         "division": 17,
         "party": "republican",
@@ -1504,6 +1692,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-19-REP-A",
         "ward": 45,
         "division": 19,
         "party": "republican",
@@ -1512,6 +1701,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-20-REP-A",
         "ward": 45,
         "division": 20,
         "party": "republican",
@@ -1520,6 +1710,7 @@
         "zip": "19137"
     },
     {
+        "ID": "45-20-REP-B",
         "ward": 45,
         "division": 20,
         "party": "republican",
@@ -1528,6 +1719,7 @@
         "zip": "19137"
     },
     {
+        "ID": "45-21-REP-A",
         "ward": 45,
         "division": 21,
         "party": "republican",
@@ -1536,6 +1728,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-21-REP-B",
         "ward": 45,
         "division": 21,
         "party": "republican",
@@ -1544,6 +1737,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-22-REP-A",
         "ward": 45,
         "division": 22,
         "party": "republican",
@@ -1552,6 +1746,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-22-REP-B",
         "ward": 45,
         "division": 22,
         "party": "republican",
@@ -1560,6 +1755,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-23-REP-A",
         "ward": 45,
         "division": 23,
         "party": "republican",
@@ -1568,6 +1764,7 @@
         "zip": "19137"
     },
     {
+        "ID": "45-23-REP-B",
         "ward": 45,
         "division": 23,
         "party": "republican",
@@ -1576,6 +1773,7 @@
         "zip": "19137"
     },
     {
+        "ID": "45-24-REP-A",
         "ward": 45,
         "division": 24,
         "party": "republican",
@@ -1584,6 +1782,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-24-REP-B",
         "ward": 45,
         "division": 24,
         "party": "republican",
@@ -1592,6 +1791,7 @@
         "zip": "19134"
     },
     {
+        "ID": "45-25-REP-A",
         "ward": 45,
         "division": 25,
         "party": "republican",
@@ -1600,6 +1800,7 @@
         "zip": "19137"
     },
     {
+        "ID": "45-25-REP-B",
         "ward": 45,
         "division": 25,
         "party": "republican",
@@ -1608,6 +1809,7 @@
         "zip": "19137"
     },
     {
+        "ID": "46-16-REP-A",
         "ward": 46,
         "division": 16,
         "party": "republican",
@@ -1616,6 +1818,7 @@
         "zip": "19143"
     },
     {
+        "ID": "48-17-REP-A",
         "ward": 48,
         "division": 17,
         "party": "republican",
@@ -1624,6 +1827,7 @@
         "zip": "19145"
     },
     {
+        "ID": "51-01-REP-A",
         "ward": 51,
         "division": 1,
         "party": "republican",
@@ -1632,6 +1836,7 @@
         "zip": "19143"
     },
     {
+        "ID": "51-08-REP-A",
         "ward": 51,
         "division": 8,
         "party": "republican",
@@ -1640,6 +1845,7 @@
         "zip": "19143"
     },
     {
+        "ID": "51-09-REP-A",
         "ward": 51,
         "division": 9,
         "party": "republican",
@@ -1648,6 +1854,7 @@
         "zip": "19143"
     },
     {
+        "ID": "51-09-REP-B",
         "ward": 51,
         "division": 9,
         "party": "republican",
@@ -1656,6 +1863,7 @@
         "zip": "19143"
     },
     {
+        "ID": "51-15-REP-A",
         "ward": 51,
         "division": 15,
         "party": "republican",
@@ -1664,6 +1872,7 @@
         "zip": "19143"
     },
     {
+        "ID": "51-24-REP-A",
         "ward": 51,
         "division": 24,
         "party": "republican",
@@ -1672,6 +1881,7 @@
         "zip": "19143"
     },
     {
+        "ID": "53-11-REP-A",
         "ward": 53,
         "division": 11,
         "party": "republican",
@@ -1680,6 +1890,7 @@
         "zip": "19111"
     },
     {
+        "ID": "53-17-REP-A",
         "ward": 53,
         "division": 17,
         "party": "republican",
@@ -1688,6 +1899,7 @@
         "zip": "19111"
     },
     {
+        "ID": "53-19-REP-A",
         "ward": 53,
         "division": 19,
         "party": "republican",
@@ -1696,6 +1908,7 @@
         "zip": "19111"
     },
     {
+        "ID": "53-21-REP-A",
         "ward": 53,
         "division": 21,
         "party": "republican",
@@ -1704,6 +1917,7 @@
         "zip": "19111"
     },
     {
+        "ID": "53-21-REP-B",
         "ward": 53,
         "division": 21,
         "party": "republican",
@@ -1712,6 +1926,7 @@
         "zip": "19111"
     },
     {
+        "ID": "53-23-REP-A",
         "ward": 53,
         "division": 23,
         "party": "republican",
@@ -1720,6 +1935,7 @@
         "zip": "19111"
     },
     {
+        "ID": "54-10-REP-A",
         "ward": 54,
         "division": 10,
         "party": "republican",
@@ -1728,6 +1944,7 @@
         "zip": "19149"
     },
     {
+        "ID": "54-10-REP-B",
         "ward": 54,
         "division": 10,
         "party": "republican",
@@ -1736,6 +1953,7 @@
         "zip": "19149"
     },
     {
+        "ID": "54-22-REP-A",
         "ward": 54,
         "division": 22,
         "party": "republican",
@@ -1744,6 +1962,7 @@
         "zip": "19149"
     },
     {
+        "ID": "54-22-REP-B",
         "ward": 54,
         "division": 22,
         "party": "republican",
@@ -1752,6 +1971,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-06-REP-A",
         "ward": 55,
         "division": 6,
         "party": "republican",
@@ -1760,6 +1980,7 @@
         "zip": "19135"
     },
     {
+        "ID": "55-09-REP-A",
         "ward": 55,
         "division": 9,
         "party": "republican",
@@ -1768,6 +1989,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-10-REP-A",
         "ward": 55,
         "division": 10,
         "party": "republican",
@@ -1776,6 +1998,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-12-REP-A",
         "ward": 55,
         "division": 12,
         "party": "republican",
@@ -1784,6 +2007,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-12-REP-B",
         "ward": 55,
         "division": 12,
         "party": "republican",
@@ -1792,6 +2016,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-15-REP-A",
         "ward": 55,
         "division": 15,
         "party": "republican",
@@ -1800,6 +2025,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-15-REP-B",
         "ward": 55,
         "division": 15,
         "party": "republican",
@@ -1808,6 +2034,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-19-REP-A",
         "ward": 55,
         "division": 19,
         "party": "republican",
@@ -1816,6 +2043,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-22-REP-A",
         "ward": 55,
         "division": 22,
         "party": "republican",
@@ -1824,6 +2052,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-24-REP-A",
         "ward": 55,
         "division": 24,
         "party": "republican",
@@ -1832,6 +2061,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-24-REP-B",
         "ward": 55,
         "division": 24,
         "party": "republican",
@@ -1840,6 +2070,7 @@
         "zip": "19149"
     },
     {
+        "ID": "55-27-REP-A",
         "ward": 55,
         "division": 27,
         "party": "republican",
@@ -1848,6 +2079,7 @@
         "zip": "19135"
     },
     {
+        "ID": "55-27-REP-B",
         "ward": 55,
         "division": 27,
         "party": "republican",
@@ -1856,6 +2088,7 @@
         "zip": "19135"
     },
     {
+        "ID": "56-04-REP-A",
         "ward": 56,
         "division": 4,
         "party": "republican",
@@ -1864,6 +2097,7 @@
         "zip": "19111"
     },
     {
+        "ID": "56-04-REP-B",
         "ward": 56,
         "division": 4,
         "party": "republican",
@@ -1872,6 +2106,7 @@
         "zip": "19111"
     },
     {
+        "ID": "56-08-REP-A",
         "ward": 56,
         "division": 8,
         "party": "republican",
@@ -1880,6 +2115,7 @@
         "zip": "19111"
     },
     {
+        "ID": "56-08-REP-B",
         "ward": 56,
         "division": 8,
         "party": "republican",
@@ -1888,6 +2124,7 @@
         "zip": "19111"
     },
     {
+        "ID": "56-33-REP-A",
         "ward": 56,
         "division": 33,
         "party": "republican",
@@ -1896,6 +2133,7 @@
         "zip": "19111"
     },
     {
+        "ID": "56-33-REP-B",
         "ward": 56,
         "division": 33,
         "party": "republican",
@@ -1904,6 +2142,7 @@
         "zip": "19111"
     },
     {
+        "ID": "57-08-REP-A",
         "ward": 57,
         "division": 8,
         "party": "republican",
@@ -1912,6 +2151,7 @@
         "zip": "19152"
     },
     {
+        "ID": "57-12-REP-A",
         "ward": 57,
         "division": 12,
         "party": "republican",
@@ -1920,6 +2160,7 @@
         "zip": "19136"
     },
     {
+        "ID": "57-13-REP-A",
         "ward": 57,
         "division": 13,
         "party": "republican",
@@ -1928,6 +2169,7 @@
         "zip": "19136"
     },
     {
+        "ID": "57-13-REP-B",
         "ward": 57,
         "division": 13,
         "party": "republican",
@@ -1936,6 +2178,7 @@
         "zip": "19136"
     },
     {
+        "ID": "57-14-REP-A",
         "ward": 57,
         "division": 14,
         "party": "republican",
@@ -1944,6 +2187,7 @@
         "zip": "19136"
     },
     {
+        "ID": "57-14-REP-B",
         "ward": 57,
         "division": 14,
         "party": "republican",
@@ -1952,6 +2196,7 @@
         "zip": "19136"
     },
     {
+        "ID": "57-18-REP-A",
         "ward": 57,
         "division": 18,
         "party": "republican",
@@ -1960,6 +2205,7 @@
         "zip": "19136"
     },
     {
+        "ID": "57-21-REP-A",
         "ward": 57,
         "division": 21,
         "party": "republican",
@@ -1968,6 +2214,7 @@
         "zip": "19114"
     },
     {
+        "ID": "57-24-REP-A",
         "ward": 57,
         "division": 24,
         "party": "republican",
@@ -1976,6 +2223,7 @@
         "zip": "19114"
     },
     {
+        "ID": "57-25-REP-A",
         "ward": 57,
         "division": 25,
         "party": "republican",
@@ -1984,6 +2232,7 @@
         "zip": "19114"
     },
     {
+        "ID": "58-04-REP-A",
         "ward": 58,
         "division": 4,
         "party": "republican",
@@ -1992,6 +2241,7 @@
         "zip": "19116"
     },
     {
+        "ID": "58-07-REP-A",
         "ward": 58,
         "division": 7,
         "party": "republican",
@@ -2000,6 +2250,7 @@
         "zip": "19116"
     },
     {
+        "ID": "58-07-REP-B",
         "ward": 58,
         "division": 7,
         "party": "republican",
@@ -2008,6 +2259,7 @@
         "zip": "19116"
     },
     {
+        "ID": "58-12-REP-A",
         "ward": 58,
         "division": 12,
         "party": "republican",
@@ -2016,6 +2268,7 @@
         "zip": "19116"
     },
     {
+        "ID": "58-13-REP-A",
         "ward": 58,
         "division": 13,
         "party": "republican",
@@ -2024,6 +2277,7 @@
         "zip": "19115"
     },
     {
+        "ID": "58-14-REP-A",
         "ward": 58,
         "division": 14,
         "party": "republican",
@@ -2032,6 +2286,7 @@
         "zip": "19115"
     },
     {
+        "ID": "58-21-REP-A",
         "ward": 58,
         "division": 21,
         "party": "republican",
@@ -2040,6 +2295,7 @@
         "zip": "19116"
     },
     {
+        "ID": "58-23-REP-A",
         "ward": 58,
         "division": 23,
         "party": "republican",
@@ -2048,6 +2304,7 @@
         "zip": "19115"
     },
     {
+        "ID": "58-23-REP-B",
         "ward": 58,
         "division": 23,
         "party": "republican",
@@ -2056,6 +2313,7 @@
         "zip": "19115"
     },
     {
+        "ID": "58-24-REP-A",
         "ward": 58,
         "division": 24,
         "party": "republican",
@@ -2064,6 +2322,7 @@
         "zip": "19116"
     },
     {
+        "ID": "58-34-REP-A",
         "ward": 58,
         "division": 34,
         "party": "republican",
@@ -2072,6 +2331,7 @@
         "zip": "19116"
     },
     {
+        "ID": "58-39-REP-A",
         "ward": 58,
         "division": 39,
         "party": "republican",
@@ -2080,6 +2340,7 @@
         "zip": "19116"
     },
     {
+        "ID": "58-41-REP-A",
         "ward": 58,
         "division": 41,
         "party": "republican",
@@ -2088,6 +2349,7 @@
         "zip": "19116"
     },
     {
+        "ID": "58-41-REP-B",
         "ward": 58,
         "division": 41,
         "party": "republican",
@@ -2096,6 +2358,7 @@
         "zip": "19116"
     },
     {
+        "ID": "60-16-REP-A",
         "ward": 60,
         "division": 16,
         "party": "republican",
@@ -2104,6 +2367,7 @@
         "zip": "19143"
     },
     {
+        "ID": "61-03-REP-A",
         "ward": 61,
         "division": 3,
         "party": "republican",
@@ -2112,6 +2376,7 @@
         "zip": "19120"
     },
     {
+        "ID": "63-02-REP-A",
         "ward": 63,
         "division": 2,
         "party": "republican",
@@ -2120,6 +2385,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-03-REP-A",
         "ward": 63,
         "division": 3,
         "party": "republican",
@@ -2128,6 +2394,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-03-REP-B",
         "ward": 63,
         "division": 3,
         "party": "republican",
@@ -2136,6 +2403,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-04-REP-A",
         "ward": 63,
         "division": 4,
         "party": "republican",
@@ -2144,6 +2412,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-04-REP-B",
         "ward": 63,
         "division": 4,
         "party": "republican",
@@ -2152,6 +2421,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-09-REP-A",
         "ward": 63,
         "division": 9,
         "party": "republican",
@@ -2160,6 +2430,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-10-REP-A",
         "ward": 63,
         "division": 10,
         "party": "republican",
@@ -2168,6 +2439,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-10-REP-B",
         "ward": 63,
         "division": 10,
         "party": "republican",
@@ -2176,6 +2448,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-14-REP-A",
         "ward": 63,
         "division": 14,
         "party": "republican",
@@ -2184,6 +2457,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-16-REP-A",
         "ward": 63,
         "division": 16,
         "party": "republican",
@@ -2192,6 +2466,7 @@
         "zip": "19115"
     },
     {
+        "ID": "63-17-REP-A",
         "ward": 63,
         "division": 17,
         "party": "republican",
@@ -2200,6 +2475,7 @@
         "zip": "19115"
     },
     {
+        "ID": "63-17-REP-B",
         "ward": 63,
         "division": 17,
         "party": "republican",
@@ -2208,6 +2484,7 @@
         "zip": "19115"
     },
     {
+        "ID": "63-18-REP-A",
         "ward": 63,
         "division": 18,
         "party": "republican",
@@ -2216,6 +2493,7 @@
         "zip": "19115"
     },
     {
+        "ID": "63-18-REP-B",
         "ward": 63,
         "division": 18,
         "party": "republican",
@@ -2224,6 +2502,7 @@
         "zip": "19115"
     },
     {
+        "ID": "63-21-REP-A",
         "ward": 63,
         "division": 21,
         "party": "republican",
@@ -2232,6 +2511,7 @@
         "zip": "19115"
     },
     {
+        "ID": "63-22-REP-A",
         "ward": 63,
         "division": 22,
         "party": "republican",
@@ -2240,6 +2520,7 @@
         "zip": "19115"
     },
     {
+        "ID": "63-23-REP-A",
         "ward": 63,
         "division": 23,
         "party": "republican",
@@ -2248,6 +2529,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-23-REP-B",
         "ward": 63,
         "division": 23,
         "party": "republican",
@@ -2256,6 +2538,7 @@
         "zip": "19111"
     },
     {
+        "ID": "63-24-REP-A",
         "ward": 63,
         "division": 24,
         "party": "republican",
@@ -2264,6 +2547,7 @@
         "zip": "19115"
     },
     {
+        "ID": "64-04-REP-A",
         "ward": 64,
         "division": 4,
         "party": "republican",
@@ -2272,6 +2556,7 @@
         "zip": "19136"
     },
     {
+        "ID": "64-06-REP-A",
         "ward": 64,
         "division": 6,
         "party": "republican",
@@ -2280,6 +2565,7 @@
         "zip": "19136"
     },
     {
+        "ID": "64-11-REP-A",
         "ward": 64,
         "division": 11,
         "party": "republican",
@@ -2288,6 +2574,7 @@
         "zip": "19149"
     },
     {
+        "ID": "64-11-REP-B",
         "ward": 64,
         "division": 11,
         "party": "republican",
@@ -2296,6 +2583,7 @@
         "zip": "19149"
     },
     {
+        "ID": "64-18-REP-A",
         "ward": 64,
         "division": 18,
         "party": "republican",
@@ -2304,6 +2592,7 @@
         "zip": "19152"
     },
     {
+        "ID": "65-02-REP-A",
         "ward": 65,
         "division": 2,
         "party": "republican",
@@ -2312,6 +2601,7 @@
         "zip": "19114"
     },
     {
+        "ID": "65-07-REP-A",
         "ward": 65,
         "division": 7,
         "party": "republican",
@@ -2320,6 +2610,7 @@
         "zip": "19114"
     },
     {
+        "ID": "66-02-REP-A",
         "ward": 66,
         "division": 2,
         "party": "republican",
@@ -2328,6 +2619,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-02-REP-B",
         "ward": 66,
         "division": 2,
         "party": "republican",
@@ -2336,6 +2628,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-06-REP-A",
         "ward": 66,
         "division": 6,
         "party": "republican",
@@ -2344,6 +2637,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-06-REP-B",
         "ward": 66,
         "division": 6,
         "party": "republican",
@@ -2352,6 +2646,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-09-REP-A",
         "ward": 66,
         "division": 9,
         "party": "republican",
@@ -2360,6 +2655,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-09-REP-B",
         "ward": 66,
         "division": 9,
         "party": "republican",
@@ -2368,6 +2664,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-10-REP-A",
         "ward": 66,
         "division": 10,
         "party": "republican",
@@ -2376,6 +2673,7 @@
         "zip": "19114"
     },
     {
+        "ID": "66-11-REP-A",
         "ward": 66,
         "division": 11,
         "party": "republican",
@@ -2384,6 +2682,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-13-REP-A",
         "ward": 66,
         "division": 13,
         "party": "republican",
@@ -2392,6 +2691,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-17-REP-A",
         "ward": 66,
         "division": 17,
         "party": "republican",
@@ -2400,6 +2700,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-17-REP-B",
         "ward": 66,
         "division": 17,
         "party": "republican",
@@ -2408,6 +2709,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-20-REP-A",
         "ward": 66,
         "division": 20,
         "party": "republican",
@@ -2416,6 +2718,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-30-REP-A",
         "ward": 66,
         "division": 30,
         "party": "republican",
@@ -2424,6 +2727,7 @@
         "zip": "19154"
     },
     {
+        "ID": "66-43-REP-A",
         "ward": 66,
         "division": 43,
         "party": "republican",

@@ -21,9 +21,11 @@ def process_committee(filepath):
                  'Zip': 'zip'}) \
         .cut('ward_div', 'party', 'fullName',
              'address', 'zip') \
-        .convert({'fullName': 'title',
-                  'address': 'title'}) \
-        .convert('party', 'lower') \
+        .convert({'ward_div': 'strip',
+                  'fullName': lambda v: v.strip().title(),
+                  'address': lambda v: v.strip().title(),
+                  'zip': 'strip'}) \
+        .convert('party', lambda v: v.strip().lower()) \
         .addfield('ward', create_ward, index=0) \
         .addfield('division', create_division, index=1)
 
