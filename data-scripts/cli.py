@@ -94,10 +94,12 @@ def export_leaders_cmd(space_id, api_key, environment_id,
               help='Contentful.com Content type ID')
 @click.option('--apikey', 'api_key', required=True,
               help='Contentful.com API key')
-def drop_contentful(space_id, content_type, api_key):
+@click.option('--environment', '-e', 'environment_id', default='master',
+              help='Contentful.com environment ID (default: master)')
+def drop_contentful(space_id, content_type, api_key, environment_id):
     """Drops all entries from a contentful.com content type.
        Processes 1,000 records at a time."""
-    process_drop(space_id, content_type, api_key)
+    process_drop(space_id, content_type, api_key, environment_id)
 
 if __name__ == '__main__':
     cli()

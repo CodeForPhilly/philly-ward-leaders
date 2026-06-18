@@ -72,9 +72,9 @@ def process_fetch(space_id, content_type_id, api_key, environment_id='master'):
         records.append(record)
     return records
 
-def process_drop(space_id, content_type_id, api_key):
+def process_drop(space_id, content_type_id, api_key, environment_id='master'):
     client = Client(api_key)
-    content_type = client.content_types(space_id).find(content_type_id)
+    content_type = client.content_types(space_id, environment_id).find(content_type_id)
     entries = content_type.entries().all({ 'limit': 1000 })
 
     for entry in tqdm(entries):
