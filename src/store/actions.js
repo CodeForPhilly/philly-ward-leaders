@@ -1,9 +1,17 @@
 import { nanoid } from "nanoid";
 
 import Api from "../api";
-import { CONTENTFUL_SPACE_ID, CONTENTFUL_ENVIRONMENT, CONTENTFUL_ACCESS_TOKEN } from "../config";
+import {
+  CONTENTFUL_SPACE_ID,
+  CONTENTFUL_ENVIRONMENT,
+  CONTENTFUL_ACCESS_TOKEN,
+} from "../config";
 
-const api = new Api(CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN, CONTENTFUL_ENVIRONMENT);
+const api = new Api(
+  CONTENTFUL_SPACE_ID,
+  CONTENTFUL_ACCESS_TOKEN,
+  CONTENTFUL_ENVIRONMENT,
+);
 
 export function NOTIFY(ctx, msg) {
   const id = nanoid();
