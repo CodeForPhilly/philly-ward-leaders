@@ -96,7 +96,7 @@ export default class Api {
   }
 
   fetchCitywideBoundaries() {
-    const url = "/data/Political_Divisions.geojson";
+    const url = "/data/citywide-boundaries.geojson";
     return axios.get(url).then((response) => response.data);
   }
 }
