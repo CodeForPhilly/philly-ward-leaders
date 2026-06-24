@@ -2,10 +2,11 @@ import axios from "axios";
 import { createClient } from "contentful";
 
 export default class Api {
-  constructor(spaceId, accessToken) {
+  constructor(spaceId, accessToken, environment) {
     this.client = createClient({
       space: spaceId,
       accessToken,
+      environment,
     });
   }
 
