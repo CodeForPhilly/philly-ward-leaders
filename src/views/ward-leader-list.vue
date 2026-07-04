@@ -33,8 +33,8 @@
             :photo="leader.photo"
             :turnout-party="leader.turnoutParty"
             :registered-voters-party="leader.registeredVotersParty"
-            :division-count="leader.divisionCount"
-            :committee-person-count="leader.committeePersonCount"
+            :division-count="getDivisionCount(leader)"
+            :vacancies="getVacancies(leader)"
           ></baseball-card>
         </div>
       </div>
@@ -53,6 +53,7 @@ export default {
   props: ["party"],
   computed: {
     ...mapState({
+      wardStats: (state) => state.wardStats,
       leaders(state) {
         return state.leaders.filter((leader) => leader.party === this.party);
       },
@@ -63,10 +64,25 @@ export default {
     hero: Hero,
     "baseball-card": BaseballCard,
   },
-  methods: mapActions({
-    fetchLeaders: "FETCH_LEADERS",
-  }),
-  created() {
+  methods: {
+    ...mapActions({
+      fetchLeaders: "FETCH_LEADERS",
+      fetchWardStats: "FETCH_WARD_STATS",
+    }),
+    getWardKey(leader) {
+      return leader.subWard ? `${leader.ward}${leader.subWard}` : String(leader.ward);
+    },
+    getDivisionCount(leader) {
+      const stats = this.wardStats[this.getWardKey(leader)];
+      return stats ? stats.divisionCount : 0;
+    },
+    getVacancies(leader) {
+      const stats = this.wardStats[this.getWardKey(leader)];
+      return stats ? stats[`${this.party}Vacancies`] || 0 : 0;
+    },
+  },
+  async created() {
+    await this.fetchWardStats();
     if (!this.isLeadersFetched) {
       this.fetchLeaders();
     }

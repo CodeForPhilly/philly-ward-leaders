@@ -22,7 +22,7 @@
         :party="leader.party"
         :registered-voters-party="leader.registeredVotersParty"
         :turnout-party-percent="turnoutPartyPercent"
-        :division-count="wardBoundaries.features.length"
+        :division-count="divisionCount"
         :vacancy-count="vacancyCount"
       ></stats-bar>
     </section>
@@ -76,7 +76,7 @@
                   Divisions
                 </span>
               </dt>
-              <dd>{{ wardBoundaries.features.length }}</dd>
+              <dd>{{ divisionCount }}</dd>
 
               <dt>
                 <span
@@ -271,6 +271,7 @@ export default {
       leader: (state) => state.currentLeader.leader,
       committeePersons: (state) => state.currentLeader.committeePersons,
       wardBoundaries: (state) => state.currentLeader.wardBoundaries,
+      wardStats: (state) => state.wardStats,
     }),
     ...mapGetters([
       "partyPlural",
@@ -281,6 +282,21 @@ export default {
       "vacancyCount",
       "age",
     ]),
+    wardKey() {
+      return this.ward;
+    },
+    currentWardStats() {
+      return this.wardStats[this.wardKey] || {};
+    },
+    divisionCount() {
+      return this.currentWardStats.divisionCount || 0;
+    },
+    committeePersonCount() {
+      return this.currentWardStats[`${this.party}Count`] || 0;
+    },
+    vacanciesCount() {
+      return this.currentWardStats[`${this.party}Vacancies`] || 0;
+    },
     feedbackPage() {
       return `${this.leader.fullName} (Ward ${this.leader.ward} ${this.leader.party})`;
     },
@@ -331,13 +347,6 @@ export default {
       });
       return committeePersonsList;
     },
-    committeePersonCount() {
-      return this.wardBoundaries.features.length * 2;
-    },
-    vacanciesCount() {
-      return this.allCommitteePersons.filter((p) => p.fullName === "VACANT")
-        .length;
-    },
     leaderLinks() {
       const websites = this.leader.websites;
       if (websites === undefined) {
@@ -367,6 +376,7 @@ export default {
       fetchLeader: "FETCH_LEADER",
       fetchCommitteePersons: "FETCH_COMMITTEE_PERSONS",
       fetchWardBoundaries: "FETCH_WARD_BOUNDARIES",
+      fetchWardStats: "FETCH_WARD_STATS",
     }),
     ordinalizeNumber(number) {
       return ordinalize(number);
@@ -388,9 +398,10 @@ export default {
       opts.ward = this.ward;
     }
 
+    await this.fetchWardStats();
     await this.fetchLeader(opts);
     await this.fetchCommitteePersons(opts);
-    await this.fetchWardBoundaries(this.ward); // `ward` prop may include suffix for sub ward
+    await this.fetchWardBoundaries(this.ward);
   },
   components: {
     "stats-bar": StatsBar,

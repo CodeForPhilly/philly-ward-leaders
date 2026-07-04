@@ -94,6 +94,18 @@ export async function FETCH_CITYWIDE_BOUNDARIES(ctx) {
   ctx.commit("END_REQUEST", "FETCH_CITYWIDE_BOUNDARIES");
 }
 
+export async function FETCH_WARD_STATS(ctx) {
+  ctx.commit("BEGIN_REQUEST", "FETCH_WARD_STATS");
+  try {
+    const wardStats = await api.fetchWardStats();
+    ctx.commit("FETCH_WARD_STATS_SUCCESS", wardStats);
+  } catch (err) {
+    logError(err);
+    ctx.dispatch("NOTIFY", "Failed to retrieve ward stats");
+  }
+  ctx.commit("END_REQUEST", "FETCH_WARD_STATS");
+}
+
 export async function FETCH_CONTENT_PAGE(ctx, slug) {
   ctx.commit("BEGIN_REQUEST", "FETCH_CONTENT_PAGE");
   try {

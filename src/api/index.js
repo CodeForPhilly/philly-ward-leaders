@@ -19,8 +19,6 @@ export default class Api {
       "fields.photo",
       "fields.registeredVotersParty",
       "fields.turnoutParty",
-      "fields.divisionCount",
-      "fields.committeePersonCount",
     ];
     const opts = {
       content_type: "wardLeader",
@@ -92,6 +90,11 @@ export default class Api {
 
   fetchWardBoundaries(ward) {
     const url = `/data/ward-boundaries/${ward}.geojson`;
+    return axios.get(url).then((response) => response.data);
+  }
+
+  fetchWardStats() {
+    const url = "/data/ward-stats.json";
     return axios.get(url).then((response) => response.data);
   }
 

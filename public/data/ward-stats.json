@@ -1,0 +1,485 @@
+{
+  "1": {
+    "divisionCount": 21,
+    "democraticCount": 42,
+    "republicanCount": 7,
+    "democraticVacancies": 0,
+    "republicanVacancies": 35
+  },
+  "2": {
+    "divisionCount": 29,
+    "democraticCount": 51,
+    "democraticVacancies": 7,
+    "republicanCount": 0,
+    "republicanVacancies": 58
+  },
+  "3": {
+    "divisionCount": 22,
+    "democraticCount": 39,
+    "republicanCount": 1,
+    "democraticVacancies": 5,
+    "republicanVacancies": 43
+  },
+  "4": {
+    "divisionCount": 21,
+    "democraticCount": 27,
+    "democraticVacancies": 15,
+    "republicanCount": 0,
+    "republicanVacancies": 42
+  },
+  "5": {
+    "divisionCount": 37,
+    "democraticCount": 69,
+    "republicanCount": 3,
+    "democraticVacancies": 5,
+    "republicanVacancies": 71
+  },
+  "6": {
+    "divisionCount": 18,
+    "democraticCount": 27,
+    "democraticVacancies": 9,
+    "republicanCount": 0,
+    "republicanVacancies": 36
+  },
+  "7": {
+    "divisionCount": 23,
+    "democraticCount": 36,
+    "republicanCount": 1,
+    "democraticVacancies": 10,
+    "republicanVacancies": 45
+  },
+  "8": {
+    "divisionCount": 35,
+    "democraticCount": 60,
+    "republicanCount": 1,
+    "democraticVacancies": 10,
+    "republicanVacancies": 69
+  },
+  "9": {
+    "divisionCount": 17,
+    "democraticCount": 30,
+    "republicanCount": 8,
+    "democraticVacancies": 4,
+    "republicanVacancies": 26
+  },
+  "10": {
+    "divisionCount": 29,
+    "democraticCount": 40,
+    "democraticVacancies": 18,
+    "republicanCount": 0,
+    "republicanVacancies": 58
+  },
+  "11": {
+    "divisionCount": 20,
+    "democraticCount": 20,
+    "democraticVacancies": 20,
+    "republicanCount": 0,
+    "republicanVacancies": 40
+  },
+  "12": {
+    "divisionCount": 24,
+    "democraticCount": 35,
+    "democraticVacancies": 13,
+    "republicanCount": 0,
+    "republicanVacancies": 48
+  },
+  "13": {
+    "divisionCount": 25,
+    "democraticCount": 39,
+    "democraticVacancies": 11,
+    "republicanCount": 0,
+    "republicanVacancies": 50
+  },
+  "14": {
+    "divisionCount": 11,
+    "democraticCount": 20,
+    "democraticVacancies": 2,
+    "republicanCount": 0,
+    "republicanVacancies": 22
+  },
+  "15": {
+    "divisionCount": 19,
+    "democraticCount": 34,
+    "democraticVacancies": 4,
+    "republicanCount": 0,
+    "republicanVacancies": 38
+  },
+  "16": {
+    "divisionCount": 18,
+    "democraticCount": 32,
+    "democraticVacancies": 4,
+    "republicanCount": 0,
+    "republicanVacancies": 36
+  },
+  "17": {
+    "divisionCount": 29,
+    "democraticCount": 41,
+    "democraticVacancies": 17,
+    "republicanCount": 0,
+    "republicanVacancies": 58
+  },
+  "18": {
+    "divisionCount": 19,
+    "democraticCount": 36,
+    "republicanCount": 4,
+    "democraticVacancies": 2,
+    "republicanVacancies": 34
+  },
+  "19": {
+    "divisionCount": 19,
+    "democraticCount": 32,
+    "republicanCount": 2,
+    "democraticVacancies": 6,
+    "republicanVacancies": 36
+  },
+  "20": {
+    "divisionCount": 11,
+    "democraticCount": 13,
+    "democraticVacancies": 9,
+    "republicanCount": 0,
+    "republicanVacancies": 22
+  },
+  "21": {
+    "divisionCount": 45,
+    "democraticCount": 74,
+    "republicanCount": 5,
+    "democraticVacancies": 16,
+    "republicanVacancies": 85
+  },
+  "22": {
+    "divisionCount": 29,
+    "democraticCount": 58,
+    "republicanCount": 4,
+    "democraticVacancies": 0,
+    "republicanVacancies": 54
+  },
+  "23": {
+    "divisionCount": 23,
+    "democraticCount": 35,
+    "republicanCount": 2,
+    "democraticVacancies": 11,
+    "republicanVacancies": 44
+  },
+  "24": {
+    "divisionCount": 19,
+    "democraticCount": 19,
+    "democraticVacancies": 19,
+    "republicanCount": 0,
+    "republicanVacancies": 38
+  },
+  "25": {
+    "divisionCount": 24,
+    "democraticCount": 25,
+    "republicanCount": 9,
+    "democraticVacancies": 23,
+    "republicanVacancies": 39
+  },
+  "26": {
+    "divisionCount": 23,
+    "democraticCount": 42,
+    "republicanCount": 39,
+    "democraticVacancies": 4,
+    "republicanVacancies": 7
+  },
+  "27": {
+    "divisionCount": 23,
+    "democraticCount": 36,
+    "republicanCount": 3,
+    "democraticVacancies": 10,
+    "republicanVacancies": 43
+  },
+  "28": {
+    "divisionCount": 18,
+    "democraticCount": 32,
+    "democraticVacancies": 4,
+    "republicanCount": 0,
+    "republicanVacancies": 36
+  },
+  "29": {
+    "divisionCount": 18,
+    "democraticCount": 29,
+    "democraticVacancies": 7,
+    "republicanCount": 0,
+    "republicanVacancies": 36
+  },
+  "30": {
+    "divisionCount": 17,
+    "democraticCount": 34,
+    "republicanCount": 1,
+    "democraticVacancies": 0,
+    "republicanVacancies": 33
+  },
+  "31": {
+    "divisionCount": 19,
+    "democraticCount": 38,
+    "republicanCount": 15,
+    "democraticVacancies": 0,
+    "republicanVacancies": 23
+  },
+  "32": {
+    "divisionCount": 31,
+    "democraticCount": 52,
+    "democraticVacancies": 10,
+    "republicanCount": 0,
+    "republicanVacancies": 62
+  },
+  "33": {
+    "divisionCount": 24,
+    "democraticCount": 44,
+    "republicanCount": 5,
+    "democraticVacancies": 4,
+    "republicanVacancies": 43
+  },
+  "34": {
+    "divisionCount": 42,
+    "democraticCount": 75,
+    "republicanCount": 4,
+    "democraticVacancies": 9,
+    "republicanVacancies": 80
+  },
+  "35": {
+    "divisionCount": 32,
+    "democraticCount": 40,
+    "republicanCount": 5,
+    "democraticVacancies": 24,
+    "republicanVacancies": 59
+  },
+  "36": {
+    "divisionCount": 41,
+    "democraticCount": 78,
+    "republicanCount": 1,
+    "democraticVacancies": 4,
+    "republicanVacancies": 81
+  },
+  "37": {
+    "divisionCount": 21,
+    "democraticCount": 25,
+    "republicanCount": 3,
+    "democraticVacancies": 17,
+    "republicanVacancies": 39
+  },
+  "38": {
+    "divisionCount": 21,
+    "democraticCount": 37,
+    "democraticVacancies": 5,
+    "republicanCount": 0,
+    "republicanVacancies": 42
+  },
+  "39A": {
+    "divisionCount": 22,
+    "democraticCount": 40,
+    "republicanCount": 18,
+    "democraticVacancies": 4,
+    "republicanVacancies": 26
+  },
+  "39B": {
+    "divisionCount": 24,
+    "democraticCount": 46,
+    "republicanCount": 4,
+    "democraticVacancies": 2,
+    "republicanVacancies": 44
+  },
+  "40A": {
+    "divisionCount": 23,
+    "democraticCount": 34,
+    "republicanCount": 1,
+    "democraticVacancies": 12,
+    "republicanVacancies": 45
+  },
+  "40B": {
+    "divisionCount": 28,
+    "democraticCount": 14,
+    "republicanCount": 3,
+    "democraticVacancies": 42,
+    "republicanVacancies": 53
+  },
+  "41": {
+    "divisionCount": 26,
+    "democraticCount": 14,
+    "republicanCount": 6,
+    "democraticVacancies": 38,
+    "republicanVacancies": 46
+  },
+  "42": {
+    "divisionCount": 25,
+    "democraticCount": 28,
+    "republicanCount": 15,
+    "democraticVacancies": 22,
+    "republicanVacancies": 35
+  },
+  "43": {
+    "divisionCount": 25,
+    "democraticCount": 45,
+    "republicanCount": 1,
+    "democraticVacancies": 5,
+    "republicanVacancies": 49
+  },
+  "44": {
+    "divisionCount": 19,
+    "democraticCount": 22,
+    "republicanCount": 1,
+    "democraticVacancies": 16,
+    "republicanVacancies": 37
+  },
+  "45": {
+    "divisionCount": 25,
+    "democraticCount": 31,
+    "republicanCount": 29,
+    "democraticVacancies": 19,
+    "republicanVacancies": 21
+  },
+  "46": {
+    "divisionCount": 23,
+    "democraticCount": 46,
+    "republicanCount": 1,
+    "democraticVacancies": 0,
+    "republicanVacancies": 45
+  },
+  "47": {
+    "divisionCount": 14,
+    "democraticCount": 21,
+    "democraticVacancies": 7,
+    "republicanCount": 0,
+    "republicanVacancies": 28
+  },
+  "48": {
+    "divisionCount": 23,
+    "democraticCount": 33,
+    "republicanCount": 1,
+    "democraticVacancies": 13,
+    "republicanVacancies": 45
+  },
+  "49": {
+    "divisionCount": 22,
+    "democraticCount": 26,
+    "democraticVacancies": 18,
+    "republicanCount": 0,
+    "republicanVacancies": 44
+  },
+  "50": {
+    "divisionCount": 30,
+    "democraticCount": 49,
+    "democraticVacancies": 11,
+    "republicanCount": 0,
+    "republicanVacancies": 60
+  },
+  "51": {
+    "divisionCount": 28,
+    "democraticCount": 42,
+    "republicanCount": 6,
+    "democraticVacancies": 14,
+    "republicanVacancies": 50
+  },
+  "52": {
+    "divisionCount": 28,
+    "democraticCount": 50,
+    "democraticVacancies": 6,
+    "republicanCount": 0,
+    "republicanVacancies": 56
+  },
+  "53": {
+    "divisionCount": 23,
+    "democraticCount": 22,
+    "republicanCount": 6,
+    "democraticVacancies": 24,
+    "republicanVacancies": 40
+  },
+  "54": {
+    "divisionCount": 22,
+    "democraticCount": 18,
+    "republicanCount": 4,
+    "democraticVacancies": 26,
+    "republicanVacancies": 40
+  },
+  "55": {
+    "divisionCount": 29,
+    "democraticCount": 45,
+    "republicanCount": 13,
+    "democraticVacancies": 13,
+    "republicanVacancies": 45
+  },
+  "56": {
+    "divisionCount": 41,
+    "democraticCount": 61,
+    "republicanCount": 6,
+    "democraticVacancies": 21,
+    "republicanVacancies": 76
+  },
+  "57": {
+    "divisionCount": 28,
+    "democraticCount": 33,
+    "republicanCount": 10,
+    "democraticVacancies": 23,
+    "republicanVacancies": 46
+  },
+  "58": {
+    "divisionCount": 44,
+    "democraticCount": 61,
+    "republicanCount": 14,
+    "democraticVacancies": 27,
+    "republicanVacancies": 74
+  },
+  "59": {
+    "divisionCount": 25,
+    "democraticCount": 37,
+    "democraticVacancies": 13,
+    "republicanCount": 0,
+    "republicanVacancies": 50
+  },
+  "60": {
+    "divisionCount": 23,
+    "democraticCount": 34,
+    "republicanCount": 1,
+    "democraticVacancies": 12,
+    "republicanVacancies": 45
+  },
+  "61": {
+    "divisionCount": 28,
+    "democraticCount": 31,
+    "republicanCount": 1,
+    "democraticVacancies": 25,
+    "republicanVacancies": 55
+  },
+  "62": {
+    "divisionCount": 26,
+    "democraticCount": 33,
+    "democraticVacancies": 19,
+    "republicanCount": 0,
+    "republicanVacancies": 52
+  },
+  "63": {
+    "divisionCount": 25,
+    "democraticCount": 33,
+    "republicanCount": 19,
+    "democraticVacancies": 17,
+    "republicanVacancies": 31
+  },
+  "64": {
+    "divisionCount": 18,
+    "democraticCount": 22,
+    "republicanCount": 5,
+    "democraticVacancies": 14,
+    "republicanVacancies": 31
+  },
+  "65": {
+    "divisionCount": 23,
+    "democraticCount": 38,
+    "republicanCount": 2,
+    "democraticVacancies": 8,
+    "republicanVacancies": 44
+  },
+  "66A": {
+    "divisionCount": 26,
+    "democraticCount": 23,
+    "republicanCount": 3,
+    "democraticVacancies": 29,
+    "republicanVacancies": 49
+  },
+  "66B": {
+    "divisionCount": 20,
+    "democraticCount": 16,
+    "republicanCount": 11,
+    "democraticVacancies": 24,
+    "republicanVacancies": 29
+  }
+}

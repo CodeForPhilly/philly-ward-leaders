@@ -26,6 +26,10 @@ export function FETCH_CITYWIDE_BOUNDARIES_SUCCESS(state, citywideBoundaries) {
   state.citywideBoundaries = citywideBoundaries;
 }
 
+export function FETCH_WARD_STATS_SUCCESS(state, wardStats) {
+  state.wardStats = wardStats;
+}
+
 export function FETCH_CONTENT_PAGE_SUCCESS(state, contentPage) {
   state.contentPage = contentPage;
 }

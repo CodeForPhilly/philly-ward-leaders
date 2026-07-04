@@ -1,4 +1,5 @@
 import json
+from os import path
 
 import click
 import petl as etl
@@ -6,7 +7,7 @@ import petl as etl
 from registry import process_registry
 from turnout import process_turnout
 from committee import process_committee
-from divisions import process_divisions
+from divisions import process_divisions, generate_ward_stats_json
 from leaders import process_leaders, export_leaders, collapse_party
 from contentful import process_import, process_fetch, process_drop
 
@@ -36,10 +37,29 @@ def committee(committee_file):
 @cli.command()
 @click.option('--out', '-o', 'output_dir', type=click.Path(),
               required=True, help='Output directory for individual .geojson files')
+@click.option('--dem-committee', type=click.Path(),
+              help='Democratic committee people JSON file')
+@click.option('--rep-committee', type=click.Path(),
+              help='Republican committee people JSON file')
+@click.option('--stats-out', type=click.Path(),
+              help='Output path for ward stats JSON (default: <output_dir>/ward-stats.json)')
 @click.argument('divisions_file', type=click.Path())
-def divisions(divisions_file, output_dir):
-    """Cleans and separates divisions file"""
+def divisions(divisions_file, output_dir, dem_committee, rep_committee, stats_out):
+    """Cleans and separates divisions file, optionally generates ward stats"""
     process_divisions(divisions_file, output_dir)
+
+    if dem_committee or rep_committee:
+        committee_files = []
+        if dem_committee:
+            committee_files.append((dem_committee, 'democratic'))
+        if rep_committee:
+            committee_files.append((rep_committee, 'republican'))
+
+        if stats_out is None:
+            stats_out = path.join(output_dir, 'ward-stats.json')
+
+        generate_ward_stats_json(divisions_file, committee_files, stats_out)
+        click.echo(f'Ward stats written to {stats_out}')
 
 @cli.command()
 @click.argument('leaders_file', type=click.Path())

@@ -40,8 +40,12 @@ export function turnoutTotalPercent(state) {
 }
 
 export function vacancyCount(state) {
-  const { divisionCount, committeePersonCount } = state.currentLeader.leader;
-  return divisionCount * 2 - committeePersonCount;
+  const { ward, subWard, party } = state.currentLeader.leader;
+  if (!ward || !party) return 0;
+  const wardKey = subWard ? `${ward}${subWard}` : String(ward);
+  const stats = state.wardStats[wardKey];
+  if (!stats) return 0;
+  return stats[`${party}Vacancies`] || 0;
 }
 
 export function age(state) {

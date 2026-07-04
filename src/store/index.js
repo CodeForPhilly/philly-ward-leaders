@@ -11,6 +11,7 @@ const store = createStore({
     notifications: {},
     contentPage: {},
     leaders: [],
+    wardStats: {},
     citywideBoundaries: {},
     currentLeader: {
       leader: {},

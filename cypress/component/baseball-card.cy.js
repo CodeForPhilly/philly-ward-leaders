@@ -12,7 +12,7 @@ describe('BaseballCard Component', () => {
       turnoutParty: 400,
       turnoutTotal: 600,
       divisionCount: 30,
-      committeePersonCount: 25,
+      vacancies: 35,
     };
 
     cy.mount(BaseballCard, { props });
@@ -36,7 +36,7 @@ describe('BaseballCard Component', () => {
       turnoutParty: 200,
       turnoutTotal: 300,
       divisionCount: 10,
-      committeePersonCount: 15,
+      vacancies: 5,
     };
 
     cy.mount(BaseballCard, { props });

@@ -62,7 +62,7 @@ export default {
     turnoutParty: Number,
     turnoutTotal: Number,
     divisionCount: Number,
-    committeePersonCount: Number,
+    vacancies: Number,
   },
   computed: {
     url() {
@@ -77,9 +77,6 @@ export default {
     },
     turnoutPartyPercent() {
       return Math.round((this.turnoutParty / this.registeredVotersParty) * 100);
-    },
-    vacancies() {
-      return this.divisionCount * 2 - this.committeePersonCount;
     },
     registeredVotersPartyFormatted() {
       return formatNumber(this.registeredVotersParty);
