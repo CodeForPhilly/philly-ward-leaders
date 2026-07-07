@@ -47,9 +47,7 @@ def process_import(filepath, space_id, content_type_id, api_key,
                     entry.publish()
                 except Exception:
                     pass
-            break
 
-@rate_limited(78)
 def delete_entry(entry):
     if entry.is_published:
         entry.unpublish()
@@ -60,7 +58,7 @@ def process_fetch(space_id, content_type_id, api_key, environment_id='master'):
     """Fetches all entries for a content type and returns them as a list of dicts"""
     client = Client(api_key)
     content_type = client.content_types(space_id, environment_id).find(content_type_id)
-    entries = content_type.entries().all({'limit': 1000})
+    entries = content_type.entries().all({'limit': 1000, 'sys.archivedAt[exists]': 'false'})
 
     records = []
     for entry in entries:

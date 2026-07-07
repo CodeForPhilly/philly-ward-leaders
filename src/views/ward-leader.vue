@@ -23,7 +23,7 @@
         :registered-voters-party="leader.registeredVotersParty"
         :turnout-party-percent="turnoutPartyPercent"
         :division-count="wardBoundaries.features.length"
-        :vacancy-count="vacancyCount"
+        :vacancy-count="vacanciesCount"
       ></stats-bar>
     </section>
 
