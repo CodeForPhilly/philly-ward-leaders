@@ -1,6 +1,7 @@
 import csv
 
 import petl as etl
+import pprint
 
 # Mapping from CSV column names to Contentful field names
 FIELD_MAP = {
@@ -20,7 +21,6 @@ FIELD_MAP = {
     'Facebook':    'facebook',
     'Twitter':     'twitter',
     'Email':       'email',
-    'Photo':       'photoUrl',
     'Divisions':   'divisionCount',
     'Committee People':    'committeePersonCount',
     'Party Registered':    'registeredVotersParty',
@@ -31,6 +31,11 @@ FIELD_MAP = {
 
 REVERSE_FIELD_MAP = {v: k for k, v in FIELD_MAP.items()}
 REVERSE_HEADERS = list(FIELD_MAP.values())
+
+INT_FIELDS = ['ward', 'wardOfResidence', 'yearOfBirth',
+                  'divisionCount', 'committeePersonCount',
+                  'registeredVotersParty', 'registeredVotersTotal',
+                  'turnoutParty', 'turnoutTotal']
 
 def remove_dash_lines(value):
     """Some social media values are '---------'"""
@@ -55,13 +60,13 @@ def none_to_empty(value):
     return '' if value is None else value
 
 def process_leaders(filepath):
+    remove_fields = ['turnoutTotal']
+    reverse_headers = [item for item in REVERSE_HEADERS if item not in remove_fields]
+    int_fields = [item for item in INT_FIELDS if item not in remove_fields]
     table = etl.fromcsv(filepath) \
         .rename(FIELD_MAP) \
-        .cut(REVERSE_HEADERS) \
-        .convert(('ward', 'wardOfResidence', 'yearOfBirth',
-                  'divisionCount', 'committeePersonCount',
-                  'registeredVotersParty', 'registeredVotersTotal',
-                  'turnoutParty', 'turnoutTotal'), int) \
+        .cut(reverse_headers) \
+        .convert(int_fields, int) \
         .convert(('linkedin', 'facebook', 'twitter'), remove_dash_lines) \
         .convert('party', expand_party) \
         .convert('gender', expand_gender) \
