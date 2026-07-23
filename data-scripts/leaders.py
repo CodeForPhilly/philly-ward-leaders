@@ -21,6 +21,7 @@ FIELD_MAP = {
     'Facebook':    'facebook',
     'Twitter':     'twitter',
     'Email':       'email',
+    'Photo':       'photoUrl',
     'Divisions':   'divisionCount',
     'Committee People':    'committeePersonCount',
     'Party Registered':    'registeredVotersParty',
@@ -33,9 +34,9 @@ REVERSE_FIELD_MAP = {v: k for k, v in FIELD_MAP.items()}
 REVERSE_HEADERS = list(FIELD_MAP.values())
 
 INT_FIELDS = ['ward', 'wardOfResidence', 'yearOfBirth',
-                  'divisionCount', 'committeePersonCount',
-                  'registeredVotersParty', 'registeredVotersTotal',
-                  'turnoutParty', 'turnoutTotal']
+              'divisionCount', 'committeePersonCount',
+              'registeredVotersParty', 'registeredVotersTotal',
+              'turnoutParty', 'turnoutTotal']
 
 def remove_dash_lines(value):
     """Some social media values are '---------'"""
@@ -60,11 +61,11 @@ def none_to_empty(value):
     return '' if value is None else value
 
 def process_leaders(filepath):
-    remove_fields = ['turnoutTotal']
+    remove_fields = ['photoUrl', 'divisionCount', 'committeePersonCount', 'registeredVotersParty', 'registeredVotersTotal', 'turnoutParty', 'turnoutTotal']
     reverse_headers = [item for item in REVERSE_HEADERS if item not in remove_fields]
     int_fields = [item for item in INT_FIELDS if item not in remove_fields]
     table = etl.fromcsv(filepath) \
-        .rename(FIELD_MAP) \
+        .rename(FIELD_MAP, strict=False) \
         .cut(reverse_headers) \
         .convert(int_fields, int) \
         .convert(('linkedin', 'facebook', 'twitter'), remove_dash_lines) \
