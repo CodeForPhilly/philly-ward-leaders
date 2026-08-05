@@ -24,13 +24,12 @@ def process_import(filepath, space_id, content_type_id, api_key,
             try:
                 if update and entry_id:
                     entry = space.find(entry_id)
-                    pprint.pprint(entry.fields())
+                    # pprint.pprint(entry.fields())
                     """ todo: handle photos """
-                    record.pop('photoUrl')
-                    for key, value in record:
+                    for key, value in record.items():
                         snake_key = snake_case(key)
                         entry.fields()[snake_key] = value
-                    pprint.pprint(entry.fields())
+                    # pprint.pprint(entry.fields())
                     entry.save()
                 else:
                     entry_data = {
