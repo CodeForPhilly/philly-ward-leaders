@@ -9,6 +9,7 @@ def process_divisions(filepath, output_dir):
 
     features = geojson['features']
     wards = defaultdict(list)
+    all_ward_divs = defaultdict(list)
 
     # Dictionary with division config for split wards
     split_wards_config = {
@@ -65,8 +66,10 @@ def process_divisions(filepath, output_dir):
                         ) else "B"
             sp_ward = f"{ward}{sub_ward}"
             wards[sp_ward].append(ward_data)
+            all_ward_divs[sp_ward].append(division)
 
         wards[ward].append(ward_data)
+        all_ward_divs[ward].append(division)
 
     for ward, features in wards.items():
         features.sort(key=lambda ele: ele['properties']['ward_div'])
@@ -79,3 +82,9 @@ def process_divisions(filepath, output_dir):
             # The separators argument prevents trailing whitespace per
             # https://stackoverflow.com/a/35013643
             json.dump(out_data, out_file, indent=2, sort_keys=True, separators= (',', ': '))
+
+    for ward, divisions in all_ward_divs.items():
+        divisions.sort()
+    sorted_ward_divs = dict(sorted(all_ward_divs.items(), key=lambda item: int(item[0].rstrip("AB"))))    
+    with open(path.join(output_dir, 'all_wards_divs.json'), 'w') as out_file:
+      json.dump(sorted_ward_divs, out_file, indent=2, separators= (',', ': '))     
