@@ -31,7 +31,7 @@
     "query-string": "^9.5.1",
     "snapsvg-cjs": "^0.0.6",
     "tslib": "^2.8.1",
-    "vue": "^3.3.9",
+    "vue": "^3.5.44",
     "vue-bulma-tooltip": "^2.0.0-alpha.0",
     "vue-directive-tooltip": "^1.4.0",
     "vue-router": "^4.2.5",
